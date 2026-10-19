@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Feuerschale_Anim_v1
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -8708201055184308656, guid: 581ea335fbf29744bb403f644b2a2888, type: 3}
+  - {fileID: -3383567632448909935, guid: 581ea335fbf29744bb403f644b2a2888, type: 3}
+  - {fileID: 6195618016301353057, guid: 581ea335fbf29744bb403f644b2a2888, type: 3}
+  - {fileID: -171324526190502897, guid: 581ea335fbf29744bb403f644b2a2888, type: 3}
+  - {fileID: 6254846045706254389, guid: 581ea335fbf29744bb403f644b2a2888, type: 3}
+  - {fileID: 6073573248776781859, guid: 581ea335fbf29744bb403f644b2a2888, type: 3}
+  m_MinSpeed: 4.0499997
+  m_MaxSpeed: 4.0499997
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 1
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

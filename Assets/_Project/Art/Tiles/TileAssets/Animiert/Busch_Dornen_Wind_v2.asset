@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Busch_Dornen_Wind_v2
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: 8141154305171645632, guid: 2c99d758dc14e264bb84a26162df5376, type: 3}
+  - {fileID: 6898298113870313350, guid: 2c99d758dc14e264bb84a26162df5376, type: 3}
+  - {fileID: -2416268948866503717, guid: 2c99d758dc14e264bb84a26162df5376, type: 3}
+  - {fileID: 6718077097734928276, guid: 2c99d758dc14e264bb84a26162df5376, type: 3}
+  m_MinSpeed: 1.0266666
+  m_MaxSpeed: 1.0266666
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 2
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

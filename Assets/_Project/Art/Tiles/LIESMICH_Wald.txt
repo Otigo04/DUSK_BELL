@@ -1,0 +1,37 @@
+NIGHTWARD - Wald (natuerlich, begehbar)
+=======================================
+Kein Kronen-Teppich mehr. Der Wald besteht aus Einzelbaeumen, Unterholz und Waldweg.
+Man laeuft zwischen den Staemmen. Vorschau: Wald_Vorschau.png
+
+Tileset_Wald.png  (20 Spalten x 5 Zeilen, Kachel 32x32, ab 0 gezaehlt)
+ Zeile 0  Waldweg (rotbraune Erde) auf Waldgras. Autotile:
+          Index = N*1 + E*2 + S*4 + W*8 (Bit = Weg geht dort weiter), 15 = Mitte,
+          Spalte 16-19 = Innenecken (fehlt NO, SO, SW, NW)
+ Zeile 1  Waldgras-Rand auf Wiese. Gleiche Indizes. Fuer den Uebergang Wiese <-> Waldboden.
+ Zeile 2  Waldgras 1-8 (Spalte 0-7: normal, Laub, Moos, Nadeln, Steinchen, Wurzel, Lichtung, Klee),
+          Weg-Fuellungen 1-3 (Spalte 8-10)
+ Zeile 3  Deko-Overlays (transparent): Graesbuschel 1-4 (0-3), Grasbuendel 3x (4-6),
+          Grasreihe 3x kachelbar (7-9), Farn 3x (10-12), Wildblumen 2x (13-14),
+          Pilze (15), Moos (16), Laub (17), Zapfen (18)
+ Zeile 4  Lichtflecken 3x (0-2), Wurzeln 2x (3-4), Totholz 2x (5-6), Blaubeeren (7),
+          Glockenblumen (8), Farn gross 2x (9-10), Pilze (11), Moos (12), Laub (13)
+
+Objekte/  (transparent, schlank und hoch, Fusspunkt = unten Mitte)
+ Birke_A/B/C        64x128   weisse Rinde, lockere Blaetter
+ Fichte_Hoch_A/B/C  48x128 / 40x112   schmal, haengende Zweige, langer kahler Stamm
+ Fichte_Jung        32x64
+ Eiche_A/B/Herbst/Apfel  64x128   Astwerk sichtbar, Krone aus lockeren Lappen
+ Kiefer_A/B         64x128   Schirm-Kronen
+ *_Fern             dunkle Hintergrund-Variante desselben Baums (selbe Palette)
+ *_Krone / *_Stamm  Baum an der Zeile y=72 (Birke), 74 (Eiche), 66 (Kiefer) geteilt, gleiche
+                    Bildgroesse. Stamm auf die Objekt-Ebene, Krone ueber die Figur.
+ Heidelbeerbusch, Farn_Dicht (+ bestehende Buesche, Steine, Baumstuempfe, Totholz ...)
+
+Aufbau in Unity (von unten nach oben)
+ 1. Boden       Waldgras-Varianten gemischt, Weg per Autotile, Rand zur Wiese per Autotile
+ 2. Boden-Deko  Graesbuschel, Farn, Wildblumen, Laub, Wurzeln, Lichtflecken
+ 3. Objekte     Baeume (*_Stamm oder ganzer Baum), nach Y sortieren. Kollision nur am Stamm-Fuss
+                (ca. 8x6 px), nicht an der Krone: so ist der Wald begehbar.
+ 4. Kronen      *_Krone ueber der Figur; bei Ueberdeckung leicht transparent.
+ 5. Licht       Global Light 2D dunkel, Light 2D warm fuer Laternen/Lagerfeuer.
+ Dichte         Baeume dichter setzen und verschieden hoch mischen, hinten *_Fern, vorne normal.

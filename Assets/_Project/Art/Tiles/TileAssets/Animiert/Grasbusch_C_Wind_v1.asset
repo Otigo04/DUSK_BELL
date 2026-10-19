@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Grasbusch_C_Wind_v1
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -6714092536837910340, guid: e53452a70fd5ce348b24e8291bb71676, type: 3}
+  - {fileID: 2370215123105133130, guid: e53452a70fd5ce348b24e8291bb71676, type: 3}
+  - {fileID: -3087521731293359494, guid: e53452a70fd5ce348b24e8291bb71676, type: 3}
+  - {fileID: 6809596843360489152, guid: e53452a70fd5ce348b24e8291bb71676, type: 3}
+  m_MinSpeed: 0.84
+  m_MaxSpeed: 0.84
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 1
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

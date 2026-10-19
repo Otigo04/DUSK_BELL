@@ -1,0 +1,29 @@
+# Normalize line endings for text
+* text=auto
+
+# Unity YAML: force text, union-friendly diffs
+*.cs text diff=csharp eol=lf
+*.unity text eol=lf linguist-generated
+*.prefab text eol=lf linguist-generated
+*.asset text eol=lf linguist-generated
+*.mat text eol=lf linguist-generated
+*.anim text eol=lf linguist-generated
+*.controller text eol=lf linguist-generated
+*.meta text eol=lf linguist-generated
+
+# Binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.psd binary
+*.aseprite binary
+*.ase binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.fbx binary
+*.blend binary
+*.ttf binary
+*.otf binary
+*.dll binary

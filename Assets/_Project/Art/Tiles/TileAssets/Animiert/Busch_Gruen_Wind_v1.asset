@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Busch_Gruen_Wind_v1
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: 6440264601811788985, guid: f7ecb2fbcc3058e45a409f95d6495ad6, type: 3}
+  - {fileID: -3585379341744714434, guid: f7ecb2fbcc3058e45a409f95d6495ad6, type: 3}
+  - {fileID: -1195656678214704804, guid: f7ecb2fbcc3058e45a409f95d6495ad6, type: 3}
+  - {fileID: 1964545724672544510, guid: f7ecb2fbcc3058e45a409f95d6495ad6, type: 3}
+  m_MinSpeed: 0.84
+  m_MaxSpeed: 0.84
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 1
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

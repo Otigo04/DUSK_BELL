@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Kristall_Talisman_A_Anim_v2
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -7227694679247576378, guid: d757b3e63cbc924469fcd271050a5842, type: 3}
+  - {fileID: 2373702541209021604, guid: d757b3e63cbc924469fcd271050a5842, type: 3}
+  - {fileID: -6275200672756949165, guid: d757b3e63cbc924469fcd271050a5842, type: 3}
+  - {fileID: -1603446388021884930, guid: d757b3e63cbc924469fcd271050a5842, type: 3}
+  m_MinSpeed: 1.75
+  m_MaxSpeed: 1.75
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 2
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

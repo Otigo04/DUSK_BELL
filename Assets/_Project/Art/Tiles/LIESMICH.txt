@@ -1,0 +1,65 @@
+NIGHTWARD - Tileset-Paket
+=========================
+Raster 32x32 px, keine Skalierung, Filter Point (no filter), PPU 32.
+Palette: Art/Palette.png (40 Farben). Keine Farbe ausserhalb, keine halbtransparenten Pixel.
+Outlines: dunkles Violett (#2a1d3b), kein Schwarz.
+
+Tileset_Terrain.png  (20 Spalten x 7 Zeilen, Kachel = 32x32, Spalte/Zeile ab 0)
+ Zeile 0  Weg (Erde) auf Gras
+ Zeile 1  Pflasterweg auf Gras
+ Zeile 2  Wasser auf Gras (mit Ufer)
+ Zeile 3  Waldboden auf Gras
+   Spalte 0-15: Kanten-Set. Index = N*1 + E*2 + S*4 + W*8, wobei jedes Bit 1 ist,
+                wenn dort dasselbe Terrain weitergeht. Index 15 = Mitte/Fuellung,
+                Index 0 = Insel, 5 = senkrecht, 10 = waagrecht, usw.
+   Spalte 16-19: Innenecken, in der Reihenfolge fehlt NO, SO, SW, NW
+ Zeile 4  Gras 1-8 (Spalte 0-7), Weg-Fuellung 1-3 (8-10), Pflaster 1-2 (11-12),
+          Waldboden 1-3 (13-15), Wasser-Animation 4 Frames (16-19)
+ Zeile 5  Deko-Overlays (transparent): Blumen rot/gelb/rosa/blau/weiss/gemischt (0-5),
+          Grasbueschel 3x (6-8), Hohes Gras 2x (9-10), Kiesel 3x (11-13), Laub 2x (14-15),
+          Pilze 2x (16-17), Farn (18), Klee (19)
+ Zeile 6  Bruecken: waagrecht Links/Mitte/Rechts (0-2), senkrecht Oben/Mitte/Unten (3-5)
+
+Objekte/  (einzelne PNGs, transparent, Groesse siehe _Liste.txt)
+Objekte_Uebersicht.png  Kontaktbogen aller Objekte
+
+
+=== ERWEITERUNG (Zaeune, Uebergaenge, Hohes Gras, Buesche, Steine, Props) ===
+Alles Pixelart 32x32-Raster, Palette Art/Palette.png, Outline #2a1d3b. Erzeugt mit _Quelle_Generator/build_all.py
+(Python + PIL). Unity-Aufbau: Menue  Nightward > Tiles > Erweiterung bauen (alles).
+
+Tileset_Terrain.png  Zeilen 0 (Weg) und 1 (Pflaster) NEU gebaut: Wegenden jetzt gleich breit wie der Weg (vorher
+                     schmale, kantige Kappen), Kanten nahtlos (Profil periodisch), runde Ecken, Innenecken.
+                     Fuellungen Weg 8-10 und Pflaster 11-12 sind jetzt nahtlos kachelbar.
+                     Index-Schema unveraendert (N1 E2 S4 W8, Spalte 16-19 Innenecken fehlt NO/SO/SW/NW).
+                     Sicherung der alten Datei: _Quelle_Generator/Tileset_Terrain_VOR_Wegfix.png.bak
+
+Tileset_Zaun.png  (20 Spalten x 5 Zeilen)  Kanten-Set wie oben, d.h. Ecken, T-Stuecke, Kreuz, Endpfosten:
+   Zeile 0 Holzzaun, 1 Holzzaun dunkel, 2 Lattenzaun weiss, 3 Steinmauer, 4 Hecke
+   Spalte 0-15 Maske N1 E2 S4 W8 (0 = einzelner Pfosten, 10 = waagrecht, 5 = senkrecht, 15 = Kreuz)
+   Spalte 16-18 = waagrechte Varianten, 19 = senkrechte Variante (fuer Zufall / Abwechslung)
+   Tore: Objekte/Tor_Zu, Tor_Offen (64x32, 2 Zellen).
+
+Tileset_Uebergang.png (20 x 5)  weiche, gedithert Uebergaenge Gras -> Waldboden (Autotile wie oben, Innenecken 16-19)
+   Zeile 0 Wald hell, 1 Wald dunkel (Nacht/tief), 2 Laubteppich, 3 Nadelboden
+   Zeile 4 Fuellungen: je Stil 4 (Spalte 0-3 hell, 4-7 dunkel, 8-11 Laub, 12-15 Nadel)
+   Die Wald-Seite ist die Flaeche, die Gras-Seite wird vom Gras-Tile darunter geliefert (Tile enthaelt Gras mit).
+
+Tileset_HohesGras.png (16 Spalten x 4 Zeilen)  16 Varianten Hohes Gras (frisch, dunkel, trocken, Wiese, mit Blueten
+   weiss/rot/violett/rosa/gelb/blau, Weizen, Aehren). Zeile = Windframe (0-3), nahtlos in X. Transparent: ueber Gras legen.
+
+Objekte/ NEU (Liste siehe _Liste.txt):
+   Busch_Gruen_A-D, Busch_Klein_A-C, Busch_Rund, Busch_Gross_A/B, Busch_Riesig, Busch_Beeren_Rot/Blau/Gelb/Schwarz,
+   Busch_Blueten_Rosa/Weiss/Gelb/Violett/Rot/Blau/Gross, Busch_Dunkel_A-C/Gross, Busch_Herbst_Rot/Orange/Gelb/Gross,
+   Busch_Tot_A-C, Busch_Dornen, Brombeerbusch_A, Farn_A-C/Dunkel/Gross_A/B, Lavendel_A/B, Grasbusch_A-C/Gross/Dunkel/Trocken,
+   Heidekraut_A/B, Stein_Klein_D-M, Stein_Mittel_A-H, Stein_Gross_A-C, Stein_Gross_Moos_A/B, Stein_Findling, Stein_Sand_A-C,
+   Stein_Dunkel_A/B, Steinhaufen_A-C, Kiesel_Streu_A-D, Trittstein_A-D, Menhir_A/B, Grabstein_A-C,
+   Fass_*, Kiste_*, Sack_*, Korb_*, Eimer_*, Truhe_*, Kuerbis_*, Heuballen_*, Holzstapel_Klein/Gross, Tisch*, Bank*, Hocker, Stuhl,
+   Karren*, Schubkarre*, Wegweiser, Tafel, Warnschild, Schild_*, Briefkasten, Vogelscheuche, Zelt_*, Hackklotz_Axt, Amboss,
+   Bienenkorb, Ruderboot, Tor_Zu/Offen.
+Animiert/  (Streifen + _Liste.txt, wie gehabt): Lagerfeuer_Gross, Kochfeuer, Feuerschale, Fackel, Kerzen, Windlicht,
+   Fahne_Rot/Blau, Brunnen, Wassertrog, Fass_Wasser, Kristall_Talisman_A/B, Runenstein_A  (_Anim)
+   sowie _Wind fuer alle neuen Buesche, Farne, Grasbuesche, Lavendel, Heidekraut.
+Unity-Ausgabe: TileAssets/{Objekte,Zaun,Uebergang,HohesGras,Animiert,RuleTiles}, Paletten Pal_Natur_Neu, Pal_Props_Neu,
+   Pal_Autotiles, Pal_Zaun_Uebergang_Gras. RuleTiles: RT_Zaun_*, RT_Mauer_Stein, RT_Hecke, RT_Wald_*, RT_Weg, RT_Pflaster,
+   RT_Wasser, RT_Waldboden (malen mit einem Tile, Kanten/Ecken automatisch).
