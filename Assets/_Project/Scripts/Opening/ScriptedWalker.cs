@@ -29,8 +29,8 @@ namespace Nightward.Opening
             body = GetComponent<Rigidbody2D>();
         }
 
-        /// <summary>Laeuft geradlinig zum Ziel. speed in Units pro Sekunde. Solange hold true liefert, bleibt die Figur stehen (z. B. wartet auf den Spieler).</summary>
-        public IEnumerator WalkTo(Vector2 target, float speed, System.Func<bool> hold = null)
+        /// <summary>Laeuft geradlinig zum Ziel. speed in Units pro Sekunde. Solange hold true liefert, bleibt die Figur stehen (z. B. wartet auf den Spieler). stand = false: am Ziel nicht anhalten (Zwischenpunkt einer Route, naechster WalkTo folgt gleich).</summary>
+        public IEnumerator WalkTo(Vector2 target, float speed, System.Func<bool> hold = null, bool stand = true)
         {
             Walking = true;
             mover.Stop();
@@ -59,7 +59,7 @@ namespace Nightward.Opening
                 if (animator != null) animator.speed = Mathf.Clamp(speed / 2.5f, 0.6f, 1.6f);
                 yield return null;
             }
-            Stand(target + Vector2.down);
+            if (stand) Stand(target + Vector2.down);
             Walking = false;
         }
 

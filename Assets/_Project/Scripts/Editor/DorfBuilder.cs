@@ -931,6 +931,7 @@ namespace Nightward.EditorTools
 
         static GameObject barInstance;
         const int BarX = 46, BarY = 96;
+        static readonly Vector3 IlhanInBar = new Vector3(224f, 17.4f, 0f);      // Innenraum der Bar, hinter der Theke
 
         static void PlaceBar()
         {
@@ -951,6 +952,7 @@ namespace Nightward.EditorTools
             FillRect(Ter.Cobble, BarX + 5, BarY - 10, BarX + 15, BarY - 2);    // Platz vor der Bar
             var innen = barInstance.transform.Find("Innen_IlhansBar");
             if (innen != null) innen.localPosition = new Vector3(100f, -BarY, 0f);
+            LinkBarDoors();
             for (int x = BarX - 8; x <= BarX + 28; x++)
                 for (int y = BarY - 10; y <= BarY + 10; y++)
                     if (InMap(x, y)) { forest[x - MinX, y - MinY] = false; fdepth[x - MinX, y - MinY] = 0; }
@@ -970,6 +972,28 @@ namespace Nightward.EditorTools
             Reserve(BarX - 8, BarY - 10, BarX + 28, BarY - 8);       // Strasse nach Westen/Osten
             Reserve(BarX - 1, BarY - 8, BarX + 4, BarY - 3);         // Schild links
             Reserve(BarX + 16, BarY - 9, BarX + 28, BarY - 3);       // Brunnen, Schild, Baenke rechts
+        }
+
+        /// <summary>
+        /// Die Tueren der Bar (Tuer_Eingang aussen, Tuer_Ausgang innen) haben im Prefab kein Ziel gespeichert: hier verbinden,
+        /// sonst kommt man weder hinein noch hinaus.
+        /// </summary>
+        static void LinkBarDoors()
+        {
+            Transform Find(string n) { foreach (var t in barInstance.GetComponentsInChildren<Transform>(true)) if (t.name == n) return t; return null; }
+            void Link(string door, string target)
+            {
+                var d = Find(door);
+                var z = Find(target);
+                if (d == null || z == null) { issues.Add("Bar: " + door + " oder " + target + " fehlt"); return; }
+                var dg = d.GetComponent<Nightward.World.Durchgang>();
+                if (dg == null) { issues.Add("Bar: kein Durchgang an " + door); return; }
+                var so = new SerializedObject(dg);
+                so.FindProperty("ziel").objectReferenceValue = z;
+                so.ApplyModifiedPropertiesWithoutUndo();
+            }
+            Link("Tuer_Eingang", "Spawn_Innen");
+            Link("Tuer_Ausgang", "Spawn_Aussen");
         }
 
         static void FenceRect(int x0, int y0, int x1, int y1, int gapX0 = -999, int gapX1 = -999)
@@ -1504,10 +1528,11 @@ namespace Nightward.EditorTools
                     g.transform.position = new Vector3(35f, 12f, 0f);
                     foreach (var sr in g.GetComponentsInChildren<SpriteRenderer>()) sr.sortingOrder = OrderObjects;
                 }
-                else if (g.name == "NPC_Ilhan_Bartender") g.transform.position = new Vector3(BarX + 12f, BarY - 4.5f, 0f);
+                else if (g.name == "NPC_Ilhan_Bartender") g.transform.position = IlhanInBar;      // hinter der Theke im Innenraum
                 else if (g.name == "NPC_Bulut_Sheriff") g.transform.position = new Vector3(Houses[9].x + Houses[9].door + 1.5f, Houses[9].y - 3.5f, 0f);
             }
             PlaceCast(scene);
+            ArrivalBuilder.BuildInto(scene);
 
             Debug.Log("[Dorf] Level_01 gebaut. Baeume mit Stammkollision: " + trunkFeet.Count + ", Laternen: " + lampCount +
                       (missing.Count > 0 ? "\nFehlende Objekte: " + string.Join(", ", missing) : "") +

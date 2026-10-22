@@ -499,7 +499,7 @@ namespace Nightward.EditorTools
             ti.SaveAndReimport();
         }
 
-        static Sprite PortraitSprite(string path)
+        internal static Sprite PortraitSprite(string path)
         {
             var ti = (TextureImporter)AssetImporter.GetAtPath(path);
             if (ti == null) return null;
@@ -1046,7 +1046,7 @@ namespace Nightward.EditorTools
             return b;
         }
 
-        static OpeningUI BuildUI(PlayerInteractor interactor, RuntimeAnimatorController woman, RuntimeAnimatorController man, OpeningAudio audio,
+        internal static OpeningUI BuildUI(PlayerInteractor interactor, RuntimeAnimatorController woman, RuntimeAnimatorController man, OpeningAudio audio,
                                  out CharacterSelect select, out QuestHud questHud, out InteractPrompt prompt)
         {
             font = AssetDatabase.LoadAssetAtPath<Font>(FontPath);

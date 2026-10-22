@@ -78,6 +78,13 @@ namespace Nightward.Player
         float dodgeEnd;
         /// <summary>Keine Bewegung/Angriffe, z. B. waehrend eines Dialogs.</summary>
         public bool InputLocked { get; set; }
+        /// <summary>
+        /// Gesteuerte Bewegung in Zwischensequenzen: wirkt wie gedrueckte Laufrichtung (die Laenge ist egal, das Tempo steuert SpeedMultiplier),
+        /// auch wenn die Eingabe gesperrt ist. Physik, Kollision und Laufanimation laufen dabei ganz normal.
+        /// </summary>
+        public Vector2 ScriptedInput { get; set; }
+        /// <summary>Tempo bei gesteuerter Bewegung (Units/s). 0 = normales Lauftempo.</summary>
+        public float ScriptedSpeed { get; set; }
         public Vector2 FacingVector => DirVectors[facing];
         public Vector2 Velocity => body.linearVelocity;
         /// <summary>Gewollte Geschwindigkeit aus der Eingabe. Anders als Velocity auch dann, wenn er gerade gegen etwas laeuft.</summary>
@@ -90,7 +97,9 @@ namespace Nightward.Player
         /// <summary>Eingaberichtung (0 = keine Taste).</summary>
         public Vector2 MoveInput => moveInput;
 
-        float CurrentMaxSpeed => (IsAttacking ? moveSpeed * attackMoveMultiplier : moveSpeed) * SpeedMultiplier;
+        float CurrentMaxSpeed => ScriptedInput.sqrMagnitude > 0.0001f && ScriptedSpeed > 0f
+            ? ScriptedSpeed
+            : (IsAttacking ? moveSpeed * attackMoveMultiplier : moveSpeed) * SpeedMultiplier;
 
         /// <summary>Kurzer Stoss in eine Richtung (Ausweichen, Rueckstoss). Die Geschwindigkeit bremst danach normal ab.</summary>
         public void Kick(Vector2 direction, float speed)
@@ -144,6 +153,8 @@ namespace Nightward.Player
                 if (kb.wKey.isPressed) rawInput.y += 1f;
                 if (kb.sKey.isPressed) rawInput.y -= 1f;
             }
+
+            if (ScriptedInput.sqrMagnitude > 0.0001f) rawInput = ScriptedInput;
 
             // Von schraeg auf gerade gewechselt (eine Taste losgelassen)? Kurz die Schraege halten:
             // Wird kurz danach auch die zweite Taste losgelassen, war es ein gemeinsames Loslassen

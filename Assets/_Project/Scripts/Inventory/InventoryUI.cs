@@ -643,6 +643,12 @@ namespace Nightward.Items
             if (!built && !TryBuild()) return;
             var kb = Keyboard.current;
             if (kb == null) return;
+            if (Nightward.Core.Cutscene.Active)
+            {
+                if (IsOpen) Close();
+                UpdateToasts();
+                return;
+            }
 
             bool dead = survival != null && survival.Sim.IsDead;
             if (kb.tabKey.wasPressedThisFrame || kb.iKey.wasPressedThisFrame) { if (IsOpen) Close(); else if (!dead) Open(); }
