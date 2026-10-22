@@ -1,0 +1,4 @@
+- [Scripts untracked in git](scripts-untracked-in-git.md) — most Scripts folders not committed; back up before rewriting, parallel sessions possible
+- [Dorf-Builder Level_01](dorf-builder-level01.md) — Dorf per DorfBuilder.cs bauen, Screenshot-Tricks, Opening nicht anfassen
+- [Survival-System](survival-system.md) — Stats/Moods/Regeln in Scripts/Survival, Config-Asset, nur Level_01-Spieler, Build-Fallen
+- [Hauptfiguren Kampf-Anims](hauptfiguren-kampf-animationen.md) — Run/Box/Messer/Bat/Pistole per Python-Generator, nicht von Hand
