@@ -9,6 +9,7 @@ using Nightward.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 namespace Nightward.Opening
 {
@@ -56,30 +57,10 @@ namespace Nightward.Opening
         [SerializeField, Range(5f, 10f)] float investigateSeconds = 7f;
 
         [Header("Dorf")]
+        [Tooltip("Ab hier rollt das Auto allein weiter, blendet aus und die Ankunft in Level_01 beginnt")]
         [SerializeField] float villageEntryY = -24f;
-        [Tooltip("Ab hier beginnt die Cutscene: die Kamera schwenkt zu den Trauergaesten, das Auto faehrt von selbst")]
-        [SerializeField] float squareApproachY = -37f;
-        [Tooltip("Tempo zwischen Dorfeingang und Dorfplatz (noch nichts zu sehen, soll nicht ewig dauern)")]
+        [Tooltip("Tempo des Autos bei der Dorfeinfahrt")]
         [SerializeField] float approachSpeed = 1.6f;
-        [Tooltip("Hier haelt das Auto in der Cutscene, auf Hoehe der Trauergaeste")]
-        [SerializeField] float cutsceneStopY = -47f;
-        [Tooltip("Tempo des Autos in der Cutscene")]
-        [SerializeField] float cutsceneSpeed = 1f;
-        [Tooltip("Tempo beim Wegfahren aus dem Dorf (Szene 4)")]
-        [SerializeField] float villageSpeed = 0.75f;
-        [SerializeField] List<CrowdMember> crowd = new List<CrowdMember>();
-        [SerializeField] NpcMover boy;
-        [SerializeField] NpcMover mother;
-        [SerializeField] GameObject manAtDoor;
-        [Tooltip("Blickpunkt der Kamera am Grab (leer = Mitte der Trauergaeste)")]
-        [SerializeField] Transform graveFocus;
-
-        [Header("Bulut")]
-        [SerializeField] NpcMover bulut;
-        [SerializeField] NpcProfile bulutProfile;
-        [SerializeField] Transform stationDoor;
-        [SerializeField] Transform lantern;
-        [SerializeField] Transform houseLights;
 
         [Header("Tag-Uhr")]
         [Tooltip("Startpunkt der Uhr: spaeter Nachmittag, warmes Abendlicht")]
@@ -102,12 +83,9 @@ namespace Nightward.Opening
         bool free;          // Spieler steuert frei (zu Fuss oder am Steuer)
         bool clockStarted;
         bool menuLock;
-        bool hasList;
-        bool villageDone;
         bool tutorialActive;
         double odometerAtLog;
         bool odometerFrozen;
-        Coroutine villageRoutine;
 
         void Start()
         {
@@ -118,9 +96,6 @@ namespace Nightward.Opening
                 cycle.SetPhase(clockPhase, clockProgress);
                 cycle.Paused = true;
             }
-            foreach (var c in crowd) if (c != null) c.Watch = car.transform;
-            if (manAtDoor != null) manAtDoor.SetActive(false);
-            if (graveFocus == null) graveFocus = MakeGraveFocus();
             StartCoroutine(Run());
         }
 
@@ -144,19 +119,6 @@ namespace Nightward.Opening
             else ui.Gauge(false);
         }
 
-        /// <summary>Blickpunkt der Kamera: Mitte der Trauergaeste.</summary>
-        Transform MakeGraveFocus()
-        {
-            var found = GameObject.Find("Grab_Blickpunkt");
-            if (found != null) return found.transform;
-            var go = new GameObject("Grab_Blickpunkt");
-            Vector3 sum = Vector3.zero;
-            int n = 0;
-            foreach (var c in crowd) if (c != null) { sum += c.transform.position; n++; }
-            go.transform.position = n > 0 ? sum / n : transform.position;
-            return go.transform;
-        }
-
         static bool Pressed(System.Func<Keyboard, bool> f) => Keyboard.current != null && f(Keyboard.current);
 
         IEnumerator Run()
@@ -168,7 +130,6 @@ namespace Nightward.Opening
             if (jumpToVillage)
             {
                 ApplyProtagonist(PlayerChoice.Current);
-                hasList = true;
                 odometerAtLog = car.Odometer;
                 QuestLog.SetMain(QuestDriveToVillage);
                 questHud.Show(true);
@@ -254,47 +215,19 @@ namespace Nightward.Opening
             car.GiveControl();
             free = true;
 
-            // ---------------- Step 9: Dorfeinfahrt (Beerdigung)
+            // ---------------- Step 9: Dorfeinfahrt. Am Dorfrand rollt das Auto allein weiter, es wird dunkel, die Ankunft im Dorf (Level_01) uebernimmt.
             Village:
             while (car.transform.position.y > villageEntryY) yield return null;
-            car.SpeedLimit = approachSpeed;
-            car.AllowReverse = false;
-            while (car.transform.position.y > squareApproachY) yield return null;
-
-            // ---------------- Step 9/10: Cutscene am Friedhof. Der Spieler steuert nichts mehr, das Auto faehrt von selbst
-            // zum Dorfplatz, die Kamera schwenkt zu den Trauergaesten und das Auto bleibt links im Bild.
             free = false;
-            villageDone = false;
             car.SpeedLimit = float.MaxValue;
-            car.DriveTo(new Vector2(roadX, cutsceneStopY), cutsceneSpeed);
-            StartCoroutine(CutsceneCamera());
-            villageRoutine = StartCoroutine(VillageEntry());
-            while (!villageDone || !car.AutoArrived || Mathf.Abs(car.Speed) > 0.05f) yield return null;
-            car.Park();
-            ui.HideSubtitle();
-            ui.HideBubble();
-            yield return new WaitForSeconds(1.0f);
-            yield return BulutRunsToCar(3.5f);
-
-            // ---------------- Step 11: Dialog (Szene 3)
-            dialogue.Open(bulutProfile);
-            var s3 = OpeningScript.Scene3;
-            for (int i = 0; i < s3.Length - 1; i++) yield return dialogue.PlayLine(s3[i]);
-            yield return dialogue.PlayLine(s3[s3.Length - 1], 2);
-            yield return dialogue.Choose(new[] { OpeningScript.ChoiceGo, OpeningScript.ChoiceDrive });
-            bool goWithHim = dialogue.Chosen == 0;
-            dialogue.ChangeRelationship(goWithHim ? +1 : -1); // rel_bulut_player
-            yield return new WaitForSeconds(2.6f);      // die Beziehungsanzeige soll in Ruhe zu sehen sein
-            dialogue.Close();
-            if (CameraFollow2D.Main != null) CameraFollow2D.Main.ClearFocus();
+            car.AllowReverse = false;
+            car.DriveTo(new Vector2(roadX, villageEntryY - 7f), approachSpeed);
             yield return new WaitForSeconds(1.2f);
-
-            if (goWithHim) yield return Station();
-            else yield return DriveOn();
-
+            yield return ui.FadeOut();
+            audioPlayer.StopAll(0.4f);
             questHud.Show(false);
-            free = false;
-            yield return ui.ShowEnd("To be continued");
+            ArrivalState.Pending = true;
+            SceneManager.LoadScene("Level_01");
         }
 
         void ApplyProtagonist(Protagonist p)
@@ -353,7 +286,6 @@ namespace Nightward.Opening
             audioPlayer.Rustle(false);
             if (action != null) action.Stop();
             if (logRenderer != null && logWithoutPaper != null) logRenderer.sprite = logWithoutPaper;
-            hasList = true;
             Relationships.SetFlag("has_list");
             yield return ui.Hint(OpeningScript.LogFound.TrimEnd('.'), 2.2f);
             yield return ui.ShowPaper(OpeningScript.ListEntries);
@@ -363,259 +295,6 @@ namespace Nightward.Opening
             player.Lock(false);
             free = true;
             clockStarted = true;    // das Tutorial ist vorbei: ab jetzt laeuft die Zeit
-        }
-
-        // ------------------------------------------------------------ Step 9
-
-        IEnumerator VillageEntry()
-        {
-            var lines = OpeningScript.VillageEntry;
-            var w = OpeningScript.Whispers;
-
-            // Trigger: erzaehlt wird erst, wenn man die Menschen auch sieht (die Kamera schwenkt in CutsceneCamera)
-            yield return WaitVisible(Speaker(0), Speaker(1));
-            yield return ui.Narrate(lines[0].text);
-            yield return WaitVisible(Speaker(0));
-            yield return ui.Bubble(Speaker(0), w[0]);
-            yield return WaitVisible(Speaker(2));
-            yield return ui.Bubble(Speaker(2), w[1]);
-
-            yield return WaitVisible(Speaker(3), boy != null ? boy.transform : Speaker(3));
-            yield return ui.Narrate(lines[1].text);
-            StartCoroutine(BoyPulledBack());
-            yield return new WaitForSeconds(1.0f);
-            if (mother != null)
-            {
-                yield return WaitVisible(mother.transform);
-                yield return ui.Bubble(mother.transform, OpeningScript.MotherCall);
-            }
-            yield return WaitVisible(Speaker(4));
-            yield return ui.Bubble(Speaker(4), w[2]);
-            yield return ui.Narrate(lines[2].text, thought: true);
-            yield return ui.Narrate(lines[3].text, thought: true);
-            villageDone = true;
-        }
-
-        /// <summary>
-        /// Kamera der Cutscene: schwenkt je weiter das Auto kommt von ihm weg zur Mitte der Trauergaeste. Das Auto bleibt dabei
-        /// immer links im Bild, die Menschen rechts. Am Ende bleibt die Kamera stehen (auch fuer den Dialog).
-        /// </summary>
-        IEnumerator CutsceneCamera()
-        {
-            var cam = Camera.main;
-            var follow = CameraFollow2D.Main;
-            if (cam == null || follow == null) yield break;
-
-            // Mitte der Gruppe (Fuesse bis Kopf) und Platz fuer das Auto links
-            float minY = float.MaxValue, maxY = float.MinValue;
-            void Include(Transform t) { if (t == null) return; minY = Mathf.Min(minY, t.position.y); maxY = Mathf.Max(maxY, t.position.y + 1.7f); }
-            foreach (var c in crowd) if (c != null) Include(c.transform);
-            if (boy != null) Include(boy.transform);
-            if (mother != null) Include(mother.transform);
-            // 0,9 hoeher: unten verdeckt die Erzaehlerzeile sonst die vorderen Gaeste
-            float centerY = (minY < maxY ? (minY + maxY) * 0.5f : graveFocus.position.y) + 0.9f;
-            float halfW = cam.orthographicSize * cam.aspect;
-            float targetX = Mathf.Min(graveFocus.position.x, roadX + halfW * 0.7f);
-
-            var point = new GameObject("Cutscene_Kamerapunkt").transform;
-            float startY = car.transform.position.y;
-            point.position = player.transform.position;     // dort schaut die Kamera gerade hin: kein Sprung beim Start
-            follow.SetFocus(point, 1f);
-            while (!villageDone || !car.AutoArrived || Mathf.Abs(car.Speed) > 0.05f)
-            {
-                float progress = Mathf.InverseLerp(startY, cutsceneStopY, car.transform.position.y);
-                float k = progress * progress * progress;      // erst spaet wegschwenken: das Auto bleibt im Bild
-                Vector2 start = (Vector2)player.transform.position + follow.Offset;
-                Vector2 center = Vector2.Lerp(start, new Vector2(targetX, centerY), k);
-                point.position = center - follow.Offset;
-                yield return null;
-            }
-            // Endlage halten
-            point.position = new Vector2(targetX, centerY) - follow.Offset;
-        }
-
-        /// <summary>Wartet, bis alle Figuren gut im Bild sind (Text und Sprechblasen nur, wenn man die Sprecher sieht). Hoechstens 8 s.</summary>
-        IEnumerator WaitVisible(params Transform[] targets)
-        {
-            for (float t = 0f; t < 8f; t += Time.deltaTime)
-            {
-                bool all = true;
-                foreach (var target in targets) if (!InView(target)) { all = false; break; }
-                if (all) yield break;
-                yield return null;
-            }
-        }
-
-        bool InView(Transform t)
-        {
-            var cam = Camera.main;
-            if (cam == null || t == null) return true;
-            Vector3 v = cam.WorldToViewportPoint(t.position + Vector3.up * 0.5f);
-            return v.x > 0.04f && v.x < 0.96f && v.y > 0.06f && v.y < 0.94f;
-        }
-
-        Transform Speaker(int i) => crowd.Count > 0 ? crowd[Mathf.Clamp(i, 0, crowd.Count - 1)].transform : transform;
-
-        IEnumerator BoyPulledBack()
-        {
-            if (boy == null || mother == null) yield break;
-            var boyWalk = boy.GetComponent<ScriptedWalker>();
-            var motherWalk = mother.GetComponent<ScriptedWalker>();
-            Vector2 home = boy.Position, motherHome = mother.Position;
-            Vector2 toCar = ((Vector2)car.transform.position - home).normalized;
-            yield return boyWalk.WalkTo(home + toCar * 1.1f, 1.1f);
-            boy.LookAt(car.transform.position);
-            yield return new WaitForSeconds(0.5f);
-            yield return motherWalk.WalkTo(home + toCar * 0.6f, 1.2f);
-            StartCoroutine(motherWalk.WalkTo(motherHome, 0.8f));
-            yield return boyWalk.WalkTo(home, 0.9f);
-            boy.LookAt(car.transform.position);
-        }
-
-        // ------------------------------------------------------------ Step 10
-
-        IEnumerator BulutRunsToCar(float seconds)
-        {
-            Vector2 window = car.SidePoint(1.45f, 0.3f);
-            float dist = Vector2.Distance(bulut.Position, window);
-            var walk = bulut.GetComponent<ScriptedWalker>();
-            yield return walk.WalkTo(window, Mathf.Max(0.9f, dist / seconds));
-            bulut.LookAt(car.transform.position);
-        }
-
-        // ------------------------------------------------------------ Step 12a: Mitkommen
-
-        IEnumerator Station()
-        {
-            QuestLog.CompleteMain(QuestFollowBulut);
-            var walk = bulut.GetComponent<ScriptedWalker>();
-
-            // Aussteigen: Bulut tritt einen Schritt zurueck, damit die Figur nicht in ihm steht. Erst die Erzaehlung, dann geht er los.
-            StartCoroutine(walk.WalkTo(bulut.Position + car.Left * 0.9f + car.Forward * 0.3f, 0.7f));
-            car.Exit(player, unlock: false);
-            yield return ui.Narrate(OpeningScript.RevierWalk[0].text);
-            yield return new WaitForSeconds(0.6f);
-
-            // Bulut geht zur Station, waehrend die Erzaehlung das sagt. Die Kamera bleibt bei ihm, damit man sieht, wohin er geht.
-            var follow = CameraFollow2D.Main;
-            if (follow != null) follow.SetFocus(bulut.transform, 0.85f);
-            StartCoroutine(walk.WalkTo(stationDoor.position, 1.0f));
-            yield return ui.Narrate(OpeningScript.RevierWalk[1].text);
-            while (walk.Walking) yield return null;     // erst wenn er an der Tuer steht, geht es weiter
-            yield return new WaitForSeconds(0.8f);
-            if (follow != null) follow.ClearFocus();
-            yield return new WaitForSeconds(0.8f);      // Kamera kommt zum Spieler zurueck
-
-            player.Lock(false);
-            free = true;
-            StartCoroutine(ui.Narrate(OpeningScript.RevierWalk[2].text));
-
-            // Bulut wartet an der Tuer, bis der Spieler nachkommt
-            while (!(!walk.Walking && Vector2.Distance(player.transform.position, stationDoor.position) < 1.8f))
-            {
-                if (!walk.Walking) bulut.LookAt(player.transform.position);
-                yield return null;
-            }
-            free = false;
-            player.Lock(true);
-            ui.HideSubtitle();
-            yield return ui.FadeOut();
-            ui.Backdrop(true);
-            QuestLog.CompleteMain(null);
-            yield return ui.FadeIn();
-
-            dialogue.Open(bulutProfile);
-            var inside = OpeningScript.RevierInside;
-            for (int i = 0; i < inside.Length - 1; i++) yield return dialogue.PlayLine(inside[i]);
-            var options = new List<string>();
-            if (hasList) options.Add(OpeningScript.ChoiceShowList);
-            options.Add(OpeningScript.ChoiceAskMonsters);
-            yield return dialogue.PlayLine(inside[inside.Length - 1], options.Count);
-            yield return dialogue.Choose(options);
-            bool showList = options[dialogue.Chosen] == OpeningScript.ChoiceShowList;
-
-            int rel = Relationships.Get(bulutProfile.id); // rel_bulut_player
-            if (showList)
-            {
-                yield return dialogue.PlayLine(OpeningScript.ShowListIntro);
-                yield return dialogue.Play(rel >= 5 ? OpeningScript.ShowListTrusted : OpeningScript.ShowListDistrust);
-            }
-            else
-            {
-                yield return dialogue.PlayLine(OpeningScript.AskMonstersIntro);
-                yield return dialogue.Play(rel >= 5 ? OpeningScript.AskMonstersTrusted
-                    : rel <= -5 ? OpeningScript.AskMonstersHostile : OpeningScript.AskMonstersNeutral);
-            }
-            yield return dialogue.Play(OpeningScript.RevierEnd);
-            dialogue.Close();
-            yield return ui.FadeOut();
-        }
-
-        // ------------------------------------------------------------ Step 12b: Weiterfahren (Cutscene)
-
-        IEnumerator DriveOn()
-        {
-            QuestLog.CompleteMain(null);
-            free = false;
-            var walk = bulut.GetComponent<ScriptedWalker>();
-            StartCoroutine(walk.WalkTo(bulut.Position + car.Left * 1.2f, 0.9f));
-            car.SpeedLimit = float.MaxValue;
-            car.AllowReverse = true;
-            car.TurnTo(0f);
-            while (!car.AutoArrived) yield return null;
-            car.DriveTo(new Vector2(roadX, -8f), 4f);
-            yield return new WaitForSeconds(3.5f);
-            yield return ui.FadeOut();
-
-            // Der Stamm ist weg, die Strasse fuehrt geradeaus. Der Kilometerzaehler zeigt dieselbe Zahl wie vorher
-            if (logRoot != null) logRoot.SetActive(false);
-            car.Teleport(new Vector2(roadX, logStopY - 12f), 0f);
-            odometerFrozen = true;
-            car.DriveTo(new Vector2(roadX, logStopY + 14f), 3f);
-            yield return ui.FadeIn();
-            yield return ui.Narrate(OpeningScript.CutsceneLoop.text);
-            yield return ui.FadeOut();
-            odometerFrozen = false;
-
-            // Szene 4: Abenddaemmerung, das Dorf liegt wieder vor dem Auto
-            var cycle = DayNightCycle.Instance;
-            if (cycle != null) cycle.SetPhase(DayPhase.Daemmerung, 0.35f);
-            foreach (var c in crowd) if (c != null) c.gameObject.SetActive(false);
-            if (boy != null) boy.gameObject.SetActive(false);
-            if (mother != null) mother.gameObject.SetActive(false);
-            if (manAtDoor != null) manAtDoor.SetActive(true);
-            bulut.Stop();
-            bulut.transform.position = lantern.position + Vector3.down * 0.6f;
-            var bb = bulut.GetComponent<Rigidbody2D>();
-            if (bb != null) bb.position = bulut.transform.position;
-            car.Teleport(new Vector2(roadX, villageEntryY + 6f), 180f);
-            car.SpeedLimit = villageSpeed * 1.6f;
-            car.DriveTo(new Vector2(roadX, lantern.position.y - 0.5f), villageSpeed * 1.6f);
-            yield return ui.FadeIn();
-            audioPlayer.Bell(2);
-            while (!car.AutoArrived || Mathf.Abs(car.Speed) > 0.05f) yield return null;
-            car.Park();
-            bulut.LookAt(car.transform.position);
-            if (manAtDoor != null && manAtDoor.TryGetComponent<NpcMover>(out var man)) man.LookAt(car.transform.position);
-
-            dialogue.Open(bulutProfile);
-            yield return dialogue.Play(OpeningScript.Scene4Intro);
-            if (manAtDoor != null) manAtDoor.SetActive(false); // er schliesst die Tuer
-            yield return dialogue.Play(OpeningScript.Scene4Bulut);
-            dialogue.Close();
-
-            audioPlayer.Bell(1);
-            StartCoroutine(ui.Narrate(OpeningScript.Scene4End.text));
-            yield return new WaitForSeconds(1.2f);
-            if (houseLights != null)
-                foreach (var l in houseLights.GetComponentsInChildren<Light2D>())
-                {
-                    l.enabled = false;
-                    yield return new WaitForSeconds(0.35f);
-                }
-            yield return new WaitForSeconds(2f);
-            audioPlayer.StopAll(1.5f);
-            yield return ui.FadeOut();
         }
     }
 }

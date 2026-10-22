@@ -193,17 +193,7 @@ namespace Nightward.EditorTools
                 l.pointLightOuterAngle = 70f;
                 heads.Add(pivot);
             }
-            var vso = new SerializedObject(carVis);
-            SetSprites(vso, "north", Frames(VehDir + "/Auto_Sedan_N.png"));
-            SetSprites(vso, "east", Frames(VehDir + "/Auto_Sedan_E.png"));
-            SetSprites(vso, "south", Frames(VehDir + "/Auto_Sedan_S.png"));
-            SetSprites(vso, "smoke", Frames(VehDir + "/Auto_Rauch.png"));
-            var hl = vso.FindProperty("headlights");
-            hl.arraySize = heads.Count;
-            for (int i = 0; i < heads.Count; i++) hl.GetArrayElementAtIndex(i).objectReferenceValue = heads[i];
-            vso.FindProperty("car").objectReferenceValue = car;
-            vso.ApplyModifiedPropertiesWithoutUndo();
-            carSr.sprite = Frames(VehDir + "/Auto_Sedan_N.png")[0];
+            CarArt.Apply(carGo);   // Pickup (8 Richtungen), Kollision, Scheinwerfer
 
             // ---------- Spieler
             var player = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(PlayerPrefab));
@@ -303,7 +293,7 @@ namespace Nightward.EditorTools
 
             var director = sys.AddComponent<OpeningDirector>();
             var so = new SerializedObject(director);
-            void Set(string prop, Object value) => so.FindProperty(prop).objectReferenceValue = value;
+            void Set(string prop, Object value) { var sp = so.FindProperty(prop); if (sp != null) sp.objectReferenceValue = value; }   // Felder des alten Dorfablaufs gibt es nicht mehr
             Set("ui", ui);
             Set("characterSelect", select);
             Set("questHud", questHud);
@@ -325,9 +315,6 @@ namespace Nightward.EditorTools
             Set("logRenderer", logSr);
             Set("logWithoutPaper", logEmpty);
             Set("ravens", ravens);
-            var cl = so.FindProperty("crowd");
-            cl.arraySize = crowd.Count;
-            for (int i = 0; i < crowd.Count; i++) cl.GetArrayElementAtIndex(i).objectReferenceValue = crowd[i];
             Set("boy", boy.GetComponent<NpcMover>());
             Set("mother", mother.GetComponent<NpcMover>());
             Set("manAtDoor", manAtDoorGo);
@@ -349,10 +336,8 @@ namespace Nightward.EditorTools
 
         static void ImportArt()
         {
-            SliceRow(VehDir + "/Auto_Sedan_N.png", 46, 32, new Vector2(0.5f, 0.42f));
-            SliceRow(VehDir + "/Auto_Sedan_S.png", 46, 32, new Vector2(0.5f, 0.42f));
-            SliceRow(VehDir + "/Auto_Sedan_E.png", 80, 32, new Vector2(0.5f, 0.3f));
             SliceRow(VehDir + "/Auto_Rauch.png", 10, 32, new Vector2(0.5f, 0.5f));
+            CarArt.SliceSheet();
             SliceRow(EnvDir + "/Rabe_Flug.png", 18, 32, new Vector2(0.5f, 0.5f));
             SliceRow(EnvDir + "/Rabe_Sitzt.png", 14, 32, new Vector2(0.5f, 0f));
             SpriteImport(EnvDir + "/Baumstamm_Alt.png", 32, new Vector2(0.5f, 0f));
