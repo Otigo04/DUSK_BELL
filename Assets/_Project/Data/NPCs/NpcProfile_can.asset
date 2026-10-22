@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff74d651ccc7694eba92c4429695289, type: 3}
+  m_Name: NpcProfile_can
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.NpcProfile
+  id: can
+  displayName: Can
+  nameColor: {r: 0.9098039, g: 0.8784314, b: 0.9411765, a: 1}
+  gender: 0
+  romanceable: 0
+  startRelationship: 0
+  portraitIdle: {fileID: 21300000, guid: 91637a0476d60194291488703bd1a471, type: 3}
+  portraitTalk:
+  - {fileID: 21300000, guid: d086d84718fa91242a8262925e805e5d, type: 3}
+  - {fileID: 21300000, guid: a2a200c4c2df913419e23db363de912d, type: 3}
+  portraitBlink: {fileID: 21300000, guid: 7f17a3a9940b8c64e8f4ae6cec0ae5ec, type: 3}
+  talkFps: 10

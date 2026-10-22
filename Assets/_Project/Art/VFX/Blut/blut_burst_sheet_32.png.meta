@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 80669f91fe2bdeb4bb49f1c5dc1e58da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7164048192009851267
+    second: blut_burst_sheet_32_0
+  - first:
+      213: -1535070554696426045
+    second: blut_burst_sheet_32_1
+  - first:
+      213: 2056435949658896275
+    second: blut_burst_sheet_32_2
+  - first:
+      213: 5388598340545677318
+    second: blut_burst_sheet_32_3
+  - first:
+      213: 8458818331063121918
+    second: blut_burst_sheet_32_4
+  - first:
+      213: -1209761402043738413
+    second: blut_burst_sheet_32_5
+  - first:
+      213: -8357798341547808912
+    second: blut_burst_sheet_32_6
+  - first:
+      213: 8842986409605269418
+    second: blut_burst_sheet_32_7
+  - first:
+      213: -8340306563480344056
+    second: blut_burst_sheet_32_8
+  - first:
+      213: -3281301744618983240
+    second: blut_burst_sheet_32_9
+  - first:
+      213: -4194927872060396329
+    second: blut_burst_sheet_32_10
+  - first:
+      213: 3431797148927094107
+    second: blut_burst_sheet_32_11
+  - first:
+      213: 3796281046708942616
+    second: blut_burst_sheet_32_12
+  - first:
+      213: 8565601900544886860
+    second: blut_burst_sheet_32_13
+  - first:
+      213: -5147070642970692839
+    second: blut_burst_sheet_32_14
+  - first:
+      213: 8587471890810795742
+    second: blut_burst_sheet_32_15
+  - first:
+      213: 1962921455615922080
+    second: blut_burst_sheet_32_16
+  - first:
+      213: 272713859933061997
+    second: blut_burst_sheet_32_17
+  - first:
+      213: 3064604138325247141
+    second: blut_burst_sheet_32_18
+  - first:
+      213: -7925601361174224821
+    second: blut_burst_sheet_32_19
+  - first:
+      213: 8196781530954871401
+    second: blut_burst_sheet_32_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 42
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 381d686bfdfcb6360800000000000000
+      internalID: 7164048192009851267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 39
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd5822b67552bae0800000000000000
+      internalID: -1535070554696426045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 38
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397f2cac99de98c10800000000000000
+      internalID: 2056435949658896275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 37
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6080c7504a528ca40800000000000000
+      internalID: 5388598340545677318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 45
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef774929472c36570800000000000000
+      internalID: 8458818331063121918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_5
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 42
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d654381a60163fe0800000000000000
+      internalID: -1209761402043738413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 34
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077a1bb90b2230c80800000000000000
+      internalID: -8357798341547808912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 45
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa70122994998ba70800000000000000
+      internalID: 8842986409605269418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_8
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 40
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a25ed8e57414c80800000000000000
+      internalID: -8340306563480344056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_9
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 31
+        width: 49
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0bd17c2797672d0800000000000000
+      internalID: -3281301744618983240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_10
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 31
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc6477735f98c5c0800000000000000
+      internalID: -4194927872060396329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d6ff2135130af20800000000000000
+      internalID: 3431797148927094107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_12
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 8
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81772a89f791fa430800000000000000
+      internalID: 3796281046708942616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_13
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 8
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c488369cb812fd670800000000000000
+      internalID: 8565601900544886860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 9
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913f3e3458ee198b0800000000000000
+      internalID: -5147070642970692839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_15
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 8
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6fd62bf24dc2770800000000000000
+      internalID: 8587471890810795742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_16
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 6
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0afcaf3f9a2bd3b10800000000000000
+      internalID: 1962921455615922080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_17
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 13
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63c2aa8fcfd8c300800000000000000
+      internalID: 272713859933061997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_18
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 5
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a481121a39a78a20800000000000000
+      internalID: 3064604138325247141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_19
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 3
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40abdbbd8b920290800000000000000
+      internalID: -7925601361174224821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_burst_sheet_32_20
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 12
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9623c0ebf51d0c170800000000000000
+      internalID: 8196781530954871401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blut_burst_sheet_32_0: 7164048192009851267
+      blut_burst_sheet_32_1: -1535070554696426045
+      blut_burst_sheet_32_10: -4194927872060396329
+      blut_burst_sheet_32_11: 3431797148927094107
+      blut_burst_sheet_32_12: 3796281046708942616
+      blut_burst_sheet_32_13: 8565601900544886860
+      blut_burst_sheet_32_14: -5147070642970692839
+      blut_burst_sheet_32_15: 8587471890810795742
+      blut_burst_sheet_32_16: 1962921455615922080
+      blut_burst_sheet_32_17: 272713859933061997
+      blut_burst_sheet_32_18: 3064604138325247141
+      blut_burst_sheet_32_19: -7925601361174224821
+      blut_burst_sheet_32_2: 2056435949658896275
+      blut_burst_sheet_32_20: 8196781530954871401
+      blut_burst_sheet_32_3: 5388598340545677318
+      blut_burst_sheet_32_4: 8458818331063121918
+      blut_burst_sheet_32_5: -1209761402043738413
+      blut_burst_sheet_32_6: -8357798341547808912
+      blut_burst_sheet_32_7: 8842986409605269418
+      blut_burst_sheet_32_8: -8340306563480344056
+      blut_burst_sheet_32_9: -3281301744618983240
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

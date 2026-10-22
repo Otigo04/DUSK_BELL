@@ -146,6 +146,150 @@ TextureImporter:
   - first:
       213: -5885909237546271347
     second: doctor_veronica_idle_sheet_47
+  - first:
+      213: 9185688313311593637
+    second: doctor_veronica_idle_sheet_0_0
+  - first:
+      213: -4201432516858589819
+    second: doctor_veronica_idle_sheet_0_1
+  - first:
+      213: -3132546519906037271
+    second: doctor_veronica_idle_sheet_0_2
+  - first:
+      213: 4953293706407705652
+    second: doctor_veronica_idle_sheet_0_3
+  - first:
+      213: 4083490035423897304
+    second: doctor_veronica_idle_sheet_0_4
+  - first:
+      213: 8776221191303964195
+    second: doctor_veronica_idle_sheet_0_5
+  - first:
+      213: -2701460454879606994
+    second: doctor_veronica_idle_sheet_1_0
+  - first:
+      213: 4690558614600969572
+    second: doctor_veronica_idle_sheet_1_1
+  - first:
+      213: -5676827435400223255
+    second: doctor_veronica_idle_sheet_1_2
+  - first:
+      213: -7198182094354336773
+    second: doctor_veronica_idle_sheet_1_3
+  - first:
+      213: -7303006600838585233
+    second: doctor_veronica_idle_sheet_1_4
+  - first:
+      213: 1279532696488522168
+    second: doctor_veronica_idle_sheet_1_5
+  - first:
+      213: -7503130344541098658
+    second: doctor_veronica_idle_sheet_2_0
+  - first:
+      213: -5036451351778144503
+    second: doctor_veronica_idle_sheet_2_1
+  - first:
+      213: -4045100344882477494
+    second: doctor_veronica_idle_sheet_2_2
+  - first:
+      213: 2498036722728133057
+    second: doctor_veronica_idle_sheet_2_3
+  - first:
+      213: -9055888588551153993
+    second: doctor_veronica_idle_sheet_2_4
+  - first:
+      213: 4397990335325442744
+    second: doctor_veronica_idle_sheet_2_5
+  - first:
+      213: 8281724985094678730
+    second: doctor_veronica_idle_sheet_3_0
+  - first:
+      213: 2576618612396191477
+    second: doctor_veronica_idle_sheet_3_1
+  - first:
+      213: -3751446838990634892
+    second: doctor_veronica_idle_sheet_3_2
+  - first:
+      213: 1656055620660941867
+    second: doctor_veronica_idle_sheet_3_3
+  - first:
+      213: -4849678791633443337
+    second: doctor_veronica_idle_sheet_3_4
+  - first:
+      213: 7404183542440214652
+    second: doctor_veronica_idle_sheet_3_5
+  - first:
+      213: -3242613714636135256
+    second: doctor_veronica_idle_sheet_4_0
+  - first:
+      213: 1005630215714292795
+    second: doctor_veronica_idle_sheet_4_1
+  - first:
+      213: 2171668217837704283
+    second: doctor_veronica_idle_sheet_4_2
+  - first:
+      213: 5756043354207442909
+    second: doctor_veronica_idle_sheet_4_3
+  - first:
+      213: -330149742684064423
+    second: doctor_veronica_idle_sheet_4_4
+  - first:
+      213: -1834309534231187500
+    second: doctor_veronica_idle_sheet_4_5
+  - first:
+      213: 3502081569072032992
+    second: doctor_veronica_idle_sheet_5_0
+  - first:
+      213: 8262414809964164827
+    second: doctor_veronica_idle_sheet_5_1
+  - first:
+      213: 221131956420244468
+    second: doctor_veronica_idle_sheet_5_2
+  - first:
+      213: -5594895118726123190
+    second: doctor_veronica_idle_sheet_5_3
+  - first:
+      213: -8807225650878967813
+    second: doctor_veronica_idle_sheet_5_4
+  - first:
+      213: 5655246149071534794
+    second: doctor_veronica_idle_sheet_5_5
+  - first:
+      213: 7930963032992782714
+    second: doctor_veronica_idle_sheet_6_0
+  - first:
+      213: -6495299047352894542
+    second: doctor_veronica_idle_sheet_6_1
+  - first:
+      213: -5247263399041837082
+    second: doctor_veronica_idle_sheet_6_2
+  - first:
+      213: 6662055124154665117
+    second: doctor_veronica_idle_sheet_6_3
+  - first:
+      213: 4360475827651982931
+    second: doctor_veronica_idle_sheet_6_4
+  - first:
+      213: 8715654073672301988
+    second: doctor_veronica_idle_sheet_6_5
+  - first:
+      213: 8094680303034010873
+    second: doctor_veronica_idle_sheet_7_0
+  - first:
+      213: -4912539835306259605
+    second: doctor_veronica_idle_sheet_7_1
+  - first:
+      213: -3477899892847669637
+    second: doctor_veronica_idle_sheet_7_2
+  - first:
+      213: -4504214847093743863
+    second: doctor_veronica_idle_sheet_7_3
+  - first:
+      213: 1418492382004473667
+    second: doctor_veronica_idle_sheet_7_4
+  - first:
+      213: -1022355764448741758
+    second: doctor_veronica_idle_sheet_7_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -178,7 +322,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -192,7 +336,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -216,7 +360,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -241,1057 +385,1057 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_0
+      name: doctor_veronica_idle_sheet_0_0
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 392
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 104d7eb1b88708180800000000000000
-      internalID: -9115153106933918719
+      spriteID: 5a405646ade1a7f70800000000000000
+      internalID: 9185688313311593637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_1
+      name: doctor_veronica_idle_sheet_0_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 56
         y: 392
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 166c22ad74601ccd0800000000000000
-      internalID: -2539741809188092319
+      spriteID: 58d4ed4d26381b5c0800000000000000
+      internalID: -4201432516858589819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_2
+      name: doctor_veronica_idle_sheet_0_2
       rect:
         serializedVersion: 2
-        x: 130
+        x: 112
         y: 392
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aed0cb451d59575a0800000000000000
-      internalID: -6524143758873981462
+      spriteID: 9e15d9e7985f684d0800000000000000
+      internalID: -3132546519906037271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_3
+      name: doctor_veronica_idle_sheet_0_3
       rect:
         serializedVersion: 2
-        x: 186
+        x: 168
         y: 392
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2abe6cd65b659a80800000000000000
-      internalID: -8460738304136005073
+      spriteID: 43cfb9ed162adb440800000000000000
+      internalID: 4953293706407705652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_4
+      name: doctor_veronica_idle_sheet_0_4
       rect:
         serializedVersion: 2
-        x: 242
+        x: 224
         y: 392
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8115c0440569fc230800000000000000
-      internalID: 3661310293558710552
+      spriteID: 8d6e94d4d887ba830800000000000000
+      internalID: 4083490035423897304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_5
+      name: doctor_veronica_idle_sheet_0_5
       rect:
         serializedVersion: 2
-        x: 298
+        x: 280
         y: 392
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c39a703969e8882a0800000000000000
-      internalID: -6734976465369585348
+      spriteID: 326ade1dca66bc970800000000000000
+      internalID: 8776221191303964195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_6
+      name: doctor_veronica_idle_sheet_1_0
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 336
-        width: 19
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12e4075f86d7280f0800000000000000
-      internalID: -1116191867886612959
+      spriteID: e27c22c770c728ad0800000000000000
+      internalID: -2701460454879606994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_7
+      name: doctor_veronica_idle_sheet_1_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 56
         y: 336
-        width: 19
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 560b0bcbecb72f720800000000000000
-      internalID: 2878499239702343781
+      spriteID: 46d60755536381140800000000000000
+      internalID: 4690558614600969572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_8
+      name: doctor_veronica_idle_sheet_1_2
       rect:
         serializedVersion: 2
-        x: 130
+        x: 112
         y: 336
-        width: 19
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 150b8bf96ed31de50800000000000000
-      internalID: 6832310170429206609
+      spriteID: 9e527cd468bd731b0800000000000000
+      internalID: -5676827435400223255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_9
+      name: doctor_veronica_idle_sheet_1_3
       rect:
         serializedVersion: 2
-        x: 186
+        x: 168
         y: 336
-        width: 19
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 014f541aa358946a0800000000000000
-      internalID: -6464489303253322736
+      spriteID: bf3be65d58bea1c90800000000000000
+      internalID: -7198182094354336773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_10
+      name: doctor_veronica_idle_sheet_1_4
       rect:
         serializedVersion: 2
-        x: 242
+        x: 224
         y: 336
-        width: 19
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a961735e115550fe0800000000000000
-      internalID: -1223478188412823910
+      spriteID: f64eea4803286aa90800000000000000
+      internalID: -7303006600838585233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_11
+      name: doctor_veronica_idle_sheet_1_5
       rect:
         serializedVersion: 2
-        x: 298
+        x: 280
         y: 336
-        width: 19
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67e5dd844500f5d50800000000000000
-      internalID: 6728096730314530422
+      spriteID: 8b132bc4530d1c110800000000000000
+      internalID: 1279532696488522168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_12
+      name: doctor_veronica_idle_sheet_2_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 280
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51d0ddfddf19ed320800000000000000
-      internalID: 2584663755725802773
+      spriteID: e5d6c2674b68fd790800000000000000
+      internalID: -7503130344541098658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_13
+      name: doctor_veronica_idle_sheet_2_1
       rect:
         serializedVersion: 2
-        x: 76
+        x: 56
         y: 280
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd1880f6d6937fbd0800000000000000
-      internalID: -2596543517978754595
+      spriteID: 90f4ab80e2eea1ab0800000000000000
+      internalID: -5036451351778144503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_14
+      name: doctor_veronica_idle_sheet_2_2
       rect:
         serializedVersion: 2
-        x: 132
+        x: 112
         y: 280
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81849437bc772da60800000000000000
-      internalID: 7697346428825847832
+      spriteID: a46487e0baaecd7c0800000000000000
+      internalID: -4045100344882477494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_15
+      name: doctor_veronica_idle_sheet_2_3
       rect:
         serializedVersion: 2
-        x: 188
+        x: 168
         y: 280
-        width: 16
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14a8da0e9e02a0fb0800000000000000
-      internalID: -4680892673829270975
+      spriteID: 1c167160a2fcaa220800000000000000
+      internalID: 2498036722728133057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_16
+      name: doctor_veronica_idle_sheet_2_4
       rect:
         serializedVersion: 2
-        x: 244
+        x: 224
         y: 280
-        width: 16
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 160192d716032c8a0800000000000000
-      internalID: -6286408934585986975
+      spriteID: 7b615e11f45035280800000000000000
+      internalID: -9055888588551153993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_17
+      name: doctor_veronica_idle_sheet_2_5
       rect:
         serializedVersion: 2
-        x: 300
+        x: 280
         y: 280
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6efdf6da8c582d7f0800000000000000
-      internalID: -589261504282370074
+      spriteID: 8b29cae88ecc80d30800000000000000
+      internalID: 4397990335325442744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_18
+      name: doctor_veronica_idle_sheet_3_0
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 224
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4e3cff5380d9dbe0800000000000000
-      internalID: -1451900142180614581
+      spriteID: ac8ab08def89ee270800000000000000
+      internalID: 8281724985094678730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_19
+      name: doctor_veronica_idle_sheet_3_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 56
         y: 224
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38d985ab537d48120800000000000000
-      internalID: 2415291925937036675
+      spriteID: 5fee889f9fcf1c320800000000000000
+      internalID: 2576618612396191477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_20
+      name: doctor_veronica_idle_sheet_3_2
       rect:
         serializedVersion: 2
-        x: 130
+        x: 112
         y: 224
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 772ebe0bbd2519f70800000000000000
-      internalID: 9192219417959457399
+      spriteID: 4708338d9fe20fbc0800000000000000
+      internalID: -3751446838990634892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_21
+      name: doctor_veronica_idle_sheet_3_3
       rect:
         serializedVersion: 2
-        x: 186
+        x: 168
         y: 224
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d6c1c37011b374b0800000000000000
-      internalID: -5443812840341125417
+      spriteID: b24d8c510dd7bf610800000000000000
+      internalID: 1656055620660941867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_22
+      name: doctor_veronica_idle_sheet_3_4
       rect:
         serializedVersion: 2
-        x: 242
+        x: 224
         y: 224
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1765749a11c4b670800000000000000
-      internalID: 8553673912187447070
+      spriteID: 7f561fd65da72bcb0800000000000000
+      internalID: -4849678791633443337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_23
+      name: doctor_veronica_idle_sheet_3_5
       rect:
         serializedVersion: 2
-        x: 298
+        x: 280
         y: 224
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a58e66c0d191eb590800000000000000
-      internalID: -7656654703930447782
+      spriteID: c7041fae3b1f0c660800000000000000
+      internalID: 7404183542440214652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_24
+      name: doctor_veronica_idle_sheet_4_0
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 168
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f7e37eebf9e08f40800000000000000
-      internalID: 5728835994261907443
+      spriteID: 8a4ad43b10ceff2d0800000000000000
+      internalID: -3242613714636135256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_25
+      name: doctor_veronica_idle_sheet_4_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 56
         y: 168
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57034e9bc678f8cd0800000000000000
-      internalID: -2553673562650824587
+      spriteID: b34cc076a57b4fd00800000000000000
+      internalID: 1005630215714292795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_26
+      name: doctor_veronica_idle_sheet_4_2
       rect:
         serializedVersion: 2
-        x: 130
+        x: 112
         y: 168
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bfccf6318ad026b0800000000000000
-      internalID: -5323014511043752011
+      spriteID: b54d836fcb0532e10800000000000000
+      internalID: 2171668217837704283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_27
+      name: doctor_veronica_idle_sheet_4_3
       rect:
         serializedVersion: 2
-        x: 186
+        x: 168
         y: 168
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8699a23d98a7fd8a0800000000000000
-      internalID: -6278164623159289496
+      spriteID: dd7584f0fe291ef40800000000000000
+      internalID: 5756043354207442909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_28
+      name: doctor_veronica_idle_sheet_4_4
       rect:
         serializedVersion: 2
-        x: 242
+        x: 224
         y: 168
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f38486ac024271a70800000000000000
-      internalID: 8797540120344938559
+      spriteID: 95531a8ee821b6bf0800000000000000
+      internalID: -330149742684064423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_29
+      name: doctor_veronica_idle_sheet_4_5
       rect:
         serializedVersion: 2
-        x: 298
+        x: 280
         y: 168
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97b2083f2d0030ba0800000000000000
-      internalID: -6124050162265347207
+      spriteID: 4dfa90c72393b86e0800000000000000
+      internalID: -1834309534231187500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_30
+      name: doctor_veronica_idle_sheet_5_0
       rect:
         serializedVersion: 2
-        x: 18
+        x: 0
         y: 112
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c81ef4f1d2d203c0800000000000000
-      internalID: -4394718487159891771
+      spriteID: 0ec2bfad1a4e99030800000000000000
+      internalID: 3502081569072032992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_31
+      name: doctor_veronica_idle_sheet_5_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 56
         y: 112
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0fa50409e6028a140800000000000000
-      internalID: 4731067067791334128
+      spriteID: bd637d65e7ef9a270800000000000000
+      internalID: 8262414809964164827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_32
+      name: doctor_veronica_idle_sheet_5_2
       rect:
         serializedVersion: 2
-        x: 130
+        x: 112
         y: 112
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 781d02d85a629acc0800000000000000
-      internalID: -3699383126428954233
+      spriteID: 4f37aeeb75e911300800000000000000
+      internalID: 221131956420244468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_33
+      name: doctor_veronica_idle_sheet_5_3
       rect:
         serializedVersion: 2
-        x: 186
+        x: 168
         y: 112
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 949a08c7eff46e0a0800000000000000
-      internalID: -6852701828568536759
+      spriteID: a4133c45880fa52b0800000000000000
+      internalID: -5594895118726123190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_34
+      name: doctor_veronica_idle_sheet_5_4
       rect:
         serializedVersion: 2
-        x: 242
+        x: 224
         y: 112
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54e1d4e34fd8f7db0800000000000000
-      internalID: -4791955398342140347
+      spriteID: bff86a6eee276c580800000000000000
+      internalID: -8807225650878967813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_35
+      name: doctor_veronica_idle_sheet_5_5
       rect:
         serializedVersion: 2
-        x: 298
+        x: 280
         y: 112
-        width: 20
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb3a00f47f3439860800000000000000
-      internalID: 7535441330982396860
+      spriteID: acafdc8e8687b7e40800000000000000
+      internalID: 5655246149071534794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_36
+      name: doctor_veronica_idle_sheet_6_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 56
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: edfc9ab65c46ecf80800000000000000
-      internalID: -8084413482005835810
+      spriteID: a791a44cbd0701e60800000000000000
+      internalID: 7930963032992782714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_37
+      name: doctor_veronica_idle_sheet_6_1
       rect:
         serializedVersion: 2
-        x: 76
+        x: 56
         y: 56
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 350058e122c740e20800000000000000
-      internalID: 3315911711634292819
+      spriteID: 2bbf8941eef0cd5a0800000000000000
+      internalID: -6495299047352894542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_38
+      name: doctor_veronica_idle_sheet_6_2
       rect:
         serializedVersion: 2
-        x: 132
+        x: 112
         y: 56
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91bc5bb1b77ea2090800000000000000
-      internalID: -8058374067294188775
+      spriteID: 6e7d3316db9fd27b0800000000000000
+      internalID: -5247263399041837082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_39
+      name: doctor_veronica_idle_sheet_6_3
       rect:
         serializedVersion: 2
-        x: 188
+        x: 168
         y: 56
-        width: 16
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18c76849f778a88a0800000000000000
-      internalID: -6302075746529149823
+      spriteID: d984f4d96df547c50800000000000000
+      internalID: 6662055124154665117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_40
+      name: doctor_veronica_idle_sheet_6_4
       rect:
         serializedVersion: 2
-        x: 244
+        x: 224
         y: 56
-        width: 16
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4a9f748fa46cbd60800000000000000
-      internalID: 7907305750760757839
+      spriteID: 356bfd699a5838c30800000000000000
+      internalID: 4360475827651982931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_41
+      name: doctor_veronica_idle_sheet_6_5
       rect:
         serializedVersion: 2
-        x: 300
+        x: 280
         y: 56
-        width: 16
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 362fa4debec124310800000000000000
-      internalID: 1387703434807538275
+      spriteID: 4ad7c66d33934f870800000000000000
+      internalID: 8715654073672301988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_42
+      name: doctor_veronica_idle_sheet_7_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 0
         y: 0
-        width: 19
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f24b5599264ba2b90800000000000000
-      internalID: -7265796713236548561
+      spriteID: 9fc81b029d4165070800000000000000
+      internalID: 8094680303034010873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_43
+      name: doctor_veronica_idle_sheet_7_1
       rect:
         serializedVersion: 2
-        x: 75
+        x: 56
         y: 0
-        width: 19
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9cda9a93fbb5cf660800000000000000
-      internalID: 7420907162864037321
+      spriteID: b6b4d9b2c0723dbb0800000000000000
+      internalID: -4912539835306259605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_44
+      name: doctor_veronica_idle_sheet_7_2
       rect:
         serializedVersion: 2
-        x: 131
+        x: 112
         y: 0
-        width: 19
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22e3c447ed91b9320800000000000000
-      internalID: 2565672855942217250
+      spriteID: b7e027269740cbfc0800000000000000
+      internalID: -3477899892847669637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_45
+      name: doctor_veronica_idle_sheet_7_3
       rect:
         serializedVersion: 2
-        x: 187
+        x: 168
         y: 0
-        width: 19
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3b4e5a286f35bc10800000000000000
-      internalID: 2068629320466582335
+      spriteID: 90fdfeef570dd71c0800000000000000
+      internalID: -4504214847093743863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_46
+      name: doctor_veronica_idle_sheet_7_4
       rect:
         serializedVersion: 2
-        x: 243
+        x: 224
         y: 0
-        width: 19
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49c0d756349f3eb30800000000000000
-      internalID: 4315566935811886228
+      spriteID: 34f69f15e4f7fa310800000000000000
+      internalID: 1418492382004473667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doctor_veronica_idle_sheet_47
+      name: doctor_veronica_idle_sheet_7_5
       rect:
         serializedVersion: 2
-        x: 299
+        x: 280
         y: 0
-        width: 19
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8d3ddbbbbc015ea0800000000000000
-      internalID: -5885909237546271347
+      spriteID: 286b5f159dcdfc1f0800000000000000
+      internalID: -1022355764448741758
       vertices: []
       indices: 
       edges: []
@@ -1311,6 +1455,12 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       doctor_veronica_idle_sheet_0: -9115153106933918719
+      doctor_veronica_idle_sheet_0_0: 9185688313311593637
+      doctor_veronica_idle_sheet_0_1: -4201432516858589819
+      doctor_veronica_idle_sheet_0_2: -3132546519906037271
+      doctor_veronica_idle_sheet_0_3: 4953293706407705652
+      doctor_veronica_idle_sheet_0_4: 4083490035423897304
+      doctor_veronica_idle_sheet_0_5: 8776221191303964195
       doctor_veronica_idle_sheet_1: -2539741809188092319
       doctor_veronica_idle_sheet_10: -1223478188412823910
       doctor_veronica_idle_sheet_11: 6728096730314530422
@@ -1322,6 +1472,12 @@ TextureImporter:
       doctor_veronica_idle_sheet_17: -589261504282370074
       doctor_veronica_idle_sheet_18: -1451900142180614581
       doctor_veronica_idle_sheet_19: 2415291925937036675
+      doctor_veronica_idle_sheet_1_0: -2701460454879606994
+      doctor_veronica_idle_sheet_1_1: 4690558614600969572
+      doctor_veronica_idle_sheet_1_2: -5676827435400223255
+      doctor_veronica_idle_sheet_1_3: -7198182094354336773
+      doctor_veronica_idle_sheet_1_4: -7303006600838585233
+      doctor_veronica_idle_sheet_1_5: 1279532696488522168
       doctor_veronica_idle_sheet_2: -6524143758873981462
       doctor_veronica_idle_sheet_20: 9192219417959457399
       doctor_veronica_idle_sheet_21: -5443812840341125417
@@ -1333,6 +1489,12 @@ TextureImporter:
       doctor_veronica_idle_sheet_27: -6278164623159289496
       doctor_veronica_idle_sheet_28: 8797540120344938559
       doctor_veronica_idle_sheet_29: -6124050162265347207
+      doctor_veronica_idle_sheet_2_0: -7503130344541098658
+      doctor_veronica_idle_sheet_2_1: -5036451351778144503
+      doctor_veronica_idle_sheet_2_2: -4045100344882477494
+      doctor_veronica_idle_sheet_2_3: 2498036722728133057
+      doctor_veronica_idle_sheet_2_4: -9055888588551153993
+      doctor_veronica_idle_sheet_2_5: 4397990335325442744
       doctor_veronica_idle_sheet_3: -8460738304136005073
       doctor_veronica_idle_sheet_30: -4394718487159891771
       doctor_veronica_idle_sheet_31: 4731067067791334128
@@ -1344,6 +1506,12 @@ TextureImporter:
       doctor_veronica_idle_sheet_37: 3315911711634292819
       doctor_veronica_idle_sheet_38: -8058374067294188775
       doctor_veronica_idle_sheet_39: -6302075746529149823
+      doctor_veronica_idle_sheet_3_0: 8281724985094678730
+      doctor_veronica_idle_sheet_3_1: 2576618612396191477
+      doctor_veronica_idle_sheet_3_2: -3751446838990634892
+      doctor_veronica_idle_sheet_3_3: 1656055620660941867
+      doctor_veronica_idle_sheet_3_4: -4849678791633443337
+      doctor_veronica_idle_sheet_3_5: 7404183542440214652
       doctor_veronica_idle_sheet_4: 3661310293558710552
       doctor_veronica_idle_sheet_40: 7907305750760757839
       doctor_veronica_idle_sheet_41: 1387703434807538275
@@ -1353,9 +1521,33 @@ TextureImporter:
       doctor_veronica_idle_sheet_45: 2068629320466582335
       doctor_veronica_idle_sheet_46: 4315566935811886228
       doctor_veronica_idle_sheet_47: -5885909237546271347
+      doctor_veronica_idle_sheet_4_0: -3242613714636135256
+      doctor_veronica_idle_sheet_4_1: 1005630215714292795
+      doctor_veronica_idle_sheet_4_2: 2171668217837704283
+      doctor_veronica_idle_sheet_4_3: 5756043354207442909
+      doctor_veronica_idle_sheet_4_4: -330149742684064423
+      doctor_veronica_idle_sheet_4_5: -1834309534231187500
       doctor_veronica_idle_sheet_5: -6734976465369585348
+      doctor_veronica_idle_sheet_5_0: 3502081569072032992
+      doctor_veronica_idle_sheet_5_1: 8262414809964164827
+      doctor_veronica_idle_sheet_5_2: 221131956420244468
+      doctor_veronica_idle_sheet_5_3: -5594895118726123190
+      doctor_veronica_idle_sheet_5_4: -8807225650878967813
+      doctor_veronica_idle_sheet_5_5: 5655246149071534794
       doctor_veronica_idle_sheet_6: -1116191867886612959
+      doctor_veronica_idle_sheet_6_0: 7930963032992782714
+      doctor_veronica_idle_sheet_6_1: -6495299047352894542
+      doctor_veronica_idle_sheet_6_2: -5247263399041837082
+      doctor_veronica_idle_sheet_6_3: 6662055124154665117
+      doctor_veronica_idle_sheet_6_4: 4360475827651982931
+      doctor_veronica_idle_sheet_6_5: 8715654073672301988
       doctor_veronica_idle_sheet_7: 2878499239702343781
+      doctor_veronica_idle_sheet_7_0: 8094680303034010873
+      doctor_veronica_idle_sheet_7_1: -4912539835306259605
+      doctor_veronica_idle_sheet_7_2: -3477899892847669637
+      doctor_veronica_idle_sheet_7_3: -4504214847093743863
+      doctor_veronica_idle_sheet_7_4: 1418492382004473667
+      doctor_veronica_idle_sheet_7_5: -1022355764448741758
       doctor_veronica_idle_sheet_8: 6832310170429206609
       doctor_veronica_idle_sheet_9: -6464489303253322736
   mipmapLimitGroupName: 

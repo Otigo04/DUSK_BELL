@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff74d651ccc7694eba92c4429695289, type: 3}
+  m_Name: NpcProfile_veronica
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.NpcProfile
+  id: veronica
+  displayName: Doctor Veronica
+  nameColor: {r: 0.72156864, g: 0.6039216, b: 0.44705883, a: 1}
+  gender: 1
+  romanceable: 0
+  startRelationship: 2
+  portraitIdle: {fileID: 21300000, guid: 2ddb884e103bcee4db78acd0bbdc930b, type: 3}
+  portraitTalk:
+  - {fileID: 21300000, guid: be17808bcaa01f14186e0f99141f6316, type: 3}
+  - {fileID: 21300000, guid: bb665da82fdeb83489efab59ed70f710, type: 3}
+  portraitBlink: {fileID: 21300000, guid: 9b483024c0a5f8c489df3866f12a19d8, type: 3}
+  talkFps: 10

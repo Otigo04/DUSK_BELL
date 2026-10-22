@@ -144,10 +144,7 @@ namespace Nightward.EditorTools
             var prefab = MakePrefab("NPC_Veronica_Doctor", ctrl, null, profile, VeronicaDialogs(), 1.5f, false);
             AssetDatabase.SaveAssets();
 
-            var player = GameObject.Find("Player");
-            Vector3 origin = player != null ? player.transform.position : Vector3.zero;
-            Place(prefab, origin + new Vector3(11f, 0f, 0f));
-            EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+            PlaceTest(prefab, 11f);
             Debug.Log("[NPCs] Doctor Veronica gebaut und platziert.");
         }
 
@@ -211,10 +208,7 @@ namespace Nightward.EditorTools
             var prefab = MakePrefab("NPC_Mara_Baker", ctrl, null, profile, MaraDialogs(), 1.5f, false);
             AssetDatabase.SaveAssets();
 
-            var player = GameObject.Find("Player");
-            Vector3 origin = player != null ? player.transform.position : Vector3.zero;
-            Place(prefab, origin + new Vector3(13f, 0f, 0f));
-            EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+            PlaceTest(prefab, 13f);
             Debug.Log("[NPCs] Baker Mara gebaut und platziert.");
         }
 
@@ -280,10 +274,7 @@ namespace Nightward.EditorTools
             var prefab = MakePrefab("NPC_David_Pastor", ctrl, null, profile, PastorDialogs(), 1.5f, false);
             AssetDatabase.SaveAssets();
 
-            var player = GameObject.Find("Player");
-            Vector3 origin = player != null ? player.transform.position : Vector3.zero;
-            Place(prefab, origin + new Vector3(15f, 0f, 0f));
-            EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
+            PlaceTest(prefab, 15f);
             Debug.Log("[NPCs] Pastor David gebaut und platziert.");
         }
 
@@ -312,6 +303,158 @@ namespace Nightward.EditorTools
                 new DialogueEntry { dialogue = kennen, onlyOnce = true },
                 new DialogueEntry { dialogue = alltag },
             };
+        }
+
+
+        // ------------------------------------------------------------------ Dorfbewohner (alle bestehenden Figuren fuer Level_01)
+        /// <summary>true = die Einzel-Builder stellen keine Testinstanz neben den Spieler (das Dorf platziert die Figuren selbst).</summary>
+        static bool skipPlacement;
+
+        /// <summary>
+        /// Baut alle Dorfbewohner, die noch kein Prefab haben bzw. neu gebaut werden sollen (Veronica, Mara, David, Can, Elenora),
+        /// ohne Testplatzierung. Ilhan und Bulut stammen aus BuildAll und werden hier nicht angefasst.
+        /// </summary>
+        [MenuItem("Nightward/NPCs/Alle Dorfbewohner bauen (ohne Platzierung)")]
+        public static void BuildVillagers()
+        {
+            skipPlacement = true;
+            try
+            {
+                BuildVeronica();
+                BuildMara();
+                BuildPastor();
+                BuildCan();
+                BuildElenora();
+            }
+            finally { skipPlacement = false; }
+            Debug.Log("[NPCs] Dorfbewohner gebaut (Veronica, Mara, David, Can, Elenora).");
+        }
+
+        /// <summary>
+        /// Can einzeln bauen: Controller mit idle/walk/run/feed (Monster fuettern) in 8 Richtungen, Profil, Dialoge, Prefab.
+        /// </summary>
+        [MenuItem("Nightward/NPCs/Can bauen und platzieren")]
+        public static void BuildCan()
+        {
+            AssetDatabase.Refresh();
+            EnsureFolder("Assets/_Project/Art", "Animations");
+            EnsureFolder(DataDir, "NPCs");
+            EnsureFolder(DataDir, "Dialoge");
+
+            const string anim = "CAN/ANIMATIONS_8DIR/can_";
+            var ctrl = Controller("Can", new[]
+            {
+                new Clip("idle", anim + "idle_sheet.png", 56, 6, true),
+                new Clip("walk", anim + "walk_sheet.png", 56, 10, true),
+                new Clip("run", anim + "run_sheet.png", 56, 14, true),
+                new Clip("feed", anim + "feed_sheet.png", 56, 8, true),
+            });
+
+            const string por = "CAN/portraits/can_";
+            var profile = Profile("can", "Can", "#e8e0f0", por + "calm.png",
+                new[] { por + "talk_A.png", por + "talk_O.png" });
+            profile.gender = NpcGender.Maennlich;
+            profile.startRelationship = 0;
+            profile.portraitBlink = Portrait(por + "blink.png");
+            foreach (var expr in new[] { "compassionate", "scared", "determined", "talk_E" }) Portrait(por + expr + ".png");
+            EditorUtility.SetDirty(profile);
+
+            var prefab = MakePrefab("NPC_Can", ctrl, null, profile, CanDialogs(), 1.5f, false);
+            AssetDatabase.SaveAssets();
+            PlaceTest(prefab, 17f);
+            Debug.Log("[NPCs] Can gebaut.");
+        }
+
+        static List<DialogueEntry> CanDialogs()
+        {
+            // Nach der NPC-Doku: wortkarg bei Menschen, zerstreut, glaubt, dass die Monster ihn moegen. Kernzeile: "Sie haben dich auch gesehen, nicht wahr?"
+            var kennen = Dialog("Can", "Dialog_Can_Kennenlernen",
+                N("start", Speaker.Npc, "Sie haben dich auch gesehen, nicht wahr?", null, 0, "can_kennengelernt",
+                    C("Wer hat mich gesehen?", "wer"),
+                    C("Was machst du am Waldrand?", "wald"),
+                    C("Ich muss weiter.", "weiter")),
+                N("wer", Speaker.Npc, "Die da draußen. Sie sind nicht so, wie alle sagen. ... Vergiss es. Du wirst es verstehen."),
+                N("wald", Speaker.Npc, "Nichts. Ich bringe ihnen nur etwas Brot. Sag es nicht dem Sheriff.", null, 0, "can_fuettert"),
+                N("weiter", Speaker.Npc, "Ja. Geh. Vor der Glocke bist du besser drinnen."));
+            var alltag = Dialog("Can", "Dialog_Can_Alltag",
+                N("start", Speaker.Npc, "Hm? Ach, du.", null, 0, null,
+                    C("Alles in Ordnung?", "ok", 1),
+                    C("Bis später.", "tschuess")),
+                N("ok", Speaker.Npc, "Ja. Ich war nur in Gedanken. Sie mögen mich, weißt du. Wirklich."),
+                N("tschuess", Speaker.Npc, "Bis später."));
+            return new List<DialogueEntry>
+            {
+                new DialogueEntry { dialogue = kennen, onlyOnce = true },
+                new DialogueEntry { dialogue = alltag },
+            };
+        }
+
+        /// <summary>
+        /// Madame Elenora einzeln bauen: Controller mit idle/walk/run/invite (Einladung) in 8 Richtungen, Profil (-2 Startbeziehung), Dialoge, Prefab.
+        /// </summary>
+        [MenuItem("Nightward/NPCs/Madame Elenora bauen und platzieren")]
+        public static void BuildElenora()
+        {
+            AssetDatabase.Refresh();
+            EnsureFolder("Assets/_Project/Art", "Animations");
+            EnsureFolder(DataDir, "NPCs");
+            EnsureFolder(DataDir, "Dialoge");
+
+            const string anim = "MADAME ELENORA/ANIMATIONS_8DIR/madame_elenora_";
+            var ctrl = Controller("Elenora", new[]
+            {
+                new Clip("idle", anim + "idle_sheet.png", 56, 6, true),
+                new Clip("walk", anim + "walk_sheet.png", 56, 10, true),
+                new Clip("run", anim + "run_sheet.png", 56, 14, true),
+                new Clip("invite", anim + "invite_sheet.png", 56, 8, false),
+            });
+
+            const string por = "MADAME ELENORA/portraits/elenora_";
+            var profile = Profile("elenora", "Madame Elenora", "#c4636b", por + "calm.png",
+                new[] { por + "talk_A.png", por + "talk_O.png" });
+            profile.gender = NpcGender.Weiblich;
+            profile.startRelationship = -2;
+            profile.portraitBlink = Portrait(por + "blink.png");
+            foreach (var expr in new[] { "cold", "fake_smile", "talk_E" }) Portrait(por + expr + ".png");
+            EditorUtility.SetDirty(profile);
+
+            var prefab = MakePrefab("NPC_Elenora", ctrl, null, profile, ElenoraDialogs(), 1.2f, false);
+            AssetDatabase.SaveAssets();
+            PlaceTest(prefab, 19f);
+            Debug.Log("[NPCs] Madame Elenora gebaut.");
+        }
+
+        static List<DialogueEntry> ElenoraDialogs()
+        {
+            // Nach der NPC-Doku: hoeflich und eisig, zeigt nie die Zaehne. Kernzeilen sind dort offen.
+            var kennen = Dialog("Elenora", "Dialog_Elenora_Kennenlernen",
+                N("start", Speaker.Npc, "Ah. Der Neuzugang. Man hat mir von Ihnen erzählt. Mein Name ist Elenora. Die Villa liegt am Ende der Straße. Ich erwarte Sie dort, wenn es Ihnen recht ist.", null, 0, "elenora_kennengelernt",
+                    C("Ich komme vielleicht vorbei.", "vielleicht"),
+                    C("Wer sind Sie?", "wer"),
+                    C("Kein Interesse.", "nein", -1)),
+                N("vielleicht", Speaker.Npc, "Wie überaus freundlich. Ich lasse Tee bereitstellen."),
+                N("wer", Speaker.Npc, "Eine Anwältin, früher. Jetzt die Hausherrin. Ordnung ist das Einzige, was in diesem Dorf Bestand hat."),
+                N("nein", Speaker.Npc, "Wie Sie wünschen. Man überlegt es sich meist anders."));
+            var alltag = Dialog("Elenora", "Dialog_Elenora_Alltag",
+                N("start", Speaker.Npc, "Guten Tag. Was führt Sie zu mir?", null, 0, null,
+                    C("Nur ein Gruß.", "gruss"),
+                    C("Nichts. Auf Wiedersehen.", "tschuess")),
+                N("gruss", Speaker.Npc, "Wie reizend. Bleiben Sie nicht zu lange im Freien."),
+                N("tschuess", Speaker.Npc, "Auf Wiedersehen."));
+            return new List<DialogueEntry>
+            {
+                new DialogueEntry { dialogue = kennen, onlyOnce = true },
+                new DialogueEntry { dialogue = alltag },
+            };
+        }
+
+        static void PlaceTest(GameObject prefab, float dx)
+        {
+            if (skipPlacement) return;
+            var player = GameObject.Find("Player");
+            Vector3 origin = player != null ? player.transform.position : Vector3.zero;
+            Place(prefab, origin + new Vector3(dx, 0f, 0f));
+            EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
         }
 
         // ------------------------------------------------------------------ Sprites und Animation

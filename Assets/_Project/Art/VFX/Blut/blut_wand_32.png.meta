@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 82f21407ad68c3743b06ff63bcb270cf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6966711187764601313
+    second: blut_wand_32_0
+  - first:
+      213: -7493246203312063195
+    second: blut_wand_32_1
+  - first:
+      213: 7286393413254716295
+    second: blut_wand_32_2
+  - first:
+      213: 6937314623530240105
+    second: blut_wand_32_3
+  - first:
+      213: -5157778657419128008
+    second: blut_wand_32_4
+  - first:
+      213: -2873641506947231625
+    second: blut_wand_32_5
+  - first:
+      213: 135957726019048193
+    second: blut_wand_32_6
+  - first:
+      213: -6799354713985529856
+    second: blut_wand_32_7
+  - first:
+      213: -83248246870348212
+    second: blut_wand_32_8
+  - first:
+      213: -1895378374544705648
+    second: blut_wand_32_9
+  - first:
+      213: -5737533810560470018
+    second: blut_wand_32_10
+  - first:
+      213: 3129944551530909263
+    second: blut_wand_32_11
+  - first:
+      213: -3654330026568694339
+    second: blut_wand_32_12
+  - first:
+      213: -6195767219342896893
+    second: blut_wand_32_13
+  - first:
+      213: -9111112742655826143
+    second: blut_wand_32_14
+  - first:
+      213: -303509473481521390
+    second: blut_wand_32_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blut_wand_32_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 129
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1e27ff9eabea060800000000000000
+      internalID: 6966711187764601313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 63
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d3a0d6744a20890800000000000000
+      internalID: -7493246203312063195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 93
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b1bc254387e1560800000000000000
+      internalID: 7286393413254716295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 93
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96884a605ea464060800000000000000
+      internalID: 6937314623530240105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 63
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833117e53a3eb68b0800000000000000
+      internalID: -5157778657419128008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 31
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770979e4646ce18d0800000000000000
+      internalID: -2873641506947231625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 31
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103d5dbd4d403e100800000000000000
+      internalID: 135957726019048193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 31
+        width: 7
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008c30389e6d3a1a0800000000000000
+      internalID: -6799354713985529856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 4
+        width: 13
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e6e19192e38def0800000000000000
+      internalID: -83248246870348212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_9
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 31
+        width: 7
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0973e46196342b5e0800000000000000
+      internalID: -1895378374544705648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_10
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2
+        width: 13
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef3ffb6e56f2060b0800000000000000
+      internalID: -5737533810560470018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 4
+        width: 17
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e4ba88cfbcf6b20800000000000000
+      internalID: 3129944551530909263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_12
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 39
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5445ac336394dc0800000000000000
+      internalID: -3654330026568694339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_13
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 38
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3019e046a86340aa0800000000000000
+      internalID: -6195767219342896893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127e679bb33de8180800000000000000
+      internalID: -9111112742655826143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_wand_32_15
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 65
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2170b2fedb7b9cbf0800000000000000
+      internalID: -303509473481521390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blut_wand_32_0: 6966711187764601313
+      blut_wand_32_1: -7493246203312063195
+      blut_wand_32_10: -5737533810560470018
+      blut_wand_32_11: 3129944551530909263
+      blut_wand_32_12: -3654330026568694339
+      blut_wand_32_13: -6195767219342896893
+      blut_wand_32_14: -9111112742655826143
+      blut_wand_32_15: -303509473481521390
+      blut_wand_32_2: 7286393413254716295
+      blut_wand_32_3: 6937314623530240105
+      blut_wand_32_4: -5157778657419128008
+      blut_wand_32_5: -2873641506947231625
+      blut_wand_32_6: 135957726019048193
+      blut_wand_32_7: -6799354713985529856
+      blut_wand_32_8: -83248246870348212
+      blut_wand_32_9: -1895378374544705648
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

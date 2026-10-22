@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_Veronica_Kennenlernen
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: "Du bist neu hier. Komm, setz dich kurz. Hast du dich verletzt? Sch\xFCrfwunde,
+      Kopfschmerz, Schock: Ich behandle, was man mir zeigt."
+    relationship: 0
+    setFlag: veronica_kennengelernt
+    noFarewell: 0
+    next: 
+    choices:
+    - text: Mir geht es gut, danke.
+      next: gut
+      relationship: 1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: "Was ist das f\xFCr ein Schl\xFCsselbund?"
+      next: schluessel
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Wie lange sind Sie schon hier?
+      next: lange
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: gut
+    speaker: 0
+    text: Das sagen alle in der ersten Nacht. Trink genug, ruh dich aus, solange
+      es still ist. Und komm zu mir, bevor aus einem Kratzer etwas Ernstes wird.
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []
+  - id: schluessel
+    speaker: 0
+    text: "Die Praxis und der Medikamentenschrank. Beides \xF6ffnet nur dieser Bund.
+      Ich trage ihn Tag und Nacht."
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []
+  - id: lange
+    speaker: 0
+    text: "Acht Jahre. So lange wie der Sheriff. Man gew\xF6hnt sich nicht daran,
+      aber man lernt, ruhig zu bleiben. Das ist die beste Medizin, die ich habe."
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []

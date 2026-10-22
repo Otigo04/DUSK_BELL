@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_Veronica_Alltag
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: "Guten Tag. Wie f\xFChlst du dich? Schlaf, Appetit, Puls: alles in Ordnung?"
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices:
+    - text: Alles gut.
+      next: gut
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: "Ich bin ersch\xF6pft."
+      next: erschoepft
+      relationship: 1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Haben Sie Medikamente?
+      next: med
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: gut
+    speaker: 0
+    text: "Sch\xF6n. Wenn sich das \xE4ndert, kommst du zu mir. Es f\xE4ngt immer
+      mit den kleinen Dingen an."
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []
+  - id: erschoepft
+    speaker: 0
+    text: "Das ist normal. Der K\xF6rper rechnet mit jeder Nacht. Ruh dich aus, solange
+      es hell ist."
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []
+  - id: med
+    speaker: 0
+    text: "Der Schrank bleibt abgeschlossen. Nicht aus Misstrauen: Es ist wenig da,
+      und es muss f\xFCr alle reichen."
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []

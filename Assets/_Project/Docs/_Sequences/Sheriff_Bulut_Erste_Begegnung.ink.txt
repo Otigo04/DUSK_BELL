@@ -1,0 +1,223 @@
+Dusk Bell – Sheriff Bulut: Erste Begegnung (Ink)
+21. Okt. 2026 · @Orhan
+Scene 1: Station, first meeting
+Setting: the Revier, a small village station. A talisman hangs on a hook beside the door. Bulut sits at his desk and does not look up. The protagonist has no voice; player choices are actions only.
+VAR player_name = "PLAYER_NAME"  // set at game start
+VAR bulut_rel = 0  // relation player to Bulut, -10 to +10, starts at 0
+
+=== revier_arrival ===
+The station smells of old coffee and wet wool.
+A talisman hangs on a hook beside the door, faint blue light.
+Sheriff Bulut doesn't look up from his desk.
+
+Bulut: Sit down.
+Bulut: I'm sorry this is your life now.
+
+* [Sit down across from him.]
+    -> sit_down
+* [Stay by the door, near the talisman.]
+    -> stay_at_door
+* [Look around the room first.]
+    -> look_around
+
+=== stay_at_door ===
+You stay where you are, one hand close to the wall. The talisman glows faintly beside your shoulder.
+Bulut looks up for the first time. He follows your gaze to the hook.
+Bulut: Good. You already understand more than you think.
+Bulut: Sit down anyway. This will take a while.
+
+* [Sit down across from him.]
+    -> sit_down
+* [Stay by the door and listen.]
+    -> wait_and_listen
+
+=== look_around ===
+You take in the room: a village map on the wall, a shelf of old files, a handwritten list of names beside the window.
+Bulut: Done looking? Sit down. Those names are not for you yet.
+
+* [Sit down across from him.]
+    -> sit_down
+* [Ask him about the list.]
+    -> ask_about_list
+
+=== ask_about_list ===
+Bulut: Those are the people who died. Every name was once someone's neighbor.
+-> bulut_next
+
+=== sit_down ===
+You pull out the chair and sit across from him.
+Bulut finally looks up. He looks tired more than angry.
+Bulut: The conversation we are about to have is essential for your survival in this village.
+Bulut: Listen carefully. I'm not joking. This is life or death.
+-> bulut_next
+
+=== bulut_next ===
+Bulut: You have to believe me.
+Bulut: What I say next will sound absurd to you.
+Bulut: But if you don't listen and follow my rules, they will brutally kill you at night.
+You frown and lean forward, asking without words.
+-> bulut_rules
+
+=== bulut_rules ===
+You: What is going on? Who is they? Who is trying to kill me? This makes no sense!
+-> bulut_answers
+
+=== bulut_answers ===
+Bulut: They look like us. That's the problem.
+Bulut: Smiling is how you tell.
+
+* [Stand up and walk toward the door.]
+    -> leave_attempt
+* [Stay still and wait.]
+    -> wait_and_listen
+
+=== leave_attempt ===
+Bulut: Sit back down. Outside, that door won't protect you.
+You hesitate with your hand on the door handle.
+Bulut: I'm not asking twice.
+You sit back down, slowly.
+-> wait_and_listen
+
+=== wait_and_listen ===
+Bulut: Thank you for listening. Most people don't.
+Bulut: First. Be inside before the bell rings. Every night, no exceptions.
+Bulut: Second. Never open your door at night, not even for people you know.
+Bulut: Third. Don't trust anyone who smiles too wide.
+Bulut: They are monsters. They wear our faces and hunt us at night.
+Bulut: It sounds absurd, I know. But it's true.
+Bulut: Only the houses with a talisman are safe. Stay in one.
+Bulut: Many people have died.
+-> wait_reaction
+
+=== wait_reaction ===
+You fold your hands and say nothing.
+Bulut: I came in off that same road. I didn't believe a word of it either.
+You: How long have you been here?
+Bulut: Long enough to know the rules. Not long enough to know why.
+You: How do you get out of here? That obviously can't be real.
+Bulut: Physics and reason stopped applying the day you arrived. Learn the rules instead.
+Bulut: Sticking to the rules will assure your survival and the survival of the village.
+You: Who made the rules?
+Bulut: The rules were learned by people dying. Our mistakes made them.
+Bulut: If we don't follow them strictly, more lives will be lost.
+You nod, frightened, but you believe him.
+Bulut: Go to the bar. Talk to Bartender Ilhan. He'll show you where you can stay tonight.
+Bulut: When you hear the bell, you must be home. Secure the windows and doors.
+Bulut: Make sure the talisman hangs by your door. Without it, they come inside.
+Bulut: Go now. Ilhan is waiting.
+You ask him for the way to the bar.
+Bulut: I'll walk you there. Stay close to me.
+You nod and follow him out of the station.
+-> walk_to_bar
+
+=== walk_to_bar ===
+You walk half a step behind Bulut, eyes on the street.
+Bulut: Keep up. The street looks empty, but it's watching you.
+-> bar_entrance
+
+=== bar_entrance ===
+It is daytime, so the bar is open. Bulut pushes the door and walks in.
+Bulut: This is {player_name}. The new one.
+Bulut: Ilhan, show them where they can stay tonight.
+Ilhan: Another one. I'll show you the back room. Don't touch the windows.
+You nod and sit down at the bar.
+Bulut: I have to check on the others. Remember what I told you.
+Bulut leaves without looking back.
+You stay at the bar with Ilhan.
+Ilhan: He always says that. Doesn't mean he's wrong.
+You: What the fuck is going on here. Is it true what the Sheriff said? Is this some kind of prank? Are you all messing with me?
+Ilhan: I know. I know. I've been there.
+Ilhan: Please believe the Sheriff. Don't make the mistakes others did.
+Ilhan: Just stay inside today. All your questions and doubts will go away when you first see them.
+You: That can't be true.
+Ilhan: Your face already believes it. Sit down before you fall.
+You sit down and hold your head in your hands.
+Ilhan: Here, drink this.
+Bartender Ilhan fills a glass of water for {player_name}
+Ilhan: It is going to be dark soon.
+-> bar_night
+
+=== bar_night ===
+Ilhan: Come on. The back room is yours until morning.
+You follow him behind the bar through a narrow door.
+The back room has a cot, a small lamp, and a talisman hanging on a hook beside the door.
+Ilhan: The bell rings at dusk. You can look around the bar. Stay away from the windows, they try to manipulate you. If you open a window or do what they say. That means you've killed us both.
+-> first_night
+
+=== first_night ===
+The bell rings at dusk. Ilhan turns off the lights behind the bar.
+You lock the door of the back room from inside and lie down on the cot.
+The bar falls quiet.
+-> night_knock
+
+=== night_knock ===
+Three soft knocks against the window of the back room. Then again, slower.
+You wake up on the cot. Ilhan wakes in the other room and comes to the back window.
+Ilhan stops short when he sees who is standing outside.
+The figure looks human. Its grin is far too wide, and its teeth show in the dark.
+Monster: Ilhan, let me in. It's cold out here.
+Ilhan: I can't. The rules say no one comes in tonight.
+// Alternative (not chosen yet): Ilhan: Who are you?
+Monster: Ilhan, it's me. You know my voice.
+* [Ilhan opens the window.]
+    -> window_opened
+* [The player refuses. The window stays closed.]
+    -> window_refused
+
+=== window_opened ===
+Ilhan unlatches the window and pushes it open.
+The figure climbs through the window and walks toward the back room, toward the player.
+Ilhan: STOP! {player_name}, RUN!!!
+-> run_to_station
+
+=== run_to_station ===
+Both of you run out of the bar, toward the sheriff's station.
+Bulut is already inside the station. He opens the door before they reach it.
+Bulut: In. Now. Don't look back.
+Bulut closes the door and locks it.
+The figure reaches the threshold and stops. Through the gap, it grins at you.
+Bulut waits without moving until it is gone.
+Bulut: What happened? Tell me what happened!
+Ilhan: You were supposed to stay inside! Do you understand what you did?
+You stop breathing for a moment. This time, you believe all of it.
+You are in shock. Your hands won't stop shaking.
+Bulut: Ilhan, stop. He's seen enough for one night.
+Bulut pours a glass of water and pushes it across the desk.
+Bulut: Breathe. You're safe here. Tell me what you saw.
+You: It looked like a man. Then it smiled, and the smile was too wide. And then it turned into something... I can't get it out of my head.
+Bulut: That's the one they always send first. Don't fall for them. Please.
+Bulut: Enough for tonight. Ilhan, bring him to the cells. He sleeps there tonight.
+Bulut: Tomorrow we talk again.
+-> cells_night
+
+=== cells_night ===
+Ilhan leads you down to the cells and leaves you there. Upstairs, you hear him and Bulut talking in low voices.
+You are alone. You lie down on the bunk and fall asleep.
+-> morning
+
+=== morning ===
+It is morning. You slept through the night.
+Early this morning, Bulut already unlocked the cell door so you can leave.
+The police station is empty. There is no one left inside.
+You step outside. The street is empty.
+Bulut is standing by the station, waiting for you.
+Bulut: You slept. Good. Now you know the rules are real.
+Bulut reads the morning report from the station step. Nobody died in the night.
+Bulut: The forest sent a warning. Something moved near the trees before dawn.
+Bulut: The warning is about last night. Something stood at the bar window until dawn.
+-> END
+-> END
+
+=== window_refused ===
+You step back from the glass. The window stays closed.
+You: No, you have to ask Bartender Ilhan! He owns the bar.
+The figure stops grinning. It knocks on the glass again, harder, and then again.
+The knocking turns into pounding. The figure's voice sounds angry now.
+Ilhan comes in from the other room and pulls you away from the window into the hallway.
+Ilhan: Don't look at it. Look at me. Only at me.
+The hammering stops. The street outside goes silent.
+Ilhan keeps you in the hallway, sitting with your back against the wall. Neither of you sleeps until morning.
+-> END
+-> END
+// Player decides in play how to react to the knock. Not scripted here.
+-> END

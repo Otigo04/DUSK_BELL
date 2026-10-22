@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_Mara_Kennenlernen
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: "Frisch aus dem Ofen. Nimm eins. Du siehst aus, als h\xE4ttest du seit
+      gestern nichts gegessen."
+    relationship: 0
+    setFlag: mara_kennengelernt
+    noFarewell: 0
+    next: 
+    choices:
+    - text: Danke, gern.
+      next: danke
+      relationship: 1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Sie waren mal Model, oder?
+      next: model
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: "Wer hatte die B\xE4ckerei vorher?"
+      next: harren
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: danke
+    speaker: 0
+    text: "Brot hab ich immer \xFCbrig. Komm morgen fr\xFCh wieder, dann ist es noch
+      warm."
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []
+  - id: model
+    speaker: 0
+    text: Lang her. Heute steh ich vor dem Ofen statt vor der Kamera. Der Ofen ist
+      ehrlicher. ... Das Licht fehlt mir manchmal, zugegeben.
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []
+  - id: harren
+    speaker: 0
+    text: Harren. Der hat hier gebacken. Er ist weg. Mehr gibt es dazu nicht.
+    relationship: 0
+    setFlag: mara_harren_gefragt
+    noFarewell: 0
+    next: 
+    choices: []

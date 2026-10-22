@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_David_Kennenlernen
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: "Ah, ein neues Gesicht. Setz dich, die B\xE4nke sind f\xFCr alle da. ...
+      Verzeih, ich wollte eigentlich etwas holen. Was war es nur?"
+    relationship: 0
+    setFlag: david_kennengelernt
+    noFarewell: 0
+    next: 
+    choices:
+    - text: Ist alles in Ordnung?
+      next: ok
+      relationship: 1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Sind Sie hier der Pfarrer?
+      next: pfarrer
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: "Wie h\xE4lt man das hier aus?"
+      next: aushalten
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: ok
+    speaker: 0
+    text: "Ich verliere nur ab und zu den Faden. Ein Gespr\xE4ch ist mir wichtiger
+      als die Uhr."
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []
+  - id: pfarrer
+    speaker: 0
+    text: "Dem Titel nach. Ich habe Theologie studiert, bin aber nie fertig geworden.
+      Jetzt h\xF6re ich vor allem zu. Den Leuten scheint das zu reichen."
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []
+  - id: aushalten
+    speaker: 0
+    text: Gemeinsam. Wir essen zusammen, wir wachen zusammen. Wer allein bleibt,
+      den holt die Nacht zuerst.
+    relationship: 0
+    setFlag: 
+    noFarewell: 0
+    next: 
+    choices: []

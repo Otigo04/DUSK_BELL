@@ -146,6 +146,150 @@ TextureImporter:
   - first:
       213: -8984500889139101430
     second: baker_mara_idle_sheet_47
+  - first:
+      213: -6907518250267059164
+    second: baker_mara_idle_sheet_0_0
+  - first:
+      213: -3344023636891154851
+    second: baker_mara_idle_sheet_0_1
+  - first:
+      213: 998777751101637295
+    second: baker_mara_idle_sheet_0_2
+  - first:
+      213: 4779769843911981790
+    second: baker_mara_idle_sheet_0_3
+  - first:
+      213: -5169661281460869290
+    second: baker_mara_idle_sheet_0_4
+  - first:
+      213: 609042369031746825
+    second: baker_mara_idle_sheet_0_5
+  - first:
+      213: 8117283373763026459
+    second: baker_mara_idle_sheet_1_0
+  - first:
+      213: 5361544330388268133
+    second: baker_mara_idle_sheet_1_1
+  - first:
+      213: 6608363908921305271
+    second: baker_mara_idle_sheet_1_2
+  - first:
+      213: 4620474010953931417
+    second: baker_mara_idle_sheet_1_3
+  - first:
+      213: 5216223385177777374
+    second: baker_mara_idle_sheet_1_4
+  - first:
+      213: 6138912114601147506
+    second: baker_mara_idle_sheet_1_5
+  - first:
+      213: 1578863927790682058
+    second: baker_mara_idle_sheet_2_0
+  - first:
+      213: 5222424008420514459
+    second: baker_mara_idle_sheet_2_1
+  - first:
+      213: -3504133993326774737
+    second: baker_mara_idle_sheet_2_2
+  - first:
+      213: 2061216523528168908
+    second: baker_mara_idle_sheet_2_3
+  - first:
+      213: 4486413196105876417
+    second: baker_mara_idle_sheet_2_4
+  - first:
+      213: 8848633447680040186
+    second: baker_mara_idle_sheet_2_5
+  - first:
+      213: -6913018906470854676
+    second: baker_mara_idle_sheet_3_0
+  - first:
+      213: -9208832564530994686
+    second: baker_mara_idle_sheet_3_1
+  - first:
+      213: 1485536877023391492
+    second: baker_mara_idle_sheet_3_2
+  - first:
+      213: -13614121669348310
+    second: baker_mara_idle_sheet_3_3
+  - first:
+      213: 5115699307838805538
+    second: baker_mara_idle_sheet_3_4
+  - first:
+      213: 1941326237905430591
+    second: baker_mara_idle_sheet_3_5
+  - first:
+      213: -8156773522575509393
+    second: baker_mara_idle_sheet_4_0
+  - first:
+      213: 6375596798244954407
+    second: baker_mara_idle_sheet_4_1
+  - first:
+      213: 5389994842627927864
+    second: baker_mara_idle_sheet_4_2
+  - first:
+      213: -6824849671125056489
+    second: baker_mara_idle_sheet_4_3
+  - first:
+      213: 2043145277059443098
+    second: baker_mara_idle_sheet_4_4
+  - first:
+      213: -4537545240319545949
+    second: baker_mara_idle_sheet_4_5
+  - first:
+      213: -2725800036797431123
+    second: baker_mara_idle_sheet_5_0
+  - first:
+      213: 208708915214391782
+    second: baker_mara_idle_sheet_5_1
+  - first:
+      213: 6377151611437576269
+    second: baker_mara_idle_sheet_5_2
+  - first:
+      213: 2833708343226181544
+    second: baker_mara_idle_sheet_5_3
+  - first:
+      213: -4059509606232727488
+    second: baker_mara_idle_sheet_5_4
+  - first:
+      213: 30982154548087139
+    second: baker_mara_idle_sheet_5_5
+  - first:
+      213: -930443824141513712
+    second: baker_mara_idle_sheet_6_0
+  - first:
+      213: -54124914157707965
+    second: baker_mara_idle_sheet_6_1
+  - first:
+      213: 8119753608051949947
+    second: baker_mara_idle_sheet_6_2
+  - first:
+      213: -4128632924296141857
+    second: baker_mara_idle_sheet_6_3
+  - first:
+      213: -4470368810548095450
+    second: baker_mara_idle_sheet_6_4
+  - first:
+      213: -5585733452414077761
+    second: baker_mara_idle_sheet_6_5
+  - first:
+      213: -2414895850666077401
+    second: baker_mara_idle_sheet_7_0
+  - first:
+      213: 5403819659948689720
+    second: baker_mara_idle_sheet_7_1
+  - first:
+      213: 6040342606803614555
+    second: baker_mara_idle_sheet_7_2
+  - first:
+      213: -9074738984811664512
+    second: baker_mara_idle_sheet_7_3
+  - first:
+      213: 2542295851380461804
+    second: baker_mara_idle_sheet_7_4
+  - first:
+      213: -7327062263276726405
+    second: baker_mara_idle_sheet_7_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -178,7 +322,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -192,7 +336,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -216,7 +360,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -241,1057 +385,1057 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_0
+      name: baker_mara_idle_sheet_0_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 392
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 583b31c68079ecd20800000000000000
-      internalID: 3300741639337915269
+      spriteID: 42cdd4dbfb09320a0800000000000000
+      internalID: -6907518250267059164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_1
+      name: baker_mara_idle_sheet_0_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 56
         y: 392
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d8e314a0abe48810800000000000000
-      internalID: 1766796029016139985
+      spriteID: d56c79a3834a791d0800000000000000
+      internalID: -3344023636891154851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_2
+      name: baker_mara_idle_sheet_0_2
       rect:
         serializedVersion: 2
-        x: 129
+        x: 112
         y: 392
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e514ffbb62c17b10800000000000000
-      internalID: 1977575479430092260
+      spriteID: fa20af7a21f5cdd00800000000000000
+      internalID: 998777751101637295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_3
+      name: baker_mara_idle_sheet_0_3
       rect:
         serializedVersion: 2
-        x: 185
+        x: 168
         y: 392
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b805d6ca1014b390800000000000000
-      internalID: -7803594547135182666
+      spriteID: eda7f764957255240800000000000000
+      internalID: 4779769843911981790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_4
+      name: baker_mara_idle_sheet_0_4
       rect:
         serializedVersion: 2
-        x: 241
+        x: 224
         y: 392
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97d789f00774e22b0800000000000000
-      internalID: -5607465939406127751
+      spriteID: 6572f6d547ca148b0800000000000000
+      internalID: -5169661281460869290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_5
+      name: baker_mara_idle_sheet_0_5
       rect:
         serializedVersion: 2
-        x: 297
+        x: 280
         y: 392
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95b6638bd84a27260800000000000000
-      internalID: 7093913291649870681
+      spriteID: 905bc4bcec0c37800800000000000000
+      internalID: 609042369031746825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_6
+      name: baker_mara_idle_sheet_1_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 336
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ab5829b53166ce20800000000000000
-      internalID: 3370488254500985766
+      spriteID: b1e5452a83266a070800000000000000
+      internalID: 8117283373763026459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_7
+      name: baker_mara_idle_sheet_1_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 56
         y: 336
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2ac8c70c743d4d60800000000000000
-      internalID: 7876009030652054058
+      spriteID: 5646d4c6928086a40800000000000000
+      internalID: 5361544330388268133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_8
+      name: baker_mara_idle_sheet_1_2
       rect:
         serializedVersion: 2
-        x: 129
+        x: 112
         y: 336
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76e9e5213002e4240800000000000000
-      internalID: 4777791452251856487
+      spriteID: 7b824c966ff95bb50800000000000000
+      internalID: 6608363908921305271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_9
+      name: baker_mara_idle_sheet_1_3
       rect:
         serializedVersion: 2
-        x: 185
+        x: 168
         y: 336
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e85c24b7256fb1c0800000000000000
-      internalID: -4485755482636789533
+      spriteID: 99a55d4f1a83f1040800000000000000
+      internalID: 4620474010953931417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_10
+      name: baker_mara_idle_sheet_1_4
       rect:
         serializedVersion: 2
-        x: 241
+        x: 224
         y: 336
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44eff51cf34312330800000000000000
-      internalID: 3684283418597654084
+      spriteID: ed46b96388fb36840800000000000000
+      internalID: 5216223385177777374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_11
+      name: baker_mara_idle_sheet_1_5
       rect:
         serializedVersion: 2
-        x: 297
+        x: 280
         y: 336
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c48e849700b727f80800000000000000
-      internalID: -8110284736975804340
+      spriteID: 27cb42afa0cc13550800000000000000
+      internalID: 6138912114601147506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_12
+      name: baker_mara_idle_sheet_2_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 280
-        width: 17
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4223784f7d6870c30800000000000000
-      internalID: 4325574229191242276
+      spriteID: acf34ac806049e510800000000000000
+      internalID: 1578863927790682058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_13
+      name: baker_mara_idle_sheet_2_1
       rect:
         serializedVersion: 2
-        x: 76
+        x: 56
         y: 280
-        width: 17
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e596a88919cb1fc70800000000000000
-      internalID: 9003184463605819742
+      spriteID: b9a506057f6c97840800000000000000
+      internalID: 5222424008420514459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_14
+      name: baker_mara_idle_sheet_2_2
       rect:
         serializedVersion: 2
-        x: 132
+        x: 112
         y: 280
-        width: 17
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0548cef5c1bedf60800000000000000
-      internalID: 8061075846980977931
+      spriteID: f26f262e2b0de5fc0800000000000000
+      internalID: -3504133993326774737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_15
+      name: baker_mara_idle_sheet_2_3
       rect:
         serializedVersion: 2
-        x: 188
+        x: 168
         y: 280
-        width: 17
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be5f0bb9fac0f9610800000000000000
-      internalID: 1630035538502284779
+      spriteID: cc5ef02e189ea9c10800000000000000
+      internalID: 2061216523528168908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_16
+      name: baker_mara_idle_sheet_2_4
       rect:
         serializedVersion: 2
-        x: 244
+        x: 224
         y: 280
-        width: 17
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e976452f5e471ef0800000000000000
-      internalID: -137555093057275424
+      spriteID: 1c304852801f24e30800000000000000
+      internalID: 4486413196105876417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_17
+      name: baker_mara_idle_sheet_2_5
       rect:
         serializedVersion: 2
-        x: 300
+        x: 280
         y: 280
-        width: 17
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e59fda1584c3ac370800000000000000
-      internalID: 8343547540962933086
+      spriteID: afcdb941d39acca70800000000000000
+      internalID: 8848633447680040186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_18
+      name: baker_mara_idle_sheet_3_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 224
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 52db899044d2fd0d0800000000000000
-      internalID: -3395945823772033755
+      spriteID: cefce3a6ee50010a0800000000000000
+      internalID: -6913018906470854676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_19
+      name: baker_mara_idle_sheet_3_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 56
         y: 224
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b3b9304560de2d70800000000000000
-      internalID: 9020376236957479865
+      spriteID: 202a413b297a33080800000000000000
+      internalID: -9208832564530994686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_20
+      name: baker_mara_idle_sheet_3_2
       rect:
         serializedVersion: 2
-        x: 129
+        x: 112
         y: 224
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e70ea2127c8bc2f0800000000000000
-      internalID: -951512474691172377
+      spriteID: 40fe8bf3befad9410800000000000000
+      internalID: 1485536877023391492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_21
+      name: baker_mara_idle_sheet_3_3
       rect:
         serializedVersion: 2
-        x: 185
+        x: 168
         y: 224
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8850b42fe69872900800000000000000
-      internalID: 659646980037477768
+      spriteID: a2438f94702afcff0800000000000000
+      internalID: -13614121669348310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_22
+      name: baker_mara_idle_sheet_3_4
       rect:
         serializedVersion: 2
-        x: 241
+        x: 224
         y: 224
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93c22157a83378940800000000000000
-      internalID: 5298260156387306553
+      spriteID: 22691759a6d9ef640800000000000000
+      internalID: 5115699307838805538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_23
+      name: baker_mara_idle_sheet_3_5
       rect:
         serializedVersion: 2
-        x: 297
+        x: 280
         y: 224
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16dda89aa23fa9630800000000000000
-      internalID: 3934724589020175713
+      spriteID: f38af738de9f0fa10800000000000000
+      internalID: 1941326237905430591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_24
+      name: baker_mara_idle_sheet_4_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 168
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d33b2b7d84d2641d0800000000000000
-      internalID: -3366953880533159107
+      spriteID: f68339992b15dce80800000000000000
+      internalID: -8156773522575509393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_25
+      name: baker_mara_idle_sheet_4_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 56
         y: 168
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb7b0ebc86584f860800000000000000
-      internalID: 7562816359405500351
+      spriteID: 7212286328baa7850800000000000000
+      internalID: 6375596798244954407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_26
+      name: baker_mara_idle_sheet_4_2
       rect:
         serializedVersion: 2
-        x: 129
+        x: 112
         y: 168
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a02e19f9ccaa3c30800000000000000
-      internalID: 4339971174392799392
+      spriteID: 83f660080cb1dca40800000000000000
+      internalID: 5389994842627927864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_27
+      name: baker_mara_idle_sheet_4_3
       rect:
         serializedVersion: 2
-        x: 185
+        x: 168
         y: 168
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e6e448c13ed25d60800000000000000
-      internalID: 7877603003619141345
+      spriteID: 714462b32634941a0800000000000000
+      internalID: -6824849671125056489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_28
+      name: baker_mara_idle_sheet_4_4
       rect:
         serializedVersion: 2
-        x: 241
+        x: 224
         y: 168
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3062cedb1daff21a0800000000000000
-      internalID: -6831966330956274173
+      spriteID: a9925afedc5ba5c10800000000000000
+      internalID: 2043145277059443098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_29
+      name: baker_mara_idle_sheet_4_5
       rect:
         serializedVersion: 2
-        x: 297
+        x: 280
         y: 168
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bc88b2f43fcc9060800000000000000
-      internalID: 6961666950325374133
+      spriteID: 3ad2d7615a66701c0800000000000000
+      internalID: -4537545240319545949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_30
+      name: baker_mara_idle_sheet_5_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 112
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a3c4b903aaf85fc0800000000000000
-      internalID: -3505776731758476381
+      spriteID: da241f5fe430c2ad0800000000000000
+      internalID: -2725800036797431123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_31
+      name: baker_mara_idle_sheet_5_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 56
         y: 112
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2fc56dd3e8aab91c0800000000000000
-      internalID: -4495812275099771662
+      spriteID: 6e99fc017ab75e200800000000000000
+      internalID: 208708915214391782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_32
+      name: baker_mara_idle_sheet_5_2
       rect:
         serializedVersion: 2
-        x: 129
+        x: 112
         y: 112
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e60d65c984320f00800000000000000
-      internalID: 1081484626849760999
+      spriteID: d40fb8e5a91308850800000000000000
+      internalID: 6377151611437576269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_33
+      name: baker_mara_idle_sheet_5_3
       rect:
         serializedVersion: 2
-        x: 185
+        x: 168
         y: 112
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 588dc0fee2918da60800000000000000
-      internalID: 7698931252359649413
+      spriteID: 8a7ae0b79ba535720800000000000000
+      internalID: 2833708343226181544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_34
+      name: baker_mara_idle_sheet_5_4
       rect:
         serializedVersion: 2
-        x: 241
+        x: 224
         y: 112
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8333728815d3cef70800000000000000
-      internalID: 9217809957706478392
+      spriteID: 04066367589b9a7c0800000000000000
+      internalID: -4059509606232727488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_35
+      name: baker_mara_idle_sheet_5_5
       rect:
         serializedVersion: 2
-        x: 297
+        x: 280
         y: 112
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d88a48f3aa193ba20800000000000000
-      internalID: 3076963130820307085
+      spriteID: 369073cfa121e6000800000000000000
+      internalID: 30982154548087139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_36
+      name: baker_mara_idle_sheet_6_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 0
         y: 56
-        width: 17
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9a541ade2239dff0800000000000000
-      internalID: -10922347283064166
+      spriteID: 01cc69a85466613f0800000000000000
+      internalID: -930443824141513712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_37
+      name: baker_mara_idle_sheet_6_1
       rect:
         serializedVersion: 2
-        x: 75
+        x: 56
         y: 56
-        width: 17
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 709749d18ce7d7d60800000000000000
-      internalID: 7889601520177805575
+      spriteID: 34d91266da5bf3ff0800000000000000
+      internalID: -54124914157707965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_38
+      name: baker_mara_idle_sheet_6_2
       rect:
         serializedVersion: 2
-        x: 131
+        x: 112
         y: 56
-        width: 17
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37047d1d9c8d815f0800000000000000
-      internalID: -785639773655580557
+      spriteID: b7102afd2e82fa070800000000000000
+      internalID: 8119753608051949947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_39
+      name: baker_mara_idle_sheet_6_3
       rect:
         serializedVersion: 2
-        x: 187
+        x: 168
         y: 56
-        width: 17
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b24ee781757cbed40800000000000000
-      internalID: 5614800537334506539
+      spriteID: fd3a853da3624b6c0800000000000000
+      internalID: -4128632924296141857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_40
+      name: baker_mara_idle_sheet_6_4
       rect:
         serializedVersion: 2
-        x: 243
+        x: 224
         y: 56
-        width: 17
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67f9bf43590c65580800000000000000
-      internalID: -8838665471596454026
+      spriteID: 6269b48704f06f1c0800000000000000
+      internalID: -4470368810548095450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_41
+      name: baker_mara_idle_sheet_6_5
       rect:
         serializedVersion: 2
-        x: 299
+        x: 280
         y: 56
-        width: 17
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bec49d52f85a79740800000000000000
-      internalID: 5158773932410096875
+      spriteID: fb4b7def40d7b72b0800000000000000
+      internalID: -5585733452414077761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_42
+      name: baker_mara_idle_sheet_7_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 0
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 057e3071fe7d53d10800000000000000
-      internalID: 2104825822748862288
+      spriteID: 723db7bb4019c7ed0800000000000000
+      internalID: -2414895850666077401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_43
+      name: baker_mara_idle_sheet_7_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 56
         y: 0
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bfc3920523dab400800000000000000
-      internalID: 340816877730385846
+      spriteID: 839838d99593efa40800000000000000
+      internalID: 5403819659948689720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_44
+      name: baker_mara_idle_sheet_7_2
       rect:
         serializedVersion: 2
-        x: 129
+        x: 112
         y: 0
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d2b321d4f9fb7010800000000000000
-      internalID: 1187817756618371797
+      spriteID: b5bbf28099b93d350800000000000000
+      internalID: 6040342606803614555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_45
+      name: baker_mara_idle_sheet_7_3
       rect:
         serializedVersion: 2
-        x: 185
+        x: 168
         y: 0
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dfca378bc58d8d6b0800000000000000
-      internalID: -5271225471093986051
+      spriteID: 08b69ec29fc001280800000000000000
+      internalID: -9074738984811664512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_46
+      name: baker_mara_idle_sheet_7_4
       rect:
         serializedVersion: 2
-        x: 241
+        x: 224
         y: 0
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94d0da540ac707b10800000000000000
-      internalID: 1977217264221228361
+      spriteID: ce05b7f6b9c084320800000000000000
+      internalID: 2542295851380461804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baker_mara_idle_sheet_47
+      name: baker_mara_idle_sheet_7_5
       rect:
         serializedVersion: 2
-        x: 297
+        x: 280
         y: 0
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 56
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08928572}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a01cea21b04a05380800000000000000
-      internalID: -8984500889139101430
+      spriteID: b77983621bb015a90800000000000000
+      internalID: -7327062263276726405
       vertices: []
       indices: 
       edges: []
@@ -1311,6 +1455,12 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       baker_mara_idle_sheet_0: 3300741639337915269
+      baker_mara_idle_sheet_0_0: -6907518250267059164
+      baker_mara_idle_sheet_0_1: -3344023636891154851
+      baker_mara_idle_sheet_0_2: 998777751101637295
+      baker_mara_idle_sheet_0_3: 4779769843911981790
+      baker_mara_idle_sheet_0_4: -5169661281460869290
+      baker_mara_idle_sheet_0_5: 609042369031746825
       baker_mara_idle_sheet_1: 1766796029016139985
       baker_mara_idle_sheet_10: 3684283418597654084
       baker_mara_idle_sheet_11: -8110284736975804340
@@ -1322,6 +1472,12 @@ TextureImporter:
       baker_mara_idle_sheet_17: 8343547540962933086
       baker_mara_idle_sheet_18: -3395945823772033755
       baker_mara_idle_sheet_19: 9020376236957479865
+      baker_mara_idle_sheet_1_0: 8117283373763026459
+      baker_mara_idle_sheet_1_1: 5361544330388268133
+      baker_mara_idle_sheet_1_2: 6608363908921305271
+      baker_mara_idle_sheet_1_3: 4620474010953931417
+      baker_mara_idle_sheet_1_4: 5216223385177777374
+      baker_mara_idle_sheet_1_5: 6138912114601147506
       baker_mara_idle_sheet_2: 1977575479430092260
       baker_mara_idle_sheet_20: -951512474691172377
       baker_mara_idle_sheet_21: 659646980037477768
@@ -1333,6 +1489,12 @@ TextureImporter:
       baker_mara_idle_sheet_27: 7877603003619141345
       baker_mara_idle_sheet_28: -6831966330956274173
       baker_mara_idle_sheet_29: 6961666950325374133
+      baker_mara_idle_sheet_2_0: 1578863927790682058
+      baker_mara_idle_sheet_2_1: 5222424008420514459
+      baker_mara_idle_sheet_2_2: -3504133993326774737
+      baker_mara_idle_sheet_2_3: 2061216523528168908
+      baker_mara_idle_sheet_2_4: 4486413196105876417
+      baker_mara_idle_sheet_2_5: 8848633447680040186
       baker_mara_idle_sheet_3: -7803594547135182666
       baker_mara_idle_sheet_30: -3505776731758476381
       baker_mara_idle_sheet_31: -4495812275099771662
@@ -1344,6 +1506,12 @@ TextureImporter:
       baker_mara_idle_sheet_37: 7889601520177805575
       baker_mara_idle_sheet_38: -785639773655580557
       baker_mara_idle_sheet_39: 5614800537334506539
+      baker_mara_idle_sheet_3_0: -6913018906470854676
+      baker_mara_idle_sheet_3_1: -9208832564530994686
+      baker_mara_idle_sheet_3_2: 1485536877023391492
+      baker_mara_idle_sheet_3_3: -13614121669348310
+      baker_mara_idle_sheet_3_4: 5115699307838805538
+      baker_mara_idle_sheet_3_5: 1941326237905430591
       baker_mara_idle_sheet_4: -5607465939406127751
       baker_mara_idle_sheet_40: -8838665471596454026
       baker_mara_idle_sheet_41: 5158773932410096875
@@ -1353,9 +1521,33 @@ TextureImporter:
       baker_mara_idle_sheet_45: -5271225471093986051
       baker_mara_idle_sheet_46: 1977217264221228361
       baker_mara_idle_sheet_47: -8984500889139101430
+      baker_mara_idle_sheet_4_0: -8156773522575509393
+      baker_mara_idle_sheet_4_1: 6375596798244954407
+      baker_mara_idle_sheet_4_2: 5389994842627927864
+      baker_mara_idle_sheet_4_3: -6824849671125056489
+      baker_mara_idle_sheet_4_4: 2043145277059443098
+      baker_mara_idle_sheet_4_5: -4537545240319545949
       baker_mara_idle_sheet_5: 7093913291649870681
+      baker_mara_idle_sheet_5_0: -2725800036797431123
+      baker_mara_idle_sheet_5_1: 208708915214391782
+      baker_mara_idle_sheet_5_2: 6377151611437576269
+      baker_mara_idle_sheet_5_3: 2833708343226181544
+      baker_mara_idle_sheet_5_4: -4059509606232727488
+      baker_mara_idle_sheet_5_5: 30982154548087139
       baker_mara_idle_sheet_6: 3370488254500985766
+      baker_mara_idle_sheet_6_0: -930443824141513712
+      baker_mara_idle_sheet_6_1: -54124914157707965
+      baker_mara_idle_sheet_6_2: 8119753608051949947
+      baker_mara_idle_sheet_6_3: -4128632924296141857
+      baker_mara_idle_sheet_6_4: -4470368810548095450
+      baker_mara_idle_sheet_6_5: -5585733452414077761
       baker_mara_idle_sheet_7: 7876009030652054058
+      baker_mara_idle_sheet_7_0: -2414895850666077401
+      baker_mara_idle_sheet_7_1: 5403819659948689720
+      baker_mara_idle_sheet_7_2: 6040342606803614555
+      baker_mara_idle_sheet_7_3: -9074738984811664512
+      baker_mara_idle_sheet_7_4: 2542295851380461804
+      baker_mara_idle_sheet_7_5: -7327062263276726405
       baker_mara_idle_sheet_8: 4777791452251856487
       baker_mara_idle_sheet_9: -4485755482636789533
   mipmapLimitGroupName: 

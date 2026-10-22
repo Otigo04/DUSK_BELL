@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 99ddcb031ce04484bbae2afcee020ae2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1593941530372633195
+    second: blut_boden_splats_32_0
+  - first:
+      213: 6229049156696137376
+    second: blut_boden_splats_32_1
+  - first:
+      213: -4617568181070391793
+    second: blut_boden_splats_32_2
+  - first:
+      213: 37146413607200450
+    second: blut_boden_splats_32_3
+  - first:
+      213: 2049214624573899493
+    second: blut_boden_splats_32_4
+  - first:
+      213: 5186645457577152722
+    second: blut_boden_splats_32_5
+  - first:
+      213: -3509852327273280313
+    second: blut_boden_splats_32_6
+  - first:
+      213: 2208438797874543166
+    second: blut_boden_splats_32_7
+  - first:
+      213: 7506429507909894611
+    second: blut_boden_splats_32_8
+  - first:
+      213: -7350115746383213243
+    second: blut_boden_splats_32_9
+  - first:
+      213: 4439548278872941107
+    second: blut_boden_splats_32_10
+  - first:
+      213: -4569141082142491892
+    second: blut_boden_splats_32_11
+  - first:
+      213: -1483080847319805898
+    second: blut_boden_splats_32_12
+  - first:
+      213: 76146928421081660
+    second: blut_boden_splats_32_13
+  - first:
+      213: -5433006803799881072
+    second: blut_boden_splats_32_14
+  - first:
+      213: 27917028043523120
+    second: blut_boden_splats_32_15
+  - first:
+      213: -3577096063061879635
+    second: blut_boden_splats_32_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blut_boden_splats_32_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d85698f9e21e9e0800000000000000
+      internalID: -1593941530372633195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 96
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aed1518437027650800000000000000
+      internalID: 6229049156696137376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 99
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f061729443a1befb0800000000000000
+      internalID: -4617568181070391793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 99
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c6acb36778f38000800000000000000
+      internalID: 37146413607200450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_4
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 116
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2434608d5407c10800000000000000
+      internalID: 2049214624573899493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 68
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d097ca409aaaf740800000000000000
+      internalID: 5186645457577152722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_6
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 65
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc4cc287ef7a4fc0800000000000000
+      internalID: -3509852327273280313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_7
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 65
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ab087c263f5ae10800000000000000
+      internalID: 2208438797874543166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_8
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 66
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1ca7eddd13c2860800000000000000
+      internalID: 7506429507909894611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_9
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 37
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54dc2d6dba42ff990800000000000000
+      internalID: -7350115746383213243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 32
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3322b6d43a17c9d30800000000000000
+      internalID: 4439548278872941107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 31
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0bb046e4662790c0800000000000000
+      internalID: -4569141082142491892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_12
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 37
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630515ab3d90b6be0800000000000000
+      internalID: -1483080847319805898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32964b5a378e0100800000000000000
+      internalID: 76146928421081660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_14
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a4a35e8151a94b0800000000000000
+      internalID: -5433006803799881072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_15
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 3
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03408bb936e236000800000000000000
+      internalID: 27917028043523120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blut_boden_splats_32_16
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da49fb9351a9b5ec0800000000000000
+      internalID: -3577096063061879635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blut_boden_splats_32_0: -1593941530372633195
+      blut_boden_splats_32_1: 6229049156696137376
+      blut_boden_splats_32_10: 4439548278872941107
+      blut_boden_splats_32_11: -4569141082142491892
+      blut_boden_splats_32_12: -1483080847319805898
+      blut_boden_splats_32_13: 76146928421081660
+      blut_boden_splats_32_14: -5433006803799881072
+      blut_boden_splats_32_15: 27917028043523120
+      blut_boden_splats_32_16: -3577096063061879635
+      blut_boden_splats_32_2: -4617568181070391793
+      blut_boden_splats_32_3: 37146413607200450
+      blut_boden_splats_32_4: 2049214624573899493
+      blut_boden_splats_32_5: 5186645457577152722
+      blut_boden_splats_32_6: -3509852327273280313
+      blut_boden_splats_32_7: 2208438797874543166
+      blut_boden_splats_32_8: 7506429507909894611
+      blut_boden_splats_32_9: -7350115746383213243
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

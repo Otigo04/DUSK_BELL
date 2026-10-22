@@ -1340,6 +1340,46 @@ namespace Nightward.EditorTools
 
         // ------------------------------------------------------------------ Bauen
 
+
+        // ------------------------------------------------------------------ Besetzung
+
+        /// <summary>Dorfbewohner mit Prefab und dem Haus, vor dem sie stehen (Index in Houses). Bar-Ilhan und Bulut stehen schon in der Szene.</summary>
+        static readonly (string prefab, int house)[] Cast =
+        {
+            ("NPC_Mara_Baker", 3),       // Baeckerei
+            ("NPC_David_Pastor", 4),     // Pfarrhaus
+            ("NPC_Can", 5),              // Haus am Dorfrand
+            ("NPC_Veronica_Doctor", 7),  // Aerztehaus
+            ("NPC_Elenora", 11),         // Villa
+        };
+
+        /// <summary>
+        /// Stellt die bestehenden Dorfbewohner vor ihre Haeuser. Die Monster (Der Gast, Die Hausfrau) und der alte Holzfaeller-Ilhan
+        /// (durch den Bartender ersetzt) gehoeren nicht ins Dorf und werden aus der Szene genommen. Fehlende Prefabs
+        /// baut vorher "Nightward/NPCs/Alle Dorfbewohner bauen".
+        /// </summary>
+        static void PlaceCast(Scene scene)
+        {
+            foreach (var g in scene.GetRootGameObjects())
+                if (g.name == "NPC_Gast" || g.name == "NPC_Hausfrau" || g.name == "NPC_Ilhan") UnityEngine.Object.DestroyImmediate(g);
+
+            foreach (var (prefabName, houseIndex) in Cast)
+            {
+                string path = "Assets/_Project/Prefabs/Characters/" + prefabName + ".prefab";
+                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+                if (prefab == null) { issues.Add("NPC-Prefab fehlt: " + prefabName + " (Menue Nightward/NPCs/Alle Dorfbewohner bauen)"); continue; }
+                GameObject npc = null;
+                foreach (var g in scene.GetRootGameObjects()) if (g.name == prefabName) { npc = g; break; }
+                if (npc == null)
+                {
+                    npc = (GameObject)PrefabUtility.InstantiatePrefab(prefab, scene);
+                    npc.name = prefabName;
+                }
+                var h = Houses[houseIndex];
+                npc.transform.position = new Vector3(h.x + h.door + 1.5f, h.y - 3.5f, 0f);
+            }
+        }
+
         [MenuItem("Nightward/Dorf/2 Dorf bauen (Level_01)")]
         public static void Build()
         {
@@ -1464,12 +1504,10 @@ namespace Nightward.EditorTools
                     g.transform.position = new Vector3(35f, 12f, 0f);
                     foreach (var sr in g.GetComponentsInChildren<SpriteRenderer>()) sr.sortingOrder = OrderObjects;
                 }
-                else if (g.name == "NPC_Ilhan") g.transform.position = new Vector3(BarX + 8f, BarY - 4.5f, 0f);
                 else if (g.name == "NPC_Ilhan_Bartender") g.transform.position = new Vector3(BarX + 12f, BarY - 4.5f, 0f);
                 else if (g.name == "NPC_Bulut_Sheriff") g.transform.position = new Vector3(Houses[9].x + Houses[9].door + 1.5f, Houses[9].y - 3.5f, 0f);
-                else if (g.name == "NPC_Gast") g.transform.position = new Vector3(31.5f, 64.5f, 0f);
-                else if (g.name == "NPC_Hausfrau") g.transform.position = new Vector3(Houses[5].x + Houses[5].door + 1.5f, Houses[5].y - 3.5f, 0f);
             }
+            PlaceCast(scene);
 
             Debug.Log("[Dorf] Level_01 gebaut. Baeume mit Stammkollision: " + trunkFeet.Count + ", Laternen: " + lampCount +
                       (missing.Count > 0 ? "\nFehlende Objekte: " + string.Join(", ", missing) : "") +
