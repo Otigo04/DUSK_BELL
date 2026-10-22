@@ -43,6 +43,8 @@ namespace Nightward.Dialogue
         public bool LineFinished => box.IsFinished;
         public int ChoiceCount => buttons.Count;
         public PortraitAnimator Portrait => portrait;
+        /// <summary>Name auf der Sprechblase des Spielers (Standard "Du"; die englische Story setzt "You").</summary>
+        public string PlayerLabel { get; set; } = "Du";
 
         /// <summary>Aus: ein Klick auf die Box blaettert nicht mehr von selbst (der Aufrufer wertet Klicks selbst aus).</summary>
         public bool BoxClickEnabled { get => box.ClickEnabled; set => box.ClickEnabled = value; }
@@ -111,7 +113,7 @@ namespace Nightward.Dialogue
             switch (speaker)
             {
                 case Speaker.Npc: box.ShowResident(profile.displayName, profile.nameColor, text, reserve, startDelay: startDelay); break;
-                case Speaker.Spieler: box.ShowResident("Du", NwTheme.TextDefault, text, reserve, plateRight: true, startDelay: startDelay); break;
+                case Speaker.Spieler: box.ShowResident(PlayerLabel, NwTheme.TextDefault, text, reserve, plateRight: true, startDelay: startDelay); break;
                 default: box.ShowNarrator(text, reserve, startDelay); break;
             }
         }

@@ -49,6 +49,109 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1 &154269591677015195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5616216648382130245}
+  - component: {fileID: 463308605051401634}
+  - component: {fileID: 8230732130967212225}
+  m_Layer: 0
+  m_Name: Licht_Fenster_Bogen_Licht
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5616216648382130245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154269591677015195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 622041157569303266}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &463308605051401634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154269591677015195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 0.82, b: 0.48, a: 1}
+  m_Intensity: 0.7
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.44000003
+  m_PointLightOuterRadius: 2.2
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &8230732130967212225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154269591677015195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13928c9d07df8146b423a01af11457d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.DayNight.NightLight
+  autoSwitch: 1
+  switchOnRange: {x: 0.15, y: 0.55}
+  fadeTime: 1.2
+  dayLevel: 0
+  flicker: 0.06
+  flickerSpeed: 3
 --- !u!1 &180334626765222953
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,212 +673,6 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
---- !u!1 &821934486511350984
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5271792911433655048}
-  - component: {fileID: 902754619836931943}
-  - component: {fileID: 3660729834333099921}
-  m_Layer: 0
-  m_Name: Licht_Fenster_Bogen_Licht
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5271792911433655048
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821934486511350984}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 622041157569303266}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &902754619836931943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821934486511350984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
-  m_ComponentVersion: 2
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.82, b: 0.48, a: 1}
-  m_Intensity: 0.7
-  m_LightVolumeIntensity: 1
-  m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
-  m_UseNormalMap: 0
-  m_ShadowsEnabled: 1
-  m_ShadowIntensity: 0.75
-  m_ShadowSoftness: 0.3
-  m_ShadowSoftnessFalloffIntensity: 0.5
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.44000003
-  m_PointLightOuterRadius: 2.2
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &3660729834333099921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821934486511350984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c13928c9d07df8146b423a01af11457d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Nightward.DayNight.NightLight
-  autoSwitch: 1
-  switchOnRange: {x: 0.15, y: 0.55}
-  fadeTime: 1.2
-  dayLevel: 0
-  flicker: 0.06
-  flickerSpeed: 3
---- !u!1 &1277295973993175058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7077660417069106635}
-  - component: {fileID: 2825614740907127710}
-  - component: {fileID: 8235027713067036813}
-  m_Layer: 0
-  m_Name: Licht_Fenster_Bogen_Licht
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7077660417069106635
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277295973993175058}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 622041157569303266}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2825614740907127710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277295973993175058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
-  m_ComponentVersion: 2
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.82, b: 0.48, a: 1}
-  m_Intensity: 0.7
-  m_LightVolumeIntensity: 1
-  m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
-  m_UseNormalMap: 0
-  m_ShadowsEnabled: 1
-  m_ShadowIntensity: 0.75
-  m_ShadowSoftness: 0.3
-  m_ShadowSoftnessFalloffIntensity: 0.5
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.44000003
-  m_PointLightOuterRadius: 2.2
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &8235027713067036813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277295973993175058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c13928c9d07df8146b423a01af11457d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Nightward.DayNight.NightLight
-  autoSwitch: 1
-  switchOnRange: {x: 0.15, y: 0.55}
-  fadeTime: 1.2
-  dayLevel: 0
-  flicker: 0.06
-  flickerSpeed: 3
 --- !u!1 &1566093414009714214
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +844,7 @@ Tilemap:
       - {fileID: -3036936246022258361, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
       - {fileID: 2078681079295876302, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
       - {fileID: 2905243626452141942, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
-      m_AnimationSpeed: 3.7808385
+      m_AnimationSpeed: 3.8581882
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 2, y: 1, z: 0}
@@ -958,7 +855,7 @@ Tilemap:
       - {fileID: -3036936246022258361, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
       - {fileID: 2078681079295876302, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
       - {fileID: 2905243626452141942, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
-      m_AnimationSpeed: 4.0250115
+      m_AnimationSpeed: 3.8717616
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 3, y: 1, z: 0}
@@ -969,7 +866,7 @@ Tilemap:
       - {fileID: 6559248092593079384, guid: 6ad2b5174d42f4044baa3832d0ab97e3, type: 3}
       - {fileID: 8155817394305466771, guid: 6ad2b5174d42f4044baa3832d0ab97e3, type: 3}
       - {fileID: -6482569169207441760, guid: 6ad2b5174d42f4044baa3832d0ab97e3, type: 3}
-      m_AnimationSpeed: 5.6993504
+      m_AnimationSpeed: 5.758817
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: 1, z: 0}
@@ -980,7 +877,7 @@ Tilemap:
       - {fileID: 6559248092593079384, guid: 6ad2b5174d42f4044baa3832d0ab97e3, type: 3}
       - {fileID: 8155817394305466771, guid: 6ad2b5174d42f4044baa3832d0ab97e3, type: 3}
       - {fileID: -6482569169207441760, guid: 6ad2b5174d42f4044baa3832d0ab97e3, type: 3}
-      m_AnimationSpeed: 6.1483746
+      m_AnimationSpeed: 5.6471825
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: 1, z: 0}
@@ -991,7 +888,7 @@ Tilemap:
       - {fileID: 5304501427990370157, guid: 1ab07f51ee904b64d8526c942a6a89d7, type: 3}
       - {fileID: 2073879283391369909, guid: 1ab07f51ee904b64d8526c942a6a89d7, type: 3}
       - {fileID: -1817972395599099085, guid: 1ab07f51ee904b64d8526c942a6a89d7, type: 3}
-      m_AnimationSpeed: 3.106528
+      m_AnimationSpeed: 3.014676
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 9, y: 1, z: 0}
@@ -1002,7 +899,7 @@ Tilemap:
       - {fileID: -3036936246022258361, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
       - {fileID: 2078681079295876302, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
       - {fileID: 2905243626452141942, guid: 0a643fe5a63f77540971c352f01d6233, type: 3}
-      m_AnimationSpeed: 3.8643737
+      m_AnimationSpeed: 3.8062372
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 3, y: 2, z: 0}
@@ -1013,7 +910,7 @@ Tilemap:
       - {fileID: -8505757123830438309, guid: 2798a02eb81eb424a932ac07f54d1af5, type: 3}
       - {fileID: 6983498860947126677, guid: 2798a02eb81eb424a932ac07f54d1af5, type: 3}
       - {fileID: 2173444442455099782, guid: 2798a02eb81eb424a932ac07f54d1af5, type: 3}
-      m_AnimationSpeed: 3.8514917
+      m_AnimationSpeed: 3.8658504
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 8, y: 2, z: 0}
@@ -1024,7 +921,7 @@ Tilemap:
       - {fileID: -8505757123830438309, guid: 2798a02eb81eb424a932ac07f54d1af5, type: 3}
       - {fileID: 6983498860947126677, guid: 2798a02eb81eb424a932ac07f54d1af5, type: 3}
       - {fileID: 2173444442455099782, guid: 2798a02eb81eb424a932ac07f54d1af5, type: 3}
-      m_AnimationSpeed: 3.972688
+      m_AnimationSpeed: 3.7088652
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 10, y: 2, z: 0}
@@ -1035,7 +932,7 @@ Tilemap:
       - {fileID: -4742523940939280919, guid: a60b28e6f6eeffe4fb3594e5f0da468c, type: 3}
       - {fileID: -4093981230374175669, guid: a60b28e6f6eeffe4fb3594e5f0da468c, type: 3}
       - {fileID: 8806980084736889715, guid: a60b28e6f6eeffe4fb3594e5f0da468c, type: 3}
-      m_AnimationSpeed: 2.3956287
+      m_AnimationSpeed: 2.3425274
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -1317,11 +1214,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1182072679004754042}
-  - {fileID: 5271792911433655048}
+  - {fileID: 5616216648382130245}
   - {fileID: 281315349337081059}
-  - {fileID: 7077660417069106635}
+  - {fileID: 9113571961279814079}
   - {fileID: 68894323470914638}
-  - {fileID: 5252876175353109142}
+  - {fileID: 6895438740626942949}
   - {fileID: 2122322207730759762}
   m_Father: {fileID: 3442945838282169977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1634,7 +1531,7 @@ MonoBehaviour:
   dayLevel: 0
   flicker: 0.06
   flickerSpeed: 3
---- !u!1 &4492460890455527067
+--- !u!1 &4408006777686447533
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1642,38 +1539,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5252876175353109142}
-  - component: {fileID: 884564501621704383}
-  - component: {fileID: 2571490129843873327}
+  - component: {fileID: 9113571961279814079}
+  - component: {fileID: 7309111348180853174}
+  - component: {fileID: 944390317270766336}
   m_Layer: 0
-  m_Name: Licht_Fenster_Rund_Licht
+  m_Name: Licht_Fenster_Bogen_Licht
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5252876175353109142
+--- !u!4 &9113571961279814079
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492460890455527067}
+  m_GameObject: {fileID: 4408006777686447533}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 2.5, z: 0}
+  m_LocalPosition: {x: 9.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 622041157569303266}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &884564501621704383
+--- !u!114 &7309111348180853174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492460890455527067}
+  m_GameObject: {fileID: 4408006777686447533}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
@@ -1719,13 +1616,13 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &2571490129843873327
+--- !u!114 &944390317270766336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492460890455527067}
+  m_GameObject: {fileID: 4408006777686447533}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13928c9d07df8146b423a01af11457d, type: 3}
@@ -2549,6 +2446,109 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.6, y: 0.8}
   m_EdgeRadius: 0
+--- !u!1 &8267896134015479114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6895438740626942949}
+  - component: {fileID: 6381746672286501292}
+  - component: {fileID: 855998578559011510}
+  m_Layer: 0
+  m_Name: Licht_Fenster_Rund_Licht
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6895438740626942949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267896134015479114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.5, y: 2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 622041157569303266}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6381746672286501292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267896134015479114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 0.82, b: 0.48, a: 1}
+  m_Intensity: 0.7
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.44000003
+  m_PointLightOuterRadius: 2.2
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &855998578559011510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267896134015479114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13928c9d07df8146b423a01af11457d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.DayNight.NightLight
+  autoSwitch: 1
+  switchOnRange: {x: 0.15, y: 0.55}
+  fadeTime: 1.2
+  dayLevel: 0
+  flicker: 0.06
+  flickerSpeed: 3
 --- !u!1 &8970770576001259095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,7 +2837,7 @@ Tilemap:
       - {fileID: 3597741588058806784, guid: 9527d2da1ec359b448cc09c5bbfd015d, type: 3}
       - {fileID: -4122615300114388690, guid: 9527d2da1ec359b448cc09c5bbfd015d, type: 3}
       - {fileID: -8993550029921746809, guid: 9527d2da1ec359b448cc09c5bbfd015d, type: 3}
-      m_AnimationSpeed: 4.0272255
+      m_AnimationSpeed: 3.66442
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 9, y: 5, z: 0}
@@ -2852,7 +2852,7 @@ Tilemap:
       - {fileID: -6740183994145074722, guid: 90423cfd35c0a124dba9171ae486d841, type: 3}
       - {fileID: 4688080499189942486, guid: 90423cfd35c0a124dba9171ae486d841, type: 3}
       - {fileID: -4520801143657435545, guid: 90423cfd35c0a124dba9171ae486d841, type: 3}
-      m_AnimationSpeed: 7.2502337
+      m_AnimationSpeed: 7.330945
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:

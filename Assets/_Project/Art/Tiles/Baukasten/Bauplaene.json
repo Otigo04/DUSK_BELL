@@ -3231,8 +3231,8 @@
       "y": 1
      },
      {
-      "o": "Haengeschild_Arzt",
-      "x": 5,
+      "o": "Schild_Brett",
+      "x": 4,
       "y": 2
      },
      {
@@ -3288,67 +3288,97 @@
     ]
    },
    "innen": {
-    "breite": 8,
-    "hoehe": 5,
-    "boden": "pflaster",
-    "wand": "stein",
-    "krone": "stein",
+    "breite": 10,
+    "hoehe": 6,
+    "boden": "dielen_dunkel",
+    "wand": "holz",
+    "krone": "holz",
     "tuerX": 4,
     "objekte": [
      {
-      "o": "Wandbrett_Werkzeug",
-      "x": 3,
+      "o": "Fenster_Innen_Tag",
+      "x": 2,
       "y": 6
      },
      {
-      "o": "Wand_Hufeisen",
+      "o": "Wand_BildLandschaft",
       "x": 6,
+      "y": 7
+     },
+     {
+      "o": "Wand_BildPortrait",
+      "x": 7,
       "y": 6
      },
      {
-      "o": "Fenster_Innen_Nacht",
-      "x": 7,
+      "o": "Wand_Kerzenleuchter",
+      "x": 3,
+      "y": 7
+     },
+     {
+      "o": "Tuer_Innen_Zu",
+      "x": 8,
+      "y": 6
+     },
+     {
+      "o": "Buecherwand",
+      "x": 0,
       "y": 5
      },
      {
-      "o": "Esse",
-      "x": 0,
-      "y": 4
+      "o": "Kamin_Stein",
+      "x": 4,
+      "y": 5
      },
      {
-      "o": "Blasebalg",
-      "x": 2,
-      "y": 4
-     },
-     {
-      "o": "Amboss",
-      "x": 2,
-      "y": 2
-     },
-     {
-      "o": "Fass_Wasser",
-      "x": 0,
-      "y": 1
-     },
-     {
-      "o": "Schleifstein",
+      "o": "Buecherregal_Schmal",
       "x": 6,
+      "y": 5
+     },
+     {
+      "o": "Schreibtisch_Kerze",
+      "x": 4,
       "y": 3
      },
      {
-      "o": "Fass_Kohle",
-      "x": 7,
-      "y": 0
-     },
-     {
-      "o": "Kistenstapel",
-      "x": 6,
-      "y": 0
-     },
-     {
-      "o": "Tisch_Lang",
+      "o": "Stuhl_Vorne",
       "x": 4,
       "y": 4
+     },
+     {
+      "o": "Stuhl_Hinten",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Kartentisch",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Truhe_Zu",
+      "x": 9,
+      "y": 1
+     },
+     {
+      "o": "Fass_Wasser",
+      "x": 9,
+      "y": 4
+     },
+     {
+      "o": "Talisman_Schrein",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Topfpflanze",
+      "x": 0,
+      "y": 2
+     },
+     {
+      "o": "Teppich_Rot_Gross",
+      "x": 3,
+      "y": 2
      }
     ]
    }

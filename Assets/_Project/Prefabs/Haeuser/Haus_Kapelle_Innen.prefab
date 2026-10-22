@@ -81,7 +81,7 @@ Tilemap:
       - {fileID: -1410617832030727541, guid: 19e57f54f03155f499c081e7bf6f38e1, type: 3}
       - {fileID: -5179455799767373957, guid: 19e57f54f03155f499c081e7bf6f38e1, type: 3}
       - {fileID: -4444489319114773738, guid: 19e57f54f03155f499c081e7bf6f38e1, type: 3}
-      m_AnimationSpeed: 5.7127247
+      m_AnimationSpeed: 5.629024
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: 7, z: 0}
@@ -92,7 +92,7 @@ Tilemap:
       - {fileID: -1410617832030727541, guid: 19e57f54f03155f499c081e7bf6f38e1, type: 3}
       - {fileID: -5179455799767373957, guid: 19e57f54f03155f499c081e7bf6f38e1, type: 3}
       - {fileID: -4444489319114773738, guid: 19e57f54f03155f499c081e7bf6f38e1, type: 3}
-      m_AnimationSpeed: 5.3897057
+      m_AnimationSpeed: 5.8281436
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -1559,7 +1559,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 1
   m_DetectChunkCullingBounds: 0
---- !u!1 &2602464802203163454
+--- !u!1 &1939853637262749972
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1567,74 +1567,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1304076059124654873}
+  - component: {fileID: 2375632908416093863}
+  - component: {fileID: 6991552034305291693}
   m_Layer: 0
-  m_Name: Lichter
+  m_Name: Licht_Fenster_Innen_Kerze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1304076059124654873
+--- !u!4 &2375632908416093863
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2602464802203163454}
+  m_GameObject: {fileID: 1939853637262749972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6330123776680063450}
-  - {fileID: 4656523462722915209}
-  - {fileID: 4686294065957281275}
-  - {fileID: 2862977460315425521}
-  - {fileID: 7344686295336591421}
-  - {fileID: 7644395978487263675}
-  m_Father: {fileID: 3370208984235529523}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2820196749260066350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7344686295336591421}
-  - component: {fileID: 2988450483767855646}
-  m_Layer: 0
-  m_Name: Licht_Kerzenstaender
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7344686295336591421
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820196749260066350}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 7, z: 0}
+  m_LocalPosition: {x: 6.5, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1304076059124654873}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2988450483767855646
+--- !u!114 &6991552034305291693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820196749260066350}
+  m_GameObject: {fileID: 1939853637262749972}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
@@ -1680,6 +1643,43 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &2602464802203163454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1304076059124654873}
+  m_Layer: 0
+  m_Name: Lichter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1304076059124654873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602464802203163454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4656523462722915209}
+  - {fileID: 2375632908416093863}
+  - {fileID: 4686294065957281275}
+  - {fileID: 2862977460315425521}
+  - {fileID: 5979804831942709088}
+  - {fileID: 7644395978487263675}
+  m_Father: {fileID: 3370208984235529523}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3598605109758708331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,7 +2229,7 @@ Tilemap:
       - {fileID: -4149351599746561258, guid: 2c6f42c535b7f844f9381dea90eb3e54, type: 3}
       - {fileID: 9190292804893664055, guid: 2c6f42c535b7f844f9381dea90eb3e54, type: 3}
       - {fileID: -7916756238082159461, guid: 2c6f42c535b7f844f9381dea90eb3e54, type: 3}
-      m_AnimationSpeed: 5.6164675
+      m_AnimationSpeed: 5.3332644
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 0, y: 6, z: 0}
@@ -2242,7 +2242,7 @@ Tilemap:
       - {fileID: 1353874774499271891, guid: 54972c3ef085faf48b8e28a4ad89a91a, type: 3}
       - {fileID: 7765841316603283647, guid: 54972c3ef085faf48b8e28a4ad89a91a, type: 3}
       - {fileID: -2531431566630326791, guid: 54972c3ef085faf48b8e28a4ad89a91a, type: 3}
-      m_AnimationSpeed: 5.1485753
+      m_AnimationSpeed: 5.242986
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 1, y: 6, z: 0}
@@ -2253,7 +2253,7 @@ Tilemap:
       - {fileID: -2831006705940109013, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
       - {fileID: -6886821695712518481, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
       - {fileID: -1338812162031776653, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
-      m_AnimationSpeed: 5.467043
+      m_AnimationSpeed: 5.6912346
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: 6, z: 0}
@@ -2264,7 +2264,7 @@ Tilemap:
       - {fileID: -2831006705940109013, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
       - {fileID: -6886821695712518481, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
       - {fileID: -1338812162031776653, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
-      m_AnimationSpeed: 5.5723724
+      m_AnimationSpeed: 5.598343
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -3555,7 +3555,7 @@ Transform:
   m_GameObject: {fileID: 4650823214946437451}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 8, z: 0}
+  m_LocalPosition: {x: 1.5, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3885,6 +3885,90 @@ MonoBehaviour:
   area: {fileID: 0}
   hideWhenInside: []
   showWhenInside: []
+--- !u!1 &6235777538706172258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5979804831942709088}
+  - component: {fileID: 7744242474318650507}
+  m_Layer: 0
+  m_Name: Licht_Kerzenstaender
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5979804831942709088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235777538706172258}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.5, y: 7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1304076059124654873}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7744242474318650507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235777538706172258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 0.82, b: 0.48, a: 1}
+  m_Intensity: 0.8
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.48000002
+  m_PointLightOuterRadius: 2.4
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &6352358597681670488
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,90 +4445,6 @@ MonoBehaviour:
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.32000002
   m_PointLightOuterRadius: 1.6
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &7732428413948853298
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6330123776680063450}
-  - component: {fileID: 5101764346509594659}
-  m_Layer: 0
-  m_Name: Licht_Fenster_Innen_Kerze
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6330123776680063450
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7732428413948853298}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1304076059124654873}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5101764346509594659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7732428413948853298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
-  m_ComponentVersion: 2
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.82, b: 0.48, a: 1}
-  m_Intensity: 0.8
-  m_LightVolumeIntensity: 1
-  m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
-  m_UseNormalMap: 0
-  m_ShadowsEnabled: 1
-  m_ShadowIntensity: 0.75
-  m_ShadowSoftness: 0.3
-  m_ShadowSoftnessFalloffIntensity: 0.5
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.48000002
-  m_PointLightOuterRadius: 2.4
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

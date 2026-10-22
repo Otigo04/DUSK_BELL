@@ -2,3 +2,4 @@
 - [Dorf-Builder Level_01](dorf-builder-level01.md) — Dorf per DorfBuilder.cs bauen, Screenshot-Tricks, Opening nicht anfassen
 - [Survival-System](survival-system.md) — Stats/Moods/Regeln in Scripts/Survival, Config-Asset, nur Level_01-Spieler, Build-Fallen
 - [Hauptfiguren Kampf-Anims](hauptfiguren-kampf-animationen.md) — Run/Box/Messer/Bat/Pistole per Python-Generator, nicht von Hand
+- [Ankunft/Friedhof/Revier WIP](ankunft-friedhof-revier-wip.md) — Stand 2026-10-22, offene Schritte (ArrivalBuilder fehlt), Unity-MCP per JSON-RPC

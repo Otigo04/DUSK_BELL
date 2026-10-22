@@ -43,6 +43,16 @@ namespace Nightward.EditorTools
         const int NorthEnd = BachY + 9;              // ab hier Wald (Strasse bleibt offen)
         const int VY = 128;                          // Basis der Villa
 
+        // Friedhof am Dorfeingang (Sueden), westlich der Strasse: Zaun x 12..28, y 8..16, Tor im Osten. Beerdigung mit offenem Grab,
+        // Sarg und dem in Weiss gewickelten Toten (die Trauergaeste stellt ArrivalBuilder auf).
+        public const int GraveX0 = 12, GraveX1 = 28, GraveY0 = 8, GraveY1 = 16, GraveGateY = 10;
+        public static readonly Vector2 GravePit = new Vector2(22f, 12f);        // Mitte des offenen Grabs
+        public static readonly Vector2 GravePriest = new Vector2(22.4f, 14.1f); // Platz fuer den Priester (Figur folgt spaeter)
+
+        // Revier: Innenraum liegt weit ausserhalb der Karte (wie die Bar), Tuer-Durchgaenge fuehren hinein und hinaus
+        public static readonly Vector2 RevierInnenOrigin = new Vector2(200f, 60f);
+        public static Vector3 RevierInnenEingang => new Vector3(RevierInnenOrigin.x + 4.5f, RevierInnenOrigin.y + 0.7f, 0f);
+
         enum Ter { Grass, Dirt, Cobble, Slab, Gravel, Water, Forest, ForestPath }
 
         static Ter[,] ter;
@@ -318,9 +328,8 @@ namespace Nightward.EditorTools
             FillRect(Ter.Gravel, 4, BachY - 7, StreetX0 - 1, BachY - 6);
             FillRect(Ter.Gravel, 58, 36, 59, 39);
 
-            // Friedhofsweg
-            FillRect(Ter.Gravel, StreetX1 + 1, 6, 51, 7);
-            FillRect(Ter.Gravel, 50, 8, 52, 9);
+            // Friedhofsweg: vom Tor des Friedhofs (westlich der Strasse, am Dorfeingang) zur Dorfstrasse
+            FillRect(Ter.Gravel, GraveX1 + 1, GraveGateY, StreetX0 - 1, GraveGateY + 1);
 
             // Zone 1: Waldweg nach Suedwesten
             Line(Ter.Dirt, 2, 31, 8, 28, 5, 24, 2, 21, -1, 19, -4);
@@ -1002,20 +1011,84 @@ namespace Nightward.EditorTools
 
         static void PlaceGraveyard()
         {
-            FenceRect(45, 9, 58, 22, 50, 52);
-            Put("Tor_Offen", 50, 9, true);
-            string[] stones = { "Grabstein_A", "Grabstein_B", "Grabstein_C" };
-            for (int gx = 47; gx <= 55; gx += 2)
-                for (int gy = 12; gy <= 20; gy += 2)
-                    if (!(gx >= 49 && gx <= 53 && gy <= 12)) Put(stones[rng.Next(stones.Length)], gx, gy);
-            Put("Menhir_A", 51, 20); Put("Windlicht", 49, 11, true); Put("Windlicht", 53, 11, true);
-            Put("Kerzen", 48, 14, true); Put("Kerzen", 56, 17, true);
-            PutTree("Birke_A", 46, 18, true, true); PutTree("Birke_C", 56, 11, true, true);
-            Put("Busch_Dunkel", 47, 10); Put("Busch_Dunkel", 56, 21);
-            Sign("Graves", false, 39, 8);
-            Lamp("Gartenlicht", 38, 8); Lamp("Gartenlicht", 49, 8); Lamp("Gartenlicht", 53, 8);
-            Put("Talisman_Pfosten", 59, 13);
-            Light(lightsRoot, "Talisman_Licht", new Vector3(59.5f, 14.2f, 0), TalismanColor, 0.8f, 3f);
+            // Lichtung vom Wald freihalten und als Wiese anlegen
+            for (int x = GraveX0 - 2; x <= GraveX1 + 3; x++)
+                for (int y = GraveY0 - 2; y <= GraveY1 + 1; y++)
+                {
+                    if (!InMap(x, y)) continue;
+                    forest[x - MinX, y - MinY] = false; fdepth[x - MinX, y - MinY] = 0;
+                    if (GetT(x, y) == Ter.Forest) SetT(x, y, Ter.Grass);
+                }
+            // Zaun mit Tor im Osten (zur Strasse); die obere Kante teilt sich der Zaun mit dem Garten des Hauses darueber
+            FenceH(GraveX0, GraveX1, GraveY0);
+            FenceH(GraveX0, GraveX1, GraveY1);
+            FenceV(GraveX0, GraveY0 + 1, GraveY1 - 1);
+            FenceV(GraveX1, GraveY0 + 1, GraveGateY - 1);
+            FenceV(GraveX1, GraveGateY + 2, GraveY1 - 1);
+            Reserve(GraveX1, GraveGateY, GraveX1, GraveGateY + 1);                      // Torgasse frei
+            Sign("Graves", true, GraveX1 + 2, GraveGateY + 3);
+            Lamp("Gartenlicht", GraveX1 + 2, GraveGateY - 2); Lamp("Gartenlicht", GraveX1 + 2, GraveGateY + 2);
+            Put("Talisman_Pfosten", GraveX1 + 1, GraveGateY + 3);
+            Light(lightsRoot, "Talisman_Licht", new Vector3(GraveX1 + 1.5f, GraveGateY + 4.2f, 0), TalismanColor, 0.8f, 3f);
+
+            // Beerdigung: offenes Grab mit Erdhaufen, Sarg und der Tote in weissem Tuch auf der Bahre direkt davor
+            int px = Mathf.RoundToInt(GravePit.x) - 1, py = Mathf.RoundToInt(GravePit.y) - 1;
+            Put("Grab_Offen", px, py);
+            Put("Erdhaufen", px - 3, py + 1); Put("Schaufel_Erde", px - 1, py - 1);
+            Put("Sarg_Leer", px + 3, py + 1);
+            Put("Toter_Weiss", px + 3, py - 1);
+            Put("Kerzen", px + 5, py - 1); Put("Kerzen", px + 1, py + 3); Put("Windlicht", px + 5, py + 2);
+            Light(lightsRoot, "Kerzen_Licht", new Vector3(px + 5.5f, py - 0.4f, 0), FireColor, 0.5f, 2.2f);
+            Light(lightsRoot, "Kerzen_Licht", new Vector3(px + 1.5f, py + 3.6f, 0), FireColor, 0.5f, 2.2f);
+            Reserve(px - 1, py - 1, px + 6, py + 3);          // Platz fuer Priester und Trauergaeste
+
+            // Grabsteine verschiedener Form: Reihen im Westen und im Norden; der Bereich um das offene Grab bleibt frei
+            string[] stones = { "Grabstein_A", "Grabstein_B", "Grabstein_C", "Grabstein_E", "Grabstein_F", "Kreuz_Holz", "Grabhuegel_Kreuz", "Grabhuegel_Blumen" };
+            for (int gx = GraveX0 + 2; gx <= GraveX1 - 2; gx += 2)
+                for (int gy = GraveY0 + 1; gy <= GraveY1 - 1; gy += 2)
+                {
+                    bool ceremony = gx >= px - 4 && gx <= px + 7 && gy <= py + 2;      // Grab, Sarg, Bahre und die Trauergaeste davor
+                    bool priestSpot = gy >= py + 3 && gx >= px - 2 && gx <= px + 3;     // Platz des Priesters noerdlich des Grabs
+                    if (ceremony || priestSpot) continue;
+                    if (rng.NextDouble() < 0.18) continue;                      // Luecken wirken gewachsen
+                    if (gy >= GraveY1 - 2 && rng.NextDouble() < 0.4) Put("Grabstein_D", gx, gy);
+                    else Put(stones[rng.Next(stones.Length)], gx, gy);
+                }
+            Put("Menhir_A", GraveX0 + 1, GraveY1 - 3);
+            Put("Busch_Dunkel", GraveX0 + 1, GraveY0 + 1); Put("Busch_Dunkel", GraveX1 - 1, GraveY1 - 1);
+            PutTree("Birke_A", GraveX0 + 1, GraveY0 + 2, true, true);
+            Lamp("Gartenlicht", GraveX0 + 2, GraveY0 + 1);
+        }
+
+        /// <summary>Revier-Innenraum weit ausserhalb der Karte und die Durchgaenge von der Haustuer hinein und zurueck.</summary>
+        static void PlaceRevierInterior()
+        {
+            var r = Houses[9];
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(HouseDir + "Haus_DorfRevier_Innen.prefab");
+            if (prefab == null || r.tr == null) { issues.Add("Revier-Innenraum fehlt: Haus_DorfRevier_Innen.prefab"); return; }
+            var innen = (GameObject)PrefabUtility.InstantiatePrefab(prefab, housesRoot);
+            innen.name = "Revier_Innen";
+            innen.transform.position = new Vector3(RevierInnenOrigin.x, RevierInnenOrigin.y, 0f);
+
+            var eingang = new GameObject("Revier_Innen_Eingang").transform;
+            eingang.SetParent(levelRoot, false);
+            eingang.position = RevierInnenEingang;
+            var ausgang = new GameObject("Revier_Aussen_Ausgang").transform;
+            ausgang.SetParent(levelRoot, false);
+            ausgang.position = new Vector3(r.x + r.door + 0.5f, r.y - 1.3f, 0f);
+
+            void Link(Transform trigger, Transform ziel)
+            {
+                var d = trigger.gameObject.GetComponent<Nightward.World.Durchgang>() ?? trigger.gameObject.AddComponent<Nightward.World.Durchgang>();
+                var so = new SerializedObject(d);
+                so.FindProperty("ziel").objectReferenceValue = ziel;
+                so.ApplyModifiedPropertiesWithoutUndo();
+            }
+            Transform door = null;
+            foreach (Transform t in r.tr) if (t.name.StartsWith("Eingang_")) { door = t; break; }
+            Transform exit = innen.transform.Find("Ausgang");
+            if (door != null) Link(door, eingang); else issues.Add("Revier: Eingang-Trigger fehlt");
+            if (exit != null) Link(exit, ausgang); else issues.Add("Revier: Ausgang-Trigger fehlt");
         }
 
         static void PlaceVillaGarden()
@@ -1056,7 +1129,7 @@ namespace Nightward.EditorTools
             Lamp("Laterne_Doppel", 29, BachY + 2); Lamp("Laterne_Doppel", 38, BachY + 2);
             Lamp("Laterne_Doppel", 29, BachY - 6); Lamp("Laterne_Doppel", 38, BachY - 6);
             Lamp("Gartenlicht", 31, 3); Lamp("Gartenlicht", 38, 7);
-            Sign("Forest", true, 29, 9);
+            Sign("Forest", false, 39, 5);
             // Uferweg am Bach: Baenke, Laternen, Boot, Fischerei
             Put("Bank_Lehne", 14, BachY - 9); Put("Bank_Lehne", 24, BachY - 9);
             foreach (int lx in new[] { 8, 16, 22, 28 }) Lamp("Gartenlicht", lx, BachY - 5);
@@ -1327,6 +1400,7 @@ namespace Nightward.EditorTools
             crownMap.tileAnchor = Vector3.zero;
 
             PlaceHouses();
+            PlaceRevierInterior();
             PlaceBar();
             nearPW = new bool[W, H];
             for (int x = MinX; x <= MaxX; x++)

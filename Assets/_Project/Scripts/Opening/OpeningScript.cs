@@ -9,9 +9,11 @@ namespace Nightward.Opening
         public float pause;      // #pause, Sekunden vor der Zeile
         public bool mumble;      // #voice:mumble
         public bool thought;     // #thought (kursiv)
+        public bool player;      // Spielerzeile ("You"), sonst Erzaehler oder NPC
 
         public static Line N(string text) => new Line { text = text };
         public static Line T(string text) => new Line { text = text, thought = true };
+        public static Line You(string text) => new Line { speaker = "You", text = text, player = true };
         public static Line Bulut(string expr, string text) =>
             new Line { speaker = "Bulut", expr = expr, text = text, pause = 1.0f, mumble = true };
     }

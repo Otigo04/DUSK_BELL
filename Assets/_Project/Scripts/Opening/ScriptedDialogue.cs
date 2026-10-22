@@ -27,6 +27,8 @@ namespace Nightward.Opening
         [Tooltip("Ausdruecke aus der Dialogue Bible (tense, cold, suspicious ...) fuer das Portraet")]
         [SerializeField] List<Expression> expressions = new List<Expression>();
         [SerializeField] float voicePitch = 0.8f;
+        [Tooltip("Name der Spielerzeilen in der Dialogbox (die Opening-Texte sind englisch)")]
+        [SerializeField] string playerLabel = "You";
 
         NpcProfile profile;
         bool advance;
@@ -45,6 +47,7 @@ namespace Nightward.Opening
             profile = npc;
             IsOpen = true;
             view.BoxClickEnabled = false;   // Klicks wertet PlayLine selbst aus (auch neben der Box)
+            view.PlayerLabel = playerLabel;
             BuildTalkFrames();
             view.Open(npc);
             if (audioPlayer != null) audioPlayer.SetVoice(voicePitch);
@@ -55,6 +58,7 @@ namespace Nightward.Opening
             IsOpen = false;
             if (audioPlayer != null) audioPlayer.Mumbling = false;
             view.BoxClickEnabled = true;
+            view.PlayerLabel = "Du";
             view.Close();
         }
 
@@ -67,10 +71,10 @@ namespace Nightward.Opening
         /// sondern laesst unter dem Text Platz fuer die Antworten (Choose direkt danach aufrufen).</summary>
         public IEnumerator PlayLine(Line l, int choicesAfter = 0)
         {
-            bool npc = !string.IsNullOrEmpty(l.speaker) && profile != null;
+            bool npc = !string.IsNullOrEmpty(l.speaker) && !l.player && profile != null;
             view.Portrait.SetExpression(npc ? Find(l.expr) : null, npc ? FindTalk(l.expr) : null);
             // Die Atempause vor einer NPC-Zeile passiert in der Box (Name steht schon da, ein Klick ueberspringt sie)
-            view.ShowLine(npc ? Speaker.Npc : Speaker.Erzaehler, profile, l.text, choicesAfter, npc ? l.pause : 0f);
+            view.ShowLine(npc ? Speaker.Npc : l.player ? Speaker.Spieler : Speaker.Erzaehler, profile, l.text, choicesAfter, npc ? l.pause : 0f);
             advance = false;
             yield return null; // Taste vom letzten Weiter nicht doppelt zaehlen
             while (choicesAfter > 0 ? !view.LineFinished : !advance)

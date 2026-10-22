@@ -29,8 +29,8 @@ namespace Nightward.Opening
             body = GetComponent<Rigidbody2D>();
         }
 
-        /// <summary>Laeuft geradlinig zum Ziel. speed in Units pro Sekunde.</summary>
-        public IEnumerator WalkTo(Vector2 target, float speed)
+        /// <summary>Laeuft geradlinig zum Ziel. speed in Units pro Sekunde. Solange hold true liefert, bleibt die Figur stehen (z. B. wartet auf den Spieler).</summary>
+        public IEnumerator WalkTo(Vector2 target, float speed, System.Func<bool> hold = null)
         {
             Walking = true;
             mover.Stop();
@@ -43,10 +43,18 @@ namespace Nightward.Opening
                 Vector2 to = target - pos;
                 float dist = to.magnitude;
                 if (dist < 0.04f) break;
+                string dir = Dirs[Player.PlayerController.DirectionIndex(to)];
+                if (hold != null && hold())
+                {
+                    string idle = "idle_" + dir;
+                    if (idle != last && animator != null) { animator.speed = 1f; animator.Play(idle, 0, 0f); last = idle; }
+                    yield return null;
+                    continue;
+                }
                 Vector2 step = to / dist * Mathf.Min(dist, speed * Time.deltaTime);
                 body.position = pos + step;
                 transform.position = body.position;
-                string state = "walk_" + Dirs[Player.PlayerController.DirectionIndex(to)];
+                string state = "walk_" + dir;
                 if (state != last && animator != null) { animator.Play(state, 0, 0f); last = state; }
                 if (animator != null) animator.speed = Mathf.Clamp(speed / 2.5f, 0.6f, 1.6f);
                 yield return null;
