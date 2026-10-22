@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 49598e7ce746ad3479a7ea83cbeefc7b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4014744854981561535
+    second: Katze_Idle_Sheet_0
+  - first:
+      213: 5381252372678213692
+    second: Katze_Idle_Sheet_1
+  - first:
+      213: -1288498364021186423
+    second: Katze_Idle_Sheet_2
+  - first:
+      213: -5281769378379130369
+    second: Katze_Idle_Sheet_3
+  - first:
+      213: -8377257450939627201
+    second: Katze_Idle_Sheet_4
+  - first:
+      213: 502014397732709376
+    second: Katze_Idle_Sheet_5
+  - first:
+      213: -1398905160218061628
+    second: Katze_Idle_Sheet_6
+  - first:
+      213: -7714661509142103072
+    second: Katze_Idle_Sheet_7
+  - first:
+      213: 6996903083495752702
+    second: Katze_Idle_Sheet_8
+  - first:
+      213: -7304781142356364650
+    second: Katze_Idle_Sheet_9
+  - first:
+      213: 1906431496803496533
+    second: Katze_Idle_Sheet_10
+  - first:
+      213: -1446379486143561523
+    second: Katze_Idle_Sheet_11
+  - first:
+      213: -1410595677858576623
+    second: Katze_Idle_Sheet_12
+  - first:
+      213: -1870056988993731470
+    second: Katze_Idle_Sheet_13
+  - first:
+      213: 5204613113298060370
+    second: Katze_Idle_Sheet_14
+  - first:
+      213: -672819770605223630
+    second: Katze_Idle_Sheet_15
+  - first:
+      213: -5811239451242762906
+    second: Katze_Idle_Sheet_16
+  - first:
+      213: -5212179104592711810
+    second: Katze_Idle_Sheet_17
+  - first:
+      213: 8126542799792132776
+    second: Katze_Idle_Sheet_18
+  - first:
+      213: -4589208139583034837
+    second: Katze_Idle_Sheet_19
+  - first:
+      213: 4578056037540650304
+    second: Katze_Idle_Sheet_20
+  - first:
+      213: 7125807372468513621
+    second: Katze_Idle_Sheet_21
+  - first:
+      213: 3580185740849609941
+    second: Katze_Idle_Sheet_22
+  - first:
+      213: -1245604384234559225
+    second: Katze_Idle_Sheet_23
+  - first:
+      213: -9160237266819698539
+    second: Katze_Idle_Sheet_24
+  - first:
+      213: 4567070983334926762
+    second: Katze_Idle_Sheet_25
+  - first:
+      213: 357694894510652537
+    second: Katze_Idle_Sheet_26
+  - first:
+      213: -208223460909044497
+    second: Katze_Idle_Sheet_27
+  - first:
+      213: -388483623764195867
+    second: Katze_Idle_Sheet_28
+  - first:
+      213: -1558179339772642608
+    second: Katze_Idle_Sheet_29
+  - first:
+      213: -4878010256364944904
+    second: Katze_Idle_Sheet_30
+  - first:
+      213: -455276803196868122
+    second: Katze_Idle_Sheet_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 226
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1433ffe43d2c848c0800000000000000
+      internalID: -4014744854981561535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 226
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c308638958c0eaa40800000000000000
+      internalID: 5381252372678213692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 226
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98068de80955e1ee0800000000000000
+      internalID: -1288498364021186423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 226
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff91d200cb263b6b0800000000000000
+      internalID: -5281769378379130369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 192
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39cfb4abb00ebb80800000000000000
+      internalID: -8377257450939627201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 192
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0046df85f6387f600800000000000000
+      internalID: 502014397732709376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 192
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4ddb22b27169ce0800000000000000
+      internalID: -1398905160218061628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 192
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebb4314b3400f490800000000000000
+      internalID: -7714661509142103072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 160
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef38993884ef91160800000000000000
+      internalID: 6996903083495752702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 160
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69270efd04430aa90800000000000000
+      internalID: -7304781142356364650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 160
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552b69b7851057a10800000000000000
+      internalID: 1906431496803496533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 160
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc04006458d6debe0800000000000000
+      internalID: -1446379486143561523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 129
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117c98364be8c6ce0800000000000000
+      internalID: -1410595677858576623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 129
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274ca4593193c06e0800000000000000
+      internalID: -1870056988993731470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 129
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25488732d008a3840800000000000000
+      internalID: 5204613113298060370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 129
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231473fbbf9a9a6f0800000000000000
+      internalID: -672819770605223630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 96
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d60f322845a5fa0800000000000000
+      internalID: -5811239451242762906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 96
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fa90d38be9aa7b0800000000000000
+      internalID: -5212179104592711810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 96
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a25e91ce9747c070800000000000000
+      internalID: 8126542799792132776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 96
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a62dff28bdf40c0800000000000000
+      internalID: -4589208139583034837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d5177e5b5888f30800000000000000
+      internalID: 4578056037540650304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 64
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b68d51d04f3e260800000000000000
+      internalID: 7125807372468513621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 64
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc724176ff5fa130800000000000000
+      internalID: 3580185740849609941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 64
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709a70b7969b6bee0800000000000000
+      internalID: -1245604384234559225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 32
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590bae42dbc40e080800000000000000
+      internalID: -9160237266819698539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 32
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa91ca9acde716f30800000000000000
+      internalID: 4567070983334926762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 32
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c37458c99c6f400800000000000000
+      internalID: 357694894510652537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 32
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec2d929ddd3c1df0800000000000000
+      internalID: -208223460909044497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e58a74d334db9af0800000000000000
+      internalID: -388483623764195867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dabf74652c306ae0800000000000000
+      internalID: -1558179339772642608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1c7a24483dd4cb0800000000000000
+      internalID: -4878010256364944904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Katze_Idle_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9a9fed8288ea9f0800000000000000
+      internalID: -455276803196868122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Katze_Idle_Sheet_0: -4014744854981561535
+      Katze_Idle_Sheet_1: 5381252372678213692
+      Katze_Idle_Sheet_10: 1906431496803496533
+      Katze_Idle_Sheet_11: -1446379486143561523
+      Katze_Idle_Sheet_12: -1410595677858576623
+      Katze_Idle_Sheet_13: -1870056988993731470
+      Katze_Idle_Sheet_14: 5204613113298060370
+      Katze_Idle_Sheet_15: -672819770605223630
+      Katze_Idle_Sheet_16: -5811239451242762906
+      Katze_Idle_Sheet_17: -5212179104592711810
+      Katze_Idle_Sheet_18: 8126542799792132776
+      Katze_Idle_Sheet_19: -4589208139583034837
+      Katze_Idle_Sheet_2: -1288498364021186423
+      Katze_Idle_Sheet_20: 4578056037540650304
+      Katze_Idle_Sheet_21: 7125807372468513621
+      Katze_Idle_Sheet_22: 3580185740849609941
+      Katze_Idle_Sheet_23: -1245604384234559225
+      Katze_Idle_Sheet_24: -9160237266819698539
+      Katze_Idle_Sheet_25: 4567070983334926762
+      Katze_Idle_Sheet_26: 357694894510652537
+      Katze_Idle_Sheet_27: -208223460909044497
+      Katze_Idle_Sheet_28: -388483623764195867
+      Katze_Idle_Sheet_29: -1558179339772642608
+      Katze_Idle_Sheet_3: -5281769378379130369
+      Katze_Idle_Sheet_30: -4878010256364944904
+      Katze_Idle_Sheet_31: -455276803196868122
+      Katze_Idle_Sheet_4: -8377257450939627201
+      Katze_Idle_Sheet_5: 502014397732709376
+      Katze_Idle_Sheet_6: -1398905160218061628
+      Katze_Idle_Sheet_7: -7714661509142103072
+      Katze_Idle_Sheet_8: 6996903083495752702
+      Katze_Idle_Sheet_9: -7304781142356364650
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,343 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Nightward.NPC
+{
+    /// <summary>
+    /// Laeuft einen Pfad vom NavGrid ab (freie Bewegung zwischen Wegpunkten), weicht anderen NPCs aus
+    /// und macht dem Spieler Platz.
+    /// Entscheidet nicht selbst, wohin es geht. Das machen die Behaviors ueber SetDestination.
+    /// </summary>
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class NpcMover : MonoBehaviour
+    {
+        static readonly List<NpcMover> All = new List<NpcMover>();
+
+        [Tooltip("Geschwindigkeit in Units (= Kacheln) pro Sekunde")]
+        [SerializeField] float moveSpeed = 2.5f;
+        [Tooltip("Wie weit vor einem Wegpunkt er als erreicht gilt")]
+        [SerializeField] float waypointTolerance = 0.1f;
+        [Tooltip("Wie weit vor dem Ziel gestoppt wird")]
+        [SerializeField] float arriveDistance = 0.15f;
+        [Tooltip("Wie schnell die Geschwindigkeit der Zielrichtung folgt (hoeher = abrupter)")]
+        [SerializeField] float acceleration = 20f;
+
+        [Header("Ausweichen")]
+        [Tooltip("Ab diesem Abstand schieben sich NPCs voneinander weg")]
+        [SerializeField] float separationRadius = 0.6f;
+        [SerializeField] float separationStrength = 1.5f;
+        [Tooltip("Kommt ein NPC von vorne, wird ab diesem Abstand nach rechts ausgewichen")]
+        [SerializeField] float avoidDistance = 1.2f;
+        [SerializeField] float avoidStrength = 1.2f;
+        [Tooltip("Aus = NPCs gehen physikalisch durcheinander durch und weichen nur per Steuerung aus. Verhindert Blockaden in engen Gassen")]
+        [SerializeField] bool collideWithOtherNpcs = false;
+
+        [Header("Spieler ausweichen")]
+        [Tooltip("Kommt der Spieler auf ihn zu oder rempelt ihn an, tritt der NPC kurz zur Seite")]
+        [SerializeField] bool yieldToPlayer = true;
+        [Tooltip("Ab diesem Abstand zum Spieler wird ausgewichen")]
+        [SerializeField] float yieldRadius = 1.5f;
+        [Tooltip("Steht der Spieler still, wird erst ab diesem Abstand Platz gemacht (Beruehrung)")]
+        [SerializeField] float touchDistance = 0.7f;
+
+        [Header("Feststecken")]
+        [Tooltip("Kommt der NPC so lange nicht voran, wird der Weg neu berechnet")]
+        [SerializeField] float stuckTime = 0.75f;
+
+        [Header("Debug")]
+        [SerializeField] bool drawPath = true;
+
+        Rigidbody2D body;
+        Collider2D[] colliders;
+        readonly List<Vector2> path = new List<Vector2>();
+        int pathIndex;
+        Vector2 destination;
+        bool hasDestination;
+        bool waitingForPath;
+        float speedMultiplier = 1f;
+        Vector2 desiredVelocity;
+        Vector2 lastProgressPos;
+        float stuckTimer;
+        Rigidbody2D player;
+        float yieldSide; // 0 = weicht gerade nicht aus, sonst +1/-1, damit die Seite nicht hin und her springt
+
+        public bool IsMoving => body != null && body.linearVelocity.sqrMagnitude > 0.01f;
+        public bool HasArrived => !hasDestination && !waitingForPath;
+        public bool PathFailed { get; private set; }
+        public Vector2 Destination => destination;
+        public Vector2 Velocity => body.linearVelocity;
+        public Vector2 Position => body.position;
+        /// <summary>Letzte Bewegungs- oder Blickrichtung, fuer Animation.</summary>
+        public Vector2 Facing { get; private set; } = Vector2.down;
+        public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+        /// <summary>Steht still und weicht niemandem aus, z. B. waehrend eines Gespraechs.</summary>
+        public bool Frozen { get; set; }
+
+        void Awake()
+        {
+            body = GetComponent<Rigidbody2D>();
+            body.gravityScale = 0f;
+            body.freezeRotation = true;
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
+            colliders = GetComponentsInChildren<Collider2D>();
+        }
+
+        void Start()
+        {
+            var p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) player = p.GetComponent<Rigidbody2D>();
+        }
+
+        void OnEnable()
+        {
+            if (!collideWithOtherNpcs)
+                foreach (var other in All) IgnoreCollisions(other);
+            All.Add(this);
+        }
+
+        void IgnoreCollisions(NpcMover other)
+        {
+            foreach (var a in colliders)
+                foreach (var b in other.colliders)
+                    Physics2D.IgnoreCollision(a, b);
+        }
+
+        void OnDisable()
+        {
+            All.Remove(this);
+            if (NavGrid.Instance != null) NavGrid.Instance.CancelRequest(this);
+        }
+
+        /// <summary>
+        /// Neues Ziel setzen. Bei freier Sichtlinie wird direkt gelaufen, sonst ein Pfad angefragt.
+        /// speedMultiplier z. B. 1.5 zum Rennen, 0.5 zum Schlendern.
+        /// </summary>
+        public void SetDestination(Vector2 target, float speedMultiplier = 1f) => SetDestination(target, speedMultiplier, allowDirect: true);
+
+        void SetDestination(Vector2 target, float speedMultiplier, bool allowDirect)
+        {
+            this.speedMultiplier = speedMultiplier;
+            destination = target;
+            hasDestination = true;
+            PathFailed = false;
+            stuckTimer = 0f;
+            lastProgressPos = body.position;
+
+            var nav = NavGrid.Instance;
+            if (nav == null || (allowDirect && nav.HasLineOfSight(body.position, target)))
+            {
+                SetPath(new List<Vector2> { target });
+                return;
+            }
+            waitingForPath = true;
+            nav.RequestPath(this, body.position, target, OnPathReady);
+        }
+
+        public void Stop()
+        {
+            hasDestination = false;
+            waitingForPath = false;
+            path.Clear();
+            if (NavGrid.Instance != null) NavGrid.Instance.CancelRequest(this);
+        }
+
+        /// <summary>Im Stehen in eine Richtung schauen, z. B. zum Spieler.</summary>
+        public void LookAt(Vector2 worldPoint)
+        {
+            Vector2 d = worldPoint - body.position;
+            if (d.sqrMagnitude > 0.0001f) Facing = d.normalized;
+        }
+
+        public float RemainingDistance()
+        {
+            if (!hasDestination) return 0f;
+            float dist = 0f;
+            Vector2 p = body.position;
+            for (int i = pathIndex; i < path.Count; i++) { dist += Vector2.Distance(p, path[i]); p = path[i]; }
+            return dist;
+        }
+
+        void OnPathReady(List<Vector2> result)
+        {
+            if (!waitingForPath) return; // inzwischen gestoppt
+            waitingForPath = false;
+            if (result == null || result.Count == 0)
+            {
+                PathFailed = true;
+                hasDestination = false;
+                path.Clear();
+                return;
+            }
+            SetPath(result);
+        }
+
+        void SetPath(List<Vector2> newPath)
+        {
+            path.Clear();
+            path.AddRange(newPath);
+            pathIndex = 0;
+        }
+
+        void FixedUpdate()
+        {
+            desiredVelocity = Vector2.zero;
+            if (Frozen)
+            {
+                body.linearVelocity = Vector2.zero;
+                return;
+            }
+            if (hasDestination && !waitingForPath && pathIndex < path.Count) FollowPath();
+
+            desiredVelocity += Separation() + Avoidance();
+            float max = moveSpeed * speedMultiplier;
+
+            Vector2 yield = YieldToPlayer();
+            if (yield != Vector2.zero)
+            {
+                // Platz machen hat Vorrang vor dem eigenen Weg, der eigene Weg wird nur gedaempft
+                desiredVelocity = desiredVelocity * 0.25f + yield;
+                max = Mathf.Max(max, moveSpeed);
+            }
+            if (desiredVelocity.sqrMagnitude > max * max) desiredVelocity = desiredVelocity.normalized * max;
+
+            body.linearVelocity = Vector2.MoveTowards(body.linearVelocity, desiredVelocity, acceleration * Time.fixedDeltaTime);
+            if (body.linearVelocity.sqrMagnitude > 0.04f) Facing = body.linearVelocity.normalized;
+        }
+
+        void FollowPath()
+        {
+            Vector2 pos = body.position;
+            Vector2 target = path[pathIndex];
+            bool last = pathIndex == path.Count - 1;
+            float tolerance = last ? arriveDistance : waypointTolerance;
+
+            if ((target - pos).sqrMagnitude <= tolerance * tolerance)
+            {
+                if (last) { Stop(); return; }
+                pathIndex++;
+                target = path[pathIndex];
+            }
+
+            Vector2 dir = (target - pos).normalized;
+            float speed = moveSpeed * speedMultiplier;
+            // Kurz vor dem Ziel abbremsen statt drueberzuschiessen
+            if (last) speed = Mathf.Min(speed, (target - pos).magnitude / Time.fixedDeltaTime);
+            desiredVelocity = dir * speed;
+
+            CheckStuck(pos);
+        }
+
+        void CheckStuck(Vector2 pos)
+        {
+            if ((pos - lastProgressPos).sqrMagnitude > 0.04f)
+            {
+                lastProgressPos = pos;
+                stuckTimer = 0f;
+                return;
+            }
+            stuckTimer += Time.fixedDeltaTime;
+            // Direkter Weg klappt offenbar nicht (z. B. Collider ragt ueber die Zelle): echten A*-Pfad erzwingen
+            if (stuckTimer >= stuckTime) SetDestination(destination, speedMultiplier, allowDirect: false);
+        }
+
+        // Jeder NPC schiebt sich von zu nahen Nachbarn weg. Reicht fuer hunderte NPCs,
+        // bei deutlich mehr waere ein Raumraster fuer die Nachbarsuche sinnvoll.
+        Vector2 Separation()
+        {
+            Vector2 push = Vector2.zero;
+            Vector2 pos = body.position;
+            float r2 = separationRadius * separationRadius;
+            foreach (var other in All)
+            {
+                if (other == this) continue;
+                Vector2 d = pos - other.body.position;
+                float dist2 = d.sqrMagnitude;
+                if (dist2 >= r2) continue;
+                if (dist2 < 0.0001f) d = Random.insideUnitCircle * 0.01f; // exakt gleiche Position
+                float dist = Mathf.Sqrt(dist2);
+                push += d.normalized * (1f - dist / separationRadius);
+            }
+            return push * separationStrength;
+        }
+
+        // Laeuft der Spieler auf den NPC zu (oder steht direkt an ihm), tritt der NPC seitlich aus der Laufbahn.
+        // Die Seite wird beibehalten, solange ausgewichen wird, und muss im NavGrid begehbar sein.
+        Vector2 YieldToPlayer()
+        {
+            if (!yieldToPlayer || player == null) return Vector2.zero;
+            Vector2 pos = body.position;
+            Vector2 toMe = pos - player.position;
+            float dist = toMe.magnitude;
+            Vector2 pv = player.linearVelocity;
+            bool playerMoving = pv.sqrMagnitude > 0.1f;
+
+            bool approaching = playerMoving && Vector2.Dot(pv, toMe) > 0f;
+            if (dist > yieldRadius || (!approaching && dist > touchDistance))
+            {
+                yieldSide = 0f;
+                return Vector2.zero;
+            }
+
+            Vector2 away = dist > 0.001f ? toMe / dist : Vector2.right;
+            Vector2 heading = approaching ? pv.normalized : away;
+            Vector2 side = new Vector2(-heading.y, heading.x);
+
+            if (yieldSide == 0f)
+            {
+                float lateral = Vector2.Dot(toMe, side);
+                yieldSide = Mathf.Abs(lateral) > 0.05f ? Mathf.Sign(lateral) : (Random.value < 0.5f ? 1f : -1f);
+                if (!IsFree(pos + side * yieldSide * 0.7f)) yieldSide = -yieldSide;
+            }
+
+            Vector2 dir = side * yieldSide;
+            if (!IsFree(pos + dir * 0.7f))
+            {
+                // Beide Seiten zu: zuruecktreten, wenn wenigstens das geht
+                if (!IsFree(pos + away * 0.7f)) return Vector2.zero;
+                dir = away;
+            }
+
+            float urgency = Mathf.Clamp01(1f - dist / yieldRadius);
+            return (dir + away * 0.3f).normalized * moveSpeed * Mathf.Lerp(0.6f, 1.1f, urgency);
+        }
+
+        static bool IsFree(Vector2 world) => NavGrid.Instance == null || NavGrid.Instance.IsWalkable(world);
+
+        // Steht oder kommt jemand direkt im Weg, nach rechts ausweichen. Weil alle nach rechts gehen,
+        // laufen sich zwei NPCs auf Gegenkurs nicht gegenseitig in die Arme.
+        Vector2 Avoidance()
+        {
+            if (desiredVelocity.sqrMagnitude < 0.01f) return Vector2.zero;
+            Vector2 pos = body.position;
+            Vector2 forward = desiredVelocity.normalized;
+            Vector2 right = new Vector2(forward.y, -forward.x);
+            Vector2 steer = Vector2.zero;
+            foreach (var other in All)
+            {
+                if (other == this) continue;
+                Vector2 toOther = other.body.position - pos;
+                float ahead = Vector2.Dot(toOther, forward);
+                if (ahead <= 0f || ahead > avoidDistance) continue;
+                float lateral = Vector2.Dot(toOther, right);
+                if (Mathf.Abs(lateral) > separationRadius) continue; // steht nicht im Weg
+                // Steht der andere schon rechts, weicht man nach links aus
+                float side = lateral > 0.05f ? -1f : 1f;
+                steer += right * side * (1f - ahead / avoidDistance);
+            }
+            return steer * avoidStrength * moveSpeed * speedMultiplier;
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            if (!drawPath || path.Count == 0 || !hasDestination) return;
+            Gizmos.color = Color.cyan;
+            Vector3 p = transform.position;
+            for (int i = pathIndex; i < path.Count; i++)
+            {
+                Gizmos.DrawLine(p, path[i]);
+                Gizmos.DrawWireSphere(path[i], 0.08f);
+                p = path[i];
+            }
+        }
+    }
+}

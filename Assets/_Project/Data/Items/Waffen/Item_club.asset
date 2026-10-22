@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f821d7e1b53e0424b9e1bdb9cb217e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.ItemDef
+  id: club
+  displayName: Wooden Club
+  description: Heavy. Needs both hands.
+  icon: {fileID: 21300000, guid: 83c35d6e3987b344589dff2ea82cb8d2, type: 3}
+  category: 3
+  rarity: 0
+  maxStack: 1
+  value: 4
+  autoPickup: 0
+  consumableId: 
+  useVerb: Use
+  consumedOnUse: 1
+  leftoverItemId: 
+  refuelsItemId: 
+  refuelAmount: 50
+  weapon: 3
+  attackAnim: club
+  attackCombo: 1
+  attackSeconds: 0.5
+  hitSeconds: 0.26
+  damage: 3
+  reach: 1
+  rangedRange: 9
+  ammoItemId: 
+  staminaCostMultiplier: 1.4
+  maxDurability: 25
+  durabilityPerUse: 1
+  equipSlot: 0
+  outfitPalette: []
+  equipEffects: []
+  lightRadius: 0
+  lightColor: {r: 1, g: 0.65, b: 0.31, a: 1}
+  lightIntensity: 0.9
+  burnPerHour: 10
+  consumedWhenBurnedOut: 0

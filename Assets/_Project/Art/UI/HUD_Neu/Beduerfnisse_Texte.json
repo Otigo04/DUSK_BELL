@@ -1,0 +1,91 @@
+{
+  "need_stages": {
+    "Hunger": [
+      "Your stomach growls.",
+      "I'm hungry.",
+      "I'm really hungry.",
+      "I'm starving."
+    ],
+    "Durst": [
+      "Your mouth feels dry.",
+      "I'm thirsty.",
+      "I'm really thirsty.",
+      "I'm parched."
+    ],
+    "Muede": [
+      "A little drowsy.",
+      "I'm tired.",
+      "I'm exhausted.",
+      "I can't keep my eyes open."
+    ],
+    "Rausch": [
+      "Tipsy.",
+      "Drunk.",
+      "Very drunk.",
+      "Wasted."
+    ],
+    "Verletzt": [
+      "A scratch.",
+      "I'm hurt.",
+      "I'm badly hurt.",
+      "I'm barely standing."
+    ],
+    "Stimmung": [
+      "Feeling a bit down.",
+      "I'm unhappy.",
+      "I'm miserable.",
+      "I feel hollow."
+    ],
+    "Gesellschaft": [
+      "A bit lonely.",
+      "I'm lonely.",
+      "I'm really lonely.",
+      "I haven't spoken to anyone."
+    ],
+    "Anspannung": [
+      "A little tense.",
+      "I'm on edge.",
+      "I'm stressed.",
+      "I'm about to panic."
+    ],
+    "Erschoepft": [
+      "A bit winded.",
+      "I'm out of breath.",
+      "My legs are shaking.",
+      "I'm completely spent."
+    ],
+    "Kalt": [
+      "A chill in the air.",
+      "I'm cold.",
+      "I'm freezing.",
+      "I'm frozen to the bone."
+    ],
+    "Verstoert": [
+      "Slightly uneasy.",
+      "I'm rattled.",
+      "I'm losing my grip.",
+      "I don't trust my own mind."
+    ]
+  },
+  "need_positive": {
+    "Stimmung": [
+      "Feeling good.",
+      "I'm happy."
+    ],
+    "Gesellschaft": [
+      "Good company.",
+      "I'm among friends."
+    ],
+    "Anspannung": [
+      "Feeling relaxed.",
+      "I'm completely calm."
+    ]
+  },
+  "stage_colors": {
+    "1": "#6b5a7a",
+    "2": "#ffd27a",
+    "3": "#ffa550",
+    "4": "#d64a6a"
+  },
+  "positive_color": "#6e9a5e"
+}

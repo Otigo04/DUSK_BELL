@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Dachfenster_Licht
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -1301157808169153494, guid: dd062ecf5dda2874e97fc224e7db3fbe, type: 3}
+  - {fileID: -6537993058541469380, guid: dd062ecf5dda2874e97fc224e7db3fbe, type: 3}
+  - {fileID: 2475065272062125090, guid: dd062ecf5dda2874e97fc224e7db3fbe, type: 3}
+  - {fileID: -6027713847021013345, guid: dd062ecf5dda2874e97fc224e7db3fbe, type: 3}
+  m_MinSpeed: 3.653846
+  m_MaxSpeed: 4.038461
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

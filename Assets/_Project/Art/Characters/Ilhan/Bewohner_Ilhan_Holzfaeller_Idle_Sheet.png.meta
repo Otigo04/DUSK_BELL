@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: a28c06de0d6fc14419c6f45bcd65157d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4444363197269730139
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_0
+  - first:
+      213: 1513069430209432397
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_1
+  - first:
+      213: -1985402805579179432
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_2
+  - first:
+      213: -8079453847782424205
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_3
+  - first:
+      213: -1511880750149459348
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_4
+  - first:
+      213: -2362015514802150484
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_5
+  - first:
+      213: 3088090764078847052
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_6
+  - first:
+      213: 8837357242272604822
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_7
+  - first:
+      213: 7969248470139809676
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_8
+  - first:
+      213: 8924783966395660909
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_9
+  - first:
+      213: -6648817355966154688
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_10
+  - first:
+      213: -6478979065774696658
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_11
+  - first:
+      213: 2169075661941241871
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_12
+  - first:
+      213: -2928345153303412268
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_13
+  - first:
+      213: -9168391084103311419
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_14
+  - first:
+      213: 3026360087492680011
+    second: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53e41ad7cc8dad30800000000000000
+      internalID: 4444363197269730139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 144
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bc22451a08ff410800000000000000
+      internalID: 1513069430209432397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a936ddaae6274e0800000000000000
+      internalID: -1985402805579179432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 144
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37104cf388300ef80800000000000000
+      internalID: -8079453847782424205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 96
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c622790d778b40be0800000000000000
+      internalID: -1511880750149459348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 96
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3a14e576f683fd0800000000000000
+      internalID: -2362015514802150484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 96
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c449513403a1bda20800000000000000
+      internalID: 3088090764078847052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 96
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69262eae69994aa70800000000000000
+      internalID: 8837357242272604822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 48
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f228db245789e60800000000000000
+      internalID: 7969248470139809676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6a7d1e5bb33bdb70800000000000000
+      internalID: 8924783966395660909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 48
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0487f2977d7aab3a0800000000000000
+      internalID: -6648817355966154688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e279e45edda0616a0800000000000000
+      internalID: -6478979065774696658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08f3f082da1a1e10800000000000000
+      internalID: 2169075661941241871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d10d9d199d6c57d0800000000000000
+      internalID: -2928345153303412268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cfd92e92e453c080800000000000000
+      internalID: -9168391084103311419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bewohner_Ilhan_Holzfaeller_Idle_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49db69177acff920800000000000000
+      internalID: 3026360087492680011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_0: 4444363197269730139
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_1: 1513069430209432397
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_10: -6648817355966154688
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_11: -6478979065774696658
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_12: 2169075661941241871
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_13: -2928345153303412268
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_14: -9168391084103311419
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_15: 3026360087492680011
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_2: -1985402805579179432
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_3: -8079453847782424205
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_4: -1511880750149459348
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_5: -2362015514802150484
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_6: 3088090764078847052
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_7: 8837357242272604822
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_8: 7969248470139809676
+      Bewohner_Ilhan_Holzfaeller_Idle_Sheet_9: 8924783966395660909
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

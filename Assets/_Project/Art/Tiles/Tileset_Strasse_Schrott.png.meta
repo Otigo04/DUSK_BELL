@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: d6dacf22210859c46adcc745cddbfb23
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7929484601499301268
+    second: Tileset_Strasse_Schrott_0
+  - first:
+      213: -7115257549825643076
+    second: Tileset_Strasse_Schrott_1
+  - first:
+      213: 5234138418339104611
+    second: Tileset_Strasse_Schrott_2
+  - first:
+      213: -6791832505565608117
+    second: Tileset_Strasse_Schrott_3
+  - first:
+      213: 5717588262960079447
+    second: Tileset_Strasse_Schrott_4
+  - first:
+      213: -3143436337699234256
+    second: Tileset_Strasse_Schrott_5
+  - first:
+      213: -713570029896624038
+    second: Tileset_Strasse_Schrott_6
+  - first:
+      213: 371481752401742592
+    second: Tileset_Strasse_Schrott_7
+  - first:
+      213: 1004585535186654055
+    second: Tileset_Strasse_Schrott_8
+  - first:
+      213: -6372904393627150147
+    second: Tileset_Strasse_Schrott_9
+  - first:
+      213: 146341580889797616
+    second: Tileset_Strasse_Schrott_10
+  - first:
+      213: -8690206606680624150
+    second: Tileset_Strasse_Schrott_11
+  - first:
+      213: -6968028236096165662
+    second: Tileset_Strasse_Schrott_12
+  - first:
+      213: 7061148052281927899
+    second: Tileset_Strasse_Schrott_13
+  - first:
+      213: 5253106629921317593
+    second: Tileset_Strasse_Schrott_14
+  - first:
+      213: 5946054216798590344
+    second: Tileset_Strasse_Schrott_15
+  - first:
+      213: 3257731767299105325
+    second: Tileset_Strasse_Schrott_16
+  - first:
+      213: 1979864448491563854
+    second: Tileset_Strasse_Schrott_17
+  - first:
+      213: -3520250144172210716
+    second: Tileset_Strasse_Schrott_18
+  - first:
+      213: -1161011641493382752
+    second: Tileset_Strasse_Schrott_19
+  - first:
+      213: -4425045840091156816
+    second: Tileset_Strasse_Schrott_20
+  - first:
+      213: -4275643784678751720
+    second: Tileset_Strasse_Schrott_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 256
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a44b364cfc4f190800000000000000
+      internalID: -7929484601499301268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 95
+        width: 63
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbde939e4f6814d90800000000000000
+      internalID: -7115257549825643076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 96
+        width: 66
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367c35ae82563a840800000000000000
+      internalID: 5234138418339104611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 65
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b478fc322509eb1a0800000000000000
+      internalID: -6791832505565608117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_4
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 97
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752ada96b34f85f40800000000000000
+      internalID: 5717588262960079447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 96
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ed1653e454064d0800000000000000
+      internalID: -3143436337699234256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 31
+        width: 29
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5895a5a6d3e816f0800000000000000
+      internalID: -713570029896624038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_7
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 31
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b02748fa4c72500800000000000000
+      internalID: 371481752401742592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 31
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763db43c83101fd00800000000000000
+      internalID: 1004585535186654055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_9
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 31
+        width: 23
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8d3561835ee87a0800000000000000
+      internalID: -6372904393627150147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_10
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 31
+        width: 22
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f33ec874e8e70200800000000000000
+      internalID: 146341580889797616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_11
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae37c08422f266780800000000000000
+      internalID: -8690206606680624150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_12
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 31
+        width: 23
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8a89acc379c4f90800000000000000
+      internalID: -6968028236096165662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_13
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 31
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8a4b2fdbc3ef160800000000000000
+      internalID: 7061148052281927899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_14
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 31
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2a5b3d5a8c6e840800000000000000
+      internalID: 5253106629921317593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8855e7f7ec0a48250800000000000000
+      internalID: 5946054216798590344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_16
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d226e5b38c9c53d20800000000000000
+      internalID: 3257731767299105325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_17
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ba3c3e934e97b10800000000000000
+      internalID: 1979864448491563854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_18
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5091c152f852fc0800000000000000
+      internalID: -3520250144172210716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a991b8301243efe0800000000000000
+      internalID: -1161011641493382752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_20
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0beeb8ad0441792c0800000000000000
+      internalID: -4425045840091156816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Strasse_Schrott_21
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812cd1491acd9a4c0800000000000000
+      internalID: -4275643784678751720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tileset_Strasse_Schrott_0: -7929484601499301268
+      Tileset_Strasse_Schrott_1: -7115257549825643076
+      Tileset_Strasse_Schrott_10: 146341580889797616
+      Tileset_Strasse_Schrott_11: -8690206606680624150
+      Tileset_Strasse_Schrott_12: -6968028236096165662
+      Tileset_Strasse_Schrott_13: 7061148052281927899
+      Tileset_Strasse_Schrott_14: 5253106629921317593
+      Tileset_Strasse_Schrott_15: 5946054216798590344
+      Tileset_Strasse_Schrott_16: 3257731767299105325
+      Tileset_Strasse_Schrott_17: 1979864448491563854
+      Tileset_Strasse_Schrott_18: -3520250144172210716
+      Tileset_Strasse_Schrott_19: -1161011641493382752
+      Tileset_Strasse_Schrott_2: 5234138418339104611
+      Tileset_Strasse_Schrott_20: -4425045840091156816
+      Tileset_Strasse_Schrott_21: -4275643784678751720
+      Tileset_Strasse_Schrott_3: -6791832505565608117
+      Tileset_Strasse_Schrott_4: 5717588262960079447
+      Tileset_Strasse_Schrott_5: -3143436337699234256
+      Tileset_Strasse_Schrott_6: -713570029896624038
+      Tileset_Strasse_Schrott_7: 371481752401742592
+      Tileset_Strasse_Schrott_8: 1004585535186654055
+      Tileset_Strasse_Schrott_9: -6372904393627150147
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

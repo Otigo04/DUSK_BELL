@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_Ilhan_Freundlich
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: Da bist du ja wieder! Brauchst du Holz, oder nur jemanden zum Reden?
+    relationship: 0
+    setFlag: 
+    next: 
+    choices:
+    - text: Nur mal Hallo sagen.
+      next: hallo
+      relationship: 1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Gibt es Neuigkeiten?
+      next: neu
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Ich muss weiter.
+      next: weiter
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: hallo
+    speaker: 0
+    text: Das ist nett. Hier sagt kaum noch jemand einfach Hallo.
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: neu
+    speaker: 0
+    text: "Am Waldrand waren Spuren im Matsch. Barfu\xDF. Und viel zu gro\xDF f\xFCr
+      einen Menschen."
+    relationship: 0
+    setFlag: wissen_spuren
+    next: 
+    choices: []
+  - id: weiter
+    speaker: 0
+    text: "Pass auf dich auf. Und sei vor der D\xE4mmerung zuhause."
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []

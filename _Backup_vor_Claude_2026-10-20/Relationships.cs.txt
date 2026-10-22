@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Nightward.Dialogue
+{
+    /// <summary>
+    /// Beziehung des Spielers zu jedem NPC (-10 bis +10, Start 0) und Story-Flags ("ilhan_kennengelernt").
+    /// Jede Antwort im Dialog kann die Beziehung veraendern. Haelt nur den Laufzeitstand, Speichern kommt spaeter.
+    /// </summary>
+    public static class Relationships
+    {
+        public const int Min = -10;
+        public const int Max = 10;
+
+        static readonly Dictionary<string, int> values = new Dictionary<string, int>();
+        static readonly HashSet<string> flags = new HashSet<string>();
+
+        /// <summary>npcId, neuer Wert, Aenderung</summary>
+        public static event Action<string, int, int> Changed;
+        public static event Action<string> FlagSet;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void ResetAll()
+        {
+            values.Clear();
+            flags.Clear();
+            Changed = null;
+            FlagSet = null;
+        }
+
+        public static int Get(string npcId) => values.TryGetValue(npcId, out var v) ? v : 0;
+
+        public static int Change(string npcId, int delta)
+        {
+            if (string.IsNullOrEmpty(npcId) || delta == 0) return Get(npcId);
+            int before = Get(npcId);
+            int after = Mathf.Clamp(before + delta, Min, Max);
+            values[npcId] = after;
+            if (after != before) Changed?.Invoke(npcId, after, after - before);
+            return after;
+        }
+
+        public static bool HasFlag(string flag) => !string.IsNullOrEmpty(flag) && flags.Contains(flag);
+
+        public static void SetFlag(string flag)
+        {
+            if (string.IsNullOrEmpty(flag) || !flags.Add(flag)) return;
+            FlagSet?.Invoke(flag);
+        }
+
+        public static void ClearFlag(string flag) => flags.Remove(flag);
+
+        /// <summary>Kurzbeschreibung fuer UI und Debug.</summary>
+        public static string Describe(int value)
+        {
+            if (value <= -6) return "Feindselig";
+            if (value <= -2) return "Misstrauisch";
+            if (value >= 6) return "Vertraut";
+            if (value >= 2) return "Freundlich";
+            return "Neutral";
+        }
+    }
+}

@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c82fe3b47ca3e40adf234c2766ae04, type: 3}
+  m_Name: Loot_Haushalt
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.LootTable
+  guaranteed: []
+  pools:
+  - name: Essen
+    chance: 0.9
+    rollsMin: 1
+    rollsMax: 2
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: 8422fb6a51128044492b73e823a8da08, type: 2}
+      weight: 4
+      min: 1
+      max: 3
+    - item: {fileID: 11400000, guid: 72e6597dadf34224f985b2cc880f66fd, type: 2}
+      weight: 4
+      min: 2
+      max: 4
+    - item: {fileID: 11400000, guid: e1c382b1080eb2740a017d5db274c78d, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 5eb7be7499e9a784286c4a965132446f, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 5934f712d507fa248b09789f1155b835, type: 2}
+      weight: 0.7
+      min: 1
+      max: 1
+  - name: Kleinkram
+    chance: 0.65
+    rollsMin: 1
+    rollsMax: 2
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: ec9b309b1063f7141bbb08916b2472c9, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 432a7d34edad63d4a8372f97ac34b1fe, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 2f6b179d82d92a64aa2c49658bf3da95, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: c740db5eb9537e54f9c4572ddb008cca, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: bc2824473b5f1af44bcb8ecb2b01d6bc, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 77ff219165e175e41bee9773ff2c21b7, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 5ceeb0761aafb094abf1cf67a966b8f7, type: 2}
+      weight: 2
+      min: 1
+      max: 3
+  - name: Leckerbissen
+    chance: 0.35
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: 971a66db9bef4f046a71e523c389afb5, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 72a0281cb9f5fb0428b36a032d168dd2, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 2a958aaff76f86e498774054f95d1fc3, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 8c94f6679e94a5f489842e0c937cfe3c, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: cb5b34dffea3e8444b9a1c4d3da1b74b, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 1924d526c473614418abb677dfbddbff, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: cdf0df778737eb54db44db4d681e10f0, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 10f5bd675a665434b8e0fb2d964c4404, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: a4da0430acb5b974f98dc57f36b89315, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: ea81bcd3547ad6548883c0cb62145fe5, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: cf36190d99dd2d043bc2dacced59922a, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+  - name: Muenzen
+    chance: 0.6
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: 645e99f9481200547a16397fb7f9b0c5, type: 2}
+      weight: 1
+      min: 3
+      max: 9
+  - name: Gut
+    chance: 0.1
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: a0392bf5e9420b141a537ecf9d18b703, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 4a1399d5c7597824db5560ba6a6b3265, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 4ba33e84ff2a0aa4cae4f39052171cd1, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 484ee86582b20b541a577f866dab1e21, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+  - name: Kleidung
+    chance: 0.18
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: b8658f195df5f6f41b4b7b84c24fd180, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 528374566ce105d49966955b68cc93fb, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 01ec49671f8654142a57321b233d53de, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: c2155ecdc2dbbf641981b5bd0aaf8610, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: a2770565c86af7c44a4bed69ee7d3ba6, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 65699725d4670fa4c84b0ca6d9a9bfa1, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: b4dc15f8eebf0a14cb01a11b06f4d4f4, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: e5cc87c6422e3424f8e6ba1cdbe54b47, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: c4c42596853ce5745aea2c690c0f38bb, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 17355b0c47ce72d43ad4f12d572df1ea, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: cd084545323f67d418934812c1a02a30, type: 2}
+      weight: 2
+      min: 1
+      max: 1

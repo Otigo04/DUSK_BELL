@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Schreibtisch_Kerze
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: 334353461868523607, guid: ac707df3f1263814692c9a51a36134e3, type: 3}
+  - {fileID: -5756563693569050737, guid: ac707df3f1263814692c9a51a36134e3, type: 3}
+  - {fileID: 1180154333958369926, guid: ac707df3f1263814692c9a51a36134e3, type: 3}
+  - {fileID: -2397258047450280118, guid: ac707df3f1263814692c9a51a36134e3, type: 3}
+  m_MinSpeed: 5.2777777
+  m_MaxSpeed: 5.833333
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

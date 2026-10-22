@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 96ff7cd617f8a9c4ba7caa27dbe703ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1402419248266697495
+    second: bulut_shoot_down_0
+  - first:
+      213: -50874481227246399
+    second: bulut_shoot_down_1
+  - first:
+      213: -7837754226309361041
+    second: bulut_shoot_down_2
+  - first:
+      213: -8116728928153295909
+    second: bulut_shoot_down_3
+  - first:
+      213: -4766683090035610415
+    second: bulut_shoot_down_4
+  - first:
+      213: 445570580393633784
+    second: bulut_shoot_down_5
+  - first:
+      213: -3703750155702076707
+    second: bulut_shoot_down_6
+  - first:
+      213: -3912636874400008882
+    second: bulut_shoot_down_7
+  - first:
+      213: 797371027808200771
+    second: bulut_shoot_down_8
+  - first:
+      213: 8527573790702834345
+    second: bulut_shoot_down_9
+  - first:
+      213: -6330233662803577844
+    second: bulut_shoot_down_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bulut_shoot_down_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 4
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4a4e0cf1b998ce0800000000000000
+      internalID: -1402419248266697495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 3
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4515acde14b4ff0800000000000000
+      internalID: -50874481227246399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 3
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f629300be04ba3390800000000000000
+      internalID: -7837754226309361041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_3
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 3
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3294b4b069b5f80800000000000000
+      internalID: -8116728928153295909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_4
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 3
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dce09d0cf659ddb0800000000000000
+      internalID: -4766683090035610415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_5
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 3
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f72ab6051cfe2600800000000000000
+      internalID: 445570580393633784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_6
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 3
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda74905bd2a99cc0800000000000000
+      internalID: -3703750155702076707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_7
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 3
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45fa462e7583b9c0800000000000000
+      internalID: -3912636874400008882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_8
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 3
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34822b2a9b4d01b00800000000000000
+      internalID: 797371027808200771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_9
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 3
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a216ce7e27085670800000000000000
+      internalID: 8527573790702834345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bulut_shoot_down_10
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 4
+        width: 26
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c047f5fc50e7628a0800000000000000
+      internalID: -6330233662803577844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bulut_shoot_down_0: -1402419248266697495
+      bulut_shoot_down_1: -50874481227246399
+      bulut_shoot_down_10: -6330233662803577844
+      bulut_shoot_down_2: -7837754226309361041
+      bulut_shoot_down_3: -8116728928153295909
+      bulut_shoot_down_4: -4766683090035610415
+      bulut_shoot_down_5: 445570580393633784
+      bulut_shoot_down_6: -3703750155702076707
+      bulut_shoot_down_7: -3912636874400008882
+      bulut_shoot_down_8: 797371027808200771
+      bulut_shoot_down_9: 8527573790702834345
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

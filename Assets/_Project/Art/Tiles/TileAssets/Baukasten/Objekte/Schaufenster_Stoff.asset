@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Schaufenster_Stoff
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: 6204635759507286337, guid: 0174c04156708854d803d315b7afec7c, type: 3}
+  - {fileID: -8924543750830734462, guid: 0174c04156708854d803d315b7afec7c, type: 3}
+  - {fileID: -970908503900485320, guid: 0174c04156708854d803d315b7afec7c, type: 3}
+  - {fileID: 9150645451164102873, guid: 0174c04156708854d803d315b7afec7c, type: 3}
+  m_MinSpeed: 3.392857
+  m_MaxSpeed: 3.7499998
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

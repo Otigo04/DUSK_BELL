@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Kerzenstaender
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: 2100114326359708730, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
+  - {fileID: -2831006705940109013, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
+  - {fileID: -6886821695712518481, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
+  - {fileID: -1338812162031776653, guid: 536b845c685c27d4da01de63072dadbf, type: 3}
+  m_MinSpeed: 5.2777777
+  m_MaxSpeed: 5.833333
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

@@ -1,0 +1,48 @@
+Tileset_Interieur.png  (512 x 416 px = 16 x 13 Zellen à 32x32, Point-Filter, kein Skalieren)
+Nur Style-Bibel-Palette (Check: 0 Fremdfarben). Keine Glow-Halos im Sprite, Lichtschein macht Light 2D.
+Ansicht: 3/4 von vorne. Licht oben links warm, Schatten kühl-violett.
+Spalte/Reihe zählen ab 0, Zelle = (Spalte, Reihe).
+
+REIHE 0  Böden (32x32, nahtlos)
+ 0 Dielen hell | 1 Dielen dunkel | 2 Fischgrät-Parkett | 3 Steinplatten | 4 Schachbrett Stein
+ 5 Küchenfliese | 6 Lehmboden | 7 Stroh | 8-10 Wandschatten (oben/links/rechts, Overlay, Dither)
+ 11 Türschwelle (Overlay) | 12 Dielen abgewetzt | 13 Dielen senkrecht | 14 Keller-Stein dunkel | 15 Halle Schachbrett hell
+
+REIHE 1-2  Teppiche
+ (0-2) Teppich rot 96x64 | (3-5) blau | (6-8) grün | (9-10) rund rot 64x64 | (11-12) rund blau
+ 13 Läufer rot 32x64 | 14 Läufer blau 32x64 | 15 Fußmatte (Overlay)
+
+REIHE 3-4  Wände (je Spalte: oben = Reihe 3, unten = Reihe 4, 32x64 gesamt)
+ 0 Putz | 1 Tapete rot | 2 Tapete blau | 3 Holzwand | 4 Steinwand | 5 Tapete grün
+ 6 Fenster Nacht | 7 Fenster beleuchtet | 8 Fenster Tag | 9 Fenster beleuchtet auf roter Tapete | 10 Fenster mit Vorhang
+ 11 Tür geschlossen (32x64, ersetzt oben+unten) | 12 Tür offen (dunkel)
+ 13 Putz rissig | 14 Kellerwand Stein dunkel | 15 Holzwand dunkel
+
+REIHE 5-6  Mauerkronen, Treppe, Zugänge
+ 0 Krone waagrecht | 1 Ende links | 2 Ende rechts | 3 senkrecht | 4 senkrecht Anfang oben | 5 senkrecht Ende unten
+ (8-9, 5-6) Treppe nach oben 64x64 | 12 Bodenluke | 13 Leiter 32x64
+
+REIHE 7-8  Große Möbel (Reihe 7+8 zusammen)
+ (0-1) Bett rot 64x64 | (2-3) Bett blau | (4-5) Kamin mit Feuer 64x64 | (6-7) Küchenherd 64x64
+ 8 Bücherregal 32x64 | 9 Kleiderschrank | 10 Standuhr | 11 Standspiegel | 12 Garderobenständer | 13 Stehlampe (Licht) | 14 Palme | 15 Ficus
+
+REIHE 9  Breite Möbel (64x32)
+ (0-1) Tisch mit Decke | (2-3) Holztisch | (4-5) Sofa | (6-7) Küchenzeile mit Spüle | (8-9) Kommode
+ (10-11) Werkbank | (12-13) Schreibtisch mit Lampe | (14-15) Bank
+
+REIHE 10  Kleinmöbel
+ 0 Stuhl vorne | 1 Stuhl hinten | 2 Sessel | 3 Hocker | 4 Fass | 5 Kiste | 6 Sack | 7 Eimer
+ 8 Waschtisch | 9 Beistelltisch Öllampe (Licht) | 10 Grammophon | 11 Kerzentisch (Licht) | 12 Topfpflanze | 13 Bücherstapel | 14 Schaukelstuhl | 15 Katze auf Kissen
+
+REIHE 11  Wanddeko und Licht
+ 0 Wanduhr | 1 Landschaftsbild | 2 Porträt | 3 Spiegel klein | 4 Wandlaterne (Licht) | 5 Kerzenleuchter Wand (Licht)
+ 6 Regal Gläser | 7 Regal Bücher | 8 Kronleuchter (Licht) | 9 Kandelaber (Licht) | 10 Garderobenhaken mit Mantel | 11 Kalender
+ 12 Tonkrug | 13 Besen | 14 Schirmständer | 15 Kräuterbündel
+
+REIHE 12  Kram
+ 0 Nähmaschine | 1 Truhe zu | 2 Truhe offen | 3 Schreibmaschine | 4 Laterne Boden (Licht) | 5 Wasserkessel | 6 Tablett Brot+Krug
+ 7 Kuckucksuhr | 8 Globus | 9 Obstkorb | 10 Blumenvase | 11 Wiege | 12 Kaminbesteck | 13 Holzstapel | 14 Spinnweben (Overlay)
+
+Lichtquellen (für Light 2D Point-Lights setzen): Kamin (4-5,7), Stehlampe (13,7), Fenster lit (7/9/10,3), Öllampe (9,10), Kerzentisch (11,10),
+ Wandlaterne (4,11), Kerzenleuchter (5,11), Kronleuchter (8,11), Kandelaber (9,11), Laterne (4,12), Schreibtisch (12-13,9), Herd (6-7,7).
+Alles 1910-tauglich: Öl, Kerze, Kamin. Kein Strom, kein Telefon.

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Talisman_Tuer
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: 5712928793226326861, guid: 6cf311376cb036a418d2cf71accc5066, type: 3}
+  - {fileID: -1275817839891001791, guid: 6cf311376cb036a418d2cf71accc5066, type: 3}
+  - {fileID: 5839482375692663218, guid: 6cf311376cb036a418d2cf71accc5066, type: 3}
+  - {fileID: -6284580807552159464, guid: 6cf311376cb036a418d2cf71accc5066, type: 3}
+  - {fileID: 4598138596661826848, guid: 6cf311376cb036a418d2cf71accc5066, type: 3}
+  - {fileID: -8552476652031963942, guid: 6cf311376cb036a418d2cf71accc5066, type: 3}
+  m_MinSpeed: 4.3181815
+  m_MaxSpeed: 4.772727
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

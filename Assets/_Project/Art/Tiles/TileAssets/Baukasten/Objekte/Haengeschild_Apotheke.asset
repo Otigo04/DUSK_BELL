@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Haengeschild_Apotheke
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -8819390257894359769, guid: ffe026428d870e5439e8feb3394dddad, type: 3}
+  - {fileID: -4953579417992108932, guid: ffe026428d870e5439e8feb3394dddad, type: 3}
+  - {fileID: -3158239331467117559, guid: ffe026428d870e5439e8feb3394dddad, type: 3}
+  - {fileID: -1538657669709518965, guid: ffe026428d870e5439e8feb3394dddad, type: 3}
+  m_MinSpeed: 2.2619047
+  m_MaxSpeed: 2.4999998
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

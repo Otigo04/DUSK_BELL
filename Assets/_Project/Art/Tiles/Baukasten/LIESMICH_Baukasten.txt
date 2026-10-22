@@ -1,0 +1,93 @@
+NIGHTWARD - HAUS-BAUKASTEN
+==========================
+Modulares Set fuer beliebig viele Haeuser (aussen) und Innenraeume. Raster 32x32, PPU 32, Point-Filter, keine Kompression.
+Palette: Style-Bibel (Art/Palette.gpl, 39 Farben). Pruefung beim Erzeugen: 0 Fremdfarben, kein Halbtransparenz-Alpha.
+Outline #1a1526 / #2b2140 (kein Schwarz), Schatten kuehl-violett, Licht warm von oben links, Dither nur fuer Rauch/Schatten.
+
+Erzeugt mit:  _Quelle_Generator/bk_build.py   (Python + PIL; bk_lib, bk_aussen, bk_innen, bk_fassade, bk_moebel)
+Unity:        Menue  Nightward > Haus-Baukasten > Alles bauen (Import, Tiles, Paletten, Haeuser)
+
+
+SO BAUT MAN FEHLERFREI
+----------------------
+1. Waende, Daecher, Innenwaende, Mauerkronen und Boeden sind RuleTiles (TileAssets/Baukasten/RuleTiles, Palette Pal_BK_*_Bau).
+   Einfach eine Flaeche malen - Ecken, Sockel, Traufe, First, Ortgang, Fussleiste, Innenecken setzen sich selbst.
+   Mitte und lange Kanten wechseln zufaellig zwischen Varianten (keine sichtbaren Wiederholungen).
+2. Fenster, Tueren, Moebel, Schilder ... sind GANZE Objekte (ein Tile = ganzes Teil, Anker links unten).
+   Man kann kein halbes Bett / keine halbe Tuer setzen. Palette Pal_BK_*_Objekte.
+   WICHTIG: Objekt-Tilemaps brauchen Tile Anchor = (0, 0, 0) (wie die Objects-Ebene in Level_01).
+3. "Nightward > Haus-Baukasten > Ausgewaehltes Haus pruefen" prueft ein selbst gebautes Haus in der Szene
+   (Deko ohne Wand dahinter, Dachteile neben dem Dach, Tuer nicht unten, ueberlappende Moebel, Moebel ohne Boden).
+4. Neue Haeuser: Bauplaene.json erweitern, dann "2 Haeuser aus Bauplaene.json bauen". Fehlerhafte Plaene werden
+   NICHT gebaut, die Konsole nennt jeden Fehler mit Koordinate. "Bauplaene nur pruefen" prueft ohne zu bauen.
+   python bk_build.py prueft dieselben Regeln und rendert Vorschau_Aussen.png / Vorschau_Innen.png.
+
+
+EBENEN (Prefabs in Prefabs/Haeuser, je Haus _Aussen und _Innen)
+---------------------------------------------------------------
+Aussen (SortingGroup, Order 4, Pivot = Bodenlinie -> sortiert als Ganzes gegen Spieler):
+  Wand (RuleTile) | Wand_Deko (Fenster, Tueren, Schilder) | Dach (RuleTile) | Dach_Deko (Gauben, Schornsteine) | Vorne (Stufen, Bank ...)
+  BoxCollider ueber der Wandflaeche, Trigger "Eingang_*" vor jeder Tuer, Light2D + NightLight an Fenstern/Laternen.
+Innen:
+  Boden (RuleTile) | Boden_Deko (Teppiche) | Boden_Schatten | Wand (RuleTile, 2 Zeilen) | Wand_Deko | Moebel (Order 4, Individual,
+  y-Sortierung mit Spieler) | Krone (Order 20) | Kollision (Collision_Block: Kronen, Wand, feste Moebel) | Trigger "Ausgang".
+  Feuer, Kerzen, Talisman haben Light2D.
+  Sichtsystem (Scripts/Vision): Interior + Trigger ueber Raum inkl. Kronen, VisionOpening am Ausgang und ueber jedem
+  Fenster_Innen_* (an der oberen Krone) - drinnen sieht der Spieler nur durch diese Oeffnungen nach draussen.
+
+
+KOORDINATEN IN Bauplaene.json (Zellen, y nach oben)
+---------------------------------------------------
+Aussen: Wand = x 0..breite-1, y 0..wandHoehe-1. Dach = y wandHoehe..wandHoehe+dachHoehe-1 (x +- ueberstand).
+  aussen_wand-Teile muessen ganz in der Wand liegen, Tueren mit y = 0.
+  aussen_dach-Teile: Ankerzelle auf dem Dach (Schornstein/Rauch/Wetterfahne duerfen nach oben herausragen).
+    Tipp: Schornsteine in die oberste Dachzeile (First) setzen.
+  aussen_boden-Teile: y = -1 (vor dem Haus).
+Innen: Boden x 0..breite-1, y 0..hoehe-1. Wandzeilen y = hoehe und hoehe+1. Ausgang unten bei (tuerX, -1).
+  innen_moebel: "Fuss-Zeilen" (siehe _Liste.txt) belegen Bodenfelder; hohe Moebel ragen optisch in die Wand (gewollt).
+  innen_wand: ganz in den Wandzeilen. innen_boden (Teppiche): auf dem Boden, darf unter Moebeln liegen.
+  Regel: Eingangsfeld frei, jedes freie Bodenfeld vom Eingang aus erreichbar.
+
+
+MATERIALIEN
+-----------
+Aussen-Wand (Tileset_BK_Aussen Zeile 0-7):  fachwerk, holz, blockhaus, stein, backstein, kalk, blau, bruch
+Dach       (Zeile 8-13):                     schiefer, schindel, stroh, ziegel, moos, blech
+  Spalten je Zeile: 0-15 Maske N1 E2 S4 W8 | 16/17 Fuell-Varianten | 18 verwittert (manuell) | 19 Fuellung 4 |
+  20/21 Maske 11, 22/23 Maske 14, 24/25 Maske 10 (Zufallsvarianten).
+Innen-Wand (Tileset_BK_Innen Zeile 0-7):    putz, tapete_rot, tapete_blau, tapete_gruen, holz, stein, backstein, kalk
+Mauerkrone (Zeile 8-10):                     violett, holz, stein (16 Kanten + Innenecken 16-19)
+Boden      (Zeile 11-12, je 3 Varianten):    dielen_hell, dielen_dunkel, dielen_rot, parkett, steinplatten, pflaster,
+                                             lehm, stroh, fliesen_schach, fliesen_blau, bohlen, kirchenstein
+Overlays   (Zeile 13):                       Schatten oben/links/rechts/Ecke L/Ecke R, Schwelle, Fussmatte rot/blau/gruen
+
+
+HAEUSER (Bauplaene.json, 11 Stueck)
+-----------------------------------
+Bauernkate (holz/stroh), Fachwerkhaus (fachwerk/schiefer), Baeckerei (backstein/ziegel), Schmiede (stein/schindel),
+Kraemerladen (blau/schiefer), Apotheke (kalk/ziegel), Gelehrtenhaus (stein/blech, 2 Etagen), Kapelle (bruch/schiefer),
+Fischerhuette (blockhaus/moos), Schneiderei (fachwerk/ziegel), Stall (holz/schindel) - jeweils mit eigenem Innenraum.
+
+
+ANIMATIONEN (Animiert/<Name>_Anim.png, Streifen; Unity: AnimatedTile)
+---------------------------------------------------------------------
+Aussen: beleuchtete Fenster/Schaufenster/Gauben/Oberlichter (ruhiges Kerzenflackern), Rauch aus Schornstein/Ofenrohr (8 Frames,
+nahtlos), Wandlaterne, 10 Haengeschilder (schwingen), Wetterfahne (dreht), Haus-Talisman (pulsiert), Buntglas.
+Innen: Kamin, Herd (Feuer + Dampf), Esse (Glut pulsiert), Backofen, Standuhr/Wanduhr (Pendel), Kerzen (Nachttisch, Theke,
+Schreibtisch, Fenster, Wandleuchter, Altar, Kerzenstaender), Talisman-Schrein (schwebt), Wand-Talisman, Destille, Spinnrad.
+Alle vollstaendige Objektliste mit Groesse/Kategorie/Fuss/Kollision/Frames: _Liste.txt
+
+
+ILHANS BAR (Hauptgebaeude, eigene Szene)
+----------------------------------------
+Szene:   Scenes/Game/IlhansBar.unity   (Menue  Nightward > Haus-Baukasten > Ilhans Bar Szene bauen)
+Layout:  _Quelle_Generator/bar_szene.py -> Szene_IlhansBar.json + Vorschau_IlhansBar.png (mit Pruefung: alle Raeume,
+         Tueren und Thekendurchgaenge vom Eingang aus erreichbar, keine Moebel auf Waenden, keine Doppelbelegung).
+         Innenraum = ASCII-Karte oben in bar_szene.py (# Krone, w/k/h Wand, . : f p l Boeden) -> leicht umzubauen.
+Aussen (x 0..19): Bar-Fassade mit Pendeltuer, 6 Fenstern, Schild ILHANS BAR, 4 Gauben, 2 Schornsteinen mit Rauch,
+         Veranda (Baenke, Faesser, Bierfass), Laternenpfosten, Kreidetafel, Anbindebalken, Trog, Brunnen, Pflasterplatz.
+Innen (x 60..93): Schankraum mit 15-teiliger Theke (Zapfhaehne, Kasse, Kerze ...), Spirituosenregale + Spiegelwand,
+         7 Barhocker, 6 Rundtische mit je 4 Stuehlen, 4 Sitznischen, Versammlungstafel, Kamin, Klavier, Kronleuchter;
+         Kueche (Herd, Backofen, Spuele, Arbeitstisch), Hinterzimmer (Pokertisch, Sofa, Versammlungstisch, Ofen),
+         Lager (Fassregal, Kellerluke, Vorraete).
+Tueren:  Scripts/World/Durchgang.cs (Trigger setzt Spielfigur zum Ziel, Kamera springt mit). Eingang aussen <-> Ausgang innen.

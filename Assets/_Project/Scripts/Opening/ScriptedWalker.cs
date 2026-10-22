@@ -1,0 +1,68 @@
+using System.Collections;
+using Nightward.NPC;
+using UnityEngine;
+
+namespace Nightward.Opening
+{
+    /// <summary>
+    /// Laesst einen NPC in Zwischensequenzen sicher an einen Punkt laufen: ohne Pfadsuche, Ausweichen und Kollision.
+    /// Der NpcMover wuerde sonst z. B. vor dem Auto stehen bleiben, weil der (unsichtbare) Spieler darin sitzt.
+    /// Spielt dabei selbst walk_/idle_ in 8 Richtungen; danach uebernimmt wieder der NpcMover/NpcAnimator.
+    /// </summary>
+    [RequireComponent(typeof(NpcMover))]
+    public class ScriptedWalker : MonoBehaviour
+    {
+        static readonly string[] Dirs = { "E", "NE", "N", "NW", "W", "SW", "S", "SE" };
+
+        NpcMover mover;
+        NpcAnimator npcAnimator;
+        Animator animator;
+        Rigidbody2D body;
+
+        public bool Walking { get; private set; }
+
+        void Awake()
+        {
+            mover = GetComponent<NpcMover>();
+            npcAnimator = GetComponent<NpcAnimator>();
+            animator = GetComponentInChildren<Animator>();
+            body = GetComponent<Rigidbody2D>();
+        }
+
+        /// <summary>Laeuft geradlinig zum Ziel. speed in Units pro Sekunde.</summary>
+        public IEnumerator WalkTo(Vector2 target, float speed)
+        {
+            Walking = true;
+            mover.Stop();
+            mover.Frozen = true;
+            if (npcAnimator != null) npcAnimator.enabled = false;
+            string last = null;
+            while (true)
+            {
+                Vector2 pos = body.position;
+                Vector2 to = target - pos;
+                float dist = to.magnitude;
+                if (dist < 0.04f) break;
+                Vector2 step = to / dist * Mathf.Min(dist, speed * Time.deltaTime);
+                body.position = pos + step;
+                transform.position = body.position;
+                string state = "walk_" + Dirs[Player.PlayerController.DirectionIndex(to)];
+                if (state != last && animator != null) { animator.Play(state, 0, 0f); last = state; }
+                if (animator != null) animator.speed = Mathf.Clamp(speed / 2.5f, 0.6f, 1.6f);
+                yield return null;
+            }
+            Stand(target + Vector2.down);
+            Walking = false;
+        }
+
+        /// <summary>Stehen bleiben und zu einem Punkt schauen, dann wieder normal animieren.</summary>
+        public void Stand(Vector2 lookAt)
+        {
+            if (animator != null) animator.speed = 1f;
+            mover.Frozen = false;
+            mover.Stop();
+            mover.LookAt(lookAt);
+            if (npcAnimator != null) { npcAnimator.enabled = true; npcAnimator.ResetState(); }
+        }
+    }
+}

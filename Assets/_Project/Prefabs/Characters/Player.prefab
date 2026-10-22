@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5187182635944934176}
   - component: {fileID: 9104641846356352167}
   - component: {fileID: 8141691964451272688}
+  - component: {fileID: 4911267945180865382}
+  - component: {fileID: 1070692753501996452}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -113,8 +115,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Nightward.Player.PlayerController
   animator: {fileID: 6118003945960629013}
-  moveSpeed: 3.5
+  moveSpeed: 1.55
   attackMoveMultiplier: 0
+  acceleration: 12
+  deceleration: 16
+  inputSmoothTime: 0.05
+  facingHysteresis: 10
+  minFacingTime: 0.08
+  releaseGrace: 0.08
+  animationReferenceSpeed: 1.55
 --- !u!114 &8141691964451272688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +147,52 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4911267945180865382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563376020984467804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e60babacfd0bd449ba80295a20bc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Interaction.PlayerInteractor
+  range: 1.4
+  facingBonus: 0.4
+  cooldown: 0.25
+--- !u!114 &1070692753501996452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563376020984467804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74104f55baad590479829067047a3b14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Vision.PlayerVision
+  coneAngle: 160
+  edgeSoftness: 35
+  range: 11
+  turnSmoothTime: 0.15
+  eyeOffset: {x: 0, y: 0.1}
+  outsideBlockers:
+    serializedVersion: 2
+    m_Bits: 0
+  penumbraNear: 0.3
+  penumbraGrowth: 0.2
+  fadeStart: 0.25
+  raysPerDegree: 1
+  maskMaterial: {fileID: 2100000, guid: da16f7a2d6f86be40a97a34694dd6f3d, type: 2}
+  darknessMaterial: {fileID: 2100000, guid: a6bd9285dcb039f4b887bc58956f0c76, type: 2}
+  falloffMaterial: {fileID: 2100000, guid: 447f800bb74e2124286ab17657d835db, type: 2}
+  darkness: 1
+  fadeTime: 0.3
+  sortingLayer: Default
+  sortingOrder: 32000
 --- !u!1001 &4971391194707177181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,6 +205,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Visual
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 4e37fc01a64a6694eb641502c757c751, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8d02a20128e3ee342ad8e5ca7e332c30, type: 2}
+    - target: {fileID: 3626916397498700004, guid: 4e37fc01a64a6694eb641502c757c751, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1430560403962890439, guid: 79c5a37fd00067544b33c0b97f58d4d9, type: 3}
     - target: {fileID: 3626916397498700004, guid: 4e37fc01a64a6694eb641502c757c751, type: 3}
       propertyPath: m_SortingOrder
       value: 3

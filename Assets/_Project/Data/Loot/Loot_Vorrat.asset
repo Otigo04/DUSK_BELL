@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c82fe3b47ca3e40adf234c2766ae04, type: 3}
+  m_Name: Loot_Vorrat
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.LootTable
+  guaranteed: []
+  pools:
+  - name: Essen
+    chance: 1
+    rollsMin: 1
+    rollsMax: 3
+    unique: 1
+    nothingWeight: 0.5
+    entries:
+    - item: {fileID: 11400000, guid: 8422fb6a51128044492b73e823a8da08, type: 2}
+      weight: 4
+      min: 2
+      max: 4
+    - item: {fileID: 11400000, guid: 72e6597dadf34224f985b2cc880f66fd, type: 2}
+      weight: 4
+      min: 3
+      max: 6
+    - item: {fileID: 11400000, guid: e1c382b1080eb2740a017d5db274c78d, type: 2}
+      weight: 2
+      min: 1
+      max: 2
+    - item: {fileID: 11400000, guid: 5eb7be7499e9a784286c4a965132446f, type: 2}
+      weight: 2
+      min: 1
+      max: 3
+    - item: {fileID: 11400000, guid: 57ff99caa4839714dbf9c1ebdd8c9a9c, type: 2}
+      weight: 3
+      min: 2
+      max: 5
+    - item: {fileID: 11400000, guid: 5934f712d507fa248b09789f1155b835, type: 2}
+      weight: 0.6
+      min: 1
+      max: 1
+  - name: Zubereitet
+    chance: 0.45
+    rollsMin: 1
+    rollsMax: 2
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: b61db87b2683dff4d9d81e76d2af0fd1, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: de5569d2542adc04088dd7d6f85d1a9f, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: feaefeff9355a1b4c8aae085f0eb2223, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: cb5b34dffea3e8444b9a1c4d3da1b74b, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: ea81bcd3547ad6548883c0cb62145fe5, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: df275c398372fe1488a7f982b1581f6b, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 334c1333b69fc4d4495bd6bd9616e663, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 79908d33bda17ab4ab45a08f3ee69774, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 8c616440ffd46484ea0d34331523067c, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: e3504856023250f4899a8bb04914269c, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: d139488f871c3f14ea19cc24cc4d9539, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: e0e7c9cabc66d4840a1813e23c7d2f7d, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: fe967df636f1ed8469554a5e5a86f81a, type: 2}
+      weight: 0.7
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 03ee12127a31da045b4fe6344f31f91d, type: 2}
+      weight: 0.7
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: aa847967c24625a4f81f269d5dc288bf, type: 2}
+      weight: 0.5
+      min: 1
+      max: 1
+  - name: Material
+    chance: 0.6
+    rollsMin: 1
+    rollsMax: 2
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: d4c1257a4647c4349897a0ee8b4c54c0, type: 2}
+      weight: 3
+      min: 2
+      max: 5
+    - item: {fileID: 11400000, guid: 77ff219165e175e41bee9773ff2c21b7, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 4c659817ab2c3ef43943d482599fea63, type: 2}
+      weight: 3
+      min: 2
+      max: 4
+    - item: {fileID: 11400000, guid: bc2824473b5f1af44bcb8ecb2b01d6bc, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: d39c866ee2b57cc4487d877371736a0d, type: 2}
+      weight: 0.6
+      min: 1
+      max: 1
+  - name: Muenzen
+    chance: 0.3
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: 645e99f9481200547a16397fb7f9b0c5, type: 2}
+      weight: 1
+      min: 2
+      max: 6

@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 390f6fda35c87b245b9fd3cfdb9fe847
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1161473213703610022
+    second: Getraenke_Uebersicht_0
+  - first:
+      213: -3064540451604328736
+    second: Getraenke_Uebersicht_1
+  - first:
+      213: -4685794419743563839
+    second: Getraenke_Uebersicht_2
+  - first:
+      213: 5521931197440095218
+    second: Getraenke_Uebersicht_3
+  - first:
+      213: -7679500642302470874
+    second: Getraenke_Uebersicht_4
+  - first:
+      213: 4960842055432254539
+    second: Getraenke_Uebersicht_5
+  - first:
+      213: -7665350283352828581
+    second: Getraenke_Uebersicht_6
+  - first:
+      213: -4892815673561458189
+    second: Getraenke_Uebersicht_7
+  - first:
+      213: -952452861182195624
+    second: Getraenke_Uebersicht_8
+  - first:
+      213: 2796555650021809967
+    second: Getraenke_Uebersicht_9
+  - first:
+      213: 3131045500746888148
+    second: Getraenke_Uebersicht_10
+  - first:
+      213: 4608765106822641295
+    second: Getraenke_Uebersicht_11
+  - first:
+      213: 3479481989979598217
+    second: Getraenke_Uebersicht_12
+  - first:
+      213: 4882751677985079410
+    second: Getraenke_Uebersicht_13
+  - first:
+      213: -6420023988818523644
+    second: Getraenke_Uebersicht_14
+  - first:
+      213: 4268599675774197107
+    second: Getraenke_Uebersicht_15
+  - first:
+      213: 2380409363819480740
+    second: Getraenke_Uebersicht_16
+  - first:
+      213: 7855117642851180120
+    second: Getraenke_Uebersicht_17
+  - first:
+      213: 6232762737811939254
+    second: Getraenke_Uebersicht_18
+  - first:
+      213: 1222869940932968442
+    second: Getraenke_Uebersicht_19
+  - first:
+      213: -4088454323185212055
+    second: Getraenke_Uebersicht_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 64
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51a011144e91efe0800000000000000
+      internalID: -1161473213703610022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 64
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee0f4622b09875d0800000000000000
+      internalID: -3064540451604328736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 64
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf5da83dc6b8feb0800000000000000
+      internalID: -4685794419743563839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 64
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f37099ea27d1ac40800000000000000
+      internalID: 5521931197440095218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 64
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6255d238adeec6590800000000000000
+      internalID: -7679500642302470874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 64
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44bbd4d09378d440800000000000000
+      internalID: 4960842055432254539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 65
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5590d1b7843f9590800000000000000
+      internalID: -7665350283352828581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 32
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9d7e1711a391cb0800000000000000
+      internalID: -4892815673561458189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 33
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8584ee74b2538c2f0800000000000000
+      internalID: -952452861182195624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_9
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 34
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f59220c8c5fc620800000000000000
+      internalID: 2796555650021809967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_10
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 34
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d37a9f3b45b37b20800000000000000
+      internalID: 3131045500746888148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_11
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 34
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86f065427f95ff30800000000000000
+      internalID: 4608765106822641295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_12
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 34
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d6a1f4f6a994030800000000000000
+      internalID: 3479481989979598217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 34
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2704ebcf7c403c340800000000000000
+      internalID: 4882751677985079410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_14
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a4cf8623e77e6a0800000000000000
+      internalID: -6420023988818523644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_15
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 2
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d5ed20acc1d3b30800000000000000
+      internalID: 4268599675774197107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6497654b9e80120800000000000000
+      internalID: 2380409363819480740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 2
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e5c03c0ebf20d60800000000000000
+      internalID: 7855117642851180120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_18
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 2
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf529cffa83f7650800000000000000
+      internalID: 6232762737811939254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_19
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 2
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affffc37bb188f010800000000000000
+      internalID: 1222869940932968442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Getraenke_Uebersicht_20
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 2
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965a2226474e247c0800000000000000
+      internalID: -4088454323185212055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Getraenke_Uebersicht_0: -1161473213703610022
+      Getraenke_Uebersicht_1: -3064540451604328736
+      Getraenke_Uebersicht_10: 3131045500746888148
+      Getraenke_Uebersicht_11: 4608765106822641295
+      Getraenke_Uebersicht_12: 3479481989979598217
+      Getraenke_Uebersicht_13: 4882751677985079410
+      Getraenke_Uebersicht_14: -6420023988818523644
+      Getraenke_Uebersicht_15: 4268599675774197107
+      Getraenke_Uebersicht_16: 2380409363819480740
+      Getraenke_Uebersicht_17: 7855117642851180120
+      Getraenke_Uebersicht_18: 6232762737811939254
+      Getraenke_Uebersicht_19: 1222869940932968442
+      Getraenke_Uebersicht_2: -4685794419743563839
+      Getraenke_Uebersicht_20: -4088454323185212055
+      Getraenke_Uebersicht_3: 5521931197440095218
+      Getraenke_Uebersicht_4: -7679500642302470874
+      Getraenke_Uebersicht_5: 4960842055432254539
+      Getraenke_Uebersicht_6: -7665350283352828581
+      Getraenke_Uebersicht_7: -4892815673561458189
+      Getraenke_Uebersicht_8: -952452861182195624
+      Getraenke_Uebersicht_9: 2796555650021809967
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

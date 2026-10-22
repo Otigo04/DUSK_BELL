@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Schornstein_Backstein_Rauch
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: 2928750997562412435, guid: 974822b4dbe62c54ea0ba19fe01dcc2b, type: 3}
+  - {fileID: 2763710328856109814, guid: 974822b4dbe62c54ea0ba19fe01dcc2b, type: 3}
+  - {fileID: 1516435681930985612, guid: 974822b4dbe62c54ea0ba19fe01dcc2b, type: 3}
+  - {fileID: 7940888440511778524, guid: 974822b4dbe62c54ea0ba19fe01dcc2b, type: 3}
+  - {fileID: -1363838506003549653, guid: 974822b4dbe62c54ea0ba19fe01dcc2b, type: 3}
+  - {fileID: -7869292184164148807, guid: 974822b4dbe62c54ea0ba19fe01dcc2b, type: 3}
+  - {fileID: -8904736225863322675, guid: 974822b4dbe62c54ea0ba19fe01dcc2b, type: 3}
+  - {fileID: 3263109280155069954, guid: 974822b4dbe62c54ea0ba19fe01dcc2b, type: 3}
+  m_MinSpeed: 6.785714
+  m_MaxSpeed: 7.4999995
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

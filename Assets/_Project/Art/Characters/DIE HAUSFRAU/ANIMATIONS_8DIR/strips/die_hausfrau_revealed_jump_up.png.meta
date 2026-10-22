@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: d8bed6b7ff7c7c941ae35f3d87e78aac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2301035773379144743
+    second: die_hausfrau_revealed_jump_up_0
+  - first:
+      213: 4629145997329287221
+    second: die_hausfrau_revealed_jump_up_1
+  - first:
+      213: -1755876068724140905
+    second: die_hausfrau_revealed_jump_up_2
+  - first:
+      213: -2260069909042397800
+    second: die_hausfrau_revealed_jump_up_3
+  - first:
+      213: -3652095089351004012
+    second: die_hausfrau_revealed_jump_up_4
+  - first:
+      213: -4788218922629111744
+    second: die_hausfrau_revealed_jump_up_5
+  - first:
+      213: -708996170544704272
+    second: die_hausfrau_revealed_jump_up_6
+  - first:
+      213: 8082926207879079691
+    second: die_hausfrau_revealed_jump_up_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: die_hausfrau_revealed_jump_up_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 10
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d31540d7241110e0800000000000000
+      internalID: -2301035773379144743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die_hausfrau_revealed_jump_up_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 10
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538cb3022c70e3040800000000000000
+      internalID: 4629145997329287221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die_hausfrau_revealed_jump_up_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 11
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794961eb400e1a7e0800000000000000
+      internalID: -1755876068724140905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die_hausfrau_revealed_jump_up_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 23
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d7aff546e92a0e0800000000000000
+      internalID: -2260069909042397800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die_hausfrau_revealed_jump_up_4
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 30
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490f849add6215dc0800000000000000
+      internalID: -3652095089351004012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die_hausfrau_revealed_jump_up_5
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 18
+        width: 23
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04063e94244dc8db0800000000000000
+      internalID: -4788218922629111744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die_hausfrau_revealed_jump_up_6
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 10
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f412934db32926f0800000000000000
+      internalID: -708996170544704272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die_hausfrau_revealed_jump_up_7
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 10
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07e3569f825c2070800000000000000
+      internalID: 8082926207879079691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      die_hausfrau_revealed_jump_up_0: -2301035773379144743
+      die_hausfrau_revealed_jump_up_1: 4629145997329287221
+      die_hausfrau_revealed_jump_up_2: -1755876068724140905
+      die_hausfrau_revealed_jump_up_3: -2260069909042397800
+      die_hausfrau_revealed_jump_up_4: -3652095089351004012
+      die_hausfrau_revealed_jump_up_5: -4788218922629111744
+      die_hausfrau_revealed_jump_up_6: -708996170544704272
+      die_hausfrau_revealed_jump_up_7: 8082926207879079691
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

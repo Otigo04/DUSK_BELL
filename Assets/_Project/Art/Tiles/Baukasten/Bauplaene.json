@@ -1,0 +1,3748 @@
+{
+ "haeuser": [
+  {
+   "name": "Bauernkate",
+   "aussen": {
+    "breite": 5,
+    "wandHoehe": 2,
+    "dachHoehe": 2,
+    "ueberstand": 0,
+    "wand": "holz",
+    "dach": "stroh",
+    "deko": [
+     {
+      "o": "Tuer_Holz",
+      "x": 2,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Gruen",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Gruen",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Blumenkasten_Rot",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Gelb",
+      "x": 4,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Holz",
+      "x": 2,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 4,
+      "y": -1
+     },
+     {
+      "o": "Holzstapel_Wand",
+      "x": 0,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 7,
+    "hoehe": 5,
+    "boden": "dielen_dunkel",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 1,
+      "y": 5
+     },
+     {
+      "o": "Wand_Kraeuter",
+      "x": 4,
+      "y": 6
+     },
+     {
+      "o": "Wand_Talisman",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Wand_Pfannen",
+      "x": 6,
+      "y": 5
+     },
+     {
+      "o": "Kamin_Stein",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Bett_Rot",
+      "x": 0,
+      "y": 3
+     },
+     {
+      "o": "Truhe_Zu",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Tisch_Rund",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Stuhl_Vorne",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Stuhl_Hinten",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Spinnrad",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fass_Wasser",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Holzkorb",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "o": "Teppich_Rot",
+      "x": 2,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "Fachwerkhaus",
+   "aussen": {
+    "breite": 6,
+    "wandHoehe": 2,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "fachwerk",
+    "dach": "schiefer",
+    "deko": [
+     {
+      "o": "Tuer_Oberlicht_Holz",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Dunkel_Blau",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Blumenkasten_Rot",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Rot",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Backstein_Rauch",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Wetterfahne",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "o": "Stufe_Stein",
+      "x": 1,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Rot",
+      "x": 0,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 3,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 8,
+    "hoehe": 6,
+    "boden": "parkett",
+    "wand": "tapete_gruen",
+    "krone": "violett",
+    "tuerX": 2,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Vorhang",
+      "x": 1,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Vorhang",
+      "x": 6,
+      "y": 6
+     },
+     {
+      "o": "Wand_BildLandschaft",
+      "x": 2,
+      "y": 7
+     },
+     {
+      "o": "Wand_Uhr",
+      "x": 5,
+      "y": 7
+     },
+     {
+      "o": "Tuer_Innen_Zu",
+      "x": 7,
+      "y": 6
+     },
+     {
+      "o": "Kamin_Stein",
+      "x": 3,
+      "y": 5
+     },
+     {
+      "o": "Buecherregal_Schmal",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Standuhr",
+      "x": 6,
+      "y": 5
+     },
+     {
+      "o": "Sofa_Gruen",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Sessel_Gruen",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Sessel_Gruen",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Tisch_Rund_Decke",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Topfpflanze_Gross",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Kommode",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Teppich_Rot_Gross",
+      "x": 2,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "Baeckerei",
+   "aussen": {
+    "breite": 6,
+    "wandHoehe": 2,
+    "dachHoehe": 2,
+    "ueberstand": 0,
+    "wand": "backstein",
+    "dach": "ziegel",
+    "deko": [
+     {
+      "o": "Tuer_Laden_Doppel",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Schaufenster_Brot",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Haengeschild_Baecker",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Efeu_Gross_A",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Schornstein_Backstein_Rauch",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Dachfenster_Licht",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Stein_Breit",
+      "x": 0,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Gelb",
+      "x": 3,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 9,
+    "hoehe": 6,
+    "boden": "fliesen_schach",
+    "wand": "backstein",
+    "krone": "stein",
+    "tuerX": 1,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Kerze",
+      "x": 4,
+      "y": 6
+     },
+     {
+      "o": "Wandbrett_Toepfe",
+      "x": 6,
+      "y": 7
+     },
+     {
+      "o": "Wand_Uhr",
+      "x": 2,
+      "y": 7
+     },
+     {
+      "o": "Backofen",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Brotregal",
+      "x": 7,
+      "y": 5
+     },
+     {
+      "o": "Arbeitstisch_Brot",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Sack_Mehl",
+      "x": 2,
+      "y": 5
+     },
+     {
+      "o": "Sack_Korn",
+      "x": 6,
+      "y": 5
+     },
+     {
+      "o": "Theke_L",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Theke_M_Kasse",
+      "x": 6,
+      "y": 2
+     },
+     {
+      "o": "Theke_M_Brot",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Theke_R",
+      "x": 8,
+      "y": 2
+     },
+     {
+      "o": "Fass_Korn",
+      "x": 0,
+      "y": 3
+     },
+     {
+      "o": "Kistenstapel",
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "name": "Schmiede",
+   "aussen": {
+    "breite": 6,
+    "wandHoehe": 2,
+    "dachHoehe": 2,
+    "ueberstand": 0,
+    "wand": "stein",
+    "dach": "schindel",
+    "deko": [
+     {
+      "o": "Tor_Scheune",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Ohne",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Laeden_Zu_Rot",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Haengeschild_Schmied",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Stein",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Regenfass",
+      "x": 0,
+      "y": -1
+     },
+     {
+      "o": "Holzstapel_Wand",
+      "x": 4,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 8,
+    "hoehe": 5,
+    "boden": "pflaster",
+    "wand": "stein",
+    "krone": "stein",
+    "tuerX": 4,
+    "objekte": [
+     {
+      "o": "Wandbrett_Werkzeug",
+      "x": 3,
+      "y": 6
+     },
+     {
+      "o": "Wand_Hufeisen",
+      "x": 6,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 7,
+      "y": 5
+     },
+     {
+      "o": "Esse",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Blasebalg",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Amboss",
+      "x": 2,
+      "y": 2
+     },
+     {
+      "o": "Fass_Wasser",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Schleifstein",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Fass_Kohle",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Kistenstapel",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Tisch_Lang",
+      "x": 4,
+      "y": 4
+     }
+    ]
+   }
+  },
+  {
+   "name": "Kraemerladen",
+   "aussen": {
+    "breite": 7,
+    "wandHoehe": 2,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "blau",
+    "dach": "schiefer",
+    "deko": [
+     {
+      "o": "Tuer_Oberlicht_Blau",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Schaufenster_Waren",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Schaufenster_Buecher",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Ohne",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Ohne",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Blau",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Haengeschild_Laden",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Stufe_Stein",
+      "x": 3,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Blau",
+      "x": 2,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 5,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 9,
+    "hoehe": 6,
+    "boden": "dielen_hell",
+    "wand": "tapete_blau",
+    "krone": "violett",
+    "tuerX": 4,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 4,
+      "y": 6
+     },
+     {
+      "o": "Wand_Kerzenleuchter",
+      "x": 3,
+      "y": 7
+     },
+     {
+      "o": "Wand_Kerzenleuchter",
+      "x": 5,
+      "y": 7
+     },
+     {
+      "o": "Warenregal",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Stoffregal",
+      "x": 2,
+      "y": 5
+     },
+     {
+      "o": "Warenregal",
+      "x": 7,
+      "y": 5
+     },
+     {
+      "o": "Theke_L",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "o": "Theke_M_Waage",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Theke_M_Glaeser",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Theke_R",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Fass_Aepfel",
+      "x": 0,
+      "y": 2
+     },
+     {
+      "o": "Sack_Kartoffeln",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Kistenstapel",
+      "x": 8,
+      "y": 1
+     },
+     {
+      "o": "Topfpflanze",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Teppich_Blau",
+      "x": 3,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "Apotheke",
+   "aussen": {
+    "breite": 5,
+    "wandHoehe": 2,
+    "dachHoehe": 2,
+    "ueberstand": 0,
+    "wand": "kalk",
+    "dach": "ziegel",
+    "deko": [
+     {
+      "o": "Tuer_Gruen",
+      "x": 2,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Gruen",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Gruen",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Haengeschild_Apotheke",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Efeu_Klein",
+      "x": 4,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Weiss",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Schornstein_Backstein",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "o": "Dachfenster_Licht",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Stein",
+      "x": 2,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Rot",
+      "x": 1,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 7,
+    "hoehe": 5,
+    "boden": "steinplatten",
+    "wand": "kalk",
+    "krone": "violett",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Wand_Kraeuter",
+      "x": 2,
+      "y": 6
+     },
+     {
+      "o": "Wand_Kraeuter",
+      "x": 3,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Kerze",
+      "x": 5,
+      "y": 5
+     },
+     {
+      "o": "Apothekerschrank",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Flaschenregal",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Destille",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Moerser_Tisch",
+      "x": 1,
+      "y": 2
+     },
+     {
+      "o": "Theke_L",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Theke_M_Flaschen",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Theke_R",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Sack_Korn",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Topfpflanze",
+      "x": 6,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "name": "Gelehrtenhaus",
+   "aussen": {
+    "breite": 6,
+    "wandHoehe": 3,
+    "dachHoehe": 2,
+    "ueberstand": 0,
+    "wand": "stein",
+    "dach": "blech",
+    "deko": [
+     {
+      "o": "Tuer_Dunkel",
+      "x": 2,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Blau",
+      "x": 0,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 2,
+      "y": 2
+     },
+     {
+      "o": "Haengeschild_Buch",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fallrohr_Oben",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Fallrohr_Mitte",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Fallrohr_Unten",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Ofenrohr_Rauch",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "o": "Dachfenster_Dunkel",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Wetterfahne",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Stufe_Stein",
+      "x": 2,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 8,
+    "hoehe": 5,
+    "boden": "dielen_dunkel",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Vorhang",
+      "x": 3,
+      "y": 5
+     },
+     {
+      "o": "Wand_BildPortrait",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Wand_Uhr",
+      "x": 2,
+      "y": 6
+     },
+     {
+      "o": "Buecherwand",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Buecherregal_Schmal",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Buecherwand",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Schreibtisch_Kerze",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "o": "Globus",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Kartentisch",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Sessel_Rot",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Fernrohr",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Teppich_Gruen_Rund",
+      "x": 4,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "Kapelle",
+   "aussen": {
+    "breite": 8,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "bruch",
+    "dach": "schiefer",
+    "deko": [
+     {
+      "o": "Portal_Kapelle",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Bogen_Bunt",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Bunt",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Efeu_Gross_A",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Efeu_Gross_B",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Dachreiter_Glocke",
+      "x": 4,
+      "y": 5
+     },
+     {
+      "o": "Stufe_Stein_Breit",
+      "x": 3,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 8,
+    "hoehe": 7,
+    "boden": "kirchenstein",
+    "wand": "kalk",
+    "krone": "stein",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Kerze",
+      "x": 1,
+      "y": 7
+     },
+     {
+      "o": "Fenster_Innen_Kerze",
+      "x": 6,
+      "y": 7
+     },
+     {
+      "o": "Wand_Kranz",
+      "x": 4,
+      "y": 8
+     },
+     {
+      "o": "Altar",
+      "x": 3,
+      "y": 5
+     },
+     {
+      "o": "Kerzenstaender",
+      "x": 1,
+      "y": 6
+     },
+     {
+      "o": "Kerzenstaender",
+      "x": 6,
+      "y": 6
+     },
+     {
+      "o": "Talisman_Schrein",
+      "x": 0,
+      "y": 6
+     },
+     {
+      "o": "Topfpflanze_Gross",
+      "x": 7,
+      "y": 6
+     },
+     {
+      "o": "Kirchenbank",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Kirchenbank",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Kirchenbank",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Kirchenbank",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Laeufer_Rot",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Laeufer_Rot",
+      "x": 3,
+      "y": 2
+     }
+    ]
+   }
+  },
+  {
+   "name": "Fischerhuette",
+   "aussen": {
+    "breite": 4,
+    "wandHoehe": 2,
+    "dachHoehe": 2,
+    "ueberstand": 0,
+    "wand": "blockhaus",
+    "dach": "moos",
+    "deko": [
+     {
+      "o": "Tuer_Holz",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Ohne",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Ohne",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Haengeschild_Fischer",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Efeu_Klein",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Ofenrohr_Rauch",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Regenfass",
+      "x": 3,
+      "y": -1
+     },
+     {
+      "o": "Stufe_Holz",
+      "x": 1,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 6,
+    "hoehe": 4,
+    "boden": "bohlen",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 2,
+    "objekte": [
+     {
+      "o": "Wandbrett_Netz",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Wand_Ruder",
+      "x": 5,
+      "y": 5
+     },
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Bett_Blau",
+      "x": 0,
+      "y": 2
+     },
+     {
+      "o": "Fass_Fisch",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Reuse",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Tisch_Rund",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Stuhl_Hinten",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Holzkorb",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Truhe_Zu",
+      "x": 1,
+      "y": 3
+     }
+    ]
+   }
+  },
+  {
+   "name": "Schneiderei",
+   "aussen": {
+    "breite": 6,
+    "wandHoehe": 2,
+    "dachHoehe": 2,
+    "ueberstand": 0,
+    "wand": "fachwerk",
+    "dach": "ziegel",
+    "deko": [
+     {
+      "o": "Tuer_Rot",
+      "x": 4,
+      "y": 0
+     },
+     {
+      "o": "Schaufenster_Stoff",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Rot",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Haengeschild_Schneider",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Holz",
+      "x": 4,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Gelb",
+      "x": 5,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 7,
+    "hoehe": 5,
+    "boden": "dielen_rot",
+    "wand": "tapete_rot",
+    "krone": "violett",
+    "tuerX": 5,
+    "objekte": [
+     {
+      "o": "Wandbrett_Garn",
+      "x": 0,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Vorhang",
+      "x": 3,
+      "y": 5
+     },
+     {
+      "o": "Wand_Spiegel",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Stoffregal",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Schneiderpuppe",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Schneiderpuppe",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Naehtisch",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Stuhl_Hinten",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Stoffballen",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Standspiegel",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Kommode",
+      "x": 4,
+      "y": 4
+     }
+    ]
+   }
+  },
+  {
+   "name": "Stall",
+   "aussen": {
+    "breite": 7,
+    "wandHoehe": 2,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "holz",
+    "dach": "schindel",
+    "deko": [
+     {
+      "o": "Tor_Scheune",
+      "x": 2,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Stall",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Stall",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Tuer_Stall",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Leiter_Wand",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Wetterfahne",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Dachfenster_Dunkel",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Holzstapel_Wand",
+      "x": 4,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 0,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 9,
+    "hoehe": 5,
+    "boden": "stroh",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 2,
+    "objekte": [
+     {
+      "o": "Wandbrett_Werkzeug",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 1,
+      "y": 5
+     },
+     {
+      "o": "Heuhaufen",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Futtertrog",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Futtertrog",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Butterfass",
+      "x": 8,
+      "y": 4
+     },
+     {
+      "o": "Heuhaufen",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Sack_Korn",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Fass_Wasser",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Holzkorb",
+      "x": 0,
+      "y": 2
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfWohnhausA",
+   "aussen": {
+    "breite": 10,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "fachwerk",
+    "dach": "schiefer",
+    "deko": [
+     {
+      "o": "Tuer_Oberlicht_Holz",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Blau",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 8,
+      "y": 1
+     },
+     {
+      "o": "Blumenkasten_Rot",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Gelb",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Rot",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 2,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Dunkel",
+      "x": 8,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Backstein_Rauch",
+      "x": 8,
+      "y": 4
+     },
+     {
+      "o": "Wetterfahne",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Stufe_Stein",
+      "x": 6,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Rot",
+      "x": 5,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 9,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 1,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 8,
+    "hoehe": 6,
+    "boden": "parkett",
+    "wand": "tapete_gruen",
+    "krone": "violett",
+    "tuerX": 2,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Vorhang",
+      "x": 1,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Vorhang",
+      "x": 6,
+      "y": 6
+     },
+     {
+      "o": "Wand_BildLandschaft",
+      "x": 2,
+      "y": 7
+     },
+     {
+      "o": "Wand_Uhr",
+      "x": 5,
+      "y": 7
+     },
+     {
+      "o": "Tuer_Innen_Zu",
+      "x": 7,
+      "y": 6
+     },
+     {
+      "o": "Kamin_Stein",
+      "x": 3,
+      "y": 5
+     },
+     {
+      "o": "Buecherregal_Schmal",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Standuhr",
+      "x": 6,
+      "y": 5
+     },
+     {
+      "o": "Sofa_Gruen",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Sessel_Gruen",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Sessel_Gruen",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Tisch_Rund_Decke",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Topfpflanze_Gross",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Kommode",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Teppich_Rot_Gross",
+      "x": 2,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfWohnhausB",
+   "aussen": {
+    "breite": 10,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "holz",
+    "dach": "schindel",
+    "deko": [
+     {
+      "o": "Tuer_Gruen",
+      "x": 2,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Gruen",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Gruen",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Blumenkasten_Gelb",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Rot",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Efeu_Gross_A",
+      "x": 9,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Laeden_Zu_Licht",
+      "x": 2,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 6,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 7,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "o": "Stufe_Holz",
+      "x": 2,
+      "y": -1
+     },
+     {
+      "o": "Holzstapel_Wand",
+      "x": 5,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 0,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 7,
+    "hoehe": 5,
+    "boden": "dielen_dunkel",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 1,
+      "y": 5
+     },
+     {
+      "o": "Wand_Kraeuter",
+      "x": 4,
+      "y": 6
+     },
+     {
+      "o": "Wand_Talisman",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Wand_Pfannen",
+      "x": 6,
+      "y": 5
+     },
+     {
+      "o": "Kamin_Stein",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Bett_Rot",
+      "x": 0,
+      "y": 3
+     },
+     {
+      "o": "Truhe_Zu",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Tisch_Rund",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Stuhl_Vorne",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Stuhl_Hinten",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Spinnrad",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fass_Wasser",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Holzkorb",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "o": "Teppich_Rot",
+      "x": 2,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfWohnhausC",
+   "aussen": {
+    "breite": 11,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "kalk",
+    "dach": "ziegel",
+    "deko": [
+     {
+      "o": "Tuer_Blau",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 9,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Rot",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 10,
+      "y": 1
+     },
+     {
+      "o": "Blumenkasten_Weiss",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Rot",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Weiss",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 2,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Dunkel",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 1,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Backstein_Rauch",
+      "x": 9,
+      "y": 4
+     },
+     {
+      "o": "Dachfenster_Dunkel",
+      "x": 7,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Stein",
+      "x": 8,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Gelb",
+      "x": 7,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Blau",
+      "x": 9,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 2,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 7,
+    "hoehe": 5,
+    "boden": "steinplatten",
+    "wand": "kalk",
+    "krone": "violett",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Wand_Kraeuter",
+      "x": 2,
+      "y": 6
+     },
+     {
+      "o": "Wand_Kraeuter",
+      "x": 3,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Kerze",
+      "x": 5,
+      "y": 5
+     },
+     {
+      "o": "Apothekerschrank",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Flaschenregal",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Destille",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Moerser_Tisch",
+      "x": 1,
+      "y": 2
+     },
+     {
+      "o": "Theke_L",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Theke_M_Flaschen",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Theke_R",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Sack_Korn",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Topfpflanze",
+      "x": 6,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfWohnhausD",
+   "aussen": {
+    "breite": 10,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "blockhaus",
+    "dach": "moos",
+    "deko": [
+     {
+      "o": "Tuer_Dunkel",
+      "x": 3,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Ohne",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Ohne",
+      "x": 8,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Ohne",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Blumenkasten_Gelb",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Efeu_Gross_B",
+      "x": 9,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 7,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "o": "Stufe_Holz",
+      "x": 3,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 6,
+      "y": -1
+     },
+     {
+      "o": "Holzstapel_Wand",
+      "x": 0,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 6,
+    "hoehe": 4,
+    "boden": "bohlen",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 2,
+    "objekte": [
+     {
+      "o": "Wandbrett_Netz",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Wand_Ruder",
+      "x": 5,
+      "y": 5
+     },
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Bett_Blau",
+      "x": 0,
+      "y": 2
+     },
+     {
+      "o": "Fass_Fisch",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Reuse",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Tisch_Rund",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Stuhl_Hinten",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Holzkorb",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Truhe_Zu",
+      "x": 1,
+      "y": 3
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfWohnhausE",
+   "aussen": {
+    "breite": 10,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "holz",
+    "dach": "stroh",
+    "deko": [
+     {
+      "o": "Tuer_Dunkel",
+      "x": 4,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Vernagelt",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Gruen",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Vernagelt",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Gruen",
+      "x": 8,
+      "y": 1
+     },
+     {
+      "o": "Efeu_Gross_A",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Efeu_Gross_B",
+      "x": 9,
+      "y": 0
+     },
+     {
+      "o": "Efeu_Klein",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Rund_Dunkel",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Dunkel",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Dachfenster_Dunkel",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Stein",
+      "x": 8,
+      "y": 4
+     },
+     {
+      "o": "Stufe_Holz",
+      "x": 4,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 2,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 7,
+    "hoehe": 5,
+    "boden": "dielen_dunkel",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 1,
+      "y": 5
+     },
+     {
+      "o": "Wand_Kraeuter",
+      "x": 4,
+      "y": 6
+     },
+     {
+      "o": "Wand_Talisman",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Wand_Pfannen",
+      "x": 6,
+      "y": 5
+     },
+     {
+      "o": "Kamin_Stein",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Bett_Rot",
+      "x": 0,
+      "y": 3
+     },
+     {
+      "o": "Truhe_Zu",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Tisch_Rund",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Stuhl_Vorne",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Stuhl_Hinten",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Spinnrad",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Fass_Wasser",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Holzkorb",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "o": "Teppich_Rot",
+      "x": 2,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfBaeckerei",
+   "aussen": {
+    "breite": 11,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "backstein",
+    "dach": "ziegel",
+    "deko": [
+     {
+      "o": "Tuer_Laden_Doppel",
+      "x": 2,
+      "y": 0
+     },
+     {
+      "o": "Schaufenster_Brot",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Haengeschild_Baecker",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 9,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Rot",
+      "x": 10,
+      "y": 1
+     },
+     {
+      "o": "Blumenkasten_Gelb",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Rot",
+      "x": 9,
+      "y": 0
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 8,
+      "y": 2
+     },
+     {
+      "o": "Schornstein_Backstein_Rauch",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "o": "Schornstein_Backstein_Rauch",
+      "x": 9,
+      "y": 4
+     },
+     {
+      "o": "Dachfenster_Licht",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Dachfenster_Licht",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Stein_Breit",
+      "x": 2,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Gelb",
+      "x": 5,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Rot",
+      "x": 6,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 8,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 9,
+    "hoehe": 6,
+    "boden": "fliesen_schach",
+    "wand": "backstein",
+    "krone": "stein",
+    "tuerX": 1,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Kerze",
+      "x": 4,
+      "y": 6
+     },
+     {
+      "o": "Wandbrett_Toepfe",
+      "x": 6,
+      "y": 7
+     },
+     {
+      "o": "Wand_Uhr",
+      "x": 2,
+      "y": 7
+     },
+     {
+      "o": "Backofen",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Brotregal",
+      "x": 7,
+      "y": 5
+     },
+     {
+      "o": "Arbeitstisch_Brot",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Sack_Mehl",
+      "x": 2,
+      "y": 5
+     },
+     {
+      "o": "Sack_Korn",
+      "x": 6,
+      "y": 5
+     },
+     {
+      "o": "Theke_L",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Theke_M_Kasse",
+      "x": 6,
+      "y": 2
+     },
+     {
+      "o": "Theke_M_Brot",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Theke_R",
+      "x": 8,
+      "y": 2
+     },
+     {
+      "o": "Fass_Korn",
+      "x": 0,
+      "y": 3
+     },
+     {
+      "o": "Kistenstapel",
+      "x": 8,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfPfarrhaus",
+   "aussen": {
+    "breite": 11,
+    "wandHoehe": 3,
+    "dachHoehe": 4,
+    "ueberstand": 0,
+    "wand": "bruch",
+    "dach": "schiefer",
+    "deko": [
+     {
+      "o": "Portal_Kapelle",
+      "x": 4,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Bogen_Licht",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Licht",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Bunt",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Licht",
+      "x": 9,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Haengeschild_Kapelle",
+      "x": 10,
+      "y": 2
+     },
+     {
+      "o": "Efeu_Gross_A",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Efeu_Gross_B",
+      "x": 10,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 8,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 8,
+      "y": 3
+     },
+     {
+      "o": "Dachreiter_Glocke",
+      "x": 5,
+      "y": 5
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 9,
+      "y": 5
+     },
+     {
+      "o": "Stufe_Stein_Breit",
+      "x": 4,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Blau",
+      "x": 3,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Rot",
+      "x": 6,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 8,
+    "hoehe": 5,
+    "boden": "dielen_dunkel",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Vorhang",
+      "x": 3,
+      "y": 5
+     },
+     {
+      "o": "Wand_BildPortrait",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Wand_Uhr",
+      "x": 2,
+      "y": 6
+     },
+     {
+      "o": "Buecherwand",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Buecherregal_Schmal",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Buecherwand",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Schreibtisch_Kerze",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "o": "Globus",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Kartentisch",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Sessel_Rot",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Fernrohr",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Teppich_Gruen_Rund",
+      "x": 4,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfAerztehaus",
+   "aussen": {
+    "breite": 10,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "kalk",
+    "dach": "ziegel",
+    "deko": [
+     {
+      "o": "Tuer_Oberlicht_Blau",
+      "x": 2,
+      "y": 0
+     },
+     {
+      "o": "Haengeschild_Arzt",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Schaufenster_Apotheke",
+      "x": 4,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 9,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Blumenkasten_Weiss",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Blumenkasten_Blau",
+      "x": 9,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 6,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 7,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Backstein",
+      "x": 1,
+      "y": 4
+     },
+     {
+      "o": "Wetterfahne",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Stein",
+      "x": 2,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Blau",
+      "x": 1,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Gelb",
+      "x": 3,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 5,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 7,
+    "hoehe": 5,
+    "boden": "steinplatten",
+    "wand": "kalk",
+    "krone": "violett",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Wand_Kraeuter",
+      "x": 2,
+      "y": 6
+     },
+     {
+      "o": "Wand_Kraeuter",
+      "x": 3,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Kerze",
+      "x": 5,
+      "y": 5
+     },
+     {
+      "o": "Apothekerschrank",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Flaschenregal",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Destille",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Moerser_Tisch",
+      "x": 1,
+      "y": 2
+     },
+     {
+      "o": "Theke_L",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Theke_M_Flaschen",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Theke_R",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Sack_Korn",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Topfpflanze",
+      "x": 6,
+      "y": 0
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfDiner",
+   "aussen": {
+    "breite": 12,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "holz",
+    "dach": "blech",
+    "deko": [
+     {
+      "o": "Tuer_Laden_Doppel",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Haengeschild_Stube",
+      "x": 4,
+      "y": 2
+     },
+     {
+      "o": "Schaufenster_Waren",
+      "x": 1,
+      "y": 0
+     },
+     {
+      "o": "Schaufenster_Waren",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Rot",
+      "x": 10,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 11,
+      "y": 1
+     },
+     {
+      "o": "Vordach_Rot_L",
+      "x": 3,
+      "y": 2
+     },
+     {
+      "o": "Vordach_Rot_M",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Vordach_Rot_M",
+      "x": 6,
+      "y": 2
+     },
+     {
+      "o": "Vordach_Rot_R",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 9,
+      "y": 3
+     },
+     {
+      "o": "Ofenrohr_Rauch",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Dachfenster_Licht",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Stein_Breit",
+      "x": 5,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Rot",
+      "x": 4,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Gelb",
+      "x": 7,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 1,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 9,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 9,
+    "hoehe": 6,
+    "boden": "dielen_hell",
+    "wand": "tapete_blau",
+    "krone": "violett",
+    "tuerX": 4,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 4,
+      "y": 6
+     },
+     {
+      "o": "Wand_Kerzenleuchter",
+      "x": 3,
+      "y": 7
+     },
+     {
+      "o": "Wand_Kerzenleuchter",
+      "x": 5,
+      "y": 7
+     },
+     {
+      "o": "Warenregal",
+      "x": 0,
+      "y": 5
+     },
+     {
+      "o": "Stoffregal",
+      "x": 2,
+      "y": 5
+     },
+     {
+      "o": "Warenregal",
+      "x": 7,
+      "y": 5
+     },
+     {
+      "o": "Theke_L",
+      "x": 3,
+      "y": 3
+     },
+     {
+      "o": "Theke_M_Waage",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Theke_M_Glaeser",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Theke_R",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Fass_Aepfel",
+      "x": 0,
+      "y": 2
+     },
+     {
+      "o": "Sack_Kartoffeln",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Kistenstapel",
+      "x": 8,
+      "y": 1
+     },
+     {
+      "o": "Topfpflanze",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Teppich_Blau",
+      "x": 3,
+      "y": 1
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfRevier",
+   "aussen": {
+    "breite": 11,
+    "wandHoehe": 3,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "stein",
+    "dach": "schiefer",
+    "deko": [
+     {
+      "o": "Tuer_Oberlicht_Blau",
+      "x": 5,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 4,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 2,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Dunkel_Blau",
+      "x": 9,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Licht_Blau",
+      "x": 10,
+      "y": 1
+     },
+     {
+      "o": "Haengeschild_Arzt",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 2,
+      "y": 2
+     },
+     {
+      "o": "Fenster_Rund_Dunkel",
+      "x": 9,
+      "y": 2
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 8,
+      "y": 3
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 9,
+      "y": 4
+     },
+     {
+      "o": "Wetterfahne",
+      "x": 5,
+      "y": 3
+     },
+     {
+      "o": "Stufe_Stein_Breit",
+      "x": 5,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Blau",
+      "x": 4,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 1,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 10,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 8,
+    "hoehe": 5,
+    "boden": "pflaster",
+    "wand": "stein",
+    "krone": "stein",
+    "tuerX": 4,
+    "objekte": [
+     {
+      "o": "Wandbrett_Werkzeug",
+      "x": 3,
+      "y": 6
+     },
+     {
+      "o": "Wand_Hufeisen",
+      "x": 6,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 7,
+      "y": 5
+     },
+     {
+      "o": "Esse",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Blasebalg",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Amboss",
+      "x": 2,
+      "y": 2
+     },
+     {
+      "o": "Fass_Wasser",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Schleifstein",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Fass_Kohle",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Kistenstapel",
+      "x": 6,
+      "y": 0
+     },
+     {
+      "o": "Tisch_Lang",
+      "x": 4,
+      "y": 4
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfScheune",
+   "aussen": {
+    "breite": 12,
+    "wandHoehe": 4,
+    "dachHoehe": 3,
+    "ueberstand": 0,
+    "wand": "holz",
+    "dach": "schindel",
+    "deko": [
+     {
+      "o": "Tor_Scheune",
+      "x": 4,
+      "y": 0
+     },
+     {
+      "o": "Tuer_Stall",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Stall",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Stall",
+      "x": 11,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 7,
+      "y": 1
+     },
+     {
+      "o": "Leiter_Wand",
+      "x": 10,
+      "y": 0
+     },
+     {
+      "o": "Fenster_Stall",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Fenster_Stall",
+      "x": 6,
+      "y": 3
+     },
+     {
+      "o": "Fenster_Stall",
+      "x": 9,
+      "y": 3
+     },
+     {
+      "o": "Dachfenster_Dunkel",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Dachfenster_Dunkel",
+      "x": 9,
+      "y": 4
+     },
+     {
+      "o": "Wetterfahne",
+      "x": 5,
+      "y": 4
+     },
+     {
+      "o": "Holzstapel_Wand",
+      "x": 0,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 7,
+      "y": -1
+     },
+     {
+      "o": "Regenfass",
+      "x": 10,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 9,
+    "hoehe": 5,
+    "boden": "stroh",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 2,
+    "objekte": [
+     {
+      "o": "Wandbrett_Werkzeug",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Fenster_Innen_Nacht",
+      "x": 1,
+      "y": 5
+     },
+     {
+      "o": "Heuhaufen",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Futtertrog",
+      "x": 3,
+      "y": 4
+     },
+     {
+      "o": "Futtertrog",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Butterfass",
+      "x": 8,
+      "y": 4
+     },
+     {
+      "o": "Heuhaufen",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Sack_Korn",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Fass_Wasser",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Holzkorb",
+      "x": 0,
+      "y": 2
+     }
+    ]
+   }
+  },
+  {
+   "name": "DorfVilla",
+   "aussen": {
+    "breite": 16,
+    "wandHoehe": 4,
+    "dachHoehe": 4,
+    "ueberstand": 0,
+    "wand": "bruch",
+    "dach": "schiefer",
+    "deko": [
+     {
+      "o": "Tuer_Oberlicht_Holz",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Tuer_Oberlicht_Holz",
+      "x": 8,
+      "y": 0
+     },
+     {
+      "o": "Talisman_Tuer",
+      "x": 9,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 6,
+      "y": 1
+     },
+     {
+      "o": "Wandlaterne",
+      "x": 10,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Licht",
+      "x": 1,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Licht",
+      "x": 3,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Licht",
+      "x": 5,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Dunkel",
+      "x": 12,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Bogen_Licht",
+      "x": 14,
+      "y": 1
+     },
+     {
+      "o": "Efeu_Gross_A",
+      "x": 0,
+      "y": 0
+     },
+     {
+      "o": "Efeu_Gross_B",
+      "x": 15,
+      "y": 1
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 2,
+      "y": 3
+     },
+     {
+      "o": "Fenster_Rund_Dunkel",
+      "x": 4,
+      "y": 3
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 7,
+      "y": 3
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 8,
+      "y": 3
+     },
+     {
+      "o": "Fenster_Rund_Dunkel",
+      "x": 11,
+      "y": 3
+     },
+     {
+      "o": "Fenster_Rund_Licht",
+      "x": 13,
+      "y": 3
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 5,
+      "y": 4
+     },
+     {
+      "o": "Gaube_Licht",
+      "x": 10,
+      "y": 4
+     },
+     {
+      "o": "Gaube_Dunkel",
+      "x": 13,
+      "y": 4
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 3,
+      "y": 6
+     },
+     {
+      "o": "Schornstein_Stein_Rauch",
+      "x": 12,
+      "y": 6
+     },
+     {
+      "o": "Dachreiter_Glocke",
+      "x": 7,
+      "y": 7
+     },
+     {
+      "o": "Wetterfahne",
+      "x": 8,
+      "y": 6
+     },
+     {
+      "o": "Stufe_Stein_Breit",
+      "x": 7,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Rot",
+      "x": 6,
+      "y": -1
+     },
+     {
+      "o": "Blumentopf_Gelb",
+      "x": 9,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 2,
+      "y": -1
+     },
+     {
+      "o": "Bank_Wand",
+      "x": 12,
+      "y": -1
+     }
+    ]
+   },
+   "innen": {
+    "breite": 8,
+    "hoehe": 5,
+    "boden": "dielen_dunkel",
+    "wand": "holz",
+    "krone": "holz",
+    "tuerX": 3,
+    "objekte": [
+     {
+      "o": "Fenster_Innen_Vorhang",
+      "x": 3,
+      "y": 5
+     },
+     {
+      "o": "Wand_BildPortrait",
+      "x": 5,
+      "y": 6
+     },
+     {
+      "o": "Wand_Uhr",
+      "x": 2,
+      "y": 6
+     },
+     {
+      "o": "Buecherwand",
+      "x": 0,
+      "y": 4
+     },
+     {
+      "o": "Buecherregal_Schmal",
+      "x": 2,
+      "y": 4
+     },
+     {
+      "o": "Buecherwand",
+      "x": 6,
+      "y": 4
+     },
+     {
+      "o": "Schreibtisch_Kerze",
+      "x": 4,
+      "y": 4
+     },
+     {
+      "o": "Globus",
+      "x": 7,
+      "y": 2
+     },
+     {
+      "o": "Kartentisch",
+      "x": 0,
+      "y": 1
+     },
+     {
+      "o": "Sessel_Rot",
+      "x": 5,
+      "y": 2
+     },
+     {
+      "o": "Fernrohr",
+      "x": 7,
+      "y": 0
+     },
+     {
+      "o": "Teppich_Gruen_Rund",
+      "x": 4,
+      "y": 1
+     }
+    ]
+   }
+  }
+ ]
+}

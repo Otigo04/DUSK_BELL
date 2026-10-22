@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_Ilhan_Kennenlernen
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: Hm? Ein neues Gesicht. Hierher verirrt sich kaum jemand, schon gar nicht
+      freiwillig.
+    relationship: 0
+    setFlag: ilhan_kennengelernt
+    next: 
+    choices:
+    - text: Nur auf der Durchreise.
+      next: reise
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Freut mich! Wer bist du?
+      next: name
+      relationship: 1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: "K\xFCmmer dich um deinen Kram."
+      next: abweisend
+      relationship: -2
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: reise
+    speaker: 0
+    text: "Durchreise, ja? Das haben die anderen auch gesagt. Der Wald l\xE4sst einen
+      nicht so leicht gehen."
+    relationship: 0
+    setFlag: 
+    next: name2
+    choices: []
+  - id: name
+    speaker: 0
+    text: Ilhan. Ich halte das Dorf mit Feuerholz am Leben. Ohne Holz kein Licht,
+      und ohne Licht ... na ja.
+    relationship: 0
+    setFlag: 
+    next: frage
+    choices: []
+  - id: name2
+    speaker: 0
+    text: "Ich bin Ilhan, der Holzf\xE4ller. Merk dir den Namen, du wirst ihn noch
+      brauchen."
+    relationship: 0
+    setFlag: 
+    next: frage
+    choices: []
+  - id: abweisend
+    speaker: 0
+    text: Schon gut. Aber wenn es dunkel wird, bist du froh, dass hier jemand Holz
+      hackt.
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: frage
+    speaker: 0
+    text: Sag mal ... hast du keine Angst vor der Nacht?
+    relationship: 0
+    setFlag: 
+    next: 
+    choices:
+    - text: Ein bisschen schon.
+      next: ehrlich
+      relationship: 1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Angst? Ich doch nicht.
+      next: mutig
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Was ist mit der Nacht?
+      next: wissen
+      relationship: 0
+      setFlag: wissen_nacht
+      minRelationship: -10
+      requireFlag: 
+  - id: ehrlich
+    speaker: 0
+    text: "Gut. Wer keine Angst hat, ist entweder dumm oder schon tot. Bleib in der
+      N\xE4he der Laternen."
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: mutig
+    speaker: 0
+    text: "Das sagen alle, bis es an der T\xFCr klopft. Und drau\xDFen l\xE4chelt
+      jemand, der nicht l\xE4cheln sollte."
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: wissen
+    speaker: 0
+    text: Nachts kommen sie aus dem Wald. Sie sehen aus wie wir. Nur das Grinsen
+      ... das Grinsen stimmt nicht.
+    relationship: 0
+    setFlag: 
+    next: wissen2
+    choices: []
+  - id: wissen2
+    speaker: 2
+    text: Ilhan umklammert den Stiel seiner Axt etwas fester.
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []

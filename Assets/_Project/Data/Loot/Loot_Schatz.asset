@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c82fe3b47ca3e40adf234c2766ae04, type: 3}
+  m_Name: Loot_Schatz
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.LootTable
+  guaranteed:
+  - item: {fileID: 11400000, guid: 645e99f9481200547a16397fb7f9b0c5, type: 2}
+    weight: 1
+    min: 18
+    max: 40
+  pools:
+  - name: Wertvoll
+    chance: 1
+    rollsMin: 1
+    rollsMax: 2
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: cbc5654f9ae7fad4eb7b7ad2a8a5b327, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 2b500c8df71f41a4789b0433c0d65865, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 8af7746db159f9545b16af2ca8f1ee15, type: 2}
+      weight: 2
+      min: 1
+      max: 2
+    - item: {fileID: 11400000, guid: a0c8b5ea12407f94eb950124ee9b3b61, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 5934f712d507fa248b09789f1155b835, type: 2}
+      weight: 2
+      min: 1
+      max: 2
+  - name: Ausruestung
+    chance: 0.8
+    rollsMin: 1
+    rollsMax: 2
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: df4f9ac51f9525e40a1c3aeac4f005a8, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 969536ea0ff71d647a5c0a2d9207b856, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 6900ee1d3ccb2ee48ba1838d6f48c283, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 484ee86582b20b541a577f866dab1e21, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: ceb027facf323654abd29dde53aa90ce, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 4a1399d5c7597824db5560ba6a6b3265, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 76a95da0f01a4b042b21dfd7c7967432, type: 2}
+      weight: 2
+      min: 2
+      max: 3
+    - item: {fileID: 11400000, guid: 6aab8a456b49cbd47b636c3771ddd48e, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 5c693a89dbafb9b47ab76991747d43b4, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+  - name: Talisman
+    chance: 0.3
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: 9f5da5ffa3c6ad646bb0185a6013ccc1, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 1964ac3667fe6b1458b3a503db021340, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 5bd8d8e029a44a640b859c9168759b4a, type: 2}
+      weight: 3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 30cb33a821039dd48802dd3c87cf739c, type: 2}
+      weight: 2.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: faef9d3cb381cce49be1018cb0dcf3da, type: 2}
+      weight: 0.7
+      min: 1
+      max: 1
+  - name: Waffe
+    chance: 0.2
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: 3d163ad5755370f4995717e8b3222044, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: cd54dc31902b0b74cb4010df7b91000c, type: 2}
+      weight: 0.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 92ed3c2d50305144784dbd8bd5bfb440, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 6107e2f2e5a38c648ae28ecb7e701483, type: 2}
+      weight: 0.6
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: bcaaa1f2ce3e05347b0536d758c24076, type: 2}
+      weight: 0.4
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 1190bb72a83d0ed45bb7db97ba9da545, type: 2}
+      weight: 0.3
+      min: 1
+      max: 1
+  - name: Munition
+    chance: 0.35
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: 0b7a96dc55737f3489682d2bec0bc1b3, type: 2}
+      weight: 1
+      min: 4
+      max: 10
+    - item: {fileID: 11400000, guid: 42f5af9d60819e647ab249f6d3dab502, type: 2}
+      weight: 0.6
+      min: 3
+      max: 8
+  - name: Kleidung
+    chance: 0.45
+    rollsMin: 1
+    rollsMax: 2
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: fc4924484aac6e54991c16580e2ad920, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: bc9b4888a8097444c9274a9e79d3c39a, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 468d03c64667f164391f83d870918b45, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 79c937d85ebeb7a4596f04a08190251f, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 6ab64f0ad92b10d43b339ea312e55854, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 66027acc70cea9f42b32108b83ab1dc9, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: c7db71e6d7628404b8382a3d8d20056d, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: fffc1e9554c4440489c67c2dad3e1aee, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 21aa9aa0bc2736f48ac40475df7b7de8, type: 2}
+      weight: 2
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 2f0ac5d6e6ef9824f9626286ba2b53c6, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: ae04b03944b3e3f4d99b5bc40fdb0af8, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 68c49bd4896ab7742995ea0e33ea171b, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 6b0c68bf393f6b043999dae676278493, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 48666a2646743fd499705e0f1e8898b4, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: cac6aea112df9934fadbfe11768e4b9c, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 59c795c2ae65ee040b93c9b301100741, type: 2}
+      weight: 1
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 2e5926fc67b378544932a91cf8906bdb, type: 2}
+      weight: 0.3
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 9844f443a47900144ab867f13e46f3d7, type: 2}
+      weight: 0.3
+      min: 1
+      max: 1

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_IlhanBar_Alltag
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: Noch einen Schluck? Die Nacht ist lang.
+    relationship: 0
+    setFlag: 
+    next: 
+    choices:
+    - text: Gibt es Neuigkeiten?
+      next: neu
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Danke, nein.
+      next: nein
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: neu
+    speaker: 0
+    text: "Der Sheriff l\xE4utet bald die Glocke. Dann will keiner mehr auf der Stra\xDFe
+      sein."
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: nein
+    speaker: 0
+    text: "Dann pass auf dich auf. Und verriegel die T\xFCr richtig."
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []

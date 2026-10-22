@@ -1,0 +1,22 @@
+﻿Tileset_Haus.png  (512 x 224 px = 16 x 7 Zellen à 32x32, Point-Filter, kein Skalieren)
+Nur Style-Bibel-Palette (Check: 0 Fremdfarben). Passt zu Tileset_Interieur. Spalte/Reihe ab 0.
+
+REIHE 0-2  Dächer (Reihe = Material: 0 Schiefer violett, 1 Holzschindel, 2 Stroh)
+ Spalte 0-2 Firstreihe (links, Mitte, rechts) | 3-5 Dachfläche | 6-8 Traufreihe mit Traufbrett
+ Pro Dachbreite n: links = Ortgang L, Mitte beliebig oft, rechts = Ortgang R.
+ Aufbau von oben: First, 1+ Fläche (beliebig wiederholen), Traufe.
+ 9 Schornstein (32x64) | 10 Schornstein mit Rauch | 11 Dachfenster beleuchtet (Schiefer) | 12 Dachfenster dunkel | 13 Wetterhahn (32x64, auf First)
+
+REIHE 3-4  Fassaden (oben = Reihe 3, unten = Reihe 4, Sockel Stein)
+ 0-2 Fachwerk Mitte/L/R | 3-5 Holz Mitte/L/R | 6-8 Stein Mitte/L/R
+ 9 Fenster Fachwerk beleuchtet | 10 dunkel | 11 Läden zu (Licht in den Ritzen)
+ 12-13 Fenster Holz beleuchtet/dunkel | 14-15 Fenster Stein beleuchtet/dunkel (alle mit blauen Läden)
+ Untere Hälften zu 9-15 in Reihe 4 passend zum Material.
+
+REIHE 5-6  Türen und Zubehör
+ 0 Tür schlicht (32x64) | 1 Tür mit Fenster beleuchtet | 2 Tür offen | (3-4) Scheunentor 64x64 | 5 Kellertür Stein
+ Reihe 5: 6-8 Stufe links/Mitte/rechts (unter Tür setzen) | 10 Stufe einzeln (für 1 Kachel breite Türen)
+ Reihe 6: 6 Vordach rot-weiß | 7 Blumenkasten (unter Fenster, Reihe 4) | 8 Wandlaterne | 9 Hängeschild leer
+
+Lichtquellen für Light 2D: beleuchtete Fenster (9, 12, 14, 11), Dachfenster (11), Wandlaterne (8,6), offene Tür (2,5).
+Hinweis: Innenräume mit Tileset_Interieur. Tür offen = Einstieg in den Innenraum (Szenenwechsel).

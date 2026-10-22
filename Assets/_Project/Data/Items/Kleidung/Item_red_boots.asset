@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f821d7e1b53e0424b9e1bdb9cb217e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.ItemDef
+  id: red_boots
+  displayName: Red Boots
+  description: Loud colour, light on the foot.
+  icon: {fileID: 21300000, guid: 61529b6bececa4a4d8c50b3e2d93f289, type: 3}
+  category: 7
+  rarity: 2
+  maxStack: 1
+  value: 32
+  autoPickup: 0
+  consumableId: 
+  useVerb: Use
+  consumedOnUse: 1
+  leftoverItemId: 
+  refuelsItemId: 
+  refuelAmount: 50
+  weapon: 0
+  attackAnim: 
+  attackCombo: 1
+  attackSeconds: 0
+  hitSeconds: 0
+  damage: 1
+  reach: 0
+  rangedRange: 9
+  ammoItemId: 
+  staminaCostMultiplier: 1
+  maxDurability: 0
+  durabilityPerUse: 1
+  equipSlot: 5
+  outfitPalette:
+  - {r: 0.16862746, g: 0.12941177, b: 0.2509804, a: 1}
+  - {r: 0.47843137, g: 0.18039216, b: 0.22745098, a: 1}
+  - {r: 0.76862746, g: 0.3882353, b: 0.41960785, a: 1}
+  - {r: 0.8392157, g: 0.2901961, b: 0.41568628, a: 1}
+  equipEffects:
+  - kind: 3
+    stat: 0
+    value: 1.05
+  - kind: 4
+    stat: 0
+    value: 1.05
+  lightRadius: 0
+  lightColor: {r: 1, g: 0.65, b: 0.31, a: 1}
+  lightIntensity: 0.9
+  burnPerHour: 10
+  consumedWhenBurnedOut: 0

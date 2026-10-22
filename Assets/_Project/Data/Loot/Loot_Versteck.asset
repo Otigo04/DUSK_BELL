@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c82fe3b47ca3e40adf234c2766ae04, type: 3}
+  m_Name: Loot_Versteck
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.LootTable
+  guaranteed: []
+  pools:
+  - name: Fund
+    chance: 1
+    rollsMin: 1
+    rollsMax: 3
+    unique: 1
+    nothingWeight: 0.4
+    entries:
+    - item: {fileID: 11400000, guid: 57ff99caa4839714dbf9c1ebdd8c9a9c, type: 2}
+      weight: 3
+      min: 1
+      max: 4
+    - item: {fileID: 11400000, guid: 5ceeb0761aafb094abf1cf67a966b8f7, type: 2}
+      weight: 3
+      min: 1
+      max: 3
+    - item: {fileID: 11400000, guid: 7c9eca5ef62c4ca4d9de971493c78a58, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 72e6597dadf34224f985b2cc880f66fd, type: 2}
+      weight: 2
+      min: 1
+      max: 3
+    - item: {fileID: 11400000, guid: 9ca8410e620667645a7442b7a20cccd6, type: 2}
+      weight: 0.4
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: ec9b309b1063f7141bbb08916b2472c9, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+    - item: {fileID: 11400000, guid: 432a7d34edad63d4a8372f97ac34b1fe, type: 2}
+      weight: 1.5
+      min: 1
+      max: 1
+  - name: Muenzen
+    chance: 0.55
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: 645e99f9481200547a16397fb7f9b0c5, type: 2}
+      weight: 1
+      min: 2
+      max: 7
+  - name: Schluessel
+    chance: 0.12
+    rollsMin: 1
+    rollsMax: 1
+    unique: 1
+    nothingWeight: 0
+    entries:
+    - item: {fileID: 11400000, guid: fe532124f303bd447840c06c16bd0050, type: 2}
+      weight: 1
+      min: 1
+      max: 1

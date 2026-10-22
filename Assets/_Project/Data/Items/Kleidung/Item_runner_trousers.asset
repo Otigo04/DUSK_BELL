@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f821d7e1b53e0424b9e1bdb9cb217e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.ItemDef
+  id: runner_trousers
+  displayName: Runner's Trousers
+  description: Light, and cut for speed.
+  icon: {fileID: 21300000, guid: b9ecc9a38195a4d4c9878fe9b4379e70, type: 3}
+  category: 7
+  rarity: 3
+  maxStack: 1
+  value: 55
+  autoPickup: 0
+  consumableId: 
+  useVerb: Use
+  consumedOnUse: 1
+  leftoverItemId: 
+  refuelsItemId: 
+  refuelAmount: 50
+  weapon: 0
+  attackAnim: 
+  attackCombo: 1
+  attackSeconds: 0
+  hitSeconds: 0
+  damage: 1
+  reach: 0
+  rangedRange: 9
+  ammoItemId: 
+  staminaCostMultiplier: 1
+  maxDurability: 0
+  durabilityPerUse: 1
+  equipSlot: 4
+  outfitPalette:
+  - {r: 0.12156863, g: 0.16470589, b: 0.23921569, a: 1}
+  - {r: 0.16862746, g: 0.41960785, b: 0.5411765, a: 1}
+  - {r: 0.41960785, g: 0.49803922, b: 0.72156864, a: 1}
+  equipEffects:
+  - kind: 4
+    stat: 0
+    value: 1.08
+  - kind: 2
+    stat: 1
+    value: 1.15
+  lightRadius: 0
+  lightColor: {r: 1, g: 0.65, b: 0.31, a: 1}
+  lightIntensity: 0.9
+  burnPerHour: 10
+  consumedWhenBurnedOut: 0

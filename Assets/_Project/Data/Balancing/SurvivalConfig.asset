@@ -1,0 +1,2343 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3731ee3e7c25be54f9c4aa5c7e4fc044, type: 3}
+  m_Name: SurvivalConfig
+  m_EditorClassIdentifier: Nightward.Survival::Nightward.Survival.SurvivalConfig
+  tuning:
+    fallbackSecondsPerGameHour: 25
+    nightThreshold: 0.5
+    lifePoints: 3
+    hitInvulnerability: 2
+    dodgeWindow: 0.3
+    deathMarginLifePoints: 0.2
+    painPerDamage: 0.8
+    stressPerDamage: 0.25
+    sanityPerDamage: 0.08
+    attackStaminaCost: 8
+    dodgeStaminaCost: 25
+    staminaRegenDelay: 0.9
+    windedRecoverFraction: 0.25
+    sprintSpeedMultiplier: 1.55
+    sneakSpeedMultiplier: 0.55
+    sleepSanityBlock: 0.4
+    nightmareSanityBelow: 0.5
+    nightmareMaxChance: 0.7
+    nightmareSanityLoss: 12
+    sleepStepHours: 0.25
+    conversationCooldownHours: 6
+    conversationRepeatFactor: 0.2
+    conversationLoneliness: -28
+    conversationHappiness: 4
+    conversationSanity: 2.5
+    conversationStress: -4
+    collapseFatiguePercent: 100
+    afterDeath:
+    - stat: 0
+      amount: 30
+    - stat: 1
+      amount: 40
+    - stat: 2
+      amount: 60
+    - stat: 3
+      amount: 25
+    - stat: 4
+      amount: 55
+    - stat: 5
+      amount: 55
+    - stat: 6
+      amount: 45
+    - stat: 8
+      amount: 40
+    - stat: 11
+      amount: 55
+    - stat: 9
+      amount: 35
+    - stat: 7
+      amount: 0
+    - stat: 12
+      amount: 20
+  stats:
+  - id: 0
+    displayName: Leben
+    unit: 0
+    min: 0
+    max: 100
+    start: 100
+    baseRate: 0
+    higherIsBetter: 1
+  - id: 1
+    displayName: Ausdauer
+    unit: 1
+    min: 0
+    max: 100
+    start: 100
+    baseRate: 0
+    higherIsBetter: 1
+  - id: 2
+    displayName: Maximum-Erschoepfung
+    unit: 1
+    min: 20
+    max: 100
+    start: 100
+    baseRate: 0
+    higherIsBetter: 1
+  - id: 3
+    displayName: Sanity
+    unit: 0
+    min: 0
+    max: 100
+    start: 100
+    baseRate: 0
+    higherIsBetter: 1
+  - id: 4
+    displayName: Hunger
+    unit: 0
+    min: 0
+    max: 100
+    start: 15
+    baseRate: 2.4
+    higherIsBetter: 0
+  - id: 5
+    displayName: Durst
+    unit: 0
+    min: 0
+    max: 100
+    start: 15
+    baseRate: 3.4
+    higherIsBetter: 0
+  - id: 6
+    displayName: Muedigkeit
+    unit: 0
+    min: 0
+    max: 100
+    start: 5
+    baseRate: 3
+    higherIsBetter: 0
+  - id: 7
+    displayName: Rausch
+    unit: 0
+    min: 0
+    max: 100
+    start: 0
+    baseRate: -10
+    higherIsBetter: 0
+  - id: 8
+    displayName: Schmerz
+    unit: 0
+    min: 0
+    max: 100
+    start: 0
+    baseRate: -5
+    higherIsBetter: 0
+  - id: 9
+    displayName: Laune
+    unit: 0
+    min: 0
+    max: 100
+    start: 65
+    baseRate: -0.5
+    higherIsBetter: 1
+  - id: 10
+    displayName: Einsamkeit
+    unit: 0
+    min: 0
+    max: 100
+    start: 25
+    baseRate: 1.6
+    higherIsBetter: 0
+  - id: 11
+    displayName: Anspannung
+    unit: 0
+    min: 0
+    max: 100
+    start: 18
+    baseRate: -1.2
+    higherIsBetter: 0
+  - id: 12
+    displayName: Kaelte
+    unit: 0
+    min: 0
+    max: 100
+    start: 0
+    baseRate: 0
+    higherIsBetter: 0
+  moods:
+  - id: 0
+    displayName: Hungrig
+    hudTile: Hunger
+    sources:
+    - stat: 4
+      from: 0
+      to: 1
+    thresholds:
+    - 0.3
+    - 0.55
+    - 0.75
+    - 0.9
+    positiveThresholds: []
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects: []
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.92
+      - kind: 0
+        stat: 9
+        value: -0.4
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.82
+      - kind: 6
+        stat: 0
+        value: 0.9
+      - kind: 0
+        stat: 11
+        value: 1.5
+      - kind: 0
+        stat: 9
+        value: -0.8
+    - text: 
+      effects:
+      - kind: 0
+        stat: 0
+        value: -2.5
+      - kind: 3
+        stat: 0
+        value: 0.92
+      - kind: 6
+        stat: 0
+        value: 0.75
+      - kind: 2
+        stat: 1
+        value: 0.7
+      - kind: 0
+        stat: 3
+        value: -1.5
+    positiveStages: []
+  - id: 1
+    displayName: Durstig
+    hudTile: Durst
+    sources:
+    - stat: 5
+      from: 0
+      to: 1
+    thresholds:
+    - 0.3
+    - 0.55
+    - 0.75
+    - 0.9
+    positiveThresholds: []
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects: []
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.9
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.78
+      - kind: 0
+        stat: 11
+        value: 2
+    - text: 
+      effects:
+      - kind: 0
+        stat: 0
+        value: -4.5
+      - kind: 3
+        stat: 0
+        value: 0.9
+      - kind: 0
+        stat: 3
+        value: -2
+      - kind: 2
+        stat: 1
+        value: 0.6
+    positiveStages: []
+  - id: 2
+    displayName: Muede
+    hudTile: Muede
+    sources:
+    - stat: 6
+      from: 0
+      to: 1
+    thresholds:
+    - 0.35
+    - 0.6
+    - 0.8
+    - 0.93
+    positiveThresholds: []
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects: []
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.93
+      - kind: 8
+        stat: 0
+        value: 0.95
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.85
+      - kind: 5
+        stat: 0
+        value: 1.12
+      - kind: 3
+        stat: 0
+        value: 0.96
+      - kind: 8
+        stat: 0
+        value: 0.85
+      - kind: 0
+        stat: 9
+        value: -0.5
+    - text: 
+      effects:
+      - kind: 3
+        stat: 0
+        value: 0.9
+      - kind: 5
+        stat: 0
+        value: 1.25
+      - kind: 8
+        stat: 0
+        value: 0.7
+      - kind: 0
+        stat: 3
+        value: -2
+      - kind: 2
+        stat: 1
+        value: 0.75
+      - kind: 10
+        stat: 0
+        value: 0.15
+    positiveStages: []
+  - id: 3
+    displayName: Erschoepft
+    hudTile: Erschoepft
+    sources:
+    - stat: 1
+      from: 0.72
+      to: 1.25
+    - stat: 2
+      from: 0.1
+      to: 1
+    thresholds:
+    - 0.15
+    - 0.4
+    - 0.65
+    - 0.85
+    positiveThresholds: []
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.95
+    - text: 
+      effects:
+      - kind: 5
+        stat: 0
+        value: 1.1
+      - kind: 4
+        stat: 0
+        value: 0.95
+      - kind: 2
+        stat: 1
+        value: 0.9
+    - text: 
+      effects:
+      - kind: 5
+        stat: 0
+        value: 1.25
+      - kind: 3
+        stat: 0
+        value: 0.93
+      - kind: 4
+        stat: 0
+        value: 0.9
+      - kind: 2
+        stat: 1
+        value: 0.8
+    - text: 
+      effects:
+      - kind: 11
+        stat: 0
+        value: 1
+      - kind: 3
+        stat: 0
+        value: 0.85
+      - kind: 5
+        stat: 0
+        value: 1.5
+      - kind: 6
+        stat: 0
+        value: 0.8
+    positiveStages: []
+  - id: 4
+    displayName: Betrunken
+    hudTile: Rausch
+    sources:
+    - stat: 7
+      from: 0
+      to: 1
+    thresholds:
+    - 0.15
+    - 0.35
+    - 0.6
+    - 0.85
+    positiveThresholds: []
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects:
+      - kind: 9
+        stat: 0
+        value: 0.12
+    - text: 
+      effects:
+      - kind: 9
+        stat: 0
+        value: 0.3
+      - kind: 8
+        stat: 0
+        value: 0.85
+      - kind: 0
+        stat: 11
+        value: -3
+      - kind: 0
+        stat: 9
+        value: 1.5
+    - text: 
+      effects:
+      - kind: 9
+        stat: 0
+        value: 0.55
+      - kind: 3
+        stat: 0
+        value: 0.93
+      - kind: 6
+        stat: 0
+        value: 0.85
+      - kind: 8
+        stat: 0
+        value: 0.7
+      - kind: 0
+        stat: 6
+        value: 2
+    - text: 
+      effects:
+      - kind: 9
+        stat: 0
+        value: 1
+      - kind: 3
+        stat: 0
+        value: 0.8
+      - kind: 6
+        stat: 0
+        value: 0.6
+      - kind: 8
+        stat: 0
+        value: 0.5
+      - kind: 10
+        stat: 0
+        value: 0.25
+      - kind: 0
+        stat: 6
+        value: 4
+    positiveStages: []
+  - id: 5
+    displayName: Verletzt
+    hudTile: Verletzt
+    sources:
+    - stat: 0
+      from: 0
+      to: 1
+    - stat: 8
+      from: 0
+      to: 1
+    thresholds:
+    - 0.12
+    - 0.35
+    - 0.6
+    - 0.8
+    positiveThresholds: []
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects: []
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.93
+    - text: 
+      effects:
+      - kind: 3
+        stat: 0
+        value: 0.92
+      - kind: 6
+        stat: 0
+        value: 0.9
+      - kind: 5
+        stat: 0
+        value: 1.1
+      - kind: 2
+        stat: 1
+        value: 0.85
+    - text: 
+      effects:
+      - kind: 3
+        stat: 0
+        value: 0.78
+      - kind: 11
+        stat: 0
+        value: 1
+      - kind: 6
+        stat: 0
+        value: 0.7
+    positiveStages: []
+  - id: 6
+    displayName: Stimmung
+    hudTile: Stimmung
+    sources:
+    - stat: 9
+      from: 0
+      to: 1
+    thresholds:
+    - 0.45
+    - 0.6
+    - 0.78
+    - 0.9
+    positiveThresholds:
+    - 0.72
+    - 0.88
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects: []
+    - text: 
+      effects:
+      - kind: 0
+        stat: 3
+        value: -0.5
+    - text: 
+      effects:
+      - kind: 0
+        stat: 3
+        value: -1
+      - kind: 2
+        stat: 1
+        value: 0.9
+    - text: 
+      effects:
+      - kind: 0
+        stat: 3
+        value: -2
+      - kind: 2
+        stat: 1
+        value: 0.8
+      - kind: 0
+        stat: 11
+        value: 2
+    positiveStages:
+    - text: 
+      effects:
+      - kind: 0
+        stat: 3
+        value: 0.4
+    - text: 
+      effects:
+      - kind: 0
+        stat: 3
+        value: 0.8
+      - kind: 0
+        stat: 11
+        value: -1.5
+  - id: 7
+    displayName: Einsam
+    hudTile: Gesellschaft
+    sources:
+    - stat: 10
+      from: 0
+      to: 1
+    thresholds:
+    - 0.4
+    - 0.6
+    - 0.8
+    - 0.92
+    positiveThresholds:
+    - 0.82
+    - 0.93
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects: []
+    - text: 
+      effects:
+      - kind: 0
+        stat: 9
+        value: -0.6
+    - text: 
+      effects:
+      - kind: 0
+        stat: 9
+        value: -1.2
+      - kind: 0
+        stat: 3
+        value: -0.8
+    - text: 
+      effects:
+      - kind: 0
+        stat: 9
+        value: -2
+      - kind: 0
+        stat: 3
+        value: -1.5
+      - kind: 0
+        stat: 11
+        value: 1.5
+    positiveStages:
+    - text: 
+      effects:
+      - kind: 0
+        stat: 9
+        value: 0.4
+    - text: 
+      effects:
+      - kind: 0
+        stat: 9
+        value: 0.9
+      - kind: 0
+        stat: 3
+        value: 0.5
+  - id: 8
+    displayName: Angespannt
+    hudTile: Anspannung
+    sources:
+    - stat: 11
+      from: 0
+      to: 1
+    thresholds:
+    - 0.35
+    - 0.55
+    - 0.75
+    - 0.9
+    positiveThresholds:
+    - 0.88
+    - 0.96
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects: []
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.93
+      - kind: 8
+        stat: 0
+        value: 0.95
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.85
+      - kind: 0
+        stat: 3
+        value: -1
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.7
+      - kind: 0
+        stat: 3
+        value: -2
+      - kind: 10
+        stat: 0
+        value: 0.2
+      - kind: 9
+        stat: 0
+        value: 0.1
+    positiveStages:
+    - text: 
+      effects:
+      - kind: 8
+        stat: 0
+        value: 1.05
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 1.1
+      - kind: 0
+        stat: 3
+        value: 0.6
+  - id: 9
+    displayName: Frierend
+    hudTile: Kalt
+    sources:
+    - stat: 12
+      from: 0
+      to: 1
+    thresholds:
+    - 0.25
+    - 0.5
+    - 0.75
+    - 0.9
+    positiveThresholds: []
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects: []
+    - text: 
+      effects:
+      - kind: 2
+        stat: 1
+        value: 0.92
+    - text: 
+      effects:
+      - kind: 0
+        stat: 0
+        value: -0.8
+      - kind: 3
+        stat: 0
+        value: 0.96
+      - kind: 2
+        stat: 1
+        value: 0.8
+    - text: 
+      effects:
+      - kind: 0
+        stat: 0
+        value: -2.5
+      - kind: 3
+        stat: 0
+        value: 0.88
+      - kind: 2
+        stat: 1
+        value: 0.6
+      - kind: 0
+        stat: 3
+        value: -1
+    positiveStages: []
+  - id: 10
+    displayName: Verstoert
+    hudTile: Verstoert
+    sources:
+    - stat: 3
+      from: 0
+      to: 1
+    thresholds:
+    - 0.3
+    - 0.6
+    - 0.8
+    - 0.92
+    positiveThresholds: []
+    hysteresis: 0.04
+    stages:
+    - text: 
+      effects:
+      - kind: 0
+        stat: 11
+        value: 1
+    - text: 
+      effects:
+      - kind: 0
+        stat: 11
+        value: 2.5
+      - kind: 8
+        stat: 0
+        value: 0.9
+      - kind: 10
+        stat: 0
+        value: 0.1
+    - text: 
+      effects:
+      - kind: 0
+        stat: 11
+        value: 4
+      - kind: 8
+        stat: 0
+        value: 0.8
+      - kind: 10
+        stat: 0
+        value: 0.35
+      - kind: 9
+        stat: 0
+        value: 0.08
+      - kind: 2
+        stat: 1
+        value: 0.85
+    - text: 
+      effects:
+      - kind: 0
+        stat: 11
+        value: 6
+      - kind: 10
+        stat: 0
+        value: 0.7
+      - kind: 9
+        stat: 0
+        value: 0.2
+      - kind: 7
+        stat: 0
+        value: 1.15
+      - kind: 2
+        stat: 1
+        value: 0.7
+    positiveStages: []
+  rules:
+  - name: 'Stehen: Ausdauer erholt sich'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 0
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    - kind: 0
+      flag: 15
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 1
+      value: 18
+  - name: 'Gehen: Ausdauer erholt sich'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 1
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    - kind: 0
+      flag: 15
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 1
+      value: 10
+  - name: 'Schleichen: Ausdauer erholt sich'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 2
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    - kind: 0
+      flag: 15
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 1
+      value: 12
+  - name: 'Sprint: Ausdauer sinkt'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 3
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 1
+      value: -14
+  - name: 'Sprint: Maximum sinkt langsam'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 3
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 2
+      value: -0.04
+  - name: 'Sprint durchs Dickicht: Maximum sinkt'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 3
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    - kind: 0
+      flag: 14
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 2
+      value: -0.7
+  - name: 'Rast: Ausdauer und Maximum erholen sich'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 6
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 1
+      value: 28
+    - kind: 0
+      stat: 2
+      value: 1.5
+  - name: 'Bewegung: etwas mehr Durst und Hunger'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 8
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 1
+      stat: 5
+      value: 1.15
+    - kind: 1
+      stat: 4
+      value: 1.1
+  - name: 'Sprint: viel mehr Durst, Hunger, Muedigkeit'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 3
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 1
+      stat: 5
+      value: 2.4
+    - kind: 1
+      stat: 4
+      value: 1.7
+    - kind: 1
+      stat: 6
+      value: 1.5
+  - name: 'Kampf: Anstrengung'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 4
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 1
+      stat: 5
+      value: 1.5
+    - kind: 1
+      stat: 4
+      value: 1.3
+    - kind: 0
+      stat: 11
+      value: 5
+  - name: 'Rast: Erholung'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 6
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 6
+      value: -2
+    - kind: 0
+      stat: 11
+      value: -4
+    - kind: 0
+      stat: 3
+      value: 1
+  - name: 'Schlaf: Erholung'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 7
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 6
+      value: -14
+    - kind: 0
+      stat: 0
+      value: 4
+    - kind: 0
+      stat: 3
+      value: 3
+    - kind: 0
+      stat: 11
+      value: -6
+    - kind: 2
+      stat: 8
+      value: 2
+    - kind: 1
+      stat: 4
+      value: 0.5
+    - kind: 1
+      stat: 5
+      value: 0.6
+    - kind: 0
+      stat: 1
+      value: 40
+    - kind: 0
+      stat: 2
+      value: 1.2
+  - name: 'Dunkelheit: Sanity sinkt'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 13
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 3
+      value: -5
+    - kind: 0
+      stat: 11
+      value: 3
+  - name: 'Dunkelheit und schwache Nerven: Panik'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 13
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    - kind: 2
+      flag: 0
+      stat: 3
+      mood: 0
+      value: 30
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 11
+      value: 4
+  - name: 'Lichtinsel: Sanity erholt sich'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 11
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 3
+      value: 3
+    - kind: 0
+      stat: 11
+      value: -3
+  - name: 'Feuer: Waerme und Ruhe'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 12
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 3
+      value: 3
+    - kind: 0
+      stat: 11
+      value: -3
+    - kind: 0
+      stat: 9
+      value: 2
+    - kind: 0
+      stat: 12
+      value: -25
+  - name: 'Drinnen: waermer'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 10
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    effects:
+    - kind: 0
+      stat: 12
+      value: -12
+    - kind: 0
+      stat: 11
+      value: -1
+  - name: 'Nachts draussen: Kaelte'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 9
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 0
+    - kind: 0
+      flag: 10
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 1
+    - kind: 0
+      flag: 12
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 1
+    effects:
+    - kind: 0
+      stat: 12
+      value: 9
+  - name: 'Tagsueber: Kaelte laesst nach'
+    enabled: 1
+    when:
+    - kind: 0
+      flag: 9
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 1
+    effects:
+    - kind: 0
+      stat: 12
+      value: -8
+  - name: 'Satt und getrunken: Leben erholt sich'
+    enabled: 1
+    when:
+    - kind: 2
+      flag: 0
+      stat: 4
+      mood: 0
+      value: 45
+      negate: 0
+    - kind: 2
+      flag: 0
+      stat: 5
+      mood: 0
+      value: 45
+      negate: 0
+    - kind: 0
+      flag: 7
+      stat: 0
+      mood: 0
+      value: 0
+      negate: 1
+    effects:
+    - kind: 0
+      stat: 0
+      value: 1
+  consumables:
+  - id: bread
+    displayName: Brot
+    instant:
+    - stat: 4
+      amount: -32
+    - stat: 9
+      amount: 1
+    timed: []
+  - id: apple
+    displayName: Apfel
+    instant:
+    - stat: 4
+      amount: -10
+    - stat: 5
+      amount: -8
+    timed: []
+  - id: dried_meat
+    displayName: Trockenfleisch
+    instant:
+    - stat: 4
+      amount: -28
+    - stat: 5
+      amount: 6
+    timed: []
+  - id: stew
+    displayName: Eintopf
+    instant:
+    - stat: 4
+      amount: -55
+    - stat: 5
+      amount: -10
+    - stat: 9
+      amount: 5
+    - stat: 12
+      amount: -20
+    - stat: 0
+      amount: 4
+    timed: []
+  - id: water
+    displayName: Wasser
+    instant:
+    - stat: 5
+      amount: -38
+    timed: []
+  - id: spring_water
+    displayName: Quellwasser
+    instant:
+    - stat: 5
+      amount: -55
+    - stat: 2
+      amount: 15
+    - stat: 6
+      amount: -5
+    timed: []
+  - id: tea_calming
+    displayName: Beruhigungstee
+    instant:
+    - stat: 5
+      amount: -20
+    - stat: 11
+      amount: -18
+    - stat: 3
+      amount: 5
+    - stat: 12
+      amount: -10
+    timed:
+    - id: calming_tea
+      durationHours: 3
+      refresh: 1
+      effects:
+      - kind: 0
+        stat: 7
+        value: -15
+      - kind: 0
+        stat: 11
+        value: -4
+      - kind: 0
+        stat: 3
+        value: 1.5
+  - id: beer
+    displayName: Bier
+    instant:
+    - stat: 7
+      amount: 10
+    - stat: 3
+      amount: 3
+    - stat: 5
+      amount: -10
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: mead
+    displayName: Met
+    instant:
+    - stat: 7
+      amount: 12
+    - stat: 3
+      amount: 3
+    - stat: 5
+      amount: -6
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: red_wine
+    displayName: Rotwein
+    instant:
+    - stat: 7
+      amount: 12
+    - stat: 3
+      amount: 5
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: white_wine
+    displayName: Weisswein
+    instant:
+    - stat: 7
+      amount: 12
+    - stat: 3
+      amount: 5
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: schnaps
+    displayName: Schnaps
+    instant:
+    - stat: 7
+      amount: 20
+    - stat: 3
+      amount: 8
+    - stat: 9
+      amount: 2
+    timed:
+    - id: spirit_warmth
+      durationHours: 1
+      refresh: 1
+      effects:
+      - kind: 0
+        stat: 12
+        value: -10
+  - id: whisky
+    displayName: Whisky
+    instant:
+    - stat: 7
+      amount: 22
+    - stat: 3
+      amount: 8
+    - stat: 9
+      amount: 2
+    timed:
+    - id: spirit_warmth
+      durationHours: 1
+      refresh: 1
+      effects:
+      - kind: 0
+        stat: 12
+        value: -10
+  - id: rum
+    displayName: Rum
+    instant:
+    - stat: 7
+      amount: 22
+    - stat: 3
+      amount: 8
+    - stat: 9
+      amount: 2
+    timed:
+    - id: spirit_warmth
+      durationHours: 1
+      refresh: 1
+      effects:
+      - kind: 0
+        stat: 12
+        value: -10
+  - id: bourbon
+    displayName: Bourbon
+    instant:
+    - stat: 7
+      amount: 24
+    - stat: 3
+      amount: 8
+    - stat: 9
+      amount: 2
+    timed:
+    - id: spirit_warmth
+      durationHours: 1
+      refresh: 1
+      effects:
+      - kind: 0
+        stat: 12
+        value: -10
+  - id: tobacco
+    displayName: Tabak
+    instant:
+    - stat: 11
+      amount: -14
+    - stat: 3
+      amount: 3
+    - stat: 5
+      amount: 4
+    timed:
+    - id: tobacco_calm
+      durationHours: 1.5
+      refresh: 1
+      effects:
+      - kind: 0
+        stat: 11
+        value: -5
+  - id: bandage
+    displayName: Verband
+    instant:
+    - stat: 0
+      amount: 18
+    - stat: 8
+      amount: -25
+    timed:
+    - id: bandaged
+      durationHours: 6
+      refresh: 1
+      effects:
+      - kind: 0
+        stat: 0
+        value: 1.5
+      - kind: 2
+        stat: 8
+        value: 1.6
+  - id: herbal_salve
+    displayName: Kraeutersalbe
+    instant:
+    - stat: 8
+      amount: -35
+    - stat: 0
+      amount: 8
+    timed: []
+  - id: cheese
+    displayName: Kaese
+    instant:
+    - stat: 4
+      amount: -22
+    - stat: 9
+      amount: 2
+    timed: []
+  - id: honey
+    displayName: Honig
+    instant:
+    - stat: 4
+      amount: -14
+    - stat: 9
+      amount: 6
+    - stat: 3
+      amount: 2
+    - stat: 11
+      amount: -4
+    timed: []
+  - id: forest_mushroom
+    displayName: Waldpilz
+    instant:
+    - stat: 4
+      amount: -12
+    - stat: 5
+      amount: 3
+    timed: []
+  - id: crusty_bread
+    displayName: Crusty Bread
+    instant:
+    - stat: 4
+      amount: -30
+    - stat: 9
+      amount: 1
+    timed: []
+  - id: baguette
+    displayName: Baguette
+    instant:
+    - stat: 4
+      amount: -34
+    - stat: 9
+      amount: 2
+    - stat: 5
+      amount: 2
+    timed: []
+  - id: buns
+    displayName: Bread Buns
+    instant:
+    - stat: 4
+      amount: -20
+    - stat: 9
+      amount: 1
+    timed: []
+  - id: bagel
+    displayName: Bagel
+    instant:
+    - stat: 4
+      amount: -26
+    - stat: 9
+      amount: 1
+    timed: []
+  - id: garlic_bread
+    displayName: Garlic Bread
+    instant:
+    - stat: 4
+      amount: -22
+    - stat: 9
+      amount: 2
+    timed: []
+  - id: bread_loaf
+    displayName: Bread Loaf
+    instant:
+    - stat: 4
+      amount: -40
+    - stat: 9
+      amount: 1
+    timed: []
+  - id: bacon
+    displayName: Bacon
+    instant:
+    - stat: 4
+      amount: -24
+    - stat: 9
+      amount: 3
+    - stat: 5
+      amount: 5
+    timed: []
+  - id: meatball
+    displayName: Meatball
+    instant:
+    - stat: 4
+      amount: -20
+    - stat: 9
+      amount: 2
+    timed: []
+  - id: roast_chicken
+    displayName: Roast Chicken
+    instant:
+    - stat: 4
+      amount: -60
+    - stat: 9
+      amount: 6
+    - stat: 0
+      amount: 3
+    timed: []
+  - id: salmon
+    displayName: Salmon Fillet
+    instant:
+    - stat: 4
+      amount: -34
+    - stat: 9
+      amount: 3
+    - stat: 0
+      amount: 3
+    timed: []
+  - id: steak
+    displayName: Steak
+    instant:
+    - stat: 4
+      amount: -50
+    - stat: 9
+      amount: 4
+    - stat: 0
+      amount: 4
+    timed: []
+  - id: sushi
+    displayName: Sushi
+    instant:
+    - stat: 4
+      amount: -26
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: dumplings
+    displayName: Dumplings
+    instant:
+    - stat: 4
+      amount: -34
+    - stat: 9
+      amount: 3
+    - stat: 12
+      amount: -6
+    timed: []
+  - id: burger
+    displayName: Burger
+    instant:
+    - stat: 4
+      amount: -42
+    - stat: 9
+      amount: 4
+    - stat: 5
+      amount: 4
+    timed: []
+  - id: wrapped_burger
+    displayName: Wrapped Burger
+    instant:
+    - stat: 4
+      amount: -40
+    - stat: 9
+      amount: 4
+    - stat: 5
+      amount: 4
+    timed: []
+  - id: burrito
+    displayName: Burrito
+    instant:
+    - stat: 4
+      amount: -40
+    - stat: 9
+      amount: 3
+    - stat: 5
+      amount: 4
+    timed: []
+  - id: hotdog
+    displayName: Hotdog
+    instant:
+    - stat: 4
+      amount: -32
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: hotdog_sauce
+    displayName: Hotdog with Sauce
+    instant:
+    - stat: 4
+      amount: -34
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: sandwich
+    displayName: Sandwich
+    instant:
+    - stat: 4
+      amount: -34
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: pizza
+    displayName: Pizza Slice
+    instant:
+    - stat: 4
+      amount: -30
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: taco
+    displayName: Taco
+    instant:
+    - stat: 4
+      amount: -28
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: curry_sauce
+    displayName: Curry Sauce
+    instant:
+    - stat: 4
+      amount: -26
+    - stat: 9
+      amount: 3
+    - stat: 12
+      amount: -8
+    timed: []
+  - id: mac_and_cheese
+    displayName: Mac and Cheese
+    instant:
+    - stat: 4
+      amount: -42
+    - stat: 9
+      amount: 5
+    - stat: 12
+      amount: -10
+    timed: []
+  - id: spaghetti
+    displayName: Spaghetti
+    instant:
+    - stat: 4
+      amount: -48
+    - stat: 9
+      amount: 4
+    - stat: 12
+      amount: -6
+    timed: []
+  - id: ramen
+    displayName: Ramen
+    instant:
+    - stat: 4
+      amount: -52
+    - stat: 9
+      amount: 5
+    - stat: 5
+      amount: -6
+    - stat: 12
+      amount: -18
+    timed: []
+  - id: fried_egg
+    displayName: Fried Egg
+    instant:
+    - stat: 4
+      amount: -20
+    - stat: 9
+      amount: 2
+    timed: []
+  - id: egg_salad
+    displayName: Egg Salad
+    instant:
+    - stat: 4
+      amount: -24
+    - stat: 9
+      amount: 2
+    - stat: 5
+      amount: -2
+    timed: []
+  - id: omelette
+    displayName: Omelette
+    instant:
+    - stat: 4
+      amount: -30
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: french_fries
+    displayName: French Fries
+    instant:
+    - stat: 4
+      amount: -22
+    - stat: 9
+      amount: 3
+    - stat: 5
+      amount: 4
+    timed: []
+  - id: potato_chips
+    displayName: Potato Chips
+    instant:
+    - stat: 4
+      amount: -12
+    - stat: 9
+      amount: 3
+    - stat: 5
+      amount: 6
+    timed: []
+  - id: cheese_puffs
+    displayName: Cheese Puffs
+    instant:
+    - stat: 4
+      amount: -14
+    - stat: 9
+      amount: 3
+    - stat: 5
+      amount: 6
+    timed: []
+  - id: nacho
+    displayName: Nacho Chips
+    instant:
+    - stat: 4
+      amount: -8
+    - stat: 9
+      amount: 2
+    - stat: 5
+      amount: 3
+    timed: []
+  - id: popcorn
+    displayName: Popcorn
+    instant:
+    - stat: 4
+      amount: -10
+    - stat: 9
+      amount: 4
+    - stat: 5
+      amount: 3
+    timed: []
+  - id: apple_pie
+    displayName: Apple Pie
+    instant:
+    - stat: 4
+      amount: -22
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: cheesecake
+    displayName: Cheesecake
+    instant:
+    - stat: 4
+      amount: -20
+    - stat: 9
+      amount: 6
+    timed: []
+  - id: chocolate
+    displayName: Chocolate
+    instant:
+    - stat: 4
+      amount: -10
+    - stat: 9
+      amount: 7
+    - stat: 11
+      amount: -3
+    timed: []
+  - id: cookies
+    displayName: Cookies
+    instant:
+    - stat: 4
+      amount: -12
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: chocolate_cake
+    displayName: Chocolate Cake
+    instant:
+    - stat: 4
+      amount: -20
+    - stat: 9
+      amount: 7
+    - stat: 11
+      amount: -3
+    timed: []
+  - id: donut
+    displayName: Donut
+    instant:
+    - stat: 4
+      amount: -14
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: egg_tart
+    displayName: Egg Tart
+    instant:
+    - stat: 4
+      amount: -14
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: fruitcake
+    displayName: Fruitcake
+    instant:
+    - stat: 4
+      amount: -22
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: gummy_bear
+    displayName: Giant Gummy Bear
+    instant:
+    - stat: 4
+      amount: -10
+    - stat: 9
+      amount: 6
+    - stat: 11
+      amount: -2
+    timed: []
+  - id: gingerbread_man
+    displayName: Gingerbread Man
+    instant:
+    - stat: 4
+      amount: -12
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: ice_cream
+    displayName: Ice Cream
+    instant:
+    - stat: 4
+      amount: -10
+    - stat: 9
+      amount: 7
+    - stat: 5
+      amount: -4
+    - stat: 12
+      amount: 6
+    timed: []
+  - id: jelly
+    displayName: Jelly
+    instant:
+    - stat: 4
+      amount: -10
+    - stat: 9
+      amount: 4
+    - stat: 5
+      amount: -3
+    timed: []
+  - id: jam
+    displayName: Jam Jar
+    instant:
+    - stat: 4
+      amount: -12
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: lemon_pie
+    displayName: Lemon Pie
+    instant:
+    - stat: 4
+      amount: -20
+    - stat: 9
+      amount: 5
+    - stat: 5
+      amount: -3
+    timed: []
+  - id: pudding
+    displayName: Pudding
+    instant:
+    - stat: 4
+      amount: -16
+    - stat: 9
+      amount: 6
+    timed: []
+  - id: pancakes
+    displayName: Pancakes
+    instant:
+    - stat: 4
+      amount: -28
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: strawberry_cake
+    displayName: Strawberry Cake
+    instant:
+    - stat: 4
+      amount: -20
+    - stat: 9
+      amount: 7
+    timed: []
+  - id: waffle
+    displayName: Waffle
+    instant:
+    - stat: 4
+      amount: -24
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: apple_pie_plated
+    displayName: Apple Pie (Plated)
+    instant:
+    - stat: 4
+      amount: -29.7
+    - stat: 9
+      amount: 7
+    timed: []
+  - id: crusty_bread_plated
+    displayName: Crusty Bread (Plated)
+    instant:
+    - stat: 4
+      amount: -40.5
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: baguette_plated
+    displayName: Baguette (Plated)
+    instant:
+    - stat: 4
+      amount: -45.9
+    - stat: 9
+      amount: 4
+    - stat: 5
+      amount: 2
+    timed: []
+  - id: buns_plated
+    displayName: Bread Buns (Plated)
+    instant:
+    - stat: 4
+      amount: -27
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: bacon_plated
+    displayName: Bacon (Plated)
+    instant:
+    - stat: 4
+      amount: -32.4
+    - stat: 9
+      amount: 5
+    - stat: 5
+      amount: 5
+    timed: []
+  - id: burger_plated
+    displayName: Burger (Plated)
+    instant:
+    - stat: 4
+      amount: -56.7
+    - stat: 9
+      amount: 6
+    - stat: 5
+      amount: 4
+    timed: []
+  - id: burrito_plated
+    displayName: Burrito (Plated)
+    instant:
+    - stat: 4
+      amount: -54
+    - stat: 9
+      amount: 5
+    - stat: 5
+      amount: 4
+    timed: []
+  - id: bagel_plated
+    displayName: Bagel (Plated)
+    instant:
+    - stat: 4
+      amount: -35.100002
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: cheesecake_plated
+    displayName: Cheesecake (Plated)
+    instant:
+    - stat: 4
+      amount: -27
+    - stat: 9
+      amount: 8
+    timed: []
+  - id: cheese_puffs_plated
+    displayName: Cheese Puffs (Plated)
+    instant:
+    - stat: 4
+      amount: -18.9
+    - stat: 9
+      amount: 5
+    - stat: 5
+      amount: 6
+    timed: []
+  - id: chocolate_plated
+    displayName: Chocolate (Plated)
+    instant:
+    - stat: 4
+      amount: -13.5
+    - stat: 9
+      amount: 9
+    - stat: 11
+      amount: -3
+    timed: []
+  - id: cookies_plated
+    displayName: Cookies (Plated)
+    instant:
+    - stat: 4
+      amount: -16.2
+    - stat: 9
+      amount: 7
+    timed: []
+  - id: chocolate_cake_plated
+    displayName: Chocolate Cake (Plated)
+    instant:
+    - stat: 4
+      amount: -27
+    - stat: 9
+      amount: 9
+    - stat: 11
+      amount: -3
+    timed: []
+  - id: curry_sauce_plated
+    displayName: Curry Sauce (Plated)
+    instant:
+    - stat: 4
+      amount: -35.100002
+    - stat: 9
+      amount: 5
+    - stat: 12
+      amount: -8
+    timed: []
+  - id: donut_plated
+    displayName: Donut (Plated)
+    instant:
+    - stat: 4
+      amount: -18.9
+    - stat: 9
+      amount: 7
+    timed: []
+  - id: dumplings_plated
+    displayName: Dumplings (Plated)
+    instant:
+    - stat: 4
+      amount: -45.9
+    - stat: 9
+      amount: 5
+    - stat: 12
+      amount: -6
+    timed: []
+  - id: fried_egg_plated
+    displayName: Fried Egg (Plated)
+    instant:
+    - stat: 4
+      amount: -27
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: egg_salad_plated
+    displayName: Egg Salad (Plated)
+    instant:
+    - stat: 4
+      amount: -32.4
+    - stat: 9
+      amount: 4
+    - stat: 5
+      amount: -2
+    timed: []
+  - id: egg_tart_plated
+    displayName: Egg Tart (Plated)
+    instant:
+    - stat: 4
+      amount: -18.9
+    - stat: 9
+      amount: 6
+    timed: []
+  - id: french_fries_plated
+    displayName: French Fries (Plated)
+    instant:
+    - stat: 4
+      amount: -29.7
+    - stat: 9
+      amount: 5
+    - stat: 5
+      amount: 4
+    timed: []
+  - id: fruitcake_plated
+    displayName: Fruitcake (Plated)
+    instant:
+    - stat: 4
+      amount: -29.7
+    - stat: 9
+      amount: 6
+    timed: []
+  - id: garlic_bread_plated
+    displayName: Garlic Bread (Plated)
+    instant:
+    - stat: 4
+      amount: -29.7
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: gummy_bear_plated
+    displayName: Giant Gummy Bear (Plated)
+    instant:
+    - stat: 4
+      amount: -13.5
+    - stat: 9
+      amount: 8
+    - stat: 11
+      amount: -2
+    timed: []
+  - id: gingerbread_man_plated
+    displayName: Gingerbread Man (Plated)
+    instant:
+    - stat: 4
+      amount: -16.2
+    - stat: 9
+      amount: 6
+    timed: []
+  - id: hotdog_plated
+    displayName: Hotdog (Plated)
+    instant:
+    - stat: 4
+      amount: -43.2
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: ice_cream_plated
+    displayName: Ice Cream (Plated)
+    instant:
+    - stat: 4
+      amount: -13.5
+    - stat: 9
+      amount: 9
+    - stat: 5
+      amount: -4
+    - stat: 12
+      amount: 6
+    timed: []
+  - id: jelly_plated
+    displayName: Jelly (Plated)
+    instant:
+    - stat: 4
+      amount: -13.5
+    - stat: 9
+      amount: 6
+    - stat: 5
+      amount: -3
+    timed: []
+  - id: jam_plated
+    displayName: Jam Jar (Plated)
+    instant:
+    - stat: 4
+      amount: -16.2
+    - stat: 9
+      amount: 7
+    timed: []
+  - id: lemon_pie_plated
+    displayName: Lemon Pie (Plated)
+    instant:
+    - stat: 4
+      amount: -27
+    - stat: 9
+      amount: 7
+    - stat: 5
+      amount: -3
+    timed: []
+  - id: bread_loaf_plated
+    displayName: Bread Loaf (Plated)
+    instant:
+    - stat: 4
+      amount: -54
+    - stat: 9
+      amount: 3
+    timed: []
+  - id: mac_and_cheese_plated
+    displayName: Mac and Cheese (Plated)
+    instant:
+    - stat: 4
+      amount: -56.7
+    - stat: 9
+      amount: 7
+    - stat: 12
+      amount: -10
+    timed: []
+  - id: meatball_plated
+    displayName: Meatball (Plated)
+    instant:
+    - stat: 4
+      amount: -27
+    - stat: 9
+      amount: 4
+    timed: []
+  - id: nacho_plated
+    displayName: Nacho Chips (Plated)
+    instant:
+    - stat: 4
+      amount: -10.8
+    - stat: 9
+      amount: 4
+    - stat: 5
+      amount: 3
+    timed: []
+  - id: omelette_plated
+    displayName: Omelette (Plated)
+    instant:
+    - stat: 4
+      amount: -40.5
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: pudding_plated
+    displayName: Pudding (Plated)
+    instant:
+    - stat: 4
+      amount: -21.6
+    - stat: 9
+      amount: 8
+    timed: []
+  - id: potato_chips_plated
+    displayName: Potato Chips (Plated)
+    instant:
+    - stat: 4
+      amount: -16.2
+    - stat: 9
+      amount: 5
+    - stat: 5
+      amount: 6
+    timed: []
+  - id: pancakes_plated
+    displayName: Pancakes (Plated)
+    instant:
+    - stat: 4
+      amount: -37.8
+    - stat: 9
+      amount: 7
+    timed: []
+  - id: pizza_plated
+    displayName: Pizza Slice (Plated)
+    instant:
+    - stat: 4
+      amount: -40.5
+    - stat: 9
+      amount: 7
+    timed: []
+  - id: popcorn_plated
+    displayName: Popcorn (Plated)
+    instant:
+    - stat: 4
+      amount: -13.5
+    - stat: 9
+      amount: 6
+    - stat: 5
+      amount: 3
+    timed: []
+  - id: roast_chicken_plated
+    displayName: Roast Chicken (Plated)
+    instant:
+    - stat: 4
+      amount: -81
+    - stat: 9
+      amount: 8
+    - stat: 0
+      amount: 3
+    timed: []
+  - id: salmon_plated
+    displayName: Salmon Fillet (Plated)
+    instant:
+    - stat: 4
+      amount: -45.9
+    - stat: 9
+      amount: 5
+    - stat: 0
+      amount: 3
+    timed: []
+  - id: strawberry_cake_plated
+    displayName: Strawberry Cake (Plated)
+    instant:
+    - stat: 4
+      amount: -27
+    - stat: 9
+      amount: 9
+    timed: []
+  - id: sandwich_plated
+    displayName: Sandwich (Plated)
+    instant:
+    - stat: 4
+      amount: -45.9
+    - stat: 9
+      amount: 5
+    timed: []
+  - id: steak_plated
+    displayName: Steak (Plated)
+    instant:
+    - stat: 4
+      amount: -67.5
+    - stat: 9
+      amount: 6
+    - stat: 0
+      amount: 4
+    timed: []
+  - id: sushi_plated
+    displayName: Sushi (Plated)
+    instant:
+    - stat: 4
+      amount: -35.100002
+    - stat: 9
+      amount: 6
+    timed: []
+  - id: taco_plated
+    displayName: Taco (Plated)
+    instant:
+    - stat: 4
+      amount: -37.8
+    - stat: 9
+      amount: 6
+    timed: []
+  - id: waffle_plated
+    displayName: Waffle (Plated)
+    instant:
+    - stat: 4
+      amount: -32.4
+    - stat: 9
+      amount: 7
+    timed: []

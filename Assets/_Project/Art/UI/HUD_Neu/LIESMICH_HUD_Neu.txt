@@ -1,0 +1,86 @@
+DUSK BELL / NIGHTWARD - HUD (Neu), nur Art, noch nicht in Unity eingebaut
+=========================================================================
+Alles Pixelart, nur Farben der Style-Bibel (der Builder bricht bei einer fremden Farbe ab), Outline #1a1526, keine
+Anti-Aliasing-Kanten. Import: Sprite, PPU 100, Filter Point, unkomprimiert (wie das vorhandene UI-Paket).
+Canvas 480x270 wie die Spielkamera. Schrift: Font/Nightward_Pixel.ttf, Groesse 8 / 16 / 24. Text im Spiel ist ENGLISCH.
+Das alte Paket (Art/UI/HUD, Icons, Panels, Buttons) bleibt unveraendert; dieses Paket liegt daneben.
+
+Ordner
+  Plates/ Vitals/ Clock/ Needs/ Quest/ Wake/ Banner/ Events/   je ein Sprite pro Datei (PNG)
+  _Aseprite/HUD_<Gruppe>.aseprite   pro Gruppe eine Datei, ein Frame und ein Tag pro Sprite (Tag = Dateiname)
+  Preview/  Vorschau_HUD.png, Vorschau_Wecklevel.png, Vorschau_Neuer_Tag.png, ..._Mitternacht.png, Bauteile.png (3x)
+  Beduerfnisse_Texte.json   alle Texte der Stufen (Englisch), Stufenfarben
+  Neu bauen: _Quelle_Generator/build_hud_neu.py (+ hud2_lib/icons/extra/preview.py), danach die Aseprite-Dateien packen
+
+LAYOUT (Referenz 480x270, Ankerpunkt + Abstand 6 px)
+  Oben links    Uhr-Platte (Plate_HUD 9-Slice 68x30): Phasen-Icon (vorhandene Icon_Morgen/Tag/Abend/Nacht) + "12:45" (8 px,
+                #fff1c9) + "Day 2" (8 px, #ffd27a). Darunter Tagesspur und die drei Vitalbalken (Zeilenabstand 14 px).
+  Oben rechts   Quest-Tracker, 152 px breit, Plate_HUD als Hintergrund.
+  Rechts, untere Haelfte (ab y ~130)   Bedarfs-/Stimmungskacheln, senkrecht gestapelt, Abstand 25 px, Anker rechts.
+                Aufgeklappt erscheint links neben der Kachel ein Flyout mit dem Text.
+  Oben Mitte    Wecklevel-Einblendung, nur kurz (siehe unten).
+  Bildmitte     Neuer-Tag-Banner (siehe unten).
+
+VITALBALKEN (Vitals/)   Zeile = Icon 11x11 + Balken 64x9
+  Balken_Rahmen 64x9 (Fuellflaeche 60x5 bei x2/y2). Fuellungen 60x5, auf die Breite des Werts croppen:
+    Leben      Fuellung_Leben (#c4636b), unter 30 %: Fuellung_Leben_Kritisch (#d64a6a). Teiler_3 = 3 Lebenspunkte
+               (Kampfregeln), Teiler_10 = feine Skala. Verlust_Spur = heller Streifen, schrumpft nach einem Treffer.
+    Ausdauer   Fuellung_Ausdauer (gruen). Ist sie komplett leer: Fuellung_Ausdauer_Leer (orange).
+               Schraffur_Gesperrt = Maximum-Erschoepfung (Regelwerk): von rechts so weit ueberlagern, wie das Maximum gesunken ist.
+    Sanity     Fuellung_Geist (lila-weiss). Unter 40 %: Fuellung_Geist_Niedrig (orange, Schlafsperre laut Regelwerk),
+               unter 20 %: Fuellung_Geist_Kritisch (rot). Marke_Schlafsperre = Strichlinie bei 40 %.
+  Icons: Icon_Herz, Icon_Ausdauer (Blitz), Icon_Geist (Auge).
+
+UHR UND TAGESSPUR (Clock/)
+  Spur_Rahmen 50x5 + Spur_Segmente 48x3 (2 px pro Stunde, 0-24 Uhr): Nacht blau, Morgen 5-9 gelb, Tag 9-18 hell,
+  Abend 18-21 orange, Nacht. Die Stunden folgen der Zuordnung aus Art/UI/LIESMICH_UI.txt (DayNightCycle). Spur_Vergangen
+  (dunkler Schleier) auf die Breite der vergangenen Zeit croppen. Spur_Marke = Dreieck ueber "jetzt", Spur_Glocke = Markierung
+  bei 18 Uhr (Sheriff laeutet). Die Uhr zaehlt nicht waehrend Dialog und Cutscene (Opening-Spec).
+
+BEDARF UND STIMMUNG (Needs/)   Kachel 22x22, Symbol 16x16 bei (3,1)
+  Prinzip wie Project Zomboid: eine Kachel erscheint nur, wenn der Zustand aktiv ist, und steigt in 4 Stufen.
+  Stufe zeigt der Rand und die Punkte unten: 1 grau-lila #6b5a7a, 2 gelb #ffd27a, 3 orange #ffa550, 4 rot #d64a6a.
+  Positive Stimmung: gruener Rand #6e9a5e, 1-2 Punkte. Kachel_Blitz = heller Rand, 0,3 s beim Stufenwechsel.
+  Fertige Kombinationen: Anzeige_<Kette>_Stufe_1..4 und Anzeige_<Kette>_Positiv_1..2. Einzelteile: Kachel_* und Symbol_*.
+  Ketten: Hunger, Durst, Muede (Tired), Rausch (Drunk, Getraenke-Doku), Verletzt (Wounded),
+          Stimmung (Traurig -> Froh), Gesellschaft (Einsam -> Sozial), Anspannung (Stress -> Ruhe/Tee).
+  Aufklappen: Klick/Hover auf eine Kachel zeigt links Plate_Flyout (9-Slice) + Plate_Flyout_Zeiger, Text in der Stufenfarbe.
+  Texte (Stufe 1 bis 4), z. B. Hunger: "Your stomach growls." / "I'm hungry." / "I'm really hungry." / "I'm starving."
+  Alle Texte: Beduerfnisse_Texte.json. Erweitern: neues Symbol (16x16) in hud2_icons.py/hud2_extra.py, Eintrag in NEEDS.
+
+QUEST-TRACKER (Quest/)   Taste Q oeffnet die Uebersicht (Opening-Spec)
+  Header: Plate_Header_Haupt (gelber Akzent) und Plate_Header_Neben (blauer Akzent), 9-Slice Border L4 T3 R3 B3.
+  Je Kategorie ein Header mit Symbol_Haupt / Symbol_Neben, Titel ("Main Quest" / "Side Quests"), Pfeil_Auf (aufgeklappt)
+  oder Pfeil_Zu (eingeklappt), *_Hover in #ffd27a. Nebenquests: Abzeichen_Zahl mit Anzahl; ohne Eintraege "None yet".
+  Eintrag: Punkt_Offen / Punkt_Aktiv / Punkt_Fertig / Punkt_Gescheitert + Text (8 px). Verfolgte Quest: Marke_Verfolgt davor.
+  Fortschritt: Fortschritt_Rahmen 40x5 + Fortschritt_Fuellung 38x3 (croppen). Neue Quest: Abzeichen_Neu (Text "NEW" #1a1526).
+  Trenner: gepunktete Linie 32x1.
+
+WECKLEVEL (Wake/)   erscheint nur kurz, bei Tagesbeginn, danach ausblenden (nicht dauerhaft im HUD)
+  Plate_HUD + Symbol_Versteck + "Wake level" + 5 Balken (Balken_Leer/Gelb/Orange/Rot, 7x12):
+  Stufe 1-2 gelb, 3 orange, 4-5 rot (Cheatsheet), leere Balken fuer Stufen darueber, Stufe 0 = alle leer.
+  Balken_Puls = kurzes Aufleuchten, wenn der Wert gestiegen ist. Wert als "4 / 5".
+
+NEUER TAG (Banner/)   nach dem Schlafen ODER wenn die Uhr ueber 00:00 geht, ca. 4 s, dann Lagebericht
+  Band_Morgen (nach dem Schlaf, Dämmerungs-Verlauf) / Band_Mitternacht (nach 00:00, blauer Verlauf): 8x116, waagerecht
+  KACHELN (Image Type Tiled), NICHT strecken - der Dither bleibt sonst nur grob.
+  Strahlen_Morgen 240x110 (halbtransparent, hinter dem Titelband, Mitte auf die Sonne). Skyline_Morgen / Skyline_Mitternacht
+  200x60: Dorf mit Glockenturm, Sonne bzw. Mond dahinter, unten buendig am Band. Titelband 56x34 (9-Slice Border L14 R14,
+  Hoehe fix) mit "DAY 2" in #ffd27a, Schriftgroesse 24; Titelband_Klein fuer Groesse 16. Untertitel 8 px #9ab87a, z. B.
+  "Dawn breaks over Dusk Bell." / "Midnight. The bell has tolled." Verzierung_Linie 96x11 links gespiegelt/rechts neben dem
+  Band, Stern_Klein / Stern_Gross als Streu. Reihenfolge von hinten: Band, Strahlen, Sterne, Skyline, Zierlinien, Titelband, Text.
+  Danach die letzten Ereignisse im Dorf: vorhandenes Panel_Lagebericht + Zeilen mit Events/Symbol_* (Haus = ruhige Nacht,
+  Verlust (rot, nur Name), Kerze = Gedenken, Glocke, Verletzt) und den vorhandenen Icons fuer Versteck/Talisman/Wissen.
+  Meistens passiert nichts: eine Zeile mit Symbol_Haus, z. B. "The night was quiet. Nothing stirred."
+
+PLATES (Plates/)   alle 9-Slice
+  Plate_HUD 12x12 Border 3 (Hintergrund #1a1526 mit ~67 % Deckkraft, Rahmen #4f3d5c, Licht #6b5a7a): bleibt transparent genug.
+  Plate_Flyout 12x12 Border 3 (fast deckend), Plate_Flyout_Zeiger 6x9 (Pfeil nach rechts zur Kachel).
+
+OFFENE ENTSCHEIDUNGEN
+  - Kampfregeln: "Lebenspunkte sind keine Anzeige im HUD". Wir bauen sie trotzdem (Wunsch); Teiler_3 kann alternativ
+    ausgeblendet oder der Balken ganz weggelassen werden.
+  - Wecklevel: Regelwerk 0-5, gewuenscht ist "1 bis 5" - 5 Balken, 0 = alle leer.
+  - Tagesspur nutzt die Stunden aus dem DayNightCycle (24 h), nicht die Phasenlaengen des Regelwerks (26 min Echtzeit).
+  - Ausdauer im Kampf und Sprint: gleiche Leiste (Kampfregeln offen), es gibt nur eine.
+  - Texte und Staffelung der Bedarfe sind Vorschlaege (Beduerfnisse_Texte.json).

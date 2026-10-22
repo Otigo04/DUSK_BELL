@@ -1,0 +1,52 @@
+NIGHTWARD - Ilhans Bar (Tilesets Aussen + Innen)
+=================================================
+Raster 32x32 px, Point-Filter, PPU 32, keine Kompression, keine Skalierung (Import wie Tileset_Haus).
+Palette: Style-Bibel (Art/Palette.gpl, 39 Farben), Check: 0 Fremdfarben, kein Alpha ausser 0/255. Outline #1a1526.
+Akzentfarbe der Bar: gedaempftes Rot (#7a2e3a / #c4636b) = Ilhans Geschirrtuch (Schilder, Laeden, Markise, Barhocker, Sitznische).
+Erzeugt mit _Quelle_Generator/bar_aussen.py, bar_innen.py, bar_meta.py (Python + PIL; bar_lib.py = Palette/Schrift).
+Aenderungen: Skripte anpassen, "python bar_aussen.py && python bar_innen.py && python bar_meta.py" im _Quelle_Generator-Ordner.
+Vorschau: Bar_Aussen_Vorschau.png, Bar_Innen_Vorschau.png (nur Ansicht, nicht fuer Unity noetig).
+
+Preise auf den Tafeln (Waehrung = Wachtgroschen, WG): Bier 1, Met 1, Wein 2, Korn 2, Whisky 3, Rum 3, Bourbon 4.
+Texte auf Schildern sind in die Sprites gezeichnet (5x7- bzw. 3x5-Pixelschrift, kein Font noetig).
+
+LICHTQUELLEN fuer Light 2D: beleuchtete Fenster (Aussen fenster_lit, gaube_lit; Innen fenster_lit, fenster_vorhang),
+Wand-/Haengelaternen, Laternenpfosten, Pendeltuer (Innenraum-Glow), Kamin-Ersatz: Kanonenofen, Kronleuchter, Wandleuchte,
+Theke Kerze/Zapfhahn-Lichtinsel, Klavier-Kerzen. Kein Strom (1910): Oel, Kerze, Ofen.
+
+AUSSEN  Tileset_Bar_Aussen.png (512 x 192 = 16 x 6 Zellen)
+==========================================================
+Zelle (Spalte,Zeile) ab 0. Sprite-Name im Unity-Import: BA_<Zeile>_<Spalte> (32x32-Zellen, wie Tileset_Haus).
+Mehrzellige Teile: Groesse in Zellen BxH, linke obere Zelle ist angegeben.
+
+Zeile 0: (0,0) dach_first_L | (1,0) dach_first_M | (2,0) dach_first_R | (3,0) dach_flaeche_L | (4,0) dach_flaeche_M | (5,0) dach_flaeche_R | (6,0) dach_traufe_L | (7,0) dach_traufe_M | (8,0) dach_traufe_R | (9,0) vordach_L | (10,0) vordach_M | (11,0) vordach_R | (12,0) gaube_lit | (13,0) gaube_dunkel | (14,0) schornstein [1x2] | (15,0) schornstein_rauch [1x2]
+Zeile 1: (0,1) fassade_M [1x2] | (1,1) fassade_L [1x2] | (2,1) fassade_R [1x2] | (3,1) fenster_lit [1x2] | (4,1) fenster_dunkel [1x2] | (5,1) fenster_laeden_zu [1x2] | (6,1) pendeltuer_zu [2x2] | (8,1) pendeltuer_schwingt [2x2] | (10,1) eingang_offen [2x2] | (12,1) hintertuer [1x2]
+Zeile 3: (0,3) schild_ilhans_bar [4x1] | (4,3) schild_bar [2x1] | (6,3) preistafel [3x1] | (9,3) schild_offen | (10,3) schild_zu | (11,3) wandlaterne | (12,3) haengelaterne | (13,3) veranda_boden_L | (14,3) veranda_boden_M | (15,3) veranda_boden_R
+Zeile 4: (0,4) ausleger_krug [1x2] | (1,4) ausleger_glas [1x2] | (2,4) kreidetafel [1x2] | (3,4) laternenpfosten [1x2] | (4,4) pfosten [1x2] | (5,4) gelaender_L | (6,4) gelaender_M | (7,4) gelaender_R | (8,4) bank [2x1] | (10,4) anbindebalken [2x1] | (12,4) trog [2x1] | (14,4) stehfass | (15,4) faesser_stapel
+Zeile 5: (5,5) stufen_L | (6,5) stufen_M | (7,5) stufen_R | (8,5) flaschenkiste | (9,5) bierfass_zapf
+
+Aufbau Fassade: Dach Reihe 0 (First/Flaeche/Traufe je L/M/R, Ortgangbretter), darunter Fassade (2 Zellen hoch = oben/unten, Sockel Stein),
+Fenster mit roten Laeden (lit/dunkel/zu), Pendeltuer 64x64 (zu/schwingt/offen = Einstieg fuer Szenenwechsel Haus betreten).
+Schild "ILHANS BAR" (128x32) auf die Dachflaeche setzen, Ausleger-Schild (Krug/Glas) an die Wand, Kreidetafel + Stehfass auf die Veranda.
+Veranda: Boden L/M/R, Gelaender L/M/R, Pfosten, Stufen L/M/R, Vordach (rot-weisse Markise) L/M/R.
+
+
+INNEN  Tileset_Bar_Innen.png (512 x 352 = 16 x 11 Zellen)
+=========================================================
+Zelle (Spalte,Zeile) ab 0. Sprite-Name im Unity-Import: BI_<Zeile>_<Spalte> (32x32-Zellen, wie Tileset_Haus).
+Mehrzellige Teile: Groesse in Zellen BxH, linke obere Zelle ist angegeben.
+
+Zeile 0: (0,0) boden_dielen_dunkel | (1,0) boden_dielen_abgewetzt | (2,0) boden_saegespaene | (3,0) boden_steinplatten | (4,0) boden_schachbrett | (5,0) boden_dielen_senkrecht | (6,0) laeufer | (7,0) fussmatte | (8,0) wandschatten_oben | (9,0) wandschatten_links | (10,0) wandschatten_rechts | (11,0) schwelle | (12,0) bierlache | (13,0) scherben | (14,0) kippen | (15,0) erdnussschalen
+Zeile 1: (0,1) wand_tapete_rot [1x2] | (1,1) wand_tapete_gruen [1x2] | (2,1) wand_holz [1x2] | (3,1) fenster_nacht [1x2] | (4,1) fenster_lit [1x2] | (5,1) fenster_tag [1x2] | (6,1) fenster_vorhang [1x2] | (7,1) pendeltuer_innen [2x2] | (9,1) hintertuer [1x2] | (10,1) tuer_offen [1x2] | (11,1) kellertuer [1x2] | (12,1) spiegelwand [2x2] | (14,1) wand_ende_L [1x2] | (15,1) wand_ende_R [1x2]
+Zeile 3: (0,3) regal_whisky [2x2] | (2,3) regal_wein_bier [2x2] | (4,3) regal_glaeser [2x2] | (6,3) regal_gemischt [2x2] | (8,3) fassregal [2x2] | (10,3) glashalter [2x1] | (12,3) dartscheibe | (13,3) geweih | (14,3) wanduhr | (15,3) kalender
+Zeile 4: (10,4) foto | (11,4) foto_b
+Zeile 5: (0,5) theke_M [1x2] | (1,5) theke_ende_L [1x2] | (2,5) theke_ende_R [1x2] | (3,5) theke_glaeser [1x2] | (4,5) theke_flaschen [1x2] | (5,5) theke_zapfhahn [1x2] | (6,5) theke_kasse [1x2] | (7,5) theke_kerze [1x2] | (8,5) theke_tablett [1x2] | (9,5) theke_whisky [1x2] | (10,5) theke_klappe_zu [1x2] | (11,5) theke_klappe_offen [1x2] | (12,5) theke_zigarren [1x2] | (13,5) theke_fass [1x2] | (14,5) theke_zeitung [1x2] | (15,5) barhocker_vorne
+Zeile 6: (15,6) barhocker_seite
+Zeile 7: (0,7) tisch_rund | (1,7) tisch_rund_gedeckt | (2,7) tisch_lang [2x1] | (4,7) pokertisch [2x1] | (6,7) stuhl_vorne | (7,7) stuhl_hinten | (8,7) stuhl_links | (9,7) stuhl_rechts | (10,7) sitznische [2x1] | (12,7) spucknapf | (13,7) besen_eimer | (14,7) waschbecken | (15,7) holzstapel
+Zeile 8: (0,8) klavier [2x2] | (2,8) kanonenofen [1x2] | (3,8) garderobe [1x2] | (4,8) kronleuchter [1x2] | (5,8) wandleuchte | (6,8) haengelaterne | (7,8) wandlaterne | (8,8) kellerluke [2x1]
+Zeile 10: (0,10) preistafel [4x1] | (4,10) plakat_kein_kredit
+
+Aufbau Innenraum: Waende 32x64 (oben Tapete, Handlauf, unten Vertaefelung) in Zeile 1-2; Regale/Spiegelwand sind 64x64 und ersetzen
+zwei Wandkacheln. Theke: 32x64-Stuecke (Zeile 5-6), Platte liegt bei y=36 der Kachel, Aufbauten (Glaeser, Zapfhahn, Kasse ...) sind
+Varianten derselben Kachel - nebeneinander setzen. Barhocker davor. Wandschatten-Overlays (Dither) ueber den Boden legen.
+Flaschen auf den Regalen: Sorten Whisky, Bourbon, Bier, Rotwein, Weisswein, Rum, Schnaps, Met (passend zu Art/Items/Getraenke).

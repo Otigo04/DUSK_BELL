@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Tuer_Oberlicht_Holz
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -8757946921129857170, guid: 2e711fac5e9ea7146a4d368ce7df955b, type: 3}
+  - {fileID: -96841689012201302, guid: 2e711fac5e9ea7146a4d368ce7df955b, type: 3}
+  - {fileID: 4097130970928214175, guid: 2e711fac5e9ea7146a4d368ce7df955b, type: 3}
+  - {fileID: 3560864016409974141, guid: 2e711fac5e9ea7146a4d368ce7df955b, type: 3}
+  m_MinSpeed: 3.653846
+  m_MaxSpeed: 4.038461
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

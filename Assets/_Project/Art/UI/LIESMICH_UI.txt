@@ -1,0 +1,49 @@
+NIGHTWARD - UI-Paket (nach UI-Cheatsheet vom 19.10.2026)
+=========================================================
+Alles Pixelart, nur Farben der Style-Bibel, keine Anti-Aliasing-Kanten. Import: Sprite, PPU 100, Filter Point,
+unkomprimiert (macht Menue Nightward > UI > 1 Import konfigurieren).
+
+Font/Nightward_Pixel.ttf
+  5x7-Pixelschrift, festes Raster (Zelle 6 px), 100 Zeichen inkl. Ä Ö Ü ä ö ü ß. Em = 8 px:
+  Schriftgroesse 8 = Hinweise, 16 = Dialoge und Menues. Rendering "Hinted Raster", Textur auf Point (NwUIRoot).
+  Unterlaengen/Umlaute: Zeilenhoehe 10 px bei Groesse 8.
+
+Icons/   16x16, dunkle Outline #1a1526, je ein Icon + _Aus-Variante (deaktiviert)
+  Neu: Morgen (Sonnenaufgang #ffd27a), Abend (Sonnenuntergang #ffa550)
+  Talisman (#6fd3e6), Aktion (#ffd27a), Wissen (#6b7fb8), Vertrauen (#c4636b), Nacht (#e8e0f0), Tag (#ffd27a),
+  Warnung (#d64a6a), Wald (#4a7a4f), Versteck (#4f3d5c), Vorraete (#9c7a5a).  Icons_Sheet.png = alle in einem Bogen.
+
+Panels/  9-Slice, 24x24, Ecken 8x8, Kante 1 px, Rahmen #4f3d5c, Licht oben links #6b5a7a, Hintergrund #1a1526 mit 85 %
+  Panel_Dialog.png, Panel_Lagebericht.png (gleicher Rahmen).  Sprite-Border 8/8/8/8.
+
+Buttons/ 9-Slice, 24x16, Border L/R 8, O/U 7. Mindestgroesse im UI 48x16. Nur Farbwechsel, keine Bewegung.
+  Normal   Hintergrund #2c3e56  Rahmen #4f3d5c  Text #fff1c9
+  Hover    #3f5570              #ffd27a          #ffd27a
+  Gedrueckt #1f2a3d             #1a1526          #9a95a0
+  Deaktiviert #2b2140           #2b2140          #6e6a74
+
+HUD/     Lebensbalken: Rahmen 76x12, Fuellung 70x6 (Normal #c4636b, Kritisch ab 30 % #d64a6a), Teiler (10 Segmente)
+         Aktionspunkt voll/leer (7x7), Weckbalken Leer/Gelb/Orange/Rot (6x12), Weiterpfeil (9x6, #ffa550)
+
+UI_Vorschau.png            Kontaktbogen (3x): HUD, Dialogbox Bewohner/Erzaehler, Buttons, Icons, Lagebericht
+_Quelle_Generator/         build_font.py, build_ui.py, nwui.py (Python + PIL + fonttools). Neu bauen: python build_font.py, python build_ui.py
+
+UNITY
+  Scripts/UI/       NwTheme (Farben), NwUIRoot (Font scharf), NwButton, NwDialogBox, NwHud, NwReport(+Row), NwBlink, NwUITestController
+  Scripts/Editor/   UIBuilder.cs   Menue: Nightward > UI > Test-UI bauen (alles)
+  Prefabs/UI/       UI_Button, UI_Dialogbox, UI_HUD, UI_Lagebericht, UI_ReportRow
+  Scenes/Sandbox/   UI_Test.unity  (Canvas 480x270 wie die Spielkamera, Input System, Testknoepfe links)
+
+Regeln aus dem Cheatsheet, die im Code stecken
+  Schatten 1 px unten rechts #1a1526 (Shadow-Komponente), Titel #ffd27a, Text #fff1c9, Erzaehler #9ab87a ohne Namen.
+  Weiterpfeil blinkt alle 0,5 s. Lagebericht: Zeilen erscheinen je 0,3 s, Reihenfolge Titel, Tag, Verluste, Warnungen, Gewinne, Weiter.
+  Talismane 0 = #8a1f3d, Weckstufe ab 3 orange #ffa550, ab 4 rot #d64a6a.
+
+Text bleibt in der Box
+  Dialogbox: lange Texte werden automatisch in Seiten geteilt, die genau in die Textflaeche passen (Klick blaettert,
+  Pfeil blinkt am Seitenende). Ohne Namen (Erzaehler) hat der Text mehr Platz. RectMask2D schneidet alles ab, was doch herausragt.
+  Lagebericht/Zeilen: Text wird auf Schriftgroesse 8 verkleinert, dann mit "..." gekuerzt. Zu viele Zeilen -> "... und N weitere".
+
+HUD: Zeit und Leben
+  Uhr folgt dem DayNightCycle (Scripts/DayNight). Phasen: Morgen 05-09 Uhr, Tag 09-18, Abend (Daemmerung) 18-21, Nacht 21-05.
+  NwHud.SetHealth(aktuell, max) fuer den Lebensbalken. In UI_Test: Knoepfe Phase +, Tempo (1/10/30/60x), Pause, Leben -/+.

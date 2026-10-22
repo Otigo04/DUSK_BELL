@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_Gast_Erstkontakt
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: Guten Tag. Ich bin zu Besuch. Ich bin immer zu Besuch.
+    relationship: 0
+    setFlag: gast_kennengelernt
+    next: 
+    choices:
+    - text: "Wie hei\xDFt du?"
+      next: name
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Woher kommst du?
+      next: woher
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Ich habe zu tun.
+      next: tschuess
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: name
+    speaker: 0
+    text: "Ich habe den Namen eines Mannes, der verschwunden ist. Er passt mir gut.
+      M\xF6chtest du ihn h\xF6ren?"
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: woher
+    speaker: 0
+    text: Von weit her. Ich warte gern. Eine Nacht mehr oder weniger macht mir nichts.
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: tschuess
+    speaker: 0
+    text: "Nat\xFCrlich. Ich komme wieder. Ich klopfe dreimal."
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []

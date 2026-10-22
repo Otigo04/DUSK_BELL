@@ -1,0 +1,627 @@
+{
+ "items": [
+  {
+   "id": "linen_shirt",
+   "name": "Linen Shirt",
+   "desc": "Light and plain.",
+   "rarity": "Common",
+   "value": 4,
+   "slot": "Clothing",
+   "palette": [
+    "#fff1c9",
+    "#f2ead8",
+    "#9a95a0",
+    "#6e6a74"
+   ],
+   "effects": []
+  },
+  {
+   "id": "flannel_shirt",
+   "name": "Flannel Shirt",
+   "desc": "Red check, worn soft.",
+   "rarity": "Common",
+   "value": 6,
+   "slot": "Clothing",
+   "palette": [
+    "#d64a6a",
+    "#8a1f3d",
+    "#5e3d33",
+    "#2b2140"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.92
+    }
+   ]
+  },
+  {
+   "id": "work_jacket",
+   "name": "Work Jacket",
+   "desc": "Stiff canvas with deep pockets.",
+   "rarity": "Common",
+   "value": 8,
+   "slot": "Clothing",
+   "palette": [
+    "#b89a72",
+    "#9c7a5a",
+    "#7a5a43",
+    "#5c4033"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.88
+    }
+   ]
+  },
+  {
+   "id": "wool_coat",
+   "name": "Wool Coat",
+   "desc": "Keeps the night chill out.",
+   "rarity": "Uncommon",
+   "value": 12,
+   "slot": "Clothing",
+   "palette": [
+    "#e8e0f0",
+    "#6b7fb8",
+    "#3a4a7a",
+    "#2b2140"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.55
+    }
+   ]
+  },
+  {
+   "id": "hunting_jacket",
+   "name": "Hunting Jacket",
+   "desc": "Green, quiet, full of loops.",
+   "rarity": "Uncommon",
+   "value": 14,
+   "slot": "Clothing",
+   "palette": [
+    "#9ab87a",
+    "#4a7a4f",
+    "#2f5a3c",
+    "#1e3a2b"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.8
+    },
+    {
+     "type": "game",
+     "key": "ReactionWindowMult",
+     "value": 1.05
+    }
+   ]
+  },
+  {
+   "id": "oilskin_coat",
+   "name": "Oilskin Coat",
+   "desc": "Waxed against the rain.",
+   "rarity": "Uncommon",
+   "value": 16,
+   "slot": "Clothing",
+   "palette": [
+    "#a8f0ff",
+    "#2b6b8a",
+    "#2c3e56",
+    "#1f2a3d"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.7
+    },
+    {
+     "type": "drain",
+     "key": "Fatigue",
+     "value": 0.9
+    }
+   ]
+  },
+  {
+   "id": "leather_jacket",
+   "name": "Leather Jacket",
+   "desc": "Takes a bite and keeps its shape.",
+   "rarity": "Rare",
+   "value": 30,
+   "slot": "Clothing",
+   "palette": [
+    "#8c5f4d",
+    "#5e3d33",
+    "#3b2a22",
+    "#1a1526"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.85
+    },
+    {
+     "type": "game",
+     "key": "DamageTakenMult",
+     "value": 0.9
+    }
+   ]
+  },
+  {
+   "id": "cassock",
+   "name": "Black Cassock",
+   "desc": "The pastor wore one like it.",
+   "rarity": "Rare",
+   "value": 32,
+   "slot": "Clothing",
+   "palette": [
+    "#6b5a7a",
+    "#3d2e4a",
+    "#2b2140",
+    "#1a1526"
+   ],
+   "effects": [
+    {
+     "type": "rate",
+     "key": "Sanity",
+     "value": 1.2
+    },
+    {
+     "type": "rate",
+     "key": "Stress",
+     "value": -1.0
+    }
+   ]
+  },
+  {
+   "id": "doctor_coat",
+   "name": "Doctor's Coat",
+   "desc": "Spotless, mostly.",
+   "rarity": "Rare",
+   "value": 34,
+   "slot": "Clothing",
+   "palette": [
+    "#fff1c9",
+    "#e8e0f0",
+    "#9a95a0",
+    "#6e6a74"
+   ],
+   "effects": [
+    {
+     "type": "rate",
+     "key": "Health",
+     "value": 0.6
+    },
+    {
+     "type": "recover",
+     "key": "Pain",
+     "value": 1.3
+    }
+   ]
+  },
+  {
+   "id": "fur_coat",
+   "name": "Fur-lined Coat",
+   "desc": "Heavy, warm and unforgettable.",
+   "rarity": "Unique",
+   "value": 60,
+   "slot": "Clothing",
+   "palette": [
+    "#d19a7a",
+    "#8c5f4d",
+    "#5c4033",
+    "#3b2a22"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.35
+    },
+    {
+     "type": "game",
+     "key": "MoveSpeedMult",
+     "value": 0.97
+    }
+   ]
+  },
+  {
+   "id": "blue_jeans",
+   "name": "Blue Jeans",
+   "desc": "The ones you started in.",
+   "rarity": "Common",
+   "value": 4,
+   "slot": "Legs",
+   "palette": [
+    "#1f2a3d",
+    "#2c3e56",
+    "#3f5570"
+   ],
+   "effects": []
+  },
+  {
+   "id": "work_trousers",
+   "name": "Work Trousers",
+   "desc": "Brown and patched at the knees.",
+   "rarity": "Common",
+   "value": 5,
+   "slot": "Legs",
+   "palette": [
+    "#5c4033",
+    "#7a5a43",
+    "#9c7a5a"
+   ],
+   "effects": []
+  },
+  {
+   "id": "canvas_pants",
+   "name": "Canvas Pants",
+   "desc": "Sand coloured, hard wearing.",
+   "rarity": "Common",
+   "value": 6,
+   "slot": "Legs",
+   "palette": [
+    "#7a5a43",
+    "#9c7a5a",
+    "#b89a72"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.95
+    }
+   ]
+  },
+  {
+   "id": "black_trousers",
+   "name": "Black Trousers",
+   "desc": "For church and funerals.",
+   "rarity": "Common",
+   "value": 6,
+   "slot": "Legs",
+   "palette": [
+    "#1a1526",
+    "#2b2140",
+    "#3d2e4a"
+   ],
+   "effects": []
+  },
+  {
+   "id": "corduroy_pants",
+   "name": "Corduroy Pants",
+   "desc": "Ribbed green cord.",
+   "rarity": "Uncommon",
+   "value": 12,
+   "slot": "Legs",
+   "palette": [
+    "#1e3a2b",
+    "#2f5a3c",
+    "#4a7a4f"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.92
+    }
+   ]
+  },
+  {
+   "id": "wool_trousers",
+   "name": "Wool Trousers",
+   "desc": "Grey and thick.",
+   "rarity": "Uncommon",
+   "value": 14,
+   "slot": "Legs",
+   "palette": [
+    "#4a4550",
+    "#6e6a74",
+    "#9a95a0"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.75
+    }
+   ]
+  },
+  {
+   "id": "hunting_pants",
+   "name": "Hunting Pants",
+   "desc": "Roomy knees, quiet cloth.",
+   "rarity": "Uncommon",
+   "value": 15,
+   "slot": "Legs",
+   "palette": [
+    "#2f5a3c",
+    "#4a7a4f",
+    "#6e9a5e"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Stamina",
+     "value": 0.93
+    }
+   ]
+  },
+  {
+   "id": "leather_pants",
+   "name": "Leather Pants",
+   "desc": "Stiff, creaks a little.",
+   "rarity": "Rare",
+   "value": 28,
+   "slot": "Legs",
+   "palette": [
+    "#3b2a22",
+    "#5e3d33",
+    "#8c5f4d"
+   ],
+   "effects": [
+    {
+     "type": "game",
+     "key": "DamageTakenMult",
+     "value": 0.93
+    },
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.9
+    }
+   ]
+  },
+  {
+   "id": "sheriff_trousers",
+   "name": "Sheriff's Trousers",
+   "desc": "Blue with a pale stripe.",
+   "rarity": "Rare",
+   "value": 30,
+   "slot": "Legs",
+   "palette": [
+    "#2c3e56",
+    "#3a4a7a",
+    "#6b7fb8"
+   ],
+   "effects": [
+    {
+     "type": "game",
+     "key": "ReactionWindowMult",
+     "value": 1.1
+    }
+   ]
+  },
+  {
+   "id": "runner_trousers",
+   "name": "Runner's Trousers",
+   "desc": "Light, and cut for speed.",
+   "rarity": "Unique",
+   "value": 55,
+   "slot": "Legs",
+   "palette": [
+    "#1f2a3d",
+    "#2b6b8a",
+    "#6b7fb8"
+   ],
+   "effects": [
+    {
+     "type": "game",
+     "key": "SprintSpeedMult",
+     "value": 1.08
+    },
+    {
+     "type": "recover",
+     "key": "Stamina",
+     "value": 1.15
+    }
+   ]
+  },
+  {
+   "id": "worn_boots",
+   "name": "Worn Boots",
+   "desc": "The ones you started in.",
+   "rarity": "Common",
+   "value": 4,
+   "slot": "Feet",
+   "palette": [
+    "#3b2a22",
+    "#5c4033",
+    "#7a5a43",
+    "#9c7a5a"
+   ],
+   "effects": []
+  },
+  {
+   "id": "work_boots",
+   "name": "Work Boots",
+   "desc": "Heavy soles, steel toes.",
+   "rarity": "Common",
+   "value": 7,
+   "slot": "Feet",
+   "palette": [
+    "#1a1526",
+    "#3b2a22",
+    "#5c4033",
+    "#7a5a43"
+   ],
+   "effects": []
+  },
+  {
+   "id": "sneakers",
+   "name": "Sneakers",
+   "desc": "White and quick.",
+   "rarity": "Common",
+   "value": 8,
+   "slot": "Feet",
+   "palette": [
+    "#4a4550",
+    "#9a95a0",
+    "#e8e0f0",
+    "#fff1c9"
+   ],
+   "effects": [
+    {
+     "type": "game",
+     "key": "MoveSpeedMult",
+     "value": 1.03
+    }
+   ]
+  },
+  {
+   "id": "dress_shoes",
+   "name": "Dress Shoes",
+   "desc": "Polished black.",
+   "rarity": "Common",
+   "value": 6,
+   "slot": "Feet",
+   "palette": [
+    "#1a1526",
+    "#2b2140",
+    "#3d2e4a",
+    "#6b5a7a"
+   ],
+   "effects": []
+  },
+  {
+   "id": "rubber_boots",
+   "name": "Rubber Boots",
+   "desc": "Green and tall. Mud slides off.",
+   "rarity": "Uncommon",
+   "value": 12,
+   "slot": "Feet",
+   "palette": [
+    "#1a1526",
+    "#1e3a2b",
+    "#2f5a3c",
+    "#4a7a4f"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.93
+    }
+   ]
+  },
+  {
+   "id": "hiking_boots",
+   "name": "Hiking Boots",
+   "desc": "Ankle support and good grip.",
+   "rarity": "Uncommon",
+   "value": 16,
+   "slot": "Feet",
+   "palette": [
+    "#3b2a22",
+    "#7a5a43",
+    "#9c7a5a",
+    "#b89a72"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Stamina",
+     "value": 0.9
+    }
+   ]
+  },
+  {
+   "id": "leather_boots",
+   "name": "Leather Boots",
+   "desc": "Broken in and supple.",
+   "rarity": "Uncommon",
+   "value": 15,
+   "slot": "Feet",
+   "palette": [
+    "#3b2a22",
+    "#5e3d33",
+    "#8c5f4d",
+    "#d19a7a"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.93
+    }
+   ]
+  },
+  {
+   "id": "felt_boots",
+   "name": "Felt Boots",
+   "desc": "Thick grey felt, warm to the toes.",
+   "rarity": "Uncommon",
+   "value": 14,
+   "slot": "Feet",
+   "palette": [
+    "#2b2140",
+    "#4a4550",
+    "#6e6a74",
+    "#9a95a0"
+   ],
+   "effects": [
+    {
+     "type": "drain",
+     "key": "Cold",
+     "value": 0.82
+    }
+   ]
+  },
+  {
+   "id": "soft_moccasins",
+   "name": "Soft Moccasins",
+   "desc": "You hear nothing when they walk.",
+   "rarity": "Rare",
+   "value": 28,
+   "slot": "Feet",
+   "palette": [
+    "#3b2a22",
+    "#5e3d33",
+    "#8c5f4d",
+    "#d19a7a"
+   ],
+   "effects": [
+    {
+     "type": "game",
+     "key": "ReactionWindowMult",
+     "value": 1.1
+    }
+   ]
+  },
+  {
+   "id": "red_boots",
+   "name": "Red Boots",
+   "desc": "Loud colour, light on the foot.",
+   "rarity": "Rare",
+   "value": 32,
+   "slot": "Feet",
+   "palette": [
+    "#2b2140",
+    "#7a2e3a",
+    "#c4636b",
+    "#d64a6a"
+   ],
+   "effects": [
+    {
+     "type": "game",
+     "key": "MoveSpeedMult",
+     "value": 1.05
+    },
+    {
+     "type": "game",
+     "key": "SprintSpeedMult",
+     "value": 1.05
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f821d7e1b53e0424b9e1bdb9cb217e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.ItemDef
+  id: blue_jeans
+  displayName: Blue Jeans
+  description: The ones you started in.
+  icon: {fileID: 21300000, guid: 360095485b32daf4e8307f75a8321648, type: 3}
+  category: 7
+  rarity: 0
+  maxStack: 1
+  value: 4
+  autoPickup: 0
+  consumableId: 
+  useVerb: Use
+  consumedOnUse: 1
+  leftoverItemId: 
+  refuelsItemId: 
+  refuelAmount: 50
+  weapon: 0
+  attackAnim: 
+  attackCombo: 1
+  attackSeconds: 0
+  hitSeconds: 0
+  damage: 1
+  reach: 0
+  rangedRange: 9
+  ammoItemId: 
+  staminaCostMultiplier: 1
+  maxDurability: 0
+  durabilityPerUse: 1
+  equipSlot: 4
+  outfitPalette:
+  - {r: 0.12156863, g: 0.16470589, b: 0.23921569, a: 1}
+  - {r: 0.17254902, g: 0.24313726, b: 0.3372549, a: 1}
+  - {r: 0.24705882, g: 0.33333334, b: 0.4392157, a: 1}
+  equipEffects: []
+  lightRadius: 0
+  lightColor: {r: 1, g: 0.65, b: 0.31, a: 1}
+  lightIntensity: 0.9
+  burnPerHour: 10
+  consumedWhenBurnedOut: 0

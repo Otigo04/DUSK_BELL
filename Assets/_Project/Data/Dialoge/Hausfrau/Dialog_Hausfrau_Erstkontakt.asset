@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cbeb950ed5773488e142ea53a23cb0, type: 3}
+  m_Name: Dialog_Hausfrau_Erstkontakt
+  m_EditorClassIdentifier: Assembly-CSharp::Nightward.Dialogue.DialogueAsset
+  startNode: start
+  nodes:
+  - id: start
+    speaker: 0
+    text: "Ach, du bist so d\xFCnn geworden, Liebes. Ich habe Brot. Und Suppe, wenn
+      du magst."
+    relationship: 0
+    setFlag: hausfrau_kennengelernt
+    next: 
+    choices:
+    - text: Danke, gern.
+      next: annehmen
+      relationship: 1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Nein danke.
+      next: ablehnen
+      relationship: -1
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+    - text: Wer sind Sie?
+      next: wer
+      relationship: 0
+      setFlag: 
+      minRelationship: -10
+      requireFlag: 
+  - id: annehmen
+    speaker: 0
+    text: Das ist brav. Du musst essen, solange es noch geht.
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: ablehnen
+    speaker: 0
+    text: "Wie du meinst. Die Suppe wird kalt. Ich merke mir, wer sie verschm\xE4ht."
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []
+  - id: wer
+    speaker: 0
+    text: "Eine Nachbarin. Die Einzige, die noch an dich denkt. H\xF6rst du, wie
+      still es ist?"
+    relationship: 0
+    setFlag: 
+    next: 
+    choices: []

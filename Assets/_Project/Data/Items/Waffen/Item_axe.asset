@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f821d7e1b53e0424b9e1bdb9cb217e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Nightward.Items::Nightward.Items.ItemDef
+  id: axe
+  displayName: Wood Axe
+  description: High damage, tiring to swing.
+  icon: {fileID: 21300000, guid: 6b0b4afb59b00ac49ae6c5bbb2a8a796, type: 3}
+  category: 3
+  rarity: 1
+  maxStack: 1
+  value: 10
+  autoPickup: 0
+  consumableId: 
+  useVerb: Use
+  consumedOnUse: 1
+  leftoverItemId: 
+  refuelsItemId: 
+  refuelAmount: 50
+  weapon: 3
+  attackAnim: chop
+  attackCombo: 1
+  attackSeconds: 0.5714286
+  hitSeconds: 0.3
+  damage: 4
+  reach: 0.95
+  rangedRange: 9
+  ammoItemId: 
+  staminaCostMultiplier: 1.9
+  maxDurability: 45
+  durabilityPerUse: 1
+  equipSlot: 0
+  outfitPalette: []
+  equipEffects: []
+  lightRadius: 0
+  lightColor: {r: 1, g: 0.65, b: 0.31, a: 1}
+  lightIntensity: 0.9
+  burnPerHour: 10
+  consumedWhenBurnedOut: 0

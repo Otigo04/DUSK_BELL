@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Altar
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -1446174319022953891, guid: 2c6f42c535b7f844f9381dea90eb3e54, type: 3}
+  - {fileID: -4149351599746561258, guid: 2c6f42c535b7f844f9381dea90eb3e54, type: 3}
+  - {fileID: 9190292804893664055, guid: 2c6f42c535b7f844f9381dea90eb3e54, type: 3}
+  - {fileID: -7916756238082159461, guid: 2c6f42c535b7f844f9381dea90eb3e54, type: 3}
+  m_MinSpeed: 5.2777777
+  m_MaxSpeed: 5.833333
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0

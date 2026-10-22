@@ -1,0 +1,32 @@
+Tileset_Strasse_Schrott.png / .aseprite   (256x512, 8 Spalten x 16 Zeilen, Kachel 32x32, Spalte/Zeile ab 0)
+Nur Palette aus der Style-Bibel (39 Farben), Outline #1a1526, keine Halbpixel. Unity: Sprite Mode Multiple, Grid 32x32, PPU 32, Filter Point.
+Alle Objekte haben einen Schmutz-Pass: Matsch am Boden, Regenschlieren, Rost auf Metall, Russ, Moos, Dreckspritzer.
+Zeilen 0-1 und 8-9 = ganze Kacheln (deckend), Rest = Objekte auf transparentem Grund (ueber Asphalt legen).
+
+Zeile 0   Asphalt glatt / rau / Riss / geflickt, Doppellinie gelb, Mittellinie gestrichelt, Zebrastreifen, Kanaldeckel
+Zeile 1   Pfuetze, Oelfleck, Schlagloch, Bordstein waagrecht (Gehweg oben), Bordstein senkrecht (Gehweg links), Gehweg,
+          Gehweg mit Riss+Unkraut, Gully-Gitter
+Zeile 2   Auto rostrot (64x32, Sp. 0-1), Lieferwagen (2-3), Wrack auf Backsteinen (4-5), Reifenstapel (6), Einkaufswagen (7)
+Zeile 3-4 hoch 32x64: Telefonzelle, Telefonzelle schief+kaputt, Telefonmast m. Kabeln+Vogel, Laterne schief, Ampel,
+          Schildermast verdreht, Getraenkeautomat, Litfasssaeule
+Zeile 5   Pylon, Pylon umgekippt, Hydrant, Muelltonne, Muelltonne umgekippt, Fernseher auf Kisten, Telefon-Anschlusskasten, Badewanne
+Zeile 6   Sofa (Bein gebrochen), Kuehlschrank, Briefkasten, Parkuhr, offener Gully m. Dampf, Fahrrad, Sperrmuell, Koffer+Schirm
+Zeile 7   Muenztelefon, wackeliger Stuhl, Verkehrsspiegel, Feuertonne, Absperrung m. Blinklicht, Kartons, Satellitenschuessel, Gartenzwerg
+Zeile 8   Backsteinwand dreckig, Wand m. Graffiti-Auge, Wand m. Plakatresten, Betonwand, Maschendrahtzaun (transp.), Laub, Reifenspuren, Muell/Kippen
+Zeile 9   Kopfsteinpflaster, Pflaster m. Gras, Tramgleis waagrecht, Tramgleis senkrecht, Bordstein-Aussenecke, Bordstein-Absenkung m. Noppen,
+          Rinnstein m. Wasser, Fahrbahnpfeil
+Zeile 10-11 hoch 32x64: Bushaltestelle, Baugeruest, Betonmast m. Haengelampe, Zigarettenautomat, Fahnenmast, Feuerleiter,
+          Telefonzelle ueberwuchert (Efeu), Handpumpe m. Trog
+Zeile 12  je 2 Zellen breit (64x32): Muellcontainer (Sp. 0-1), Parkbank (2-3), Altglascontainer (4-5), Palette m. Kisten+Plane (6-7)
+Zeile 13  Katze, Ratte, Taube, Zeitungsstaender, Kaugummiautomat, Gasflasche+Eimer, Schaufensterpuppe, Boombox
+Zeile 14  Topfpflanze tot, Gummistiefel, Poller, Waeschestaender, Bierkasten, Pizzakarton+Muellbeutel, Skateboard, Stoppschild liegend
+Zeile 15  Grablicht+Blumen, Leiter, Mopp+Eimer, Oelkanister, Sandsaecke, Regenschirm kaputt, Autoreifen, Altkleiderhaufen
+
+ANIMIERT -> Animiert/Strasse_*_Anim.png + .aseprite (horizontale Streifen, Tag Loop), Liste: Animiert/_Liste_Strasse.txt
+  Feuertonne, Telefonzelle (flackert+Motte), Laterne (flackert+Insekten), Ampel (blinkt), Blinklicht, Gully_Dampf, Fernseher (rauscht),
+  Automat (flackert), Muenztelefon (Hoerer pendelt), Pfuetze_Regen, Oelfleck (Schimmer), Rinnstein (fliesst), Telefonmast (Kabel+Vogel),
+  Litfasssaeule (Plakat flattert), Parkuhr, Hydrant (tropft), Muelltonne_Fliegen, Schildermast (quietscht), Zeitung (weht), Kippe (glimmt),
+  Pumpe (tropft), Auto_Leerlauf (80x32, Auspuff), Lieferwagen_Blinker, Wrack_Rauch (80x32), Katze, Ratte, Taube, Boombox, Grablicht,
+  Kaugummiautomat, Neon_Bar, Fahne, Bushaltestelle (Werbung), Zwerg (blinzelt, schaut)
+Licht in Unity: Telefonzelle, Laterne, Feuertonne, Blinklicht, Automat, Neon, Grablicht, Kippe, Ampel = je ein Light 2D (Orange/Warmgelb).
+Quelle: _Quelle_Generator/strasse/build.lua (Aseprite-Lua, baut Sheet + alle Streifen neu).

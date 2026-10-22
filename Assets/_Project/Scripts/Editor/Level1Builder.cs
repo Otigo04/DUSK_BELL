@@ -1433,10 +1433,10 @@ namespace Nightward.EditorTools
                 var ppc = cam.GetComponent<PixelPerfectCamera>();
                 if (ppc != null)
                 {
-                    // Nah am Spieler: 480x270 = 15 x 8,4 Kacheln
+                    // Nah am Spieler: 384x216 = 12 x 6,75 Kacheln (gemuetlich nah dran)
                     ppc.assetsPPU = Cell;
-                    ppc.refResolutionX = 480;
-                    ppc.refResolutionY = 270;
+                    ppc.refResolutionX = 384;
+                    ppc.refResolutionY = 216;
                 }
             }
 

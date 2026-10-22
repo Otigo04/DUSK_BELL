@@ -1,0 +1,39 @@
+Nightward Strasse & Schrott: animierte Streifen (horizontal, Frame = Breite/Frames)
+Name | Frames | Frame-Groesse | ms pro Frame
+
+Strasse_Katze_Anim | 8 | 32x32 | 160
+Strasse_Ratte_Anim | 4 | 32x32 | 110
+Strasse_Taube_Anim | 4 | 32x32 | 220
+Strasse_Boombox_Anim | 4 | 32x32 | 160
+Strasse_Grablicht_Anim | 4 | 32x32 | 130
+Strasse_Kaugummiautomat_Anim | 4 | 32x32 | 200
+Strasse_Neon_Bar_Anim | 8 | 32x32 | 90
+Strasse_Fahne_Anim | 6 | 32x64 | 160
+Strasse_Bushaltestelle_Anim | 4 | 32x64 | 280
+Strasse_Zwerg_Anim | 6 | 32x32 | 220
+Strasse_Feuertonne_Anim | 6 | 32x32 | 100
+Strasse_Telefonzelle_Anim | 4 | 32x64 | 140
+Strasse_Laterne_Anim | 6 | 32x64 | 120
+Strasse_Ampel_Anim | 4 | 32x64 | 350
+Strasse_Blinklicht_Anim | 4 | 32x32 | 250
+Strasse_Gully_Dampf_Anim | 6 | 32x32 | 150
+Strasse_Fernseher_Anim | 4 | 32x32 | 90
+Strasse_Automat_Anim | 4 | 32x64 | 220
+Strasse_Muenztelefon_Anim | 4 | 32x32 | 200
+Strasse_Pfuetze_Regen_Anim | 6 | 32x32 | 120
+Strasse_Oelfleck_Anim | 4 | 32x32 | 300
+Strasse_Rinnstein_Anim | 4 | 32x32 | 180
+Strasse_Telefonmast_Anim | 4 | 32x64 | 250
+Strasse_Litfasssaeule_Anim | 4 | 32x64 | 200
+Strasse_Parkuhr_Anim | 4 | 32x32 | 400
+Strasse_Hydrant_Anim | 6 | 32x32 | 130
+Strasse_Muelltonne_Fliegen_Anim | 6 | 32x32 | 100
+Strasse_Schildermast_Anim | 6 | 32x64 | 150
+Strasse_Zeitung_Anim | 8 | 32x32 | 100
+Strasse_Kippe_Anim | 4 | 32x32 | 220
+Strasse_Pumpe_Anim | 6 | 32x64 | 140
+Strasse_Auto_Leerlauf_Anim | 6 | 80x32 | 110
+Strasse_Lieferwagen_Blinker_Anim | 4 | 64x32 | 250
+Strasse_Wrack_Rauch_Anim | 6 | 80x32 | 140
+
+.aseprite je Streifen: 1 Layer, Tag Loop, Frame-Dauer wie oben. Quelle: _Quelle_Generator/strasse/*.lua
