@@ -1,6 +1,6 @@
 DUSK BELL - Audio-Paket (Stand 2026-10-23)
 ==========================================
-609 WAV-Dateien, mono, 16 bit, ca. 118 MB. Alles per Code synthetisiert (keine Samples, keine Fremdrechte).
+642 WAV-Dateien, mono, 16 bit, ca. 118 MB. Alles per Code synthetisiert (keine Samples, keine Fremdrechte).
 Quelle: Audio/_Quelle_Generator (Python 3 + numpy, sonst nichts). Neu bauen:
 
     cd Assets/_Project/Audio/_Quelle_Generator
@@ -53,6 +53,8 @@ SFX/Wald         Ast bricht, Busch raschelt (Can fuettert), Blaetter, Kraeuter, 
 SFX/Talisman     aufhaengen, aktiv, Summen-Loop (Schutzraum), Fund, bricht, Schrein
 SFX/Glocke       glocke_gross (3 Var.), glocke_zweimal, glocke_laeuten (8 Schlaege), fern/gedaempft, Kapelle, Handglocke, Standuhr, Kuckuck
 SFX/Tiere        Rabe (kraechzen, Abflug), Eule, Katze (miauen, fauchen, schnurren), Ratte
+                 Hund (bellen, doppelt, winseln, knurren, hecheln-Loop), Huhn (gackern, aufgeregt, Fluegelschlag, Gluckern-Loop),
+                 Pferd (schnauben, wiehern, Hufschritt, Schritt-Loop, pruschen) - passend zu Art/Characters/Tiere
 SFX/Fahrzeug     Motor (Leerlauf/Fahrt Loops), starten, abstellen, Tueren, Bremsen auf Kies, Hupe, Radio (Rauschen-Loop, Senderwechsel, aus)
 SFX/Welt         Donner, Windspiel, Fenster klappern, Wegweiser quietscht, Fahne, Karren
 SFX/UI           Klick, Hover, Panel, Dialog, Schreibmaschine (Intro-Text)

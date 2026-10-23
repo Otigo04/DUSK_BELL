@@ -335,3 +335,137 @@ def karren(r, i):
     sq = sine(900 + 250 * rot, d) * rot ** 3 * 0.1
     gr = bp(white(d, r), 600, 5000, 2, circ=True) * (0.4 + 0.2 * rot)
     return sq + gr * 0.4
+
+
+# --------------------------------------------------------------------------- Hund, Huhn, Pferd (Art/Characters/Tiere)
+
+@sound(A, 'hund_bellen', sr=22050, n=4, desc='Hund bellt: kurzer, kehliger Stoss, Ton faellt', peak=-6)
+def hund_bellen(r, i):
+    d = r.uniform(0.16, 0.26)
+    t = tt(d)
+    f = r.uniform(360, 520) * (1.25 - 0.55 * t / d)
+    y = voice(f, d, [(650, 6, 1.0), (1450, 6, 0.6), (2600, 6, 0.2)], r, breath=0.3, jit=0.04, shimmer=0.15)
+    return reverb(y * env_ar(d, 0.008, d * 0.5), r, 0.5, 0.15, 5000)
+
+
+@sound(A, 'hund_bellen_doppelt', sr=22050, n=2, desc='Hund bellt zweimal kurz hintereinander (Warnung, wittert etwas)', peak=-5)
+def hund_doppelt(r, i):
+    out = Mix(0.9)
+    out.add(hund_bellen(r, 0), 0.02)
+    out.add(hund_bellen(r, 1) * 0.9, 0.30 + 0.03 * i)
+    return out.buf
+
+
+@sound(A, 'hund_winseln', sr=22050, n=2, desc='Hund winselt: hoher, gleitender, leicht zittriger Ton', peak=-10)
+def hund_winseln(r, i):
+    d = r.uniform(0.7, 1.0)
+    t = tt(d)
+    u = t / d
+    f = (600 + 450 * np.sin(np.pi * u) ** 0.8) * (1 + 0.02 * np.sin(TAU * 6.5 * t))
+    y = voice(f, d, [((900, 1400), 7, 1.0), (2600, 6, 0.3)], r, breath=0.1, jit=0.02, shimmer=0.08)
+    return reverb(y * np.sin(np.pi * u) ** 0.7, r, 0.5, 0.15, 5000)
+
+
+@sound(A, 'hund_knurren', sr=22050, n=2, desc='Hund knurrt: tief, rau, Dauerton (nicht das Monster-Knurren)', peak=-8)
+def hund_knurren(r, i):
+    d = r.uniform(1.0, 1.5)
+    t = tt(d)
+    y = voice(85 + 8 * np.sin(TAU * 2 * t), d, [(300, 5, 1.0), (800, 5, 0.5), (1800, 5, 0.2)], r, breath=0.35, jit=0.06, shimmer=0.2, kind='square')
+    return reverb(y * (0.75 + 0.25 * np.sin(TAU * 22 * t)) * np.sin(np.pi * t / d) ** 0.5, r, 0.4, 0.1, 4000)
+
+
+@sound(A, 'hund_hecheln_loop', sr=22050, loop=True, desc='Hund hechelt (Loop 2 s, ~4 Atemzuege/s)', peak=-20)
+def hund_hecheln(r, i):
+    d = 2.0
+    t = tt(d)
+    pulse = np.clip(np.sin(TAU * 4.0 * t), 0, None) ** 1.4
+    return bp(white(d, r), 700, 4500, 2, circ=True) * pulse * (0.8 + 0.2 * np.sin(TAU * 0.5 * t))
+
+
+def gack(r, f=None, d=None):
+    d = d or r.uniform(0.1, 0.16)
+    f = f or r.uniform(520, 700)
+    t = tt(d)
+    fr = f * (0.9 + 0.35 * t / d)
+    y = voice(fr, d, [(1100, 7, 1.0), (2300, 7, 0.5), (3300, 6, 0.15)], r, breath=0.2, jit=0.05, shimmer=0.15, kind='square')
+    return y * env_ar(d, 0.006, d * 0.6)
+
+
+@sound(A, 'huhn_gackern', sr=22050, n=4, desc='Huhn gackert: zwei bis vier kurze, steigende Silben', peak=-8)
+def huhn_gackern(r, i):
+    out = Mix(1.3)
+    t = 0.05
+    f = r.uniform(520, 680)
+    for k in range(int(r.integers(2, 5))):
+        out.add(gack(r, f * (1 + 0.04 * k)), t, 1.0 - 0.1 * k)
+        t += r.uniform(0.14, 0.24)
+    return reverb(out.buf, r, 0.4, 0.1, 5000)
+
+
+@sound(A, 'huhn_gluckern_loop', sr=22050, loop=True, desc='Huehnerhof: zufriedenes, leises Glucksen mehrerer Huehner (Loop 8 s)', peak=-18)
+def huhn_gluckern(r, i):
+    d = 8.0
+    out = Mix(d, loop=True)
+    for _ in range(int(r.poisson(14))):
+        out.add(gack(r, r.uniform(380, 520), r.uniform(0.09, 0.15)) * r.uniform(0.3, 0.8), r.uniform(0, d))
+    return reverb(out.buf, r, 0.5, 0.15, 4500, circ=True)
+
+
+@sound(A, 'huhn_aufgeregt', sr=22050, n=2, desc='Huhn gerät in Panik (Monster in der Naehe): schnelles, hohes Gackern mit Fluegelschlag', peak=-6)
+def huhn_aufgeregt(r, i):
+    out = Mix(1.6)
+    t = 0.02
+    while t < 1.2:
+        out.add(gack(r, r.uniform(650, 850), r.uniform(0.07, 0.11)), t)
+        t += r.uniform(0.07, 0.13)
+    wings = bp(white(1.4, r), 300, 2500) * (0.5 + 0.5 * np.sin(TAU * 14 * tt(1.4))) * env_ar(1.4, 0.05, 0.6) * 0.5
+    return reverb(layer((out.buf, 1.0), (wings, 0.4, 0.1)), r, 0.4, 0.1, 5000)
+
+
+@sound(A, 'huhn_fluegelschlag', sr=22050, n=3, desc='Huhn flattert kurz auf: schnelle Fluegelschlaege, Federn', peak=-9)
+def huhn_fluegel(r, i):
+    d = r.uniform(0.5, 0.8)
+    return bp(white(d, r), 300, 3000) * (0.5 + 0.5 * np.sin(TAU * r.uniform(12, 16) * tt(d))) * env_ar(d, 0.03, d * 0.5)
+
+
+@sound(A, 'pferd_schnauben', sr=22050, n=3, desc='Pferd schnaubt: kurzer, flatternder Luftstoss durch die Nuestern', peak=-8)
+def pferd_schnauben(r, i):
+    d = r.uniform(0.7, 1.0)
+    t = tt(d)
+    flutter = 0.55 + 0.45 * np.sin(TAU * r.uniform(20, 28) * t + 1.0)
+    y = tv_filter(white(d, r), lambda u: 2800 - 2000 * u, 1.0) * flutter * env_ar(d, 0.03, d * 0.3)
+    return reverb(y + lp(white(d, r), 300, 2) * env_ar(d, 0.02, 0.25) * 0.4, r, 0.5, 0.15, 3500)
+
+
+@sound(A, 'pferd_wiehern', sr=22050, n=2, desc='Pferd wiehert: aufsteigender Schrei, Gleiten nach unten, Prusten am Ende', peak=-5)
+def pferd_wiehern(r, i):
+    d = r.uniform(1.5, 2.0)
+    t = tt(d)
+    u = t / d
+    f = np.interp(u, [0, 0.18, 0.5, 0.8, 1.0], [520, 960, 880, 520, 360]) * (1 + 0.025 * np.sin(TAU * 7 * t) * np.clip(u * 3, 0, 1))
+    y = voice(f, d, [(1100, 6, 1.0), (2400, 6, 0.6), (3600, 6, 0.25)], r, breath=0.2, jit=0.03, shimmer=0.1)
+    y = y * np.sin(np.pi * np.clip(u, 0, 1)) ** 0.5
+    puff = pferd_schnauben(r, 0) * 0.5
+    return reverb(layer((y, 1.0), (puff, 1.0, d - 0.2)), r, 0.9, 0.2, 5000)
+
+
+@sound(A, 'pferd_hufschritt', sr=22050, n=4, desc='Pferd, ein Schritt auf Erde: Doppelschlag (Vorder- und Hinterhuf) mit dumpfem Boden', peak=-9)
+def pferd_hufschritt(r, i):
+    a = nw.hit(r.uniform(110, 150), 0.09, r, 0.6, sec=0.2, n=8, ratio_pow=1.4, thud=0.9, air=0.3)
+    b = nw.hit(r.uniform(120, 160), 0.08, r, 0.6, sec=0.2, n=8, ratio_pow=1.4, thud=0.8, air=0.3)
+    return layer((a, 1.0), (b, 0.8, r.uniform(0.09, 0.13)))
+
+
+@sound(A, 'pferd_schritt_loop', sr=22050, loop=True, desc='Pferd geht im Schritt auf Erde (Loop 2,4 s, vier Hufe im Viertakt)', peak=-14)
+def pferd_schritt_loop(r, i):
+    d = 2.4
+    out = Mix(d, loop=True)
+    for k in range(4):
+        out.add(nw.hit(r.uniform(110, 150), 0.09, r, 0.6, sec=0.2, n=8, ratio_pow=1.4, thud=0.9, air=0.3), k * d / 4 + r.normal(0, 0.01), r.uniform(0.7, 1.0))
+    return out.buf
+
+
+@sound(A, 'pferd_pruschen', sr=22050, n=2, desc='Pferd prustet leise im Stall: weiches, tiefes Ausatmen (Stall, Scheune)', peak=-14)
+def pferd_pruschen(r, i):
+    d = 1.2
+    return lp(white(d, r), 900, 2) * (0.6 + 0.4 * np.sin(TAU * 11 * tt(d))) * np.sin(np.pi * tt(d) / d) ** 1.3 + lp(white(d, r), 200, 2) * 0.2 * np.sin(np.pi * tt(d) / d)
