@@ -91,3 +91,59 @@ Innen (x 60..93): Schankraum mit 15-teiliger Theke (Zapfhaehne, Kasse, Kerze ...
          Kueche (Herd, Backofen, Spuele, Arbeitstisch), Hinterzimmer (Pokertisch, Sofa, Versammlungstisch, Ofen),
          Lager (Fassregal, Kellerluke, Vorraete).
 Tueren:  Scripts/World/Durchgang.cs (Trigger setzt Spielfigur zum Ziel, Kamera springt mit). Eingang aussen <-> Ausgang innen.
+
+
+SCHUTZ-SET: Barrikade, Fensterlaeden, Talisman-Zustaende (bk_schutz.py, Vorschau_Schutz.png)
+-----------------------------------------------------------------------------------------
+Regelwerk: Hauptschutz = Barrikade (Tuer schliessen, schwerer Holzbalken, zwei Fensterlaeden mit Eisengriffen), Talisman = Zusatz.
+Alle Teile haben dieselbe Zelle/Rahmen wie die vorhandenen Innen-Tueren/-Fenster -> Zustandswechsel per Tile-Tausch.
+  Tuer innen      Tuer_Innen_Zu (vorhanden) > Tuer_Innen_Riegel > Tuer_Innen_Halter (bereit) > Tuer_Innen_Barrikade     [32x64 innen_wand]
+  Balken          Balken_Lehnt (lehnt an der Wand neben der Tuer, noch nicht eingelegt)                                  [32x64 innen_moebel, Kollision]
+  Fenster innen   Fenster_Innen_Nacht (vorhanden) > Fenster_Innen_Laeden_Offen > ..._Spalt (Warnstufe 2: offene Stelle) > ..._Zu  [32x64 innen_wand]
+  Talisman        Talisman_Fenster (NEU, aussen, 6 Frames) | Talisman_Tuer | Wand_Talisman: je *_Aus (verbraucht, grau)
+                  und *_Bruch (zerbricht: Aufblitzen, Riss, klafft, Scherben, Staub, leer; 6 Frames, 120 ms, nicht loopen)
+Alles mit Palette (0 Fremdfarben). Neu bauen: python bk_build.py (registriert bk_schutz automatisch). Vorschau: python bk_schutz.py.
+Unity: Menue  Nightward > Haus-Baukasten > Alles bauen  (importiert die neuen PNGs und legt Tiles/Paletten an).
+Hinweis: bk_build.py kodiert ALLE PNGs neu (andere PIL-Version -> andere Bytes, gleiche Pixel). Danach per Pixelvergleich gegen
+git HEAD zuruecksetzen, damit Git nur die neuen Dateien zeigt.
+Noch nicht enthalten (naechster Schritt "Tuerspalt/Tuerspion"): Tatze/Fratze im Spalt (Tuer + Fenster), Tuerspion mit Grinsen.
+
+
+SPALT-SET: Tuer und Fenster einen Spalt offen, Hand/Klaue/Fratze (bk_spalt.py, Vorschau_Spalt.png)
+-----------------------------------------------------------------------------------------------
+Warnstufe 2 = offene Stelle (5-10 s zum Sichern), Warnstufe 3 = Tatze oder Fratze schiebt sich durch den Spalt (Regelwerk).
+  Tuer     Tuer_Innen_Spalt > _Spalt_Hand_Gast (Haende zu ruhig, fast starr) | _Spalt_Hand_Hausfrau (Finger tasten, Aermel zu kurz)
+           | _Spalt_Hausfrau_Rueckzug (5 Frames, nicht loopen: bekommt etwas gereicht, zieht die Hand zurueck = Hausfrau-Schwaeche)
+           | _Spalt_Klaue (Enthuellung: Krallen in #f2ead8, Kratzspuren wachsen)
+  Balken   Tuer_Innen_Barrikade_Spalt (Balken haelt, Riss + Splitter) > Tuer_Innen_Barrikade_Spalt_Klaue
+  Fenster  Fenster_Innen_Laeden_Spalt (aus dem Schutz-Set) > Fenster_Innen_Spalt_Hand | _Spalt_Klaue | _Spalt_Fratze (6 Frames: dunkel, Augen
+           #d64a6a, Grinsen 3 px #f2ead8, wieder dunkel; nur ein Gesichtsausschnitt im Spalt)
+Nach dem Bauen:  python3 bk_aufraeumen.py  setzt pixelgleiche, nur neu kodierte PNGs per git zurueck.
+
+TUERSPION (Art/UI/Tuerspion, tuerspion.py, Vorschau_Tuerspion.png)
+------------------------------------------------------------------
+Rundes 128x128-Bild, Layer von hinten: Hintergrund_Nacht | Hintergrund_Dunkel (Laterne aus) < Besucher < Rahmen.
+Besucher: Gast (+_Grinsen, +_Enthuellt), Hausfrau (+_Grinsen, +_Enthuellt) = Silhouetten, nur Grinsen/Augen in Monsterfarben;
+Mensch_Mann / Mensch_Frau = echte Bewohner mit sichtbaren Augen, Haende zittern (*_Anim.png, 4 Frames). Siehe _Liste.txt dort.
+Unity: Point-Filter, keine Kompression, nur ganzzahlig skalieren (2x).
+
+
+LEERES HAUS (bk_leer.py, Vorschau_LeeresHaus.png)
+-------------------------------------------------
+Monster-Bibel: Die Hausfrau schlaeft in einem leer stehenden Haus am Dorfrand, Tuer nie abgeschlossen. Leer, aber bewohnt:
+  aussen  Tuer_Verwittert, Tuer_Verwittert_Angelehnt (steht einen Spalt offen), Fenster_Laeden_Schief_Blau, Fenster_Zerbrochen,
+          Spinnweben_Aussen_Links/Rechts (32x32 Overlay in Tuer-/Fensterecken)
+  innen   Spinnweben_Ecke_Links/Rechts (Wand-Overlay), Laken_Sofa, Laken_Sessel, Stuhl_Umgekippt, Kerzenstumpf (kalt),
+          Tisch_Staub (altes Brot mit Schimmel), Bett_Zerwuehlt, Nest_Decken (Schlafnest am Boden mit Mulde und rotem Tuch)
+  Bauplaene.json: Objekte wie gewohnt per Name eintragen; Fenster_Vernagelt, Efeu_*, Dach moos/Wand bruch passen dazu.
+
+ERDBAU (erdbau_objekte.py -> Art/Tiles/Dorf/Objekte, Vorschau Art/Tiles/Dorf/Vorschau_Erdbau.png)
+--------------------------------------------------------------------------------------------------
+Birke_Verkruppelt (64x128) + Erdbau_Eingang_Schlaeft / _Unruhig / _Wach (64x32, ersetzen die unteren 32 Zeilen des Baums):
+Wecklevel 0-2 / 3-4 / 5 (Regelwerk). _Wach hat zwei Augen im Dunkel (4-Frame-Blinzeln: Art/Tiles/Dorf/Animiert/Erdbau_Eingang_Wach_Anim.png).
+Dazu passt Audio/Ambience/amb_erdbau.wav.
+
+MONSTER-VFX (monster_vfx.py -> Art/VFX/Monster, Liste dort in _Liste.txt)
+-------------------------------------------------------------------------
+Klopfwelle, Enthuellung_Augen, Grinsen_Aufblitzen, Enthuellung_Burst, Talisman_Puls/_Funken, Staub_Puff, Holzsplitter_Burst, Kratzer_Holz (Sheet +
+A/B/C), Kratzer_Stein, Fussspur_Mensch/_Monster L/R + Pfad, Schleifspur_H/V, Handabdruck_Glas. Nur Palette, Dither statt Halbtransparenz.

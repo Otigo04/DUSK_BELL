@@ -3,7 +3,7 @@ Alle Farben stammen aus Art/Palette.png (40 Farben)."""
 import math, os
 from PIL import Image
 
-ART = 'F:/!!!_GAMES/NIGHTWARD/Nightward/Assets/_Project/Art'
+ART = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')).replace('\\', '/')   # Art/ relativ zu diesem Ordner (laeuft auf Mac und Windows)
 TILES = ART + '/Tiles'
 
 

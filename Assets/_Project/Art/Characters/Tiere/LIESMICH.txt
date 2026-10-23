@@ -1,0 +1,10 @@
+TIERE (2026-10-23) - gen_tiere.py in _Quelle_Generator
+=======================================================
+Zeilen S, SW, W, NW, N, NE, E, SE (NE/E/SE gespiegelt). Frames nebeneinander (je 4). Gleiche Palette/Beleuchtung wie die Katze (32x32).
+  Hund   32x32   hund_idle (Schwanz wedelt) | hund_walk | hund_sleep (eingerollt, nur 2 Zeilen: W, E) | hund_stand_8dir
+  Huhn   32x32   huhn_idle | huhn_walk | huhn_peck (pickt, 8 Zeilen) | huhn_stand_8dir
+  Pferd  64x64   pferd_idle (Schweif) | pferd_walk | pferd_graze (Kopf unten) | pferd_stand_8dir
+Vereinfachung: S, W, N sind eigene Zeichnungen; SW ist Seitenkoerper mit frontal gedrehtem Kopf (Pferd: Seitenkopf), NW Seitenkoerper mit abgewandtem Kopf.
+Nicht enthalten: Animator-Setup in Unity; Tierlaute fuer Hund (Bellen, Winseln), Huhn (Gackern), Pferd (Schnauben, Wiehern) - bei Bedarf im Audio-Generator ergaenzen.
+Passt zu: Stall, Scheune, Bauernkate, Karren/Schubkarre (Tiles), Katze (Characters/Katze).
+Neu bauen: cd _Quelle_Generator; python3 gen_tiere.py  (Vorschau_Tiere.png)

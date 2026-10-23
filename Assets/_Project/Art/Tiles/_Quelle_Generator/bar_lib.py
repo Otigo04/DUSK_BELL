@@ -4,7 +4,7 @@ import os, sys, math
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from nwlib import Spr, hsh  # Sprite-Klasse + deterministischer Hash
 
-ART = 'F:/!!!_GAMES/NIGHTWARD/Nightward/Assets/_Project/Art'
+ART = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')).replace('\\', '/')   # Art/ relativ zu diesem Ordner (laeuft auf Mac und Windows)
 TILES = ART + '/Tiles'
 
 

@@ -1,0 +1,9 @@
+STATISTEN (2026-10-23) - gen_statisten.py in _Quelle_Generator
+================================================================
+Raster 56x56, Zeilen S, SW, W, NW, N, NE, E, SE (NE/E/SE gespiegelt), wie Hauptfiguren/Veronica/Mara/David/Can.
+Je Figur: <name>_stand_8dir.png (448x56), <name>_idle_sheet.png (6 Frames), <name>_walk_sheet.png (8 Frames).
+  Trauergast_Mann_A (Melone, Trauerflor) | Trauergast_Mann_B (Mantel, Halstuch) | Trauergast_Frau_A (Kopftuch) | Trauergast_Frau_B (Hut mit Schleier)
+  Trauergast_Frau_Tuch (weisses Tuch am Mund, Opening Step 9) | Mutter (Schultertuch) | Kind_Junge (Muetze, Weste) | Kind_Maedchen (Zoepfe, Schuerze)
+Kinder: ca. 3/4 Erwachsenengroesse, eigene kuerzere Beine. Opening Step 9: "Ein Junge wird von seiner Mutter zurueckgezogen" -> Mutter + Kind_Junge.
+Nicht enthalten: Animator-Controller/Clips (NpcCastBuilder/NpcAnimator wie bei den anderen NPCs anlegen), Zieh-Animation Mutter+Junge (per ScriptedWalker loesen).
+Neu bauen: cd _Quelle_Generator; python3 gen_statisten.py  (Vorschau_Statisten.png)

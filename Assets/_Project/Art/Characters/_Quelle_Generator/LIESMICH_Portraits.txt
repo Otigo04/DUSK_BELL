@@ -1,0 +1,17 @@
+Portraits - Stand und Zuordnung (2026-10-23)
+============================================
+Alle Portraits: 64x64, Point-Filter, Palette Style-Bibel, Hintergrund wie im Original der Figur.
+
+MONSTER (hatten schon vollstaendige Sets, nichts neu gezeichnet)
+  Der Gast / Die Hausfrau: *_calm (Ruhig, Taeuschung), *_friendly / _kind / _sly / _worried (Verkleidung spielt Mensch), *_blank,
+  *_reveal_1 (Augen #d64a6a), *_reveal_2 (Grinsen, Zaehne #f2ead8), *_reveal_3 (Enthuellung, breites Grinsen),
+  *_talk_A/E/O (Sprechen). Die Monster-Bibel-Checkliste "Portraits fuer beide Monster mit drei Ausdruecken" ist damit erfuellt:
+  Ruhig = calm, Grinsen = reveal_2, Enthuellung = reveal_3.
+
+MONSTER-KLON-GRINSEN fuer die sieben Menschen (NEU, portrait_grin.py)
+  bulut_grin, ilhan_grin, veronica_grin, elenora_grin, mara_grin, david_grin, can_grin (je im eigenen portraits-Ordner).
+  Portrait-Bibel: Klone im Gegensprech nutzen dasselbe Portrait wie das Original, nur mit Grinsen. Dialogue Bible: Tag "grin" = nur Monster,
+  Monster erscheinen nie als benannte Sprecher (Sprecherzeile ohne Namen). Sprech-Frames: PortraitTalkFrames legt die Mundstellung ueber den
+  Ausdruck - fuer Klone besser KEINE Mundbewegung (Klone wiederholen "starr" Phrasen), also das Grinsen-Bild statisch anzeigen.
+  Noch nicht in NpcCastBuilder/NpcProfile verdrahtet (dort sind Ausdruecke per Dateipfad eingetragen).
+  Neu bauen: python3 portrait_grin.py  (Muster stammt aus der_gast_reveal_2, Vorschau_Grin.png zeigt Original gegen Klon).
