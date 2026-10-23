@@ -1,0 +1,123 @@
+DUSK BELL - Audio-Paket (Stand 2026-10-23)
+==========================================
+609 WAV-Dateien, mono, 16 bit, ca. 118 MB. Alles per Code synthetisiert (keine Samples, keine Fremdrechte).
+Quelle: Audio/_Quelle_Generator (Python 3 + numpy, sonst nichts). Neu bauen:
+
+    cd Assets/_Project/Audio/_Quelle_Generator
+    python3 build_all.py                    # alles, schreibt auch Audio/_Liste.txt
+    python3 build_all.py glocke tuer_       # nur Sounds, deren Name/Pfad ein Muster (Regex) enthaelt
+    python3 build_all.py --list             # nur auflisten
+    python3 build_all.py --sheet bell       # zusaetzlich Vorschaubild (Wellenform + Spektrogramm) nach Audio/_Vorschau
+
+Jeder Sound ist deterministisch (Seed aus Name + Variante). Aendern: die Funktion in der passenden .py anpassen, neu bauen.
+Neuer Sound: in einer Moduldatei mit  @sound('SFX/Pfad', 'name', n=Varianten, sr=Hz, loop=False, desc='...', peak=dB)  registrieren.
+
+WICHTIG - ehrlicher Stand
+-------------------------
+* Die Klaenge wurden NICHT von Menschen abgehoert, nur numerisch geprueft (Pegel, Clipping, Gleichanteil, Loop-Naht) und als
+  Spektrogramm angesehen. Bitte stichprobenartig anhoeren; was nicht passt, steht in Audio/_Liste.txt mit Namen und laesst sich
+  gezielt neu bauen. Synthese klingt bei Geraeuschen (Tueren, Schritte, Klopfen, Wind, Feuer, Glocke) gut, bei Tieren, Stimmen und
+  Musik eher "Platzhalter mit Charakter" als Aufnahme. Ersetzbar 1:1 durch echte Aufnahmen gleichen Namens.
+* Lautstaerke: jede Datei ist auf ihren eigenen Spitzenpegel normalisiert (Schritte -14 dB, UI -12..-24 dB, Glocke -3 dB,
+  Ambience -14..-18 dB, Musik -10 dB). Feinabstimmung ueber Unity-AudioMixer-Gruppen (Master > Musik / Ambience / SFX / UI / Stimmen).
+* Groesse: WAV ist gross. Mit ffmpeg oder oggenc waeren es ca. 10-12 MB als OGG. Fuer Git sinnvoll, sobald ihr einen Encoder habt.
+* Nichts ist in Szenen oder Skripten verdrahtet. OpeningAudio.cs hat Clip-Slots (leer = Code-Platzhalter), siehe Tabelle unten.
+
+Natuerlichkeit, 2. Durchgang (2026-10-23)
+-----------------------------------------
+Rueckmeldung: manche Klaenge (z. B. Lagerfeuer) wirkten roboterhaft. Neu in nwaudio.py und amb.py:
+* Feuer: Roar/Hauch/Zischen teilen eine Flacker-Huellkurve; Knistern in Schueben, Staerke log-normal, vier Knister-Typen
+  (Tick, Snap mit Holzkoerper, Pop, Raspeln) statt immer desselben Klicks. Untergrenze gegen Aussetzer.
+* Wind: heller und lauter in Boeen (mehrere Boen-Skalen), Pfeifen nur in Boeen. Regen: gekoernte Baender + Plink-Tropfen,
+  Wasser: Minnaert-Blasen statt Sinus-Sweeps. Voegel: Obertoene, Rauschanteil, Entfernung (Hall/Hoehendaempfung), 6 Gesangstypen. Grillen: Pulsgruppen, eigener Takt.
+* Aufpralle (Klopfen, Holz, Keramik, Glas, Metall, Tablett, Tor, Schritte Holz/Stein/Pflaster, Klinke, Riegel): neue Funktion
+  nw.hit() = viele unregelmaessige Moden + Anschlagsgeraeusch + dumpfer Koerperschlag statt weniger sauberer Sinus-Toene.
+* Stimm-Klaenge (Hausfrau summt, Katze, Rabe, Knurren, Blips): nw.voice() mit fallender Quelle, Jitter, Shimmer, pulsierendem Hauch.
+* Motor: Zuendimpulse durch Auspuff-Resonanz statt Sinus-Reihe. Musik: Rubato (loop-sicher), Mikro-Verstimmung, Betonung, groesseres Timing-Jitter.
+Ehrlich: nur an Spektrogrammen und Messwerten geprueft (analyse.py), nicht gehoert. Was weiter nicht passt: Dateiname nennen, dann gezielt neu bauen.
+
+Ordner
+------
+SFX/Schritte     step_erde, gras, holz, stein, pflaster, kies, matsch, wasser, laub, teppich, schwer (je 4 Varianten _01.._04), sprung_landen
+SFX/Tueren       Tueren, Riegel, Schluessel, Barrikade (Balken), Fensterlaeden, Fenster (inkl. Klettern = Fensterflucht), Pendeltuer, Tuerglocke, Tore, Falltuer
+SFX/Monster      Klopfen (Gast dreimal, einzeln, flehend, starr), Fenster pochen/kratzen, Kratzen am Holz, Knarren, Kerze, Tatze im Spalt,
+                 Tuer-Wucht, Schritte draussen, Fluestern, Knurren, Fauchen, Enthuellung (dumpf, Grinsen, komplett), Tuerspion-Grinsen,
+                 Hausfrau summt, Gast zaehlt
+SFX/Spieler      Atem 3 Stufen (Loops, = Lebenspunkte nur ueber Atem, Kampfregeln), Herzschlag ruhig/schnell, Luftholen, Seufzen, Tod, Aufwachen, Einschlafen
+SFX/Kampf        Schlaege (Faust, Messer, Axt, Flegel, Machete), Treffer (stumpf, Axt, Klinge, Monster, Holz), Schaden, Pistole, Flinte, Nachladen,
+                 Waffe bricht, Ausweichen, Laterne schwenken/Abwehr, Tablett, Brot, Hausfrau betaeubt, Name enthuellt (Gast), Monster weicht
+SFX/Items        Aufheben, Fallenlassen, Rucksack, Ausruesten, Essen, Trinken, Papier, Tagebuch, Streichholz, Kerze/Laterne/Feuer, Truhe, Verband ...
+SFX/Bar          Einschenken, Glaeser, Korken, Muenzen (Wachtgroschen), Kasse, Dart, Stuhl, Tasse, Schublade
+SFX/Handwerk     Schaufel/Erde/Sarg (Friedhof), Holz hacken, Brunnen-Eimer, Wasser
+SFX/Wald         Ast bricht, Busch raschelt (Can fuettert), Blaetter, Kraeuter, Untersuchen-Loop (Baumstamm, Opening Step 7)
+SFX/Talisman     aufhaengen, aktiv, Summen-Loop (Schutzraum), Fund, bricht, Schrein
+SFX/Glocke       glocke_gross (3 Var.), glocke_zweimal, glocke_laeuten (8 Schlaege), fern/gedaempft, Kapelle, Handglocke, Standuhr, Kuckuck
+SFX/Tiere        Rabe (kraechzen, Abflug), Eule, Katze (miauen, fauchen, schnurren), Ratte
+SFX/Fahrzeug     Motor (Leerlauf/Fahrt Loops), starten, abstellen, Tueren, Bremsen auf Kies, Hupe, Radio (Rauschen-Loop, Senderwechsel, aus)
+SFX/Welt         Donner, Windspiel, Fenster klappern, Wegweiser quietscht, Fahne, Karren
+SFX/UI           Klick, Hover, Panel, Dialog, Schreibmaschine (Intro-Text)
+SFX/Spielfluss   Quest neu/Update/erledigt, Hinweis, Tutorial, Vertrauen +/-, Wissen, Talisman-Zaehler, Wecklevel 3/4, Sanity, Lagebericht,
+                 Tag beginnt, Phasenwechsel (Tag, Daemmerung, Nacht), Nacht ueberlebt, Speichern, Titel "DUSK BELL"
+SFX/Stimmen      Sprech-Blips pro Figur, je 6 Silben, eigenes Stimmprofil (voices.py, Grundton gemessen):
+                   Maenner  ilhan 90 Hz (rau, knarrend, harte Ansaetze) | dorfbewohner_m_alt ~103 (bruechig, zittrig) | bulut ~107 (tief, muede) |
+                            dorfbewohner_m ~118 | david ~129 (weich, nasal, langsam) | can ~140 (zittrig, zoegernd, stottert in Variante 6)
+                   Frauen   dorfbewohner_w_alt ~158 (bruechig) | veronica ~176 (warm, weich) | dorfbewohner_w ~210 | elenora ~211 (metallisch, praezise, kein Hauch) |
+                            mara ~258 (hell, schnell, steigende Satzenden)
+                   Kind     kind ~334 (Beerdigung, Junge)
+                   Maenner und Frauen unterscheiden sich in Grundton UND Formanten (Frauen F1 +15 %, F2/F3 +15-25 %, Peterson/Barney).
+                 + menge_murmeln_kurz (mehrere Stimmen)
+Ambience         31 Loops a 20 s (nahtlos): Dorf Tag/Daemmerung/Nacht, Morgen, Beerdigung, Brunnen, Nebel, Wald Tag/Nacht/tief, Erdbau, Friedhof,
+                 Strasse (Fahrt/still), Haus Tag/Nacht, Kamin, Lagerfeuer, Bar Tag/leer, Revier, Villa, Kapelle, Regen x3, Sturm,
+                 Warnstufe 1/2/3, Sanity niedrig
+Music            14 Loops (26-48 s) + Music/Stinger (6 Stinger)
+
+Mapping Spielereignis -> Datei (Auswahl)
+----------------------------------------
+Opening Step 2  Intro-Text            Music/mus_titel (leise), SFX/UI/schreibmaschine_tick_01..04, danach SFX/Spielfluss/titel_dusk_bell
+Opening Step 3  Fahrt                 Music/mus_radio_schlager, Ambience/amb_strasse_fahrt, SFX/Fahrzeug/auto_motor_fahrt (Pitch ~ Tempo)
+Opening Step 4  Baumstamm             mus_radio_schlager ausblenden, SFX/Fahrzeug/radio_rauschen_loop einblenden, amb_strasse_still, auto_bremsen
+Opening Step 5  Aussteigen            SFX/Fahrzeug/auto_tuer_auf, auto_abstellen, SFX/Spielfluss/tutorial_hinweis (F, E), quest_neu
+Opening Step 7  Stamm untersuchen     SFX/Wald/untersuchen_loop (7 s), dann papier_rascheln + hinweis_gefunden (Fund-Einblendung)
+Opening Step 9  Beerdigung            Music/mus_beerdigung, Ambience/amb_beerdigung, SFX/Stimmen/menge_murmeln_kurz, Tiere/rabe_kraechzen
+Opening Step 10-11 Bulut-Dialog       SFX/Stimmen/blip_bulut (6 Silben zufaellig, ~8x pro Sekunde, 1-2 s Pause vor seinen Zeilen), UI/dialog_oeffnen
+Opening Step 12b Weiterfahren         SFX/Glocke/glocke_zweimal (Abenddaemmerung, "schlaegt zweimal")
+Revier (Ink)    Bulut erste Begegnung Music/mus_revier, Ambience/amb_revier (Talisman-Summen eingebaut), SFX/Bar/stuhl_ruecken + hinsetzen
+Tagesablauf     Morgen/Tag/Daemm./Nacht  Ambience amb_morgen / amb_dorf_tag / amb_dorf_daemmerung / amb_dorf_nacht; Phasenwechsel-Sounds in Spielfluss/
+Daemmerung      Sheriff laeutet       SFX/Glocke/glocke_laeuten (19 s), danach Riegel/Laeden-Sounds aus amb_dorf_daemmerung
+Barrikade       zumachen              SFX/Tueren/barrikade_balken, riegel_zu, fensterladen_zu (x2), danach amb_haus_nacht_schutz
+Nacht           Warnstufe 1/2/3       amb_warnstufe1 -> 2 -> 3 ueberblenden; Warnstufe 3 Einzelereignis SFX/Monster/tatze_im_spalt
+Tuerspion       Gegensprech           SFX/Monster/klopfen_gast_dreimal (Gast), klopfen_flehend (echte Bewohner), klopfen_starr (Klon), grinsen_tuerspion
+Enthuellung     Kampfregeln           SFX/Monster/enthuellung_komplett (oder dumpf + 2,5 s + grinsen), Music/Stinger/stg_grinsen
+Kampf           Treffer, Schwaeche    SFX/Kampf/*, Music/mus_kampf; Atem 3/2/1 aus SFX/Spieler statt Lebensbalken (Kampfregeln!)
+Hausfrau        Brot-Schwaeche        SFX/Kampf/brot_wirft, hausfrau_betaeubt; Gast Name-Schwaeche: name_enthuellt
+Tod/Corpse-Run  Aufwachen             SFX/Spieler/tod_dumpf + Music/Stinger/stg_tod -> Morgen: aufwachen_morgen, Music/mus_morgen
+Loop-Neustart   Tag beginnt neu       Music/Stinger/stg_loop_neustart
+Friedhof        Grab, Toter           Ambience/amb_friedhof, SFX/Handwerk/schaufel_graben, erde_werfen, sarg_absenken, SFX/Tueren/tor_quietscht_auf
+Bar             Ilhan                 Music/mus_bar, Ambience/amb_bar_tag, SFX/Bar/*, SFX/Tueren/pendeltuer, SFX/Stimmen/blip_ilhan
+Villa           Elenora               Music/mus_villa, Ambience/amb_villa, SFX/Glocke/standuhr_schlag, SFX/Stimmen/blip_elenora
+Wald            Can fuettert          SFX/Wald/busch_raschelt (nur Bewegung im Gebuesch), Ambience/amb_wald_tag, Music/mus_wald_tag
+Erdbau          Monster-Schlafplatz   Ambience/amb_erdbau (Atem tief, Tropfen)
+Beziehungen     Vertrauen +/-         SFX/Spielfluss/vertrauen_plus, vertrauen_minus (Dialogue Bible: -10..+10)
+Wecklevel       3 / 4                 SFX/Spielfluss/wecklevel_stufe3, wecklevel_stufe4, Music/Stinger/stg_gefahr_naht
+
+Unity-Import (Empfehlung, noch nicht gesetzt)
+---------------------------------------------
+* SFX (< 5 s): Load Type "Decompress On Load", Compression Vorbis ~70 %, Preload Audio Data an.
+* Loops (Ambience/, Atem, Motor, Herzschlag, Talisman, radio_rauschen): "Compressed In Memory", Loop-Haken am AudioSource, KEIN Fade im Clip noetig.
+* Musik und Ambience lang: "Streaming" spart RAM. Force To Mono bleibt aus (ist schon mono). 2D-Spiel: Spatial Blend 0 fuer Musik/UI,
+  fuer Welt-Sounds (Glocke, Brunnen, Feuer) Spatial Blend 1 mit Linear Rolloff ca. 3..14 Einheiten.
+* Varianten (_01.._04) zufaellig waehlen, Pitch +-5 %, damit nichts nach Maschinengewehr klingt.
+
+Gestalterische Regeln, die eingehalten wurden
+---------------------------------------------
+* 1910: kein Strom, kein Netzbrummen in Innenraeumen; Radio nur im Auto (Opening-Vorgabe).
+* Protagonist hat keine Stimme (Opening Sequence): Koerperlaute (Atem, Schritte) ja, Sprech-Blips nein. Erzaehler: nur Schreibmaschinen-Tick.
+* Monster sprechen wie das Original (Portrait-Bibel): keine eigenen Blips; ihre Gefahr kommt aus Klopfen, Kratzen, Summen, Zaehlen.
+* Tonart a-Moll, Leitmotiv E-C-D-E (Titel, Nacht-sicher, Morgen, Dorf-Tag). Lichtinsel-Prinzip der Style-Bibel: Nacht = Luecken und Drones, kein Dauerteppich.
+* Talisman-Klang = kuehle, reine Sinus-Teiltoene (passend zur Talisman-Farbgruppe), nie dissonant.
+
+Bekannte Luecken / naechste Schritte
+------------------------------------
+* Keine echten Stimmen, keine Pferde/Huehner/Hunde (keine Tier-Sprites vorhanden), keine Hintergrund-Bar-Klaviermusik als Spielobjekt.
+* Skripte und Szenen noch nicht angebunden: ein AudioManager (Musik-/Ambience-Crossfade nach Tageszeit, SFX-Pool, Mixer) fehlt.
+* Hausfrau-Lied und Gast-Zaehlen sind rhythmische Stimm-Anmutungen ohne Worte; mit Sprecher ersetzen, falls gewollt.
