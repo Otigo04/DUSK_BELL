@@ -1,0 +1,1982 @@
+{
+ "ppu": 32,
+ "filter": "Point",
+ "kompression": "keine",
+ "sprites": [
+  {
+   "datei": "00_Gemeinsam/Animiert/Grenzstein_Rune.png",
+   "zone": "00_Gemeinsam",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "00_Gemeinsam/Animiert/Lagerfeuer_Rast.png",
+   "zone": "00_Gemeinsam",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "00_Gemeinsam/Objekte/Steinmaennchen.png",
+   "zone": "00_Gemeinsam",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "00_Gemeinsam/Objekte/Wegweiser_Holz.png",
+   "zone": "00_Gemeinsam",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Animiert/Gluehwuermchen.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Animiert",
+   "groesse": [
+    512,
+    64
+   ],
+   "art": "Animation",
+   "zellen": [
+    64,
+    64
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "02_Tiefwald/Animiert/Nebel.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Animiert",
+   "groesse": [
+    768,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    96,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "02_Tiefwald/Animiert/Pilzring_Leuchten.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Animiert",
+   "groesse": [
+    384,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    48,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "02_Tiefwald/Animiert/Spinnennetz.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Baumstamm_H.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    64,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Baumstamm_V.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    64
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Baumstumpf_A.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Baumstumpf_B.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Farn_A.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Farn_B.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Farn_C.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Pilze_A.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Pilze_B.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Riesenbaum.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    96,
+    112
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Toter_Baum.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    48,
+    80
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Objekte/Wurzeln.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Tileset/Boden_Tiefwald.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Tileset",
+   "groesse": [
+    128,
+    32
+   ],
+   "art": "Boden",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 4,
+   "zeilen": 1
+  },
+  {
+   "datei": "02_Tiefwald/Tileset/Dickicht.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    32
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 1,
+   "frames": 1
+  },
+  {
+   "datei": "02_Tiefwald/Tileset/Uebergang_Gras_Tiefwald.png",
+   "zone": "02_Tiefwald",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    32
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 1,
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Findling_Schaum_N.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Findling_Schaum_O.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Findling_Schaum_S.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Findling_Schaum_W.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Furtstein_Schaum.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Pfahl_Wellen.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Rohrkolben.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Schilf_A.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Schilf_B.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Schilf_C.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Seerose_A.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Seerose_B.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Seerose_C.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Sprung_Spritzer.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    384,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    48,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Strudel.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Treibholz.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    512,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    64,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Fuss_L.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Fuss_M.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Fuss_R.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Kante_L.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Kante_M.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Kante_R.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Mitte_L.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Mitte_M.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserfall_Mitte_R.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserring_gross.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    384,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    48,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Animiert/Wasserring_klein.png",
+   "zone": "03_Fluss",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Bruecke_Holz_Bruch_L.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Bruecke_Holz_Bruch_R.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Bruecke_Holz_Luecke.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Bruecke_Holz_Mitte_H.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Bruecke_Pfeiler.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Findling_A.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Findling_B.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Findling_C.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Furtstein_A.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Furtstein_B.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Furtstein_C.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Furtstein_D.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Pfahl.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Steg_Ende_H_L.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Steg_Ende_H_R.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Steg_Ende_V_O.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Steg_Ende_V_U.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Steg_Mitte_H.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Objekte/Steg_Mitte_V.png",
+   "zone": "03_Fluss",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "03_Fluss/Tiere/Fisch_Elritzenschwarm_Farbe.png",
+   "zone": "03_Fluss",
+   "ordner": "Tiere",
+   "groesse": [
+    384,
+    192
+   ],
+   "art": "Tiere4Richtungen",
+   "zellen": [
+    48,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 4
+  },
+  {
+   "datei": "03_Fluss/Tiere/Fisch_Elritzenschwarm_Schatten.png",
+   "zone": "03_Fluss",
+   "ordner": "Tiere",
+   "groesse": [
+    384,
+    192
+   ],
+   "art": "Tiere4Richtungen",
+   "zellen": [
+    48,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 4
+  },
+  {
+   "datei": "03_Fluss/Tiere/Fisch_Forelle_Farbe.png",
+   "zone": "03_Fluss",
+   "ordner": "Tiere",
+   "groesse": [
+    256,
+    128
+   ],
+   "art": "Tiere4Richtungen",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 4
+  },
+  {
+   "datei": "03_Fluss/Tiere/Fisch_Forelle_Schatten.png",
+   "zone": "03_Fluss",
+   "ordner": "Tiere",
+   "groesse": [
+    256,
+    128
+   ],
+   "art": "Tiere4Richtungen",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 4
+  },
+  {
+   "datei": "03_Fluss/Tiere/Fisch_Forelle_Sprung.png",
+   "zone": "03_Fluss",
+   "ordner": "Tiere",
+   "groesse": [
+    768,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    48,
+    48
+   ],
+   "frames": 16,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Tiere/Fisch_Karpfen_Farbe.png",
+   "zone": "03_Fluss",
+   "ordner": "Tiere",
+   "groesse": [
+    256,
+    128
+   ],
+   "art": "Tiere4Richtungen",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 4
+  },
+  {
+   "datei": "03_Fluss/Tiere/Fisch_Karpfen_Schatten.png",
+   "zone": "03_Fluss",
+   "ordner": "Tiere",
+   "groesse": [
+    256,
+    128
+   ],
+   "art": "Tiere4Richtungen",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 4
+  },
+  {
+   "datei": "03_Fluss/Tiere/Fisch_Karpfen_Sprung.png",
+   "zone": "03_Fluss",
+   "ordner": "Tiere",
+   "groesse": [
+    768,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    48,
+    48
+   ],
+   "frames": 16,
+   "zeilen": 1
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_N_Gras.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_N_Kies.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_O_Gras.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_O_Kies.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_S_Gras.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_S_Kies.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_Still_Gras.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_Still_Kies.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_W_Gras.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "03_Fluss/Tileset/Fluss_W_Kies.png",
+   "zone": "03_Fluss",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    512
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 16,
+   "frames": 16
+  },
+  {
+   "datei": "04_Sumpf/Animiert/Blasen.png",
+   "zone": "04_Sumpf",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Animiert/Frosch_Huepfen_E.png",
+   "zone": "04_Sumpf",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Animiert/Frosch_Huepfen_N.png",
+   "zone": "04_Sumpf",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Animiert/Frosch_Huepfen_S.png",
+   "zone": "04_Sumpf",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Animiert/Frosch_Huepfen_W.png",
+   "zone": "04_Sumpf",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Animiert/Frosch_Sitzen.png",
+   "zone": "04_Sumpf",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Animiert/Irrlicht.png",
+   "zone": "04_Sumpf",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Objekte/Entengruetze_A.png",
+   "zone": "04_Sumpf",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "04_Sumpf/Objekte/Entengruetze_B.png",
+   "zone": "04_Sumpf",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "04_Sumpf/Objekte/Entengruetze_C.png",
+   "zone": "04_Sumpf",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "04_Sumpf/Objekte/Mangrove.png",
+   "zone": "04_Sumpf",
+   "ordner": "Objekte",
+   "groesse": [
+    64,
+    80
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "04_Sumpf/Objekte/Moorfund_Rippen.png",
+   "zone": "04_Sumpf",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "04_Sumpf/Objekte/Moorfund_Schaedel.png",
+   "zone": "04_Sumpf",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "04_Sumpf/Objekte/Totholz.png",
+   "zone": "04_Sumpf",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "04_Sumpf/Tileset/Boden_Sumpf.png",
+   "zone": "04_Sumpf",
+   "ordner": "Tileset",
+   "groesse": [
+    128,
+    32
+   ],
+   "art": "Boden",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 4,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Tileset/Bohlenweg.png",
+   "zone": "04_Sumpf",
+   "ordner": "Tileset",
+   "groesse": [
+    512,
+    32
+   ],
+   "art": "Wegstuecke16",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 16,
+   "zeilen": 1
+  },
+  {
+   "datei": "04_Sumpf/Tileset/Moorwasser.png",
+   "zone": "04_Sumpf",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    256
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 8,
+   "frames": 8
+  },
+  {
+   "datei": "05_Felsland/Animiert/Erzader_Glitzern.png",
+   "zone": "05_Felsland",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "05_Felsland/Animiert/Kristall_A.png",
+   "zone": "05_Felsland",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    40
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    40
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "05_Felsland/Animiert/Kristall_B.png",
+   "zone": "05_Felsland",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    40
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    40
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "05_Felsland/Animiert/Tropfen.png",
+   "zone": "05_Felsland",
+   "ordner": "Animiert",
+   "groesse": [
+    128,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    16,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Erzader_Wand.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Felsbrocken_A.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Felsbrocken_B.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Felsbrocken_C.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    48,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Felsbrocken_D.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Felssaeule.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    64
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Geroellhaufen.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Hoehleneingang.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    64,
+    64
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Stalagmit_A.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Stalagmit_B.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Objekte/Treppe_Fels_S.png",
+   "zone": "05_Felsland",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Tileset/Boden_Fels.png",
+   "zone": "05_Felsland",
+   "ordner": "Tileset",
+   "groesse": [
+    128,
+    32
+   ],
+   "art": "Boden",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 4,
+   "zeilen": 1
+  },
+  {
+   "datei": "05_Felsland/Tileset/Plateau.png",
+   "zone": "05_Felsland",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    32
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 1,
+   "frames": 1
+  },
+  {
+   "datei": "05_Felsland/Tileset/Plateau_Moos.png",
+   "zone": "05_Felsland",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    32
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 1,
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Animiert/Fackel.png",
+   "zone": "06_Ruinen",
+   "ordner": "Animiert",
+   "groesse": [
+    128,
+    32
+   ],
+   "art": "Animation",
+   "zellen": [
+    16,
+    32
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "06_Ruinen/Animiert/Fahne_zerrissen.png",
+   "zone": "06_Ruinen",
+   "ordner": "Animiert",
+   "groesse": [
+    256,
+    48
+   ],
+   "art": "Animation",
+   "zellen": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "06_Ruinen/Animiert/Wasserrad.png",
+   "zone": "06_Ruinen",
+   "ordner": "Animiert",
+   "groesse": [
+    512,
+    64
+   ],
+   "art": "Animation",
+   "zellen": [
+    64,
+    64
+   ],
+   "frames": 8,
+   "zeilen": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Altar.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    64,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Brunnen_Ruine.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    64,
+    64
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Grabstein_A.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Grabstein_B.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Grabstein_C.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Muehle_Ruine.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    96,
+    96
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Ranken.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Saeule_ganz.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    64
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Saeule_gebrochen.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    48
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Saeulenfuss.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Schutt_A.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Schutt_B.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Schutt_C.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    32
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Statue.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    32,
+    64
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Objekte/Torbogen.png",
+   "zone": "06_Ruinen",
+   "ordner": "Objekte",
+   "groesse": [
+    96,
+    64
+   ],
+   "art": "Objekt",
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Tileset/Boden_Ruinen.png",
+   "zone": "06_Ruinen",
+   "ordner": "Tileset",
+   "groesse": [
+    128,
+    32
+   ],
+   "art": "Boden",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 4,
+   "zeilen": 1
+  },
+  {
+   "datei": "06_Ruinen/Tileset/Mauer.png",
+   "zone": "06_Ruinen",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    32
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 1,
+   "frames": 1
+  },
+  {
+   "datei": "06_Ruinen/Tileset/Mauer_Verfallen.png",
+   "zone": "06_Ruinen",
+   "ordner": "Tileset",
+   "groesse": [
+    1536,
+    32
+   ],
+   "art": "Autotile47",
+   "zellen": [
+    32,
+    32
+   ],
+   "spalten": 48,
+   "zeilen": 1,
+   "frames": 1
+  }
+ ]
+}

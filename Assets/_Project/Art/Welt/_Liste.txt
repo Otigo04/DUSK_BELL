@@ -1,0 +1,158 @@
+WELT JENSEITS ZONE 1 - Asset-Liste (automatisch von build_welt.py erzeugt, nicht von Hand aendern)
+Format: Datei | Groesse | Art | Zelle | Frames
+
+
+== 00_Gemeinsam ==
+Animiert/Grenzstein_Rune.png                      256x48  Animation        32x48    8
+Animiert/Lagerfeuer_Rast.png                      256x32  Animation        32x32    8
+Objekte/Steinmaennchen.png                         32x32  Objekt           -        1
+Objekte/Wegweiser_Holz.png                         32x48  Objekt           -        1
+
+== 02_Tiefwald ==
+Animiert/Gluehwuermchen.png                       512x64  Animation        64x64    8
+Animiert/Nebel.png                                768x32  Animation        96x32    8
+Animiert/Pilzring_Leuchten.png                    384x48  Animation        48x48    8
+Animiert/Spinnennetz.png                          256x32  Animation        32x32    8
+Objekte/Baumstamm_H.png                            64x32  Objekt           -        1
+Objekte/Baumstamm_V.png                            32x64  Objekt           -        1
+Objekte/Baumstumpf_A.png                           32x32  Objekt           -        1
+Objekte/Baumstumpf_B.png                           32x32  Objekt           -        1
+Objekte/Farn_A.png                                 32x32  Objekt           -        1
+Objekte/Farn_B.png                                 32x32  Objekt           -        1
+Objekte/Farn_C.png                                 32x32  Objekt           -        1
+Objekte/Pilze_A.png                                32x32  Objekt           -        1
+Objekte/Pilze_B.png                                32x32  Objekt           -        1
+Objekte/Riesenbaum.png                            96x112  Objekt           -        1
+Objekte/Toter_Baum.png                             48x80  Objekt           -        1
+Objekte/Wurzeln.png                                32x32  Objekt           -        1
+Tileset/Boden_Tiefwald.png                        128x32  Boden            32x32    -
+Tileset/Dickicht.png                             1536x32  Autotile47       32x32    1
+Tileset/Uebergang_Gras_Tiefwald.png              1536x32  Autotile47       32x32    1
+
+== 03_Fluss ==
+Animiert/Findling_Schaum_N.png                    256x32  Animation        32x32    8
+Animiert/Findling_Schaum_O.png                    256x32  Animation        32x32    8
+Animiert/Findling_Schaum_S.png                    256x32  Animation        32x32    8
+Animiert/Findling_Schaum_W.png                    256x32  Animation        32x32    8
+Animiert/Furtstein_Schaum.png                     256x32  Animation        32x32    8
+Animiert/Pfahl_Wellen.png                         256x32  Animation        32x32    8
+Animiert/Rohrkolben.png                           256x48  Animation        32x48    8
+Animiert/Schilf_A.png                             256x48  Animation        32x48    8
+Animiert/Schilf_B.png                             256x48  Animation        32x48    8
+Animiert/Schilf_C.png                             256x48  Animation        32x48    8
+Animiert/Seerose_A.png                            256x32  Animation        32x32    8
+Animiert/Seerose_B.png                            256x32  Animation        32x32    8
+Animiert/Seerose_C.png                            256x32  Animation        32x32    8
+Animiert/Sprung_Spritzer.png                      384x48  Animation        48x48    8
+Animiert/Strudel.png                              256x32  Animation        32x32    8
+Animiert/Treibholz.png                            512x32  Animation        64x32    8
+Animiert/Wasserfall_Fuss_L.png                    256x32  Animation        32x32    8
+Animiert/Wasserfall_Fuss_M.png                    256x32  Animation        32x32    8
+Animiert/Wasserfall_Fuss_R.png                    256x32  Animation        32x32    8
+Animiert/Wasserfall_Kante_L.png                   256x32  Animation        32x32    8
+Animiert/Wasserfall_Kante_M.png                   256x32  Animation        32x32    8
+Animiert/Wasserfall_Kante_R.png                   256x32  Animation        32x32    8
+Animiert/Wasserfall_Mitte_L.png                   256x32  Animation        32x32    8
+Animiert/Wasserfall_Mitte_M.png                   256x32  Animation        32x32    8
+Animiert/Wasserfall_Mitte_R.png                   256x32  Animation        32x32    8
+Animiert/Wasserring_gross.png                     384x48  Animation        48x48    8
+Animiert/Wasserring_klein.png                     256x32  Animation        32x32    8
+Objekte/Bruecke_Holz_Bruch_L.png                   32x32  Objekt           -        1
+Objekte/Bruecke_Holz_Bruch_R.png                   32x32  Objekt           -        1
+Objekte/Bruecke_Holz_Luecke.png                    32x32  Objekt           -        1
+Objekte/Bruecke_Holz_Mitte_H.png                   32x32  Objekt           -        1
+Objekte/Bruecke_Pfeiler.png                        32x32  Objekt           -        1
+Objekte/Findling_A.png                             32x32  Objekt           -        1
+Objekte/Findling_B.png                             32x32  Objekt           -        1
+Objekte/Findling_C.png                             32x32  Objekt           -        1
+Objekte/Furtstein_A.png                            32x32  Objekt           -        1
+Objekte/Furtstein_B.png                            32x32  Objekt           -        1
+Objekte/Furtstein_C.png                            32x32  Objekt           -        1
+Objekte/Furtstein_D.png                            32x32  Objekt           -        1
+Objekte/Pfahl.png                                  32x32  Objekt           -        1
+Objekte/Steg_Ende_H_L.png                          32x32  Objekt           -        1
+Objekte/Steg_Ende_H_R.png                          32x32  Objekt           -        1
+Objekte/Steg_Ende_V_O.png                          32x32  Objekt           -        1
+Objekte/Steg_Ende_V_U.png                          32x32  Objekt           -        1
+Objekte/Steg_Mitte_H.png                           32x32  Objekt           -        1
+Objekte/Steg_Mitte_V.png                           32x32  Objekt           -        1
+Tiere/Fisch_Elritzenschwarm_Farbe.png            384x192  Tiere4Richtungen 48x48    8
+Tiere/Fisch_Elritzenschwarm_Schatten.png         384x192  Tiere4Richtungen 48x48    8
+Tiere/Fisch_Forelle_Farbe.png                    256x128  Tiere4Richtungen 32x32    8
+Tiere/Fisch_Forelle_Schatten.png                 256x128  Tiere4Richtungen 32x32    8
+Tiere/Fisch_Forelle_Sprung.png                    768x48  Animation        48x48    16
+Tiere/Fisch_Karpfen_Farbe.png                    256x128  Tiere4Richtungen 32x32    8
+Tiere/Fisch_Karpfen_Schatten.png                 256x128  Tiere4Richtungen 32x32    8
+Tiere/Fisch_Karpfen_Sprung.png                    768x48  Animation        48x48    16
+Tileset/Fluss_N_Gras.png                        1536x512  Autotile47       32x32    16
+Tileset/Fluss_N_Kies.png                        1536x512  Autotile47       32x32    16
+Tileset/Fluss_O_Gras.png                        1536x512  Autotile47       32x32    16
+Tileset/Fluss_O_Kies.png                        1536x512  Autotile47       32x32    16
+Tileset/Fluss_S_Gras.png                        1536x512  Autotile47       32x32    16
+Tileset/Fluss_S_Kies.png                        1536x512  Autotile47       32x32    16
+Tileset/Fluss_Still_Gras.png                    1536x512  Autotile47       32x32    16
+Tileset/Fluss_Still_Kies.png                    1536x512  Autotile47       32x32    16
+Tileset/Fluss_W_Gras.png                        1536x512  Autotile47       32x32    16
+Tileset/Fluss_W_Kies.png                        1536x512  Autotile47       32x32    16
+
+== 04_Sumpf ==
+Animiert/Blasen.png                               256x32  Animation        32x32    8
+Animiert/Frosch_Huepfen_E.png                     256x32  Animation        32x32    8
+Animiert/Frosch_Huepfen_N.png                     256x32  Animation        32x32    8
+Animiert/Frosch_Huepfen_S.png                     256x32  Animation        32x32    8
+Animiert/Frosch_Huepfen_W.png                     256x32  Animation        32x32    8
+Animiert/Frosch_Sitzen.png                        256x32  Animation        32x32    8
+Animiert/Irrlicht.png                             256x48  Animation        32x48    8
+Objekte/Entengruetze_A.png                         32x32  Objekt           -        1
+Objekte/Entengruetze_B.png                         32x32  Objekt           -        1
+Objekte/Entengruetze_C.png                         32x32  Objekt           -        1
+Objekte/Mangrove.png                               64x80  Objekt           -        1
+Objekte/Moorfund_Rippen.png                        32x32  Objekt           -        1
+Objekte/Moorfund_Schaedel.png                      32x32  Objekt           -        1
+Objekte/Totholz.png                                32x48  Objekt           -        1
+Tileset/Boden_Sumpf.png                           128x32  Boden            32x32    -
+Tileset/Bohlenweg.png                             512x32  Wegstuecke16     32x32    -
+Tileset/Moorwasser.png                          1536x256  Autotile47       32x32    8
+
+== 05_Felsland ==
+Animiert/Erzader_Glitzern.png                     256x32  Animation        32x32    8
+Animiert/Kristall_A.png                           256x40  Animation        32x40    8
+Animiert/Kristall_B.png                           256x40  Animation        32x40    8
+Animiert/Tropfen.png                              128x32  Animation        16x32    8
+Objekte/Erzader_Wand.png                           32x32  Objekt           -        1
+Objekte/Felsbrocken_A.png                          32x32  Objekt           -        1
+Objekte/Felsbrocken_B.png                          32x32  Objekt           -        1
+Objekte/Felsbrocken_C.png                          48x32  Objekt           -        1
+Objekte/Felsbrocken_D.png                          32x32  Objekt           -        1
+Objekte/Felssaeule.png                             32x64  Objekt           -        1
+Objekte/Geroellhaufen.png                          32x32  Objekt           -        1
+Objekte/Hoehleneingang.png                         64x64  Objekt           -        1
+Objekte/Stalagmit_A.png                            32x48  Objekt           -        1
+Objekte/Stalagmit_B.png                            32x48  Objekt           -        1
+Objekte/Treppe_Fels_S.png                          32x48  Objekt           -        1
+Tileset/Boden_Fels.png                            128x32  Boden            32x32    -
+Tileset/Plateau.png                              1536x32  Autotile47       32x32    1
+Tileset/Plateau_Moos.png                         1536x32  Autotile47       32x32    1
+
+== 06_Ruinen ==
+Animiert/Fackel.png                               128x32  Animation        16x32    8
+Animiert/Fahne_zerrissen.png                      256x48  Animation        32x48    8
+Animiert/Wasserrad.png                            512x64  Animation        64x64    8
+Objekte/Altar.png                                  64x48  Objekt           -        1
+Objekte/Brunnen_Ruine.png                          64x64  Objekt           -        1
+Objekte/Grabstein_A.png                            32x48  Objekt           -        1
+Objekte/Grabstein_B.png                            32x48  Objekt           -        1
+Objekte/Grabstein_C.png                            32x48  Objekt           -        1
+Objekte/Muehle_Ruine.png                           96x96  Objekt           -        1
+Objekte/Ranken.png                                 32x32  Objekt           -        1
+Objekte/Saeule_ganz.png                            32x64  Objekt           -        1
+Objekte/Saeule_gebrochen.png                       32x48  Objekt           -        1
+Objekte/Saeulenfuss.png                            32x32  Objekt           -        1
+Objekte/Schutt_A.png                               32x32  Objekt           -        1
+Objekte/Schutt_B.png                               32x32  Objekt           -        1
+Objekte/Schutt_C.png                               32x32  Objekt           -        1
+Objekte/Statue.png                                 32x64  Objekt           -        1
+Objekte/Torbogen.png                               96x64  Objekt           -        1
+Tileset/Boden_Ruinen.png                          128x32  Boden            32x32    -
+Tileset/Mauer.png                                1536x32  Autotile47       32x32    1
+Tileset/Mauer_Verfallen.png                      1536x32  Autotile47       32x32    1

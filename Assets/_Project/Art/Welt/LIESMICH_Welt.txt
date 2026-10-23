@@ -1,0 +1,105 @@
+WELT JENSEITS ZONE 1  -  Art/Welt
+=================================================================================================
+Alle Biome hinter der Dorfzone: Tiefwald, Fluss, Sumpf, Felsland, Ruinen (+ gemeinsame Orientierungsobjekte).
+143 PNGs, erzeugt per Python-Skripten (siehe _Quelle_Generator), alles deterministisch und geprueft (siehe "Qualitaet").
+Komplette Dateiliste: _Liste.txt   |   Maschinenlesbar (Zellgroesse, Frames, Art): _Assets.json
+Bilduebersicht:       _Vorschau/Welt_Uebersicht.png   (+ Einzelvorschauen, Fluss-Animationen als .gif)
+
+ORDNERSTRUKTUR (gilt fuer jede Zone gleich)
+-------------------------------------------------------------------------------------------------
+Welt/
+  00_Gemeinsam/   zonenuebergreifend: Wegweiser, Steinmaennchen, Grenzstein mit leuchtender Rune, Lagerfeuer-Rast
+  02_Tiefwald/    Zone 2   (01 ist die Dorfzone = Art/Tiles/..., bleibt dort)
+  03_Fluss/       Zone 3   inkl. Tiere/ (Fische)
+  04_Sumpf/       Zone 4
+  05_Felsland/    Zone 5
+  06_Ruinen/      Zone 6
+     Tileset/     Boeden und Autotile-Sheets (+ _Layout_<Zone>.json)
+     Objekte/     statische Sprites (Einzelbilder, Pivot unten Mitte setzen)
+     Animiert/    Streifen mit 8 Frames nebeneinander (Ausnahmen: Fisch-Sprung 16)
+     Tiere/       nur wo es Tiere gibt (Fluss)
+  _Quelle_Generator/   alle Skripte (nur Python + Pillow + numpy, laufen auf Mac und Windows)
+  _Vorschau/           Kontaktbogen, Testkarten, GIFs  (nur zum Ansehen, nicht ins Spiel importieren)
+Namen: Deutsch, ohne Umlaute, ASCII (Saeule, Gruetze), Varianten _A/_B/_C, Richtungen _S/_N/_O/_W (Strom, Hopsrichtung), _H/_V = waagerecht/senkrecht,
+       _L/_R = links/rechts, _Farbe/_Schatten = sichtbarer Fisch / Silhouette unter Wasser.
+
+TECHNIK (fuer alle Dateien)
+-------------------------------------------------------------------------------------------------
+32 px Raster, PPU 32, Filter Point, keine Kompression, keine Mipmaps, Sprite Mode Multiple (wie die vorhandenen Tilesets).
+Palette: Art/Palette.png (40 Farben, dieselbe wie Tileset_Terrain/Wald/Hohes Gras) - Ufer und Boeden passen dadurch nahtlos ans Dorf-Gelaende.
+Alpha nur 0/255 (nie halbtransparent). Animationen: 8 Frames, empfohlen 8 fps (Wasser-Tilesets 16 Frames, 8 fps; Moorwasser 4 fps; Wasserrad 8 fps).
+Schleifen schliessen nahtlos (letzter Frame -> erster ist ein normaler Schritt); Wasser/Wasserfall bewegen sich 2 bzw. 4 px pro Frame auf 32 px Periode.
+
+SHEET-FORMATE
+-------------------------------------------------------------------------------------------------
+BODEN  Boden_<Zone>.png  128x32 = 4 nahtlose Varianten (A-D). Unity: in Tilemap zufaellig streuen (Random/Weighted Tile).
+AUTOTILE 47  (alle *_Layout_*.json beschreiben die Reihenfolge)
+   Sheet 1536 px breit = 48 Spalten x 32 px, Spalte = Blob-Index 0..46 (Spalte 47 ist leer), Zeilen = Animationsframes (1, 8 oder 16).
+   Maske pro Nachbarzelle: N=1 O=2 S=4 W=8; Bit gesetzt = die Innenflaeche setzt sich in diese Richtung fort. Eine Diagonale zaehlt nur,
+   wenn beide angrenzenden Seiten gesetzt sind (sonst "fehlende Ecke"). Reihenfolge: alle 16 Masken aufsteigend, je Maske alle Kombinationen der
+   relevanten Ecken (Reihenfolge NO, SO, SW, NW; als Binaerzaehler, 47 Kacheln gesamt). In _Layout_*.json steht jede Kachel mit Index, Maske, fehlenden Ecken.
+   -> Index zu Zelle: python: welt_lib.idx_of(mask, notches) / mask_from_map(zellen, x, y); Beispiel-Zusammenbau: preview_fluss.py, welt_tiles.render_map().
+   Innen/Aussen: Innen = Wasser / Waldboden / Dornenwand / Hochflaeche / Mauerkrone, Aussen = Ufer + Hintergrund (Gras bzw. Boden) schon eingebacken.
+   Ufer sind an allen Kachelkanten gleich dick -> Kacheln schliessen lueckenlos (per Zufallskarten-Test geprueft, 24 295 Nachbarpaare, 0 Fehler).
+WEGSTUECKE 16  (Bohlenweg.png 512x32): Spalte = Maske N1 O2 S4 W8, transparent, liegt ueber Boden oder Wasser.
+ANIMATION  Streifen, Frames nebeneinander, Zellgroesse steht in _Assets.json ("zellen"). Slice in Unity: Grid By Cell Size.
+TIERE (Fische)  Zeilen = Blickrichtung S, W, N, E (Unity y nach unten), Spalten = 8 Frames Schwanzschlag; Zellen 32x32 (Schwarm 48x48).
+
+ZONEN IM DETAIL
+-------------------------------------------------------------------------------------------------
+02_TIEFWALD   dunkler Waldboden. Tileset: Boden_Tiefwald (4), Uebergang_Gras_Tiefwald (Autotile: Waldboden in Gras), Dickicht (Autotile: Dornenwand,
+              nicht begehbar, Collider setzen). Objekte: Riesenbaum 96x112, Toter_Baum, Baumstumpf A/B, Baumstamm H/V, Farn A-C, Pilze A/B, Wurzeln.
+              Animiert: Pilzring_Leuchten, Spinnennetz, Gluehwuermchen (Overlay 64x64), Nebel (Overlay 96x32, wandert nahtlos).
+03_FLUSS      Tileset: Fluss_<Strom>_<Ufer>.png fuer Strom S, N, O, W, Still (Teich/See) und Ufer Gras, Kies = 10 Sheets, je 47 Kacheln x 16 Frames.
+              Wasser hat 3 Tiefen (Flachwasser mit Schaum an der Kante, Mittelwasser, tiefes Wasser), Wellenkaemme wandern mit dem Strom, Funkeln,
+              Uferschatten von Norden/Westen. Quelle/Muendung/Insel/Haken entstehen automatisch aus den 47 Formen.
+              Objekte: Findling A-C, Furtstein A-D, Pfahl, Steg (Mitte H/V, Ende H_L/H_R/V_O/V_U), Bruecke_Holz (Mitte_H, Bruch_L/R, Luecke, Pfeiler).
+              Animiert: Findling_Schaum_S/N/O/W (Stein mit Schaum + Kielwasser), Furtstein_Schaum, Seerose A-C, Schilf A-C, Rohrkolben, Strudel, Treibholz,
+              Pfahl_Wellen, Wasserring klein/gross, Sprung_Spritzer, Wasserfall (Kante/Mitte/Fuss x L/M/R, 3 Teile = Fallhoehe beliebig, Felswand L/R).
+              Tiere: Forelle, Karpfen (je _Farbe und _Schatten), Elritzenschwarm (_Farbe/_Schatten), Fisch_Forelle_Sprung, Fisch_Karpfen_Sprung (16 Frames,
+              Wasserlinie bei y=34 der 48x48-Zelle) -> Fische als Sprite ueber das Wasser setzen; "Schatten" fuer Fische unter der Oberflaeche,
+              "Farbe" fuer klares Flachwasser / gefangene Fische. Ab und zu springen lassen: Sprung + Sprung_Spritzer + Wasserring_gross.
+04_SUMPF      Tileset: Boden_Sumpf (4), Moorwasser (Autotile, 8 Frames, trueb mit Algen/Entengruetze), Bohlenweg (16 Wegstuecke).
+              Objekte: Mangrove 64x80, Totholz, Entengruetze A-C (Overlay), Moorfund Schaedel/Rippen. Animiert: Frosch_Sitzen, Frosch_Huepfen_S/W/N/E,
+              Irrlicht (32x48), Blasen.
+05_FELSLAND   Tileset: Boden_Fels (4), Plateau + Plateau_Moos (Autotile mit 12 px hoher Felswand an der Sued-Kante, "Ms=12"; Wand ragt in die Zelle UNTER
+              der Hochflaeche hinein, dort Bodenzelle lassen). Objekte: Treppe_Fels_S 32x48 (ueber die Wand legen), Hoehleneingang 64x64, Felsbrocken A-D,
+              Geroellhaufen, Stalagmit A/B, Felssaeule, Erzader_Wand. Animiert: Kristall A/B, Erzader_Glitzern, Tropfen (Tropfstein 16x32).
+06_RUINEN     Tileset: Boden_Ruinen (4 Plattenboeden), Mauer + Mauer_Verfallen (Autotile mit Ziegelwand, wie Plateau, Ms=12). Objekte: Saeule_ganz/gebrochen,
+              Saeulenfuss, Torbogen 96x64, Statue, Brunnen_Ruine, Schutt A-C, Ranken (Overlay), Grabstein A-C, Altar, Muehle_Ruine 96x96 (ohne Rad).
+              Animiert: Wasserrad 64x64 (Pivot Mitte, Wellenkante liegt unten, an den Fluss setzen), Fackel, Fahne_zerrissen.
+
+IN UNITY IMPORTIEREN
+-------------------------------------------------------------------------------------------------
+Unity 6000.4.7f1. Dieses Verzeichnis wurde OHNE Unity erzeugt (auf diesem Mac nicht installiert): es gibt daher noch keine .meta-Dateien.
+Beim ersten Oeffnen legt Unity sie an -> dann die neuen .meta mit committen.
+1) Alle PNGs markieren > Inspector: Texture Type Sprite (2D and UI), Sprite Mode Multiple (Objekte/Tiere ohne Animation: Single), Pixels Per Unit 32,
+   Filter Mode Point, Compression None, Max Size 2048, Generate Mip Maps aus. (Dieselben Werte wie Tiles/Tileset_Terrain.png.)
+2) Sheets slicen: Sprite Editor > Slice > Grid By Cell Size. Zellgroesse siehe _Assets.json ("zellen"): Tilesets 32x32, Wasserfall 32x32, Wasserrad 64x64 usw.
+   Pivot: Objekte "Bottom Center", Boeden/Autotile "Center".
+3) Autotile: vorhandener Builder Scripts/Editor/TilesetErweiterung.cs ist fuer die 20-Spalten-Terrain-Sheets gebaut. Die Blob-47-Sheets hier sind ein
+   eigenes Format (siehe oben + _Layout_*.json). Ein Unity-RuleTile-Builder dafuer ist NOCH NICHT geschrieben, weil ich ihn ohne Unity nicht testen kann.
+   Vorschlag: auf dem Rechner mit Unity einmal ausprobieren lassen (Editor-Skript wuerde die 47 Regeln aus der JSON lesen).
+4) Animierte Tilemap-Kacheln: Zeile = Frame -> pro Blob-Index eine AnimatedTile (16 Sprites, speed 8). Wasser und Moorwasser laufen dann synchron.
+5) Sortierung: Wasser (Boden-Layer) < Bruecken/Stege < Objekte < Fische als Sprite (Order knapp ueber Wasser) < Overlays (Nebel, Gluehwuermchen).
+
+SKRIPTE (Art/Welt/_Quelle_Generator)
+-------------------------------------------------------------------------------------------------
+build_welt.py        alles neu bauen + pruefen + _Liste/_Assets schreiben  (python build_welt.py [gemeinsam|fluss|tiefwald|sumpf|felsland|ruinen])
+qa_welt.py           Palette, Alpha, Rastermasse, Frames, Schleifen, Naehte der Boeden, leere Dateien, JSONs
+welt_lib.py          Bibliothek: Palette, periodisches Rauschen (raum- und zeitnahtlos), Blob-47-Formen (Ufer, Ecken, Distanzfelder)
+welt_tiles.py        Autotile-Sheet-Builder, Bodenset, Testkarten, Nahttest        welt_draw.py  Zeichenhilfen (Cv)
+gen_fluss.py  gen_fische.py  gen_fluss_objekte.py  gen_tiefwald.py  gen_sumpf.py  gen_felsland.py  gen_ruinen.py  gen_gemeinsam.py   je Zone
+preview_fluss.py / preview_objekte.py / vorschau_uebersicht.py     Ansichten (schreiben nach _Vorschau)
+Voraussetzung: python3 + Pillow + numpy. Aufruf aus dem Ordner _Quelle_Generator.
+
+QUALITAET (was geprueft ist)
+-------------------------------------------------------------------------------------------------
+- Alle Pixel nur aus Palette.png, Alpha nur 0/255 (qa_welt.py bricht sonst ab).
+- Autotile-Formen: an jeder Kachelgrenze identische Uferkante (24 295 zufaellige Nachbarpaare insgesamt, mit Ms=6/10/12, 0 Abweichungen).
+- Wasser-Kacheln: Farbsprung an der Naht <= Pixel-zu-Pixel-Variation im Inneren (Fuellkachel 0.3-1.0x, Zufallskarten Mittel 0.5x).
+- Animationen: Schleife schliesst (Sprung letzter->erster Frame im Bereich der uebrigen Spruenge), letzter Frame != erster, keine leeren Frames.
+- Boeden: Rand-gegen-Innen-Test je Variante.  Fische: kein Pixel beruehrt den Zellrand.
+- Zweimal komplett gebaut -> alle 143 PNGs byte-identisch (deterministisch).
+NICHT geprueft: Darstellung in Unity (kein Unity auf diesem Rechner), Gehoer/Spielgefuehl der Tempi. Die Wasserfaelle sind einkachelig-breit mit Felsrand L/R;
+breitere Faelle aus L + M... + R bauen. Gras unter Fluss-Ufern ist Tileset_Terrain Gras-Kachel 0; weicht die Wiese im Spiel ab, Fluss neu bauen (gen_fluss.py).

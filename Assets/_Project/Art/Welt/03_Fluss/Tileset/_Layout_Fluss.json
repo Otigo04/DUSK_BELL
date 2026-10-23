@@ -1,0 +1,389 @@
+{
+ "tileSize": 32,
+ "ppu": 32,
+ "frames": 16,
+ "fps": 8,
+ "columns": 48,
+ "rows": 16,
+ "layout": "Spalte = Blob-Index, Zeile = Animationsframe",
+ "masken": "Bit N=1 O=2 S=4 W=8 (Bit gesetzt = Wasser setzt sich in dieser Richtung fort); notch = Wasser-Ecke fehlt",
+ "tiles": [
+  {
+   "index": 0,
+   "maske": 0,
+   "fehlendeEcken": [],
+   "name": "m00"
+  },
+  {
+   "index": 1,
+   "maske": 1,
+   "fehlendeEcken": [],
+   "name": "m01"
+  },
+  {
+   "index": 2,
+   "maske": 2,
+   "fehlendeEcken": [],
+   "name": "m02"
+  },
+  {
+   "index": 3,
+   "maske": 3,
+   "fehlendeEcken": [],
+   "name": "m03"
+  },
+  {
+   "index": 4,
+   "maske": 3,
+   "fehlendeEcken": [
+    "NE"
+   ],
+   "name": "m03_nNE"
+  },
+  {
+   "index": 5,
+   "maske": 4,
+   "fehlendeEcken": [],
+   "name": "m04"
+  },
+  {
+   "index": 6,
+   "maske": 5,
+   "fehlendeEcken": [],
+   "name": "m05"
+  },
+  {
+   "index": 7,
+   "maske": 6,
+   "fehlendeEcken": [],
+   "name": "m06"
+  },
+  {
+   "index": 8,
+   "maske": 6,
+   "fehlendeEcken": [
+    "SE"
+   ],
+   "name": "m06_nSE"
+  },
+  {
+   "index": 9,
+   "maske": 7,
+   "fehlendeEcken": [],
+   "name": "m07"
+  },
+  {
+   "index": 10,
+   "maske": 7,
+   "fehlendeEcken": [
+    "NE"
+   ],
+   "name": "m07_nNE"
+  },
+  {
+   "index": 11,
+   "maske": 7,
+   "fehlendeEcken": [
+    "SE"
+   ],
+   "name": "m07_nSE"
+  },
+  {
+   "index": 12,
+   "maske": 7,
+   "fehlendeEcken": [
+    "NE",
+    "SE"
+   ],
+   "name": "m07_nNESE"
+  },
+  {
+   "index": 13,
+   "maske": 8,
+   "fehlendeEcken": [],
+   "name": "m08"
+  },
+  {
+   "index": 14,
+   "maske": 9,
+   "fehlendeEcken": [],
+   "name": "m09"
+  },
+  {
+   "index": 15,
+   "maske": 9,
+   "fehlendeEcken": [
+    "NW"
+   ],
+   "name": "m09_nNW"
+  },
+  {
+   "index": 16,
+   "maske": 10,
+   "fehlendeEcken": [],
+   "name": "m10"
+  },
+  {
+   "index": 17,
+   "maske": 11,
+   "fehlendeEcken": [],
+   "name": "m11"
+  },
+  {
+   "index": 18,
+   "maske": 11,
+   "fehlendeEcken": [
+    "NE"
+   ],
+   "name": "m11_nNE"
+  },
+  {
+   "index": 19,
+   "maske": 11,
+   "fehlendeEcken": [
+    "NW"
+   ],
+   "name": "m11_nNW"
+  },
+  {
+   "index": 20,
+   "maske": 11,
+   "fehlendeEcken": [
+    "NE",
+    "NW"
+   ],
+   "name": "m11_nNENW"
+  },
+  {
+   "index": 21,
+   "maske": 12,
+   "fehlendeEcken": [],
+   "name": "m12"
+  },
+  {
+   "index": 22,
+   "maske": 12,
+   "fehlendeEcken": [
+    "SW"
+   ],
+   "name": "m12_nSW"
+  },
+  {
+   "index": 23,
+   "maske": 13,
+   "fehlendeEcken": [],
+   "name": "m13"
+  },
+  {
+   "index": 24,
+   "maske": 13,
+   "fehlendeEcken": [
+    "SW"
+   ],
+   "name": "m13_nSW"
+  },
+  {
+   "index": 25,
+   "maske": 13,
+   "fehlendeEcken": [
+    "NW"
+   ],
+   "name": "m13_nNW"
+  },
+  {
+   "index": 26,
+   "maske": 13,
+   "fehlendeEcken": [
+    "NW",
+    "SW"
+   ],
+   "name": "m13_nNWSW"
+  },
+  {
+   "index": 27,
+   "maske": 14,
+   "fehlendeEcken": [],
+   "name": "m14"
+  },
+  {
+   "index": 28,
+   "maske": 14,
+   "fehlendeEcken": [
+    "SE"
+   ],
+   "name": "m14_nSE"
+  },
+  {
+   "index": 29,
+   "maske": 14,
+   "fehlendeEcken": [
+    "SW"
+   ],
+   "name": "m14_nSW"
+  },
+  {
+   "index": 30,
+   "maske": 14,
+   "fehlendeEcken": [
+    "SE",
+    "SW"
+   ],
+   "name": "m14_nSESW"
+  },
+  {
+   "index": 31,
+   "maske": 15,
+   "fehlendeEcken": [],
+   "name": "m15"
+  },
+  {
+   "index": 32,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NE"
+   ],
+   "name": "m15_nNE"
+  },
+  {
+   "index": 33,
+   "maske": 15,
+   "fehlendeEcken": [
+    "SE"
+   ],
+   "name": "m15_nSE"
+  },
+  {
+   "index": 34,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NE",
+    "SE"
+   ],
+   "name": "m15_nNESE"
+  },
+  {
+   "index": 35,
+   "maske": 15,
+   "fehlendeEcken": [
+    "SW"
+   ],
+   "name": "m15_nSW"
+  },
+  {
+   "index": 36,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NE",
+    "SW"
+   ],
+   "name": "m15_nNESW"
+  },
+  {
+   "index": 37,
+   "maske": 15,
+   "fehlendeEcken": [
+    "SE",
+    "SW"
+   ],
+   "name": "m15_nSESW"
+  },
+  {
+   "index": 38,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NE",
+    "SE",
+    "SW"
+   ],
+   "name": "m15_nNESESW"
+  },
+  {
+   "index": 39,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NW"
+   ],
+   "name": "m15_nNW"
+  },
+  {
+   "index": 40,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NE",
+    "NW"
+   ],
+   "name": "m15_nNENW"
+  },
+  {
+   "index": 41,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NW",
+    "SE"
+   ],
+   "name": "m15_nNWSE"
+  },
+  {
+   "index": 42,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NE",
+    "NW",
+    "SE"
+   ],
+   "name": "m15_nNENWSE"
+  },
+  {
+   "index": 43,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NW",
+    "SW"
+   ],
+   "name": "m15_nNWSW"
+  },
+  {
+   "index": 44,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NE",
+    "NW",
+    "SW"
+   ],
+   "name": "m15_nNENWSW"
+  },
+  {
+   "index": 45,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "name": "m15_nNWSESW"
+  },
+  {
+   "index": 46,
+   "maske": 15,
+   "fehlendeEcken": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "name": "m15_nNENWSESW"
+  }
+ ],
+ "stroeme": [
+  "S",
+  "N",
+  "O",
+  "W",
+  "Still"
+ ],
+ "ufer": [
+  "Gras",
+  "Kies"
+ ],
+ "hinweis": "Wasser fliesst im Bild in Richtung S/N/O/W; Still = Teich ohne Strom. Randpixel sind kachel-nahtfrei."
+}
