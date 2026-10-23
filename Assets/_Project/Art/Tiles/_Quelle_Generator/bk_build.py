@@ -12,6 +12,7 @@ import bk_moebel as M
 import bk_schutz as SZ
 import bk_spalt as SP
 import bk_leer as LE
+import bk_interieur as IN
 
 OBJ = BK + '/Objekte'
 ANI = BK + '/Animiert'
@@ -76,6 +77,7 @@ def build_objects():
     SZ.register(R)
     SP.register(R)
     LE.register(R)
+    IN.register(R)
     os.makedirs(OBJ, exist_ok=True)
     os.makedirs(ANI, exist_ok=True)
     for f in glob.glob(OBJ + '/*.png') + glob.glob(ANI + '/*.png'):

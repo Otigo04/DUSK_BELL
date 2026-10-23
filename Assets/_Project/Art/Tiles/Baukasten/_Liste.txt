@@ -1,5 +1,6 @@
 # Nightward Haus-Baukasten - Objektliste (erzeugt von bk_build.py, nicht von Hand aendern)
 # Name | BreitexHoehe px | Kategorie | Fuss-Zeilen | Kollision 1/0 | Frames | ms je Frame
+Aktenregal | 64x64 | innen_moebel | 1 | 1 | 1 | 0
 Altar | 64x32 | innen_moebel | 1 | 1 | 4 | 180
 Amboss | 32x32 | innen_moebel | 1 | 1 | 1 | 0
 Apothekerschrank | 64x64 | innen_moebel | 1 | 1 | 1 | 0
@@ -7,6 +8,7 @@ Arbeitstisch_Brot | 64x32 | innen_moebel | 1 | 1 | 1 | 0
 Backofen | 64x64 | innen_moebel | 1 | 1 | 6 | 120
 Balken_Lehnt | 32x64 | innen_moebel | 1 | 1 | 1 | 0
 Bank_Wand | 64x32 | aussen_boden | 1 | 1 | 1 | 0
+Behandlungsliege | 64x32 | innen_moebel | 1 | 1 | 1 | 0
 Bett_Blau | 32x64 | innen_moebel | 2 | 1 | 1 | 0
 Bett_Doppel_Blau | 64x64 | innen_moebel | 2 | 1 | 1 | 0
 Bett_Doppel_Rot | 64x64 | innen_moebel | 2 | 1 | 1 | 0
@@ -91,6 +93,7 @@ Herd_Eisen | 64x64 | innen_moebel | 1 | 1 | 6 | 120
 Heuhaufen | 64x32 | innen_moebel | 1 | 1 | 1 | 0
 Holzkorb | 32x32 | innen_moebel | 1 | 1 | 1 | 0
 Holzstapel_Wand | 64x32 | aussen_boden | 1 | 1 | 1 | 0
+Instrumententisch | 32x32 | innen_moebel | 1 | 1 | 1 | 0
 Kamin_Stein | 64x64 | innen_moebel | 1 | 1 | 6 | 110
 Kartentisch | 64x32 | innen_moebel | 1 | 1 | 1 | 0
 Kerzenstaender | 32x64 | innen_moebel | 1 | 1 | 4 | 180
@@ -114,7 +117,9 @@ Naehtisch | 64x32 | innen_moebel | 1 | 1 | 1 | 0
 Nest_Decken | 64x32 | innen_moebel | 1 | 1 | 1 | 0
 Ofenrohr | 32x64 | aussen_dach | 1 | 1 | 1 | 0
 Ofenrohr_Rauch | 32x96 | aussen_dach | 1 | 1 | 8 | 140
+Paravent | 64x64 | innen_moebel | 1 | 1 | 1 | 0
 Portal_Kapelle | 64x64 | aussen_wand | 1 | 1 | 1 | 0
+Pult_Totenbuch | 32x32 | innen_moebel | 1 | 1 | 1 | 0
 Regenfass | 32x32 | aussen_boden | 1 | 1 | 1 | 0
 Reuse | 32x32 | innen_moebel | 1 | 1 | 1 | 0
 Sack_Kartoffeln | 32x32 | innen_moebel | 1 | 1 | 1 | 0
@@ -227,12 +232,15 @@ Vordach_Rot_E | 32x32 | aussen_wand | 1 | 1 | 1 | 0
 Vordach_Rot_L | 32x32 | aussen_wand | 1 | 1 | 1 | 0
 Vordach_Rot_M | 32x32 | aussen_wand | 1 | 1 | 1 | 0
 Vordach_Rot_R | 32x32 | aussen_wand | 1 | 1 | 1 | 0
+Wand_Anatomietafel | 32x32 | innen_wand | 0 | 0 | 1 | 0
 Wand_BildLandschaft | 32x32 | innen_wand | 0 | 0 | 1 | 0
 Wand_BildPortrait | 32x32 | innen_wand | 0 | 0 | 1 | 0
+Wand_Dorfkarte | 64x32 | innen_wand | 0 | 0 | 1 | 0
 Wand_Hufeisen | 32x32 | innen_wand | 0 | 0 | 1 | 0
 Wand_Kerzenleuchter | 32x32 | innen_wand | 0 | 0 | 4 | 180
 Wand_Kraeuter | 32x32 | innen_wand | 0 | 0 | 1 | 0
 Wand_Kranz | 32x32 | innen_wand | 0 | 0 | 1 | 0
+Wand_Namensliste | 32x32 | innen_wand | 0 | 0 | 1 | 0
 Wand_Pfannen | 32x32 | innen_wand | 0 | 0 | 1 | 0
 Wand_Ruder | 32x32 | innen_wand | 0 | 0 | 1 | 0
 Wand_Spiegel | 32x32 | innen_wand | 0 | 0 | 1 | 0
@@ -250,3 +258,8 @@ Warenregal | 64x64 | innen_moebel | 1 | 1 | 1 | 0
 Waschtisch | 32x32 | innen_moebel | 1 | 1 | 1 | 0
 Wetterfahne | 32x64 | aussen_dach | 1 | 1 | 4 | 700
 Wiege | 32x32 | innen_moebel | 1 | 1 | 1 | 0
+Zelleneimer | 32x32 | innen_moebel | 1 | 1 | 1 | 0
+Zellengitter_Gerade | 32x64 | innen_moebel | 1 | 1 | 1 | 0
+Zellenpritsche | 64x32 | innen_moebel | 1 | 1 | 1 | 0
+Zellentuer_Offen | 32x64 | innen_moebel | 0 | 0 | 1 | 0
+Zellentuer_Zu | 32x64 | innen_moebel | 1 | 1 | 1 | 0

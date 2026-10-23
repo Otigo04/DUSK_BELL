@@ -147,3 +147,21 @@ MONSTER-VFX (monster_vfx.py -> Art/VFX/Monster, Liste dort in _Liste.txt)
 -------------------------------------------------------------------------
 Klopfwelle, Enthuellung_Augen, Grinsen_Aufblitzen, Enthuellung_Burst, Talisman_Puls/_Funken, Staub_Puff, Holzsplitter_Burst, Kratzer_Holz (Sheet +
 A/B/C), Kratzer_Stein, Fussspur_Mensch/_Monster L/R + Pfad, Schleifspur_H/V, Handabdruck_Glas. Nur Palette, Dither statt Halbtransparenz.
+
+
+INTERIEUR-SONDERSTUECKE (bk_interieur.py, Vorschau_Interieur.png)
+-----------------------------------------------------------------
+Backofen und Esse gab es schon (Baeckerei/Schmiede). Neu, was in Revier und Aerztehaus laut Docs fehlte:
+  Revier  Zellengitter_Gerade, Zellentuer_Zu, Zellentuer_Offen (Durchgang frei, nicht solide), Zellenpritsche, Zelleneimer,
+          Aktenregal (Ink: "a shelf of old files"), Wand_Dorfkarte (Ink: "village map on the wall"), Wand_Namensliste (Ink: "handwritten list of names")
+  Praxis  Behandlungsliege (OP-Liege), Instrumententisch, Paravent, Wand_Anatomietafel, Pult_Totenbuch (Veronicas Buch ueber die Toten)
+Gitter sind durchsichtig (Luecken transparent), Gitterteile haben Fuss-Zeile 1 und sind solide. Bauplaene.json: per Name in DorfRevier/DorfAerztehaus eintragen.
+
+Eingebaut in Bauplaene.json (bk_build: 0 Fehler, alle Bodenfelder erreichbar):
+  DorfRevier       Zelle rechts hinten (Gitter vorn bei y=3, offene Zellentuer bei x=8 als Durchgang, Seitengitter x=7, Pritsche, Eimer),
+                   Aktenregal links, Wand_Dorfkarte ueber dem Kamin, Wand_Namensliste neben dem Fenster. Kartentisch nach (6,1) und
+                   Fass_Wasser nach (2,1) verschoben, damit der Weg zur Zellentuer frei bleibt.
+  DorfAerztehaus   Behandlungsliege (0,1) hinter dem Paravent (1,0), Instrumententisch (2,1), Pult_Totenbuch (5,4) unter dem Fenster,
+                   Wand_Anatomietafel (0,6).
+Zellentuer_Offen hat Fuss-Zeile 0 (Durchgang), die geschlossene Zellentuer_Zu ist solide - zum "Einsperren" im Spiel Tile tauschen.
+Unity: Haus-Baukasten > Alles bauen, dann Dorf neu bauen (Revier-/Praxis-Innenraeume werden neu erzeugt).
