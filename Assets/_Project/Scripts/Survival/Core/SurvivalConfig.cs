@@ -60,13 +60,28 @@ namespace Nightward.Survival
         // Unity ruft Reset beim Anlegen des Assets auf
         void Reset() => FillDefaults();
 
+        static bool validating;
+
         /// <summary>Fehlende Werte/Stimmungen aus den Standardwerten ergaenzen, damit nach neuen StatIds nichts fehlt.</summary>
         void OnValidate()
         {
             if (stats.Count == 0 && moods.Count == 0) return;
-            var def = SurvivalDefaults.Create();
-            foreach (var s in def.stats) if (Stat(s.id) == null) stats.Add(s);
-            foreach (var m in def.moods) if (Mood(m.id) == null) moods.Add(m);
+            // Create() legt selbst eine Config an, deren Reset/OnValidate wieder hierher fuehrt: ohne diese Sperre Endlosrekursion
+            // bis der Speicher voll ist (Editor-Absturz bei jedem Neukompilieren)
+            if (validating) return;
+            validating = true;
+            SurvivalConfig def = null;
+            try
+            {
+                def = SurvivalDefaults.Create();
+                foreach (var s in def.stats) if (Stat(s.id) == null) stats.Add(s);
+                foreach (var m in def.moods) if (Mood(m.id) == null) moods.Add(m);
+            }
+            finally
+            {
+                validating = false;
+                if (def != null) DestroyImmediate(def);
+            }
             foreach (var m in moods)
             {
                 if (m.thresholds == null || m.thresholds.Length != 4) m.thresholds = new[] { 0.25f, 0.5f, 0.75f, 0.9f };

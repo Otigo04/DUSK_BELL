@@ -10,7 +10,7 @@ namespace Nightward.UI
 
     /// <summary>
     /// Quest-Tracker oben rechts (152 px breit): Kategorie "Main Quest" (aktuelle und zuletzt erledigte Quests) und
-    /// "Side Quests" (mit Anzahl, standardmaessig eingeklappt). Liest den QuestLog. Klick auf die Kopfzeile klappt um.
+    /// "Side Quests" (mit Anzahl, beide standardmaessig aufgeklappt). Liest den QuestLog. Klick auf die Kopfzeile klappt um.
     /// </summary>
     public class NwQuestTracker : MonoBehaviour
     {
@@ -25,7 +25,7 @@ namespace Nightward.UI
         [SerializeField] int maxDone = 2;
 
         bool mainOpen = true;
-        bool sideOpen;
+        bool sideOpen = true;
         float mainProgress = -1f;
 
         void OnEnable()

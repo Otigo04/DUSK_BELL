@@ -21,6 +21,8 @@ namespace Nightward.Opening
             new Line { speaker = "Monster", text = text, pause = pause, mumble = true };
 
         public const string QuestFollow = "Follow Bulut to the station";
+        public const string ObjectiveFollowStation = "Follow Bulut to the station";
+        public const string ObjectiveFollowBar = "Follow Bulut to the bar";
         public const string QuestBar = "Go to the bar and talk to Ilhan";
         public const string QuestVillagers = "Talk to the villagers";
 
@@ -222,29 +224,38 @@ namespace Nightward.Opening
             Line.N("The bar falls quiet."),
         };
 
-        public static readonly Line[] NightKnock =
+        /// <summary>Das Klopfen weckt den Spieler; Ilhan schlaeft im Nebenraum. Danach geht der Spieler selbst zum Fenster.</summary>
+        public static readonly Line[] NightWake =
         {
             Line.N("Three soft knocks against the window of the back room. Then again, slower."),
-            Line.N("You wake up on the cot. Ilhan wakes in the other room and comes to the back window."),
-            Line.N("Ilhan stops short when he sees who is standing outside."),
-            Line.N("The figure looks human. Its grin is far too wide, and its teeth show in the dark."),
-            Monster("Ilhan, let me in. It's cold out here."),
-            I("I can't. The rules say no one comes in tonight.", 0.8f),
-            Monster("Ilhan, it's me. You know my voice."),
+            Line.N("You wake up on the cot. Ilhan is still asleep in the other room."),
         };
-        public const string ChoiceOpenWindow = "Ilhan opens the window.";
+
+        public const string ObjectiveWindow = "Look at the window";
+
+        /// <summary>Am Fenster: der Spieler spricht selbst mit dem Monster.</summary>
+        public static readonly Line[] NightKnock =
+        {
+            Line.N("The figure outside looks human. Its grin is far too wide, and its teeth show in the dark."),
+            Monster("Let me in. It's cold out here."),
+            Line.You("I can't. The rules say no one comes in tonight."),
+            Monster("Please. It's me. You know my voice."),
+        };
+        public const string ChoiceOpenWindow = "Open the window.";
         public const string ChoiceRefuse = "Refuse. The window stays closed.";
 
         public static readonly Line[] WindowOpened =
         {
-            Line.N("Ilhan unlatches the window and pushes it open."),
-            Line.N("The figure climbs through the window and walks toward the back room, toward you."),
+            Line.N("You unlatch the window and push it open."),
+            Line.N("The figure climbs through the window and walks toward you."),
             I("STOP! RUN!!!", 0.2f),
         };
 
+        public const string ObjectiveRun = "RUN! Hold SHIFT to sprint to the sheriff's station";
+        public const string CaughtHint = "It got you. Run again!";
+
         public static readonly Line[] RunToStation =
         {
-            Line.N("Both of you run out of the bar, toward the sheriff's station."),
             Line.N("Bulut is already inside the station. He opens the door before you reach it."),
             B("angry", "In. Now. Don't look back.", 0.3f),
             Line.N("Bulut closes the door and locks it."),
@@ -272,7 +283,7 @@ namespace Nightward.Opening
         public static readonly Line[] WindowRefused =
         {
             Line.N("You step back from the glass. The window stays closed."),
-            Line.You("No, you have to ask Bartender Ilhan! He owns the bar."),
+            Line.You("No. You have to ask Bartender Ilhan! He owns the bar."),
             Line.N("The figure stops grinning. It knocks on the glass again, harder, and then again."),
             Line.N("The knocking turns into pounding. The figure's voice sounds angry now."),
             Line.N("Ilhan comes in from the other room and pulls you away from the window into the hallway."),

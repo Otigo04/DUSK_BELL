@@ -15,14 +15,15 @@ namespace Nightward.DayNight
         [SerializeField, Range(0f, 1f)] float startAt = 0.4f;
         [SerializeField] bool invert;
 
-        ParticleSystem.EmissionModule emission;
-
-        void Awake() => emission = GetComponent<ParticleSystem>().emission;
+        ParticleSystem particles;
 
         void Update()
         {
+            // Das Modul wird jedes Mal frisch geholt: ein gespeichertes Struct ist nach einem Neukompilieren im Play-Modus leer und wirft jedes Frame
+            if (particles == null) particles = GetComponent<ParticleSystem>();
             float night = DayNightCycle.Instance != null ? DayNightCycle.Instance.NightFactor : 1f;
             if (invert) night = 1f - night;
+            var emission = particles.emission;
             emission.rateOverTimeMultiplier = maxRate * Mathf.InverseLerp(startAt, 1f, night);
         }
     }

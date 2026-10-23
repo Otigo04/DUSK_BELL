@@ -43,11 +43,15 @@ namespace Nightward.Opening
             Time.timeScale = 1f;
         }
 
+        /// <summary>Wo ein NwQuestTracker im Hud ist (Level_01), macht er die Quest-Anzeige oben rechts; diese Box bleibt dort aus, damit nichts doppelt steht.</summary>
         public void Show(bool visible)
         {
-            hudRoot.SetActive(visible);
+            if (trackerPresent == null) trackerPresent = FindAnyObjectByType<NwQuestTracker>(FindObjectsInactive.Include) != null;
+            hudRoot.SetActive(visible && !trackerPresent.Value);
             Refresh();
         }
+
+        bool? trackerPresent;
 
         void Refresh()
         {

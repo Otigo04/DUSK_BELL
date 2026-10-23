@@ -57,7 +57,7 @@ namespace Nightward.Opening
         [SerializeField] Vector2 grave = new Vector2(22f, 12f);
         [SerializeField] Vector2 davidAt = new Vector2(22.4f, 14.1f);
         [SerializeField] Vector2 maraAt = new Vector2(19.4f, 9.8f);
-        [SerializeField] Vector2 veronicaAt = new Vector2(22.6f, 9.1f);
+        [SerializeField] Vector2 veronicaAt = new Vector2(23.9f, 8.9f);
         [SerializeField] Vector2 canAt = new Vector2(17.6f, 14.0f);
         [SerializeField] Vector2 bulutAtGrave = new Vector2(26.8f, 11.8f);
         [Tooltip("Durch das Tor im Osten zur Strasse")]
@@ -81,10 +81,28 @@ namespace Nightward.Opening
 
         [Header("Bar innen (Raum 206..240 x 1..21)")]
         [SerializeField] Vector2 ilhanBehindBar = new Vector2(224f, 17.4f);
-        [SerializeField] Vector2[] barInnerRoute = { new Vector2(224.5f, 3.2f), new Vector2(224.6f, 13.6f) };
+        [SerializeField] Vector2[] barInnerRoute = { new Vector2(224.5f, 3.2f), new Vector2(225.0f, 13.6f) };
+        [Tooltip("Gang zwischen den Tischen, auf dem der Spieler zur Theke geht")]
+        [SerializeField] float barAisleX = 224.0f;
         [SerializeField] Vector2 playerAtBar = new Vector2(222.4f, 13.6f);
         [SerializeField] Vector2 playerBackRoom = new Vector2(234.4f, 14.0f);
         [SerializeField] Vector2 ilhanBackRoom = new Vector2(235.8f, 14.0f);
+
+        [Header("Nacht: Fenster und Flucht")]
+        [Tooltip("Das Monster der ersten Nacht (NPC_Gast); wird zur Laufzeit erzeugt und vom Skript gefuehrt")]
+        [SerializeField] GameObject monsterPrefab;
+        [Tooltip("Fenster in der Nordwand des Hinterzimmers")]
+        [SerializeField] Vector2 windowAt = new Vector2(236.5f, 19.1f);
+        [Tooltip("Hier muss der Spieler stehen, um mit dem Monster am Fenster zu sprechen")]
+        [SerializeField] Vector2 playerAtWindow = new Vector2(236.5f, 17.4f);
+        [SerializeField] Vector2 monsterOutside = new Vector2(236.5f, 19.7f);
+        [Tooltip("Tempo des Monsters als Vielfaches der Gehgeschwindigkeit: schneller als Gehen, langsamer als Sprinten (Umschalt) - es holt den Spieler ein, wenn er geht oder stehen bleibt")]
+        [SerializeField] float monsterSpeedFactor = 1.18f;
+        [SerializeField] float catchDistance = 0.6f;
+        [Tooltip("Ilhan steht hier in der Tuer zum Hinterzimmer, wenn er aufwacht und ruft")]
+        [SerializeField] Vector2 ilhanWakes = new Vector2(231.2f, 13.5f);
+        [Tooltip("Ilhan rennt voraus: durch die Bar bis zur Ausgangstuer")]
+        [SerializeField] Vector2[] ilhanRunRoute = { new Vector2(228f, 12f), new Vector2(224.5f, 6f), new Vector2(223.5f, 1.2f) };
 
         [Header("Tag-Uhr")]
         [Tooltip("Spaeter Nachmittag, warmes Abendlicht")]
@@ -94,6 +112,13 @@ namespace Nightward.Opening
         [Header("Testen")]
         [Tooltip("Ankunft auch ohne Opening starten (Level_01 direkt per Play)")]
         [SerializeField] bool runWithoutOpening;
+
+        /// <summary>Nur zum Testen: mit Schritt n beginnen (0 Friedhof, 1 Weg zur Station, 2 Station, 3 Weg zur Bar, 4 Bar, 5 Nacht, 6 Morgen).</summary>
+        public static int DebugStartStep
+        {
+            get => PlayerPrefs.GetInt("nw_arrival_debug_step", 0);
+            set => PlayerPrefs.SetInt("nw_arrival_debug_step", value);
+        }
 
         /// <summary>Figur, die der Film uebernimmt: Verhalten aus, Heimatort merken, laeuft per ScriptedWalker.</summary>
         class Actor
@@ -106,11 +131,13 @@ namespace Nightward.Opening
             public CrowdMember crowd;
             /// <summary>true = beim Freigeben nicht nach Hause setzen (die Figur bleibt, wo sie steht)</summary>
             public bool keepPlace;
+            /// <summary>"E zum Reden" ist im Film aus (sonst koennte der Spieler Figuren mitten in der Szene ansprechen)</summary>
+            public Interactable[] talks;
         }
 
         readonly List<Actor> actors = new List<Actor>();
         readonly List<(Light2D light, float intensity)> barLights = new List<(Light2D, float)>();
-        Actor bulut, mara, veronica, david, can, ilhan;
+        Actor bulut, mara, veronica, david, can, ilhan, monster;
         Rigidbody2D playerBody;
         Collider2D[] playerColliders;
         Transform graveFocus;
@@ -171,13 +198,16 @@ namespace Nightward.Opening
             try
             {
                 BeginFilm();
-                yield return ArrivalAtGraveyard();
-                yield return WalkToStation();
-                yield return StationScene();
-                yield return WalkToBar();
-                yield return BarByDay();
+                int from = DebugStartStep;
+                DebugStartStep = 0;     // gilt nur fuer diesen einen Start, sonst beginnt ein normaler Durchlauf spaeter mitten im Ablauf
+                if (from > 0) PrepareDebugStart(from);
+                if (from <= 0) yield return ArrivalAtGraveyard();
+                if (from <= 1) yield return WalkToStation();
+                if (from <= 2) yield return StationScene();
+                if (from <= 3) yield return WalkToBar();
+                if (from <= 4) yield return BarByDay();
                 bool windowOpened = false;
-                yield return FirstNight(result => windowOpened = result);
+                if (from <= 5) yield return FirstNight(result => windowOpened = result);
                 yield return Morning(windowOpened);
             }
             finally
@@ -190,8 +220,35 @@ namespace Nightward.Opening
             yield return ui.Hint("New Main Quest: " + ArrivalScript.QuestVillagers, 3.2f);
         }
 
+        /// <summary>Teststart mitten im Ablauf: Figuren dorthin, wo der vorige Schritt sie hinterlassen haette.</summary>
+        void PrepareDebugStart(int step)
+        {
+            var cam = CameraFollow2D.Main;
+            Vector2 door = OutsideDoor;
+            if (step == 1)
+            {
+                // Direkt nach dem Gespraech am Autofenster
+                SetPlayerAt(carStop + new Vector2(-1.05f, -0.04f));
+                Place(bulut, carStop + new Vector2(-1.5f, 0.2f));
+                bulut.mover.LookAt(player.transform.position);
+            }
+            else if (step <= 3)
+            {
+                SetPlayerAt(door + new Vector2(0f, -0.5f));
+                Place(bulut, door + new Vector2(0.9f, -0.3f));
+            }
+            else
+            {
+                Vector2 bar = new Vector2(56f, 94.2f);
+                SetPlayerAt(bar + new Vector2(-0.4f, -0.4f));
+                Place(bulut, bar);
+            }
+            if (cam != null) cam.Snap();
+        }
+
         void BeginFilm()
         {
+            ui.SetFade(0f);       // die UI startet mit schwarzem Bild; wer mitten im Ablauf beginnt, braucht es klar
             playerBody = player.GetComponent<Rigidbody2D>();
             playerColliders = player.GetComponentsInChildren<Collider2D>();
             if (PlayerChoice.HasChosen) ApplyProtagonist(PlayerChoice.Current);
@@ -272,7 +329,12 @@ namespace Nightward.Opening
             a.walker = go.GetComponent<ScriptedWalker>();
             if (a.walker == null) a.walker = go.AddComponent<ScriptedWalker>();
             if (a.brain != null) a.brain.enabled = false;
+            a.talks = go.GetComponentsInChildren<Interactable>(true);
+            foreach (var t in a.talks) t.enabled = false;
             mover.Stop();
+            // Im Film wird die Figur direkt gesetzt (ScriptedWalker): kein Physik-Anstossen an Moebeln und Tueren
+            var rb = go.GetComponent<Rigidbody2D>();
+            if (rb != null) { rb.linearVelocity = Vector2.zero; rb.bodyType = RigidbodyType2D.Kinematic; }
             actors.Add(a);
             return a;
         }
@@ -283,6 +345,7 @@ namespace Nightward.Opening
             if (a == null || a.go == null) return;
             a.go.SetActive(true);
             if (a.crowd != null) { Destroy(a.crowd); a.crowd = null; }
+            if (a.talks != null) foreach (var t in a.talks) if (t != null) t.enabled = true;
             if (!a.keepPlace) Place(a, a.home);
             var rb = a.go.GetComponent<Rigidbody2D>();
             if (rb != null) rb.bodyType = RigidbodyType2D.Dynamic;
@@ -454,6 +517,7 @@ namespace Nightward.Opening
             ui.SetFade(1f);
             yield return null;
             yield return null;
+            ClearLootOnArrivalRoad();
             if (cam != null) cam.Snap();
             audioPlayer.StartDriveAmbience(0.5f);
             yield return new WaitForSeconds(0.6f);
@@ -476,6 +540,8 @@ namespace Nightward.Opening
             {
                 Vector2 window = car.SidePoint(1.45f, 0.3f);
                 yield return bulut.walker.WalkTo(graveGate, 1.9f);
+                // Die Dialogbox deckt die untere Haelfte: die Kamera rueckt zu Auto und Bulut, so dass beide darueber stehen
+                if (cameraPoint != null) StartCoroutine(GlideCamera(new Vector2(carStop.x - 2.4f, carStop.y - 1.4f), 1.6f));
                 yield return bulut.walker.WalkTo(window, 2.3f);
                 bulut.mover.LookAt(car.transform.position);
             }
@@ -491,6 +557,21 @@ namespace Nightward.Opening
             if (cam != null) cam.ClearFocus();
             if (cameraPoint != null) { Destroy(cameraPoint.gameObject); cameraPoint = null; }
             yield return new WaitForSeconds(0.8f);
+        }
+
+        /// <summary>
+        /// Der LootSpawner wuerfelt beim Szenenstart Kisten und Gegenstaende, auch auf der Ankunftsstrasse und im Friedhof:
+        /// eine Kiste auf der Fahrspur laesst das Auto steckenbleiben. Im Bereich der Startsequenz bleibt die Beute weg.
+        /// </summary>
+        void ClearLootOnArrivalRoad()
+        {
+            var area = Rect.MinMaxRect(10f, carStart.y - 1f, 39f, 18f);
+            foreach (var s in FindObjectsByType<Nightward.Items.LootSpawner>())
+            {
+                if (!area.Contains(s.transform.position)) continue;
+                if (s.Spawned != null) Destroy(s.Spawned);
+                s.enabled = false;
+            }
         }
 
         IEnumerator GraveNarration()
@@ -538,8 +619,8 @@ namespace Nightward.Opening
                 n++;
             }
             float groupX = n > 0 ? sumX / n : grave.x;
-            // 0,9 hoeher: unten verdeckt die Erzaehlerzeile sonst die vorderen Gaeste
-            float centerY = (n > 0 ? (minY + maxY) * 0.5f : grave.y) + 0.9f;
+            // Knapp unter der Mitte: die vorderen Gaeste stehen ueber dem Erzaehlerkasten (zwei Zeilen), die Sprechblase des Pastors passt oben noch ins Bild
+            float centerY = (n > 0 ? (minY + maxY) * 0.5f : grave.y) - 0.2f;
             float halfW = cam.orthographicSize * cam.aspect;
             float targetX = Mathf.Min(carStop.x - 0.3f, Mathf.Max(groupX + 1.5f, carStop.x - halfW * 0.9f));
 
@@ -557,6 +638,21 @@ namespace Nightward.Opening
                 yield return null;
             }
             cameraPoint.position = new Vector2(targetX, centerY) - follow.Offset;
+        }
+
+        /// <summary>Der Kamerapunkt der Cutscene gleitet weich zu einer neuen Bildmitte.</summary>
+        IEnumerator GlideCamera(Vector2 center, float time)
+        {
+            var follow = CameraFollow2D.Main;
+            if (cameraPoint == null || follow == null) yield break;
+            Vector2 from = cameraPoint.position;
+            Vector2 to = center - follow.Offset;
+            for (float t = 0f; t < time && cameraPoint != null; t += Time.deltaTime)
+            {
+                cameraPoint.position = Vector2.Lerp(from, to, Mathf.SmoothStep(0f, 1f, t / time));
+                yield return null;
+            }
+            if (cameraPoint != null) cameraPoint.position = to;
         }
 
         IEnumerator WaitVisible(params Transform[] targets)
@@ -585,7 +681,7 @@ namespace Nightward.Opening
             yield return ui.Narrate(ArrivalScript.WalkToStation[0].text);
             StartCoroutine(ui.Narrate(ArrivalScript.WalkToStation[1].text));
             var route = new List<Vector2>(stationRoute) { OutsideDoor + new Vector3(0f, -1.0f, 0f) };
-            yield return Escort(bulut, route, bulutSpeed);
+            yield return FollowBulut(route, bulutSpeed, ArrivalScript.ObjectiveFollowStation);
             StartCoroutine(ui.Narrate(ArrivalScript.WalkToStation[2].text));
             // An der Tuer: Bulut geht voraus hinein
             yield return bulut.walker.WalkTo((Vector2)OutsideDoor + Vector2.up * 1.1f, 1.3f);
@@ -600,7 +696,7 @@ namespace Nightward.Opening
             var cam = CameraFollow2D.Main;
             Vector3 entry = InsideEntry;
             var roomFocus = new GameObject("Raum_Blickpunkt").transform;
-            roomFocus.position = entry + new Vector3(0f, 2.2f, 0f);
+            roomFocus.position = entry + new Vector3(0f, 1.2f, 0f);   // tiefer als die Raummitte: Bulut am Schreibtisch steht ueber der Dialogbox
 
             // Die Trauergaeste sind inzwischen heimgegangen (waehrend die Tuer zu ist)
             yield return DoorTransition(() =>
@@ -663,8 +759,6 @@ namespace Nightward.Opening
             yield return new WaitForSeconds(0.3f);
 
             // Bulut steht auf und geht zur Tuer, der Spieler mit
-            var rb = bulut.go.GetComponent<Rigidbody2D>();
-            if (rb != null) rb.bodyType = RigidbodyType2D.Dynamic;
             Vector2 door = (Vector2)entry + new Vector2(0.5f, 0.1f);
             bool bulutDone = false;
             StartCoroutine(Flag(WalkRoute(bulut, new[] { new Vector2(203.1f, 65.0f), new Vector2(203.1f, 61.9f), door }, 1.6f), () => bulutDone = true));
@@ -685,8 +779,6 @@ namespace Nightward.Opening
         void SeatBulut()
         {
             Place(bulut, bulutSeat);
-            var rb = bulut.go.GetComponent<Rigidbody2D>();
-            if (rb != null) rb.bodyType = RigidbodyType2D.Kinematic;
             bulut.mover.LookAt(bulutSeat + Vector2.down);      // schaut nicht auf, sondern auf seine Unterlagen
         }
 
@@ -710,7 +802,7 @@ namespace Nightward.Opening
         IEnumerator WalkToBar()
         {
             StartCoroutine(PlayWalkTalk());
-            yield return Escort(bulut, barRoute, bulutSpeed);
+            yield return FollowBulut(barRoute, bulutSpeed, ArrivalScript.ObjectiveFollowBar);
         }
 
         IEnumerator PlayWalkTalk()
@@ -752,11 +844,13 @@ namespace Nightward.Opening
             ui.HideSubtitle();
 
             // Beide gehen zur Theke
-            StartCoroutine(Flag(WalkRoute(bulut, barInnerRoute, 1.7f), () => { }));
+            bool bulutArrived = false;
+            StartCoroutine(Flag(WalkRoute(bulut, barInnerRoute, 1.7f), () => bulutArrived = true));
             yield return PlayerWalkTo(inside + new Vector2(0f, 1.0f), 1.5f);
-            yield return PlayerWalkTo(barInnerRoute[0] + new Vector2(0f, 0.3f), 1.6f);
-            yield return PlayerWalkTo(playerAtBar, 1.6f);
-            yield return WaitWalking(bulut);
+            yield return PlayerWalkTo(new Vector2(barAisleX, barInnerRoute[0].y + 0.3f), 1.6f);
+            yield return PlayerWalkTo(new Vector2(barAisleX, playerAtBar.y), 1.6f);
+            yield return PlayerWalkTo(playerAtBar, 1.4f);
+            while (!bulutArrived) yield return null;
             player.Controller.FaceTowards(Vector2.up);
             bulut.mover.LookAt(ilhanBehindBar);
             yield return new WaitForSeconds(0.3f);
@@ -771,11 +865,6 @@ namespace Nightward.Opening
             // Es wird dunkel: Ilhan bringt den Spieler nach hinten
             yield return dialogue.Play(ArrivalScript.BarBackRoom);
             dialogue.Close();
-        }
-
-        IEnumerator WaitWalking(Actor a)
-        {
-            while (a.walker.Walking) yield return null;
         }
 
         IEnumerator BulutLeavesBar(Vector2 inside)
@@ -810,14 +899,28 @@ namespace Nightward.Opening
             SetBarLights(0.18f);
             SetPlayerAt(playerBackRoom);
             player.Controller.FaceTowards(Vector2.up);
-            Place(ilhan, ilhanBackRoom);
-            ilhan.mover.LookAt(ilhanBackRoom + Vector2.up);
+            Place(ilhan, ilhanBehindBar);
+            ilhan.mover.LookAt(ilhanBehindBar + Vector2.down);
+            monster = SpawnMonster(monsterOutside);
             if (cam != null) cam.Snap();
             yield return new WaitForSeconds(0.8f);
             yield return ui.FadeIn();
             yield return new WaitForSeconds(0.4f);
 
-            dialogue.Open(ilhanProfile);
+            // Das Klopfen weckt den Spieler (ohne Portrait: es spricht niemand, Ilhan schlaeft)
+            dialogue.Open(null);
+            yield return dialogue.Play(ArrivalScript.NightWake);
+            dialogue.Close();
+
+            // Ab hier spielt der Spieler selbst: zum Fenster gehen
+            BeginPlay();
+            StartCoroutine(ui.Hint(ArrivalScript.ObjectiveWindow, 3f));
+            yield return WaitUntilNear(playerAtWindow, 1.1f, ArrivalScript.ObjectiveWindow);
+            EndPlay();
+            player.Controller.FaceTowards(Vector2.up);
+
+            // Der Spieler selbst spricht mit dem Monster am Fenster (Portrait nur bei den Zeilen des Monsters)
+            dialogue.Open(null);
             var k = ArrivalScript.NightKnock;
             for (int i = 0; i < k.Length - 1; i++) yield return dialogue.PlayLine(k[i]);
             yield return Ask(Last(k), ArrivalScript.ChoiceOpenWindow, ArrivalScript.ChoiceRefuse);
@@ -826,8 +929,18 @@ namespace Nightward.Opening
 
             if (opened)
             {
-                yield return dialogue.Play(ArrivalScript.WindowOpened);
+                var w = ArrivalScript.WindowOpened;
+                yield return dialogue.PlayLine(w[0]);
+                yield return dialogue.PlayLine(w[1]);
                 dialogue.Close();
+                yield return MonsterClimbsIn();
+                // Ilhan wacht auf, ruft von der Tuer und rennt voraus zur Station
+                Place(ilhan, ilhanWakes);
+                ilhan.mover.LookAt(playerBody.position);
+                OpenDoorNear(ilhanWakes);
+                StartCoroutine(ui.Bubble(ilhan.go.transform, w[2].text, 0.2f));
+                StartCoroutine(Flag(WalkRoute(ilhan, ilhanRunRoute, 4.2f), () => ilhan.go.SetActive(false)));
+                yield return RunFromMonster();
                 yield return RunToStation();
             }
             else
@@ -836,6 +949,234 @@ namespace Nightward.Opening
                 dialogue.Close();
                 yield return ui.FadeOut();
             }
+            DestroyMonster();
+        }
+
+        // ------------------------------------------------------------ Spielphasen im Film
+
+        /// <summary>Freies Spielen mitten im Film: Eingabe und Kollision an (der Kampf bleibt aus).</summary>
+        void BeginPlay(bool hideSubtitle = true)
+        {
+            Cutscene.End();
+            foreach (var c in playerColliders) c.enabled = true;
+            player.Lock(false);
+            if (hideSubtitle) ui.HideSubtitle();
+        }
+
+        /// <summary>
+        /// Bulut geht voraus, der Spieler laeuft selbst hinterher (mit Kollision, frei in alle Richtungen).
+        /// Faellt der Spieler zurueck, bleibt Bulut stehen und wartet; am Ziel muss der Spieler aufschliessen.
+        /// </summary>
+        IEnumerator FollowBulut(IList<Vector2> route, float speed, string objective)
+        {
+            BeginPlay(hideSubtitle: false);
+            StartCoroutine(ui.Hint(objective, 3f));
+            bool arrived = false;
+            Func<bool> hold = () => Vector2.Distance(playerBody.position, bulut.mover.Position) > waitDistance;
+            StartCoroutine(Flag(WalkRoute(bulut, route, speed, hold), () => arrived = true));
+            float remind = 0f;
+            while (!arrived)
+            {
+                // Bulut wartet: nach einer Weile ein Hinweis
+                remind = hold() ? remind + Time.deltaTime : 0f;
+                if (remind > 12f) { remind = 0f; StartCoroutine(ui.Hint(objective, 3f)); }
+                yield return null;
+            }
+            // Am Ziel angekommen: warten, bis der Spieler da ist
+            float wait = 0f;
+            while (Vector2.Distance(playerBody.position, bulut.mover.Position) > 2.4f)
+            {
+                wait += Time.deltaTime;
+                if (wait > 12f) { wait = 0f; StartCoroutine(ui.Hint(objective, 3f)); }
+                yield return null;
+            }
+            EndPlay();
+        }
+
+        /// <summary>Zurueck in den Film: Eingabe weg, Spieler ohne Kollision.</summary>
+        void EndPlay()
+        {
+            StopPlayerWalk();
+            player.Lock(true);
+            foreach (var c in playerColliders) c.enabled = false;
+            Cutscene.Begin();
+        }
+
+        IEnumerator WaitUntilNear(Vector2 spot, float radius, string objective)
+        {
+            float t = 0f;
+            while (Vector2.Distance(playerBody.position, spot) > radius)
+            {
+                t += Time.deltaTime;
+                if (t > 18f) { t = 0f; StartCoroutine(ui.Hint(objective, 3f)); }
+                yield return null;
+            }
+        }
+
+        // ------------------------------------------------------------ Das Monster am Fenster
+
+        Actor SpawnMonster(Vector2 at)
+        {
+            if (monsterPrefab == null) { Debug.LogWarning("[Ankunft] monsterPrefab fehlt"); return null; }
+            var go = Instantiate(monsterPrefab, at, Quaternion.identity);
+            go.name = "Nacht_Monster";
+            // Das Skript fuehrt das Monster: Verhalten, Dialog, Antippen und Kollision aus
+            var brain = go.GetComponent<NpcBrain>();
+            if (brain != null) brain.enabled = false;
+            foreach (var b in go.GetComponents<NpcBehavior>()) b.enabled = false;
+            var monsterNpc = go.GetComponent<MonsterNpc>();
+            if (monsterNpc != null) monsterNpc.enabled = false;
+            var talk = go.GetComponent<NpcDialogue>();
+            if (talk != null) talk.enabled = false;
+            foreach (var it in go.GetComponentsInChildren<Interactable>(true)) it.enabled = false;
+            foreach (var c in go.GetComponentsInChildren<Collider2D>(true)) c.enabled = false;
+            var rb = go.GetComponent<Rigidbody2D>();
+            if (rb != null) { rb.linearVelocity = Vector2.zero; rb.bodyType = RigidbodyType2D.Kinematic; rb.position = at; }
+            var a = new Actor { go = go, mover = go.GetComponent<NpcMover>(), brain = brain, home = at };
+            a.walker = go.GetComponent<ScriptedWalker>();
+            if (a.walker == null) a.walker = go.AddComponent<ScriptedWalker>();
+            a.mover.Stop();
+            a.mover.LookAt(at + Vector2.down);
+            return a;
+        }
+
+        /// <summary>Ilhan reisst die Klapptuer auf (sonst muesste der Spieler mitten in der Flucht E druecken).</summary>
+        void OpenDoorNear(Vector2 at)
+        {
+            KlappTuer best = null;
+            float bestDist = 3f;
+            foreach (var door in FindObjectsByType<KlappTuer>())
+            {
+                float d = Vector2.Distance(door.transform.position, at);
+                if (d < bestDist) { bestDist = d; best = door; }
+            }
+            if (best != null && !best.Offen) best.Interact(player);
+        }
+
+        void DestroyMonster()
+        {
+            if (monster != null && monster.go != null) Destroy(monster.go);
+            monster = null;
+        }
+
+        /// <summary>Das Fenster geht auf, das Monster klettert herein.</summary>
+        IEnumerator MonsterClimbsIn()
+        {
+            if (monster == null) yield break;
+            yield return monster.walker.WalkTo(windowAt, 1.1f, null, false);
+            var m = monster.go.GetComponent<MonsterNpc>();
+            if (m != null) m.ShowRevealedLook();
+            yield return monster.walker.WalkTo(windowAt + Vector2.down * 0.6f, 1.3f);
+        }
+
+        /// <summary>
+        /// Die Flucht aus der Bar zur Station, vom Spieler selbst gelaufen. Das Monster folgt seiner Spur und ist langsamer:
+        /// es holt den Spieler nur ein, wenn er stehen bleibt. Tueren (Durchgang) versetzen den Spieler, das Monster kommt kurz danach.
+        /// Wird er gefangen, beginnt es ab der letzten Tuer von vorn.
+        /// </summary>
+        IEnumerator RunFromMonster()
+        {
+            if (monster == null) yield break;
+            var pc = player.Controller;
+            Vector2 stationDoor = OutsideDoor;
+            float monsterSpeed = pc.MoveSpeed * monsterSpeedFactor;
+
+            var trail = new Queue<Vector2>();
+            Vector2 cpPlayer = playerBackRoom, cpMonster = monster.mover.Position;
+            bool cpAfterDoor = false;
+            Vector2 lastPos = playerBody.position, lastRecord = lastPos, hopTarget = lastPos;
+            float grace = 1.0f, hopWait = 0f, remind = 0f;
+
+            BeginPlay();
+            monster.walker.BeginManual();
+            StartCoroutine(ui.Hint(ArrivalScript.ObjectiveRun, 3.5f));
+
+            while (true)
+            {
+                Vector2 pp = playerBody.position;
+
+                // Spieler wurde versetzt (Tuer): das Monster kommt etwas spaeter dort an
+                if ((pp - lastPos).sqrMagnitude > 36f)
+                {
+                    trail.Clear();
+                    monster.go.SetActive(false);
+                    hopWait = 1.8f;
+                    hopTarget = pp;
+                    cpPlayer = pp;
+                    cpAfterDoor = true;
+                    lastRecord = pp;
+                }
+                lastPos = pp;
+
+                if (hopWait > 0f)
+                {
+                    hopWait -= Time.deltaTime;
+                    if (hopWait <= 0f)
+                    {
+                        monster.go.SetActive(true);
+                        Place(monster, hopTarget);
+                        monster.walker.BeginManual();
+                        grace = 0.3f;
+                    }
+                }
+                else
+                {
+                    if ((pp - lastRecord).sqrMagnitude > 0.0625f) { trail.Enqueue(pp); lastRecord = pp; }
+                    if (grace > 0f) grace -= Time.deltaTime;
+                    else
+                    {
+                        Vector2 mp = monster.mover.Position;
+                        while (trail.Count > 0 && (trail.Peek() - mp).sqrMagnitude < 0.04f) trail.Dequeue();
+                        monster.walker.Step(trail.Count > 0 ? trail.Peek() : pp, monsterSpeed);
+                        if (Vector2.Distance(monster.mover.Position, pp) < catchDistance)
+                        {
+                            // Gefangen: zurueck zum letzten Haltepunkt, das Monster ein Stueck dahinter
+                            player.Lock(true);
+                            StopPlayerWalk();
+                            yield return ui.FadeOut();
+                            SetPlayerAt(cpPlayer);
+                            lastPos = lastRecord = cpPlayer;
+                            trail.Clear();
+                            if (cpAfterDoor)
+                            {
+                                monster.go.SetActive(false);
+                                hopWait = 1.8f;
+                                hopTarget = cpPlayer;
+                            }
+                            else
+                            {
+                                Place(monster, cpMonster);
+                                monster.walker.BeginManual();
+                                grace = 1.2f;
+                            }
+                            var cam = CameraFollow2D.Main;
+                            if (cam != null) cam.Snap();
+                            StartCoroutine(ui.Hint(ArrivalScript.CaughtHint, 2.5f));
+                            yield return ui.FadeIn();
+                            player.Lock(false);
+                        }
+                    }
+                }
+
+                if (Vector2.Distance(pp, stationDoor) < 1.6f) break;
+                remind += Time.deltaTime;
+                if (remind > 25f) { remind = 0f; StartCoroutine(ui.Hint(ArrivalScript.ObjectiveRun, 3f)); }
+                yield return null;
+            }
+
+            // Geschafft: das Monster kommt noch bis zur Schwelle und bleibt stehen
+            EndPlay();
+            player.Controller.FaceTowards(Vector2.up);
+            if (monster.go.activeSelf)
+            {
+                for (float t = 0f; t < 1.2f && Vector2.Distance(monster.mover.Position, playerBody.position) > 2.2f; t += Time.deltaTime)
+                {
+                    monster.walker.Step(playerBody.position, monsterSpeed);
+                    yield return null;
+                }
+                monster.walker.EndManual(playerBody.position);
+            }
+            yield return new WaitForSeconds(0.4f);
         }
 
         /// <summary>Flucht in die Station (Bulut wartet schon), Gespraech, danach die Zellen.</summary>
@@ -844,9 +1185,10 @@ namespace Nightward.Opening
             var cam = CameraFollow2D.Main;
             Vector3 entry = InsideEntry;
             var roomFocus = new GameObject("Raum_Blickpunkt").transform;
-            roomFocus.position = entry + new Vector3(0f, 2.2f, 0f);
+            roomFocus.position = entry + new Vector3(0f, 1.2f, 0f);   // tiefer als die Raummitte: Bulut am Schreibtisch steht ueber der Dialogbox
 
-            ui.SetFade(1f);
+            yield return ui.FadeOut();
+            DestroyMonster();
             SetBarLights(1f);
             bulut.go.SetActive(true);
             SeatBulut();
@@ -898,8 +1240,6 @@ namespace Nightward.Opening
             // Ilhan ist wieder hinter der Theke, Bulut wartet draussen
             Place(ilhan, ilhanBehindBar);
             bulut.go.SetActive(true);
-            var rb = bulut.go.GetComponent<Rigidbody2D>();
-            if (rb != null) rb.bodyType = RigidbodyType2D.Dynamic;
             Place(bulut, bulutAt);
             bulut.mover.LookAt(playerAt);
             bulut.keepPlace = true;       // bleibt nach dem Film dort, wo er steht (Heimweg uebernimmt sein Verhalten)

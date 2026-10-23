@@ -63,6 +63,38 @@ namespace Nightward.Opening
             Walking = false;
         }
 
+        string stepState;
+
+        /// <summary>Per-Frame-Steuerung (Verfolgungsjagd): Pfadsuche und Animator aus, die Figur wird mit Step bewegt.</summary>
+        public void BeginManual()
+        {
+            Walking = true;
+            mover.Stop();
+            mover.Frozen = true;
+            if (npcAnimator != null) npcAnimator.enabled = false;
+            stepState = null;
+        }
+
+        /// <summary>Ein Schritt in Richtung Ziel (speed in Units pro Sekunde), mit walk_ in 8 Richtungen.</summary>
+        public void Step(Vector2 target, float speed)
+        {
+            Vector2 pos = body.position;
+            Vector2 to = target - pos;
+            float dist = to.magnitude;
+            if (dist < 0.001f) return;
+            body.position = pos + to / dist * Mathf.Min(dist, speed * Time.deltaTime);
+            transform.position = body.position;
+            string state = "walk_" + Dirs[Player.PlayerController.DirectionIndex(to)];
+            if (state != stepState && animator != null) { animator.Play(state, 0, 0f); stepState = state; }
+            if (animator != null) animator.speed = Mathf.Clamp(speed / 2.5f, 0.6f, 1.6f);
+        }
+
+        public void EndManual(Vector2 lookAt)
+        {
+            Walking = false;
+            Stand(lookAt);
+        }
+
         /// <summary>Stehen bleiben und zu einem Punkt schauen, dann wieder normal animieren.</summary>
         public void Stand(Vector2 lookAt)
         {

@@ -234,9 +234,16 @@ namespace Nightward.Opening
         {
             subtitle.fontStyle = thought ? FontStyle.Italic : FontStyle.Normal;
             subtitle.text = "";     // sonst blitzt kurz der alte Text auf, bevor der neue getippt wird
+            // Lange Texte kommen in Satz-Haeppchen nacheinander, damit der Kasten die Szene nicht verdeckt
+            var parts = SplitForReading(text);
+            FitSubtitle(parts[0]);
             yield return ShowGroup(subtitleGroup, true);
-            yield return Type(subtitle, text, typeSpeed);
-            yield return new WaitForSeconds(ReadTime(text) + extraHold);
+            for (int i = 0; i < parts.Count; i++)
+            {
+                if (i > 0) { subtitle.text = ""; FitSubtitle(parts[i]); }
+                yield return Type(subtitle, parts[i], typeSpeed);
+                yield return new WaitForSeconds(ReadTime(parts[i]) + (i == parts.Count - 1 ? extraHold : 0f));
+            }
             yield return ShowGroup(subtitleGroup, false);
         }
 
@@ -245,8 +252,49 @@ namespace Nightward.Opening
         {
             subtitle.fontStyle = FontStyle.Normal;
             subtitle.text = "";
+            FitSubtitle(text);
             yield return ShowGroup(subtitleGroup, true);
             yield return Type(subtitle, text, typeSpeed);
+        }
+
+        const int MaxNarrationChars = 115;
+
+        /// <summary>Teilt an Satzenden in Stuecke bis etwa MaxNarrationChars Zeichen.</summary>
+        static List<string> SplitForReading(string text)
+        {
+            var parts = new List<string>();
+            var current = new System.Text.StringBuilder();
+            int start = 0;
+            for (int i = 0; i < text.Length; i++)
+            {
+                bool end = i == text.Length - 1 || ((text[i] == '.' || text[i] == '!' || text[i] == '?') && text[i + 1] == ' ');
+                if (!end) continue;
+                string sentence = text.Substring(start, i - start + 1).Trim();
+                start = i + 1;
+                if (current.Length > 0 && current.Length + sentence.Length + 1 > MaxNarrationChars)
+                {
+                    parts.Add(current.ToString());
+                    current.Length = 0;
+                }
+                if (current.Length > 0) current.Append(' ');
+                current.Append(sentence);
+            }
+            if (current.Length > 0) parts.Add(current.ToString());
+            if (parts.Count == 0) parts.Add(text);
+            return parts;
+        }
+
+        /// <summary>Kasten waechst (nach oben) mit dem Text, damit nichts herausragt.</summary>
+        void FitSubtitle(string text)
+        {
+            var rt = subtitle.rectTransform;
+            var plate = rt.parent as RectTransform;
+            if (plate == null) return;
+            var settings = subtitle.GetGenerationSettings(new Vector2(rt.rect.width, 0f));
+            float h = subtitle.cachedTextGeneratorForLayout.GetPreferredHeight(text, settings) / subtitle.pixelsPerUnit;
+            h = Mathf.Max(34f, h + 2f);
+            rt.sizeDelta = new Vector2(rt.sizeDelta.x, h);
+            plate.sizeDelta = new Vector2(plate.sizeDelta.x, h + 6f);
         }
 
         public void HideSubtitle() => StartCoroutine(ShowGroup(subtitleGroup, false));

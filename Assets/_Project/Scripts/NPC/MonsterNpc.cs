@@ -48,6 +48,13 @@ namespace Nightward.NPC
             SetRevealed(!Revealed);
         }
 
+        /// <summary>Nur das Aussehen der Enthuellung (Animator), ohne Jagd-Verhalten: fuer Szenen, in denen ein Skript das Monster fuehrt.</summary>
+        public void ShowRevealedLook()
+        {
+            if (animator != null && revealedController != null) animator.runtimeAnimatorController = revealedController;
+            if (npcAnimator != null) npcAnimator.ResetState();
+        }
+
         public void SetRevealed(bool revealed)
         {
             if (Revealed == revealed) return;
