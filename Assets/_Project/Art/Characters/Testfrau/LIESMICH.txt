@@ -1,0 +1,13 @@
+TESTFRAU - Test-Charakter nach dem Pixel Law (Assets/_Project/Art/__STYLEBIBLE/ART_STYLE.md)
+Zelle 48x48, Pivot unten-Mitte, 8 Richtungen (Zeilen: S, SW, W, NW, N, NE, E, SE; NE/E/SE gespiegelt), Pixel Per Unit 32.
+  testfrau_stand_8dir.png    384x48    erste Idle-Frame je Richtung
+  testfrau_idle_sheet.png    288x384   6 Frames je Richtung (Atmen, Blinzeln in Frame 5), 6 fps
+  testfrau_walk_sheet.png    384x384   8 Frames je Richtung, 10 fps
+  portraits/testfrau_{calm,blink,talk_A,talk_E,talk_O}.png   64x64
+  Testfrau.aseprite          112 Frames, Tags idle_<Richtung> und walk_<Richtung>, Master-Palette
+  testfrau_animation.json    Zellgroesse, Reihenfolge, Frames, fps (fuer die Unity-Einrichtung)
+  _Quelle_Generator/gen_testfrau.py   erzeugt alle PNGs (python3 gen_testfrau.py); .aseprite per Aseprite-MCP-Skript aus den Sheets
+Version 3 (Form-Regeln, ART_STYLE.md Abschnitt 11/12): Chibi-Proportion nach Mara/Sheriff, knielanger Mantel, von Hand gezeichnete Koepfe (sprite_testfrau.py), Portrait mit Ei-Gesicht und Haarvorhaengen (portrait_testfrau.py).
+Details: Umhaengetasche mit Riemen und Schnalle, Knopfleiste, Guertel, Taschenklappen, Hosenaufschlag, Kniefalten,
+Stiefelschnallen, Haarglanzpunkte; Wertgruppen: dunkelblauer Mantel / sandfarbene Hose / dunkle Stiefel / braune Haare.
+Markantes Element: rosa Schal mit haengendem Ende, Umhaengetasche. Nicht in Unity eingerichtet (Unity 6 auf dem Mac nicht installiert): kein Import, keine .meta, kein Animator.

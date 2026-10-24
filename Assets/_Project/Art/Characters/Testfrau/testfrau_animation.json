@@ -1,0 +1,42 @@
+{
+  "name": "Testfrau",
+  "cell": [
+    48,
+    48
+  ],
+  "pivot": "bottom-center",
+  "ppu": 32,
+  "rows": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "mirrored": {
+    "NE": "NW",
+    "E": "W",
+    "SE": "SW"
+  },
+  "idle": {
+    "frames": 6,
+    "fps": 6,
+    "sheet": "testfrau_idle_sheet.png"
+  },
+  "walk": {
+    "frames": 8,
+    "fps": 10,
+    "sheet": "testfrau_walk_sheet.png"
+  },
+  "stand": "testfrau_stand_8dir.png",
+  "portraits": [
+    "calm",
+    "blink",
+    "talk_A",
+    "talk_E",
+    "talk_O"
+  ]
+}

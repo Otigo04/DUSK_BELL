@@ -119,6 +119,82 @@ def guess_kind(path):
     return "object"
 
 
+
+# ---------------------------------------------------------------- Detail und Proportion (Warnungen, aus Referenzfiguren abgeleitet)
+# Referenzen (Sheriff, Mara, Can, Veronica, Elenora, David, Gast, Hausfrau, Ilhan, Hauptfiguren, Anker), Frame "S":
+#   Cluster/100 deckende Pixel 13.0-26.3 (Median 17.6) | Cluster <=2 px: 30-68 % (Median 50) | Farben 12-22 | Figur 42-48 px hoch, B/H 0.38-0.53
+# Portraits (calm): Cluster/100 8.7-24.7 | Cluster <=2 px 65-85 % | Farben 13-18
+DETAIL = {
+    "char": dict(dens_min=13.0, small_min=35.0, cols=(10, 24), height=(40, 48), aspect=(0.36, 0.56)),
+    "portrait": dict(dens_min=8.0, small_min=60.0, cols=(11, 20)),
+}
+
+
+def cluster_stats(im):
+    """-> (deckende Pixel, Cluster, kleine Cluster <=2 px). Cluster = 4er-zusammenhaengende Flaeche gleicher Farbe."""
+    im = im.convert("RGBA")
+    w, h = im.size
+    px = im.load()
+    pts = {(x, y) for y in range(h) for x in range(w) if px[x, y][3] == 255}
+    seen, clusters, small = set(), 0, 0
+    for p in pts:
+        if p in seen:
+            continue
+        c = px[p][:3]
+        st, n = [p], 0
+        seen.add(p)
+        while st:
+            x, y = st.pop()
+            n += 1
+            for q in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                if q in pts and q not in seen and px[q][:3] == c:
+                    seen.add(q)
+                    st.append(q)
+        clusters += 1
+        small += n <= 2
+    return len(pts), clusters, small
+
+
+def check_detail(img, kind):
+    """Warnungen zu Detaildichte und Proportion des ersten Frames (char: 48er/32er Zelle, portrait: 64er)."""
+    cfg = DETAIL.get(kind)
+    if not cfg:
+        return []
+    im = img.convert("RGBA")
+    w, h = im.size
+    if kind == "portrait":
+        cw, ch = (64, 64) if w % 64 == 0 and h % 64 == 0 else (w, h)
+    elif h % 48 == 0 and w % 48 == 0:
+        cw, ch = 48, 48
+    elif w % h == 0:                       # Einzelzeile mit quadratischen Zellen (z.B. 448x56 Altbestand)
+        cw, ch = h, h
+    elif h % 48 == 0 and w % 32 == 0:
+        cw, ch = 32, 48
+    else:
+        cw, ch = w, h
+    cell = im.crop((0, 0, cw, ch))
+    op, cl, sm = cluster_stats(cell)
+    if op < 300:
+        return []
+    out = []
+    dens, small = 100.0 * cl / op, 100.0 * sm / cl
+    ncol = len({c[:3] for _, c in (cell.getcolors(1 << 16) or []) if c[3] == 255})
+    if dens < cfg["dens_min"]:
+        out.append(f"W_DETAIL Detaildichte {dens:.1f} Cluster/100px (Referenzen {cfg['dens_min']:.0f}-26, Soll >= {cfg['dens_min']:.0f}): zu flach, Zubehoer/Glanzpunkte/Falten fehlen")
+    if small < cfg["small_min"]:
+        out.append(f"W_DETAIL nur {small:.0f}% Kleinteile (<=2 px) (Soll >= {cfg['small_min']:.0f}%): Akzentpunkte, Knoepfe, Glanzlichter fehlen")
+    lo, hi = cfg["cols"]
+    if not lo <= ncol <= hi:
+        out.append(f"W_DETAIL {ncol} Farben im Frame (Referenzen {lo}-{hi})")
+    if kind == "char":
+        bb = cell.getchannel("A").getbbox()
+        bw, bh = bb[2] - bb[0], bb[3] - bb[1]
+        if not cfg["height"][0] <= bh <= cfg["height"][1]:
+            out.append(f"W_PROPORTION Figurenhoehe {bh} px (Soll {cfg['height'][0]}-{cfg['height'][1]})")
+        if not cfg["aspect"][0] <= bw / bh <= cfg["aspect"][1]:
+            out.append(f"W_PROPORTION Breite/Hoehe {bw / bh:.2f} (Referenzen {cfg['aspect'][0]}-{cfg['aspect'][1]})")
+    return out
+
 # ---------------------------------------------------------------- Pruefung
 def check_image(img, kind="object", dither_max=0.02, noise_max=0.10, path=None):
     """-> (fehler, warnungen). Fehler = Asset ist NICHT fertig. path (relativ zu Art/) aktiviert die Farb-Rollen-Regel."""
@@ -197,6 +273,7 @@ def check_image(img, kind="object", dither_max=0.02, noise_max=0.10, path=None):
         warn.append(f"W_NOISE {100 * iso // opaque}% Einzelpixel (Soll <={int(noise_max * 100)}%): Rausch-Textur?")
     if chk / opaque > dither_max:
         warn.append(f"W_DITHER {100 * chk // opaque}% Schachbrett-Pixel: Dithering nur fuer Nebel/Himmel")
+    warn.extend(check_detail(im, kind))
     return err, warn
 
 

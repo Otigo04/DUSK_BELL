@@ -14,6 +14,8 @@ Einzige Quelle der Wahrheit: `Assets/_Project/Art/__STYLEBIBLE/ART_STYLE.md` (zu
 - **Outline:** 1 px dunkle Palettenfarbe, aussen geschlossen, innen nur zur Formtrennung. Baeume, Gras, Boden-Tiles ohne Outline.
 - **Schattierung:** max. 3 Stufen pro Material (Schatten kuehl-violett, Basis, Licht warm-gelb), Licht oben-links, kein Dithering im Vordergrund, kein Rausch-Muster.
 - **Farb-Rollen:** Talisman-Farben (#6fd3e6 #a8f0ff #2b6b8a) nur in Talisman-/Schutz-Assets, Monster-Farben (Monsterauge #d64a6a, Blut #8a1f3d) nur in Monster-/Blut-/UI-Assets; sonst max. 10 % Akzent. Wasser-Blau nur fuer Wasser (Sichtpruefung). Grinsen nur in Zaehne-Farbe #f2ead8 und Monsterauge #d64a6a.
+- **Detail und Wirkung (ART_STYLE.md Abschnitt 11):** Silhouette-Merkmal, getrennte Wertgruppen (Kopf/Oberkoerper/Hose/Schuhe), mindestens 3 Zubehoerteile, 3-10 Akzentpunkte, Falten/Naehte statt glatter Flaechen, lesbares Gesicht. Linter: W_DETAIL (Cluster/100px >= 13, Kleinteile >= 35 %, Portrait >= 8 und >= 60 %) und W_PROPORTION. Gegen den Sheriff pruefen.
+- **Form (ART_STYLE.md Abschnitt 12):** Rundungen statt Rechtecken, Kurvenschattierung, Chibi-Proportion (Kopf ~35 %, Gesicht klein, Beine kurz), Haar faellt vor die Schultern, Koepfe von Hand als Raster. Kennzahlen gruen heisst NICHT fertig: immer ehrlich neben Sheriff/Mara legen.
 - **Monster:** gleiche Koerpergroesse und Gesichtsform wie Menschen, Grinsen ist das einzige Erkennungsmerkmal, im Raster eindeutig lesbar (2-3 px).
 
 ## Ablauf (Checkliste)
@@ -23,7 +25,7 @@ Einzige Quelle der Wahrheit: `Assets/_Project/Art/__STYLEBIBLE/ART_STYLE.md` (zu
    - Aseprite-MCP: `create_canvas` -> `load_palette_file` (`__STYLEBIBLE/Nightward_Master.gpl`) -> `draw_rectangle`/`draw_pixels` nur mit Hex aus der Palette -> `export_sprite` PNG. Der MCP erzwingt die Palette NICHT.
    - Python: `from style_lib import P, ramp, new, add_outline, snap_image, save`; speichern nur ueber `save()`; Generator-Datei beginnt mit `import pixel_guard` (siehe bestehende Generatoren).
 4. [ ] Validieren: `python3 Assets/_Project/Art/__STYLEBIBLE/tools/pixel_lint.py <Datei>`. E_-Fehler beheben (Palette, Alpha, Raster, Rolle). W_-Warnungen bewerten.
-5. [ ] Sichtpruefung: 4x vergroessern, neben Anker legen. Outline, Schattenstufen, Licht oben-links, Silhouette.
+5. [ ] Sichtpruefung: 4x vergroessern, neben Anker UND neben den Sheriff legen. Outline, Schattenstufen, Licht oben-links, Silhouette, Wertgruppen, Zubehoer. W_DETAIL/W_PROPORTION nicht ignorieren.
 6. [ ] Erst dann als fertig melden. Hooks (`art_gate`) pruefen zusaetzlich nach jedem Bash-/Write-/Aseprite-Aufruf.
 
 ## Verboten
