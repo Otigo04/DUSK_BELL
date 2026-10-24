@@ -7,6 +7,7 @@ Ostwaerts rollt die Figur im Uhrzeigersinn, westwaerts dagegen, nach Sueden/Nord
 Dazu Staubwolke am Boden beim Absprung/Landen und Windstreifen. Nur Palettenfarben, keine Kantenglaettung.
 Aufruf: python gen_dodge.py   -> ../<Frau|Mann>/<name>_dodge.png
 """
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import os
 

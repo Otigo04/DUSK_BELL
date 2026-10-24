@@ -1,4 +1,5 @@
 """Zaun-/Mauer-/Hecken-Autotile (Kanten-Set N1 E2 S4 W8, wie die anderen Autotiles)."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from nwlib import *
 
 N, E, S, W = 1, 2, 4, 8

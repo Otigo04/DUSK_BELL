@@ -6,6 +6,7 @@ Die Figur wird zur Laufzeit umgefaerbt (PlayerOutfit): jedes Stueck bringt eine 
 Farben nur aus der Nightward-Palette. Aufruf: python gen_kleidung.py
 Effekte: ('rate', Stat, Wert) aendert die Rate, ('drain', Stat, Faktor) verlangsamt/beschleunigt Verschlechterung, ('recover', Stat, Faktor),
 ('game', EffectKind, Faktor) z. B. DamageTakenMult 0.9."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import json
 import os
 import sys

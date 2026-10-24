@@ -111,3 +111,7 @@ InitTestScene*.unity*
 # Python
 __pycache__/
 *.pyc
+
+# Pixel Law Gate Cache
+Assets/_Project/Art/__STYLEBIBLE/tools/.gate_cache.json
+**/__pycache__/

@@ -1,6 +1,7 @@
 """Schreibt die Unity-.meta fuer die Bar-Tilesets nach dem Muster von Tileset_Haus.png.meta:
 Point-Filter, PPU 32, keine Kompression, 32x32-Zellen als Sprites (leere Zellen entfallen).
 GUID bleibt erhalten (Unity vergibt sie beim ersten Import)."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import re, hashlib
 from PIL import Image
 from bar_lib import TILES

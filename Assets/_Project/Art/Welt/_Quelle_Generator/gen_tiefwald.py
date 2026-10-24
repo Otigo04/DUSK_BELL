@@ -6,6 +6,7 @@ Tileset/  Boden_Tiefwald.png        4 nahtlose Varianten (A-D) nebeneinander, 12
 Objekte/  Riesenbaum (96x112), Toter_Baum (48x80), Baumstumpf_A/B, Baumstamm_H (64x32)/_V (32x64), Farn_A-C, Pilze_A/B, Wurzeln
 Animiert/ Pilzring_Leuchten (48x48), Spinnennetz (32x32), Gluehwuermchen (64x64), Nebel (96x32) - je 8 Frames nebeneinander
 Aufruf: python gen_tiefwald.py"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import sys
 

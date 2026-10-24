@@ -1,5 +1,6 @@
 """Ilhans Bar - INNEN. Erzeugt Tileset_Bar_Innen.png + Bar_Innen_Vorschau.png.
 Ansicht 3/4 von vorne wie Tileset_Interieur. Licht oben links warm, Schatten kuehl-violett."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from bar_lib import *
 from bar_aussen import lantern, PRICE_L, PRICE_R, sign_main
 

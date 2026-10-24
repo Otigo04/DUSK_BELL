@@ -1,5 +1,6 @@
 """Baut Nightward_Pixel.ttf: 5x7-Pixelschrift, festes Raster (Zelle 6x8 px), Umlaute inklusive.
 Em = 8 px (UPM 800, 1 Pixel = 100 Einheiten). Grosse = 8 px -> 1:1, 16 px -> 2:1."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import os
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen

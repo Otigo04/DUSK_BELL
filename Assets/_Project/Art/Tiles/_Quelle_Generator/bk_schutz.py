@@ -11,6 +11,7 @@ zwischen den Zustaenden umschalten kann:
   Talisman      Wand_Talisman / Talisman_Tuer / Talisman_Fenster (aktiv, pulsiert) -> *_Aus (verbraucht) -> *_Bruch (zerbricht, 6 Frames)
   Balken_Lehnt  der Holzbalken steht bereit neben der Tuer (Moebel)
 """
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from bk_lib import *
 import bk_moebel as M
 import bk_fassade as F

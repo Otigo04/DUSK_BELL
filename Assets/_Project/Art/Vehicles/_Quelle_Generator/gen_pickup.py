@@ -12,6 +12,7 @@ Pivot: Mitte des Autos auf dem Boden (Pixel 56, 52 von 112x80).
 Aufruf:  python gen_pickup.py [Ausgabeordner]     (Standard: Ordner darueber = Art/Vehicles)
 Ausgabe: Auto_Pickup.png (Blatt) und Auto_Pickup.json (Raster und Pivot fuer den Import) im Ausgabeordner, Auto_Pickup_preview.png (4x, nur Ansicht) neben dem Skript
 """
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import json
 import math
 import os

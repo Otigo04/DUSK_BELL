@@ -8,6 +8,7 @@ Zustaende (Tile-Tausch, gleiche 32x64-Zelle wie Tuer_Innen_Zu / Fenster_Innen_*)
   Tuer mit Balken   Tuer_Innen_Barrikade_Spalt -> _Spalt_Klaue (der Balken haelt, splittert aber)
   Fenster Fenster_Innen_Laeden_Spalt (vorhanden) -> Fenster_Innen_Spalt_Hand | _Spalt_Klaue | _Spalt_Fratze (nur ein Gesichtsausschnitt)
 Dialogue Bible: nie Monster und Mensch in einer Szene - hier ist nur das Monster zu sehen, nie beide."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from bk_lib import *
 import bk_moebel as M
 import bk_schutz as Z

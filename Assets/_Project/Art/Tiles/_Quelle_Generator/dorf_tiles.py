@@ -2,6 +2,7 @@
 Die Overlays liegen auf dem Erdboden: Kante = dunkler Rand, Moos, ausgefranste Kiesel -> sauberer Uebergang Erde/Pflaster/Kies.
 Spalte 0-15 Autotile-Maske (N=1 E=2 S=4 W=8), 16-19 Innenecken (NO, SO, SW, NW), wie Tileset_Terrain.
 Aufruf: python dorf_tiles.py   (schreibt Art/Tiles/Tileset_Dorf.png und Vorschau)"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import sys, math, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from nwlib import *

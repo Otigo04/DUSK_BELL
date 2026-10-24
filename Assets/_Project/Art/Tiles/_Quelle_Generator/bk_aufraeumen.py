@@ -1,5 +1,6 @@
 """Nach python bk_build.py: setzt alle PNGs, deren PIXEL unveraendert sind (nur anders kodiert), per git checkout zurueck.
 Danach zeigt git status nur wirklich neue/geaenderte Teile.   Aufruf:  python3 bk_aufraeumen.py"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import io
 import os
 import subprocess

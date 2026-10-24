@@ -6,6 +6,7 @@ Ergebnis: 10 Sheets  Fluss_<Strom>_<Ufer>.png   Strom = S, N, O, W, Still   Ufer
   Naht: Ufer-Wellen sind an den Kachelenden exakt 0 -> Nachbarkacheln schliessen lueckenlos (siehe welt_lib / seam-Test)
 Zusaetzlich: _Layout_Fluss.json (Blob-Index -> Maske/Ecken, Frame-Anzahl, Tempo), Vorschau in Welt/_Vorschau.
 Aufruf: python gen_fluss.py        (schreibt alles, prueft Palette/Alpha/Schleife/Nahte, Abbruch bei Fehler)"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import sys
 

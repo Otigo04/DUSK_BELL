@@ -9,6 +9,7 @@ Tile-Referenzen:  BA:r:c / BI:r:c   Zellen aus Tileset_Bar_Aussen / Tileset_Bar_
                   RT:Art:material   Baukasten-RuleTile (Boden, Innenwand, Krone), BKI:r:c Baukasten-Innen-Zelle
                   T:r:c             Terrain-Zelle, TRT:Name RuleTile aus TileAssets/RuleTiles
 """
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import json, os
 from PIL import Image
 from bk_lib import *

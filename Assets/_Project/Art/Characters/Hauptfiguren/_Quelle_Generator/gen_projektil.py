@@ -4,6 +4,7 @@ projektil_pistole.png : 8 Zeilen (S, SW, W, NW, N, NE, E, SE) x 3 Frames (Flug-L
 projektil_treffer.png : 1 Zeile x 5 Frames (Einschlag, kein Loop)
 Aufruf: python gen_projektil.py [Ausgabeordner]
 """
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import os
 import sys

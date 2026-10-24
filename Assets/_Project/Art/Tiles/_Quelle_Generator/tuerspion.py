@@ -11,6 +11,7 @@ Monster sind reine Silhouetten (Kopf/Koerper in Outline-Farbe, nur Rimlicht link
 (Monsterauge #d64a6a, nur bei Enthuellung) tragen die Monsterfarben (Style-Bibel). Menschen haben sichtbare Augen (Creme) - der Unterschied.
 Einsatz: Layer in dieser Reihenfolge uebereinander, Point-Filter, keine Skalierung ausser ganzzahlig (2x). Ausgabe: Art/UI/Tuerspion.
 Aufruf: python tuerspion.py   (schreibt auch Vorschau_Tuerspion.png)"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import os
 import sys

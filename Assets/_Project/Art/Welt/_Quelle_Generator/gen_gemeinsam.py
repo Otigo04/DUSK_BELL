@@ -3,6 +3,7 @@
 Objekte/  Wegweiser_Holz (32x48), Steinmaennchen (32x32)
 Animiert/ Grenzstein_Rune (32x48, 8f, leuchtende Rune), Lagerfeuer_Rast (32x32, 8f)
 Aufruf: python gen_gemeinsam.py"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import sys
 

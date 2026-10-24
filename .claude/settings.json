@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash|Write|Edit|mcp__aseprite__export_sprite|mcp__aseprite__spritesheet_export",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/Assets/_Project/Art/__STYLEBIBLE/tools/art_gate.py\" --worktree",
+            "timeout": 120,
+            "statusMessage": "Pixel Law Gate"
+          }
+        ]
+      }
+    ]
+  }
+}

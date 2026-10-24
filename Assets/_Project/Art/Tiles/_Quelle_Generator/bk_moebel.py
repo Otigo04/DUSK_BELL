@@ -1,5 +1,6 @@
 """Haus-Baukasten INNEN: Moebel, Wanddeko, Teppiche. 3/4-Ansicht von vorne, Licht oben links.
 Jedes Teil = ganzes Objekt, Ankerzelle links unten. fuss = belegte Bodenzeilen (fuer Kollision / Pruefung)."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from bk_lib import *
 
 WD = (WOOD_M, WOOD_L, WOOD_D)          # Holz: Grund, Licht, Schatten

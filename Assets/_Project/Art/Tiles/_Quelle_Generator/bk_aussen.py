@@ -1,5 +1,6 @@
 """Haus-Baukasten AUSSEN: Wandmaterialien + Dachmaterialien als Autotile-Saetze (Maske N1 E2 S4 W8).
 Jedes Material: 16 Kanten-Kacheln + 4 Fuell-Varianten (Spalte 16-19; 16/17 kommen zufaellig in die Mitte)."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from bk_lib import *
 
 WALLS = ['fachwerk', 'holz', 'blockhaus', 'stein', 'backstein', 'kalk', 'blau', 'bruch']

@@ -8,6 +8,7 @@ floor_set(path, fn, n)   n nahtlose 32x32-Bodenkacheln nebeneinander (fn(x, y, v
 preview_blob(...)        Testkarte aus einem Sheet (genau wie Unity-Autotile zusammengesetzt)
 Pruefung: seam_ok(sheet)  vergleicht alle Nachbarpaare zufaelliger Karten (Farbsprung an der Naht <= 2x Pixel-zu-Pixel-Varianz im Inneren)
 """
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import os
 import random
 

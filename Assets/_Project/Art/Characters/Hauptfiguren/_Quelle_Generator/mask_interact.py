@@ -2,6 +2,7 @@
 Licht/Grund der Jacke und die Jeans sind eindeutig. Schatten/Tief der Jacke und die Schuhfarben teilen sich Braun-Toene mit dem Rucksack:
 Jackenschatten zaehlt nur neben Jackenpixeln, Schuhe nur in den untersten Zeilen der Figur.
 Aufruf: python mask_interact.py <Ausgabeordner>  -> <Ordner>/<Mann|Frau>/<name>_interact.png (Format wie NW_MASK=1)"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import os
 import sys
 

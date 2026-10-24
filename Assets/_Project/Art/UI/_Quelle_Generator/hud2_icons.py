@@ -1,5 +1,6 @@
 """HUD-Paket (Neu): Icons. 16x16 fuer Beduerfnisse/Stimmung und Ereignisse, 11x11 fuer die Vitalbalken.
 Stil wie das vorhandene Icon-Paket: dicke Form, dunkle Outline #1a1526, Licht oben links, Schatten unten rechts."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from hud2_lib import *
 
 

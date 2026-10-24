@@ -11,6 +11,7 @@ Enthalten:
   Pruefung           check_palette(), check_loop(), seam_report()
   Ausgabe            write_sheet(), Liste/JSON-Helfer
 """
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import json
 import math
 import os

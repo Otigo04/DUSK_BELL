@@ -8,6 +8,7 @@ Objekte (Pivot unten links, 32 px Raster) -> Art/Tiles/Dorf/Objekte:
 Anim: Erdbau_Eingang_Wach_Anim.png (4 Frames, Augen blinzeln) -> Art/Tiles/Dorf/Animiert (nicht von DorfBuilder gescannt).
 Die unteren 32 Zeilen von Birke_Verkruppelt sind identisch mit Erdbau_Eingang_Schlaeft: die Eingaenge koennen 1:1 darueber getauscht werden.
 Aufruf: python erdbau_objekte.py   (schreibt auch Vorschau_Erdbau.png)"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import os
 import sys

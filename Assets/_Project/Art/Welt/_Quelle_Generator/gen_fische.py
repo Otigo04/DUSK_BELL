@@ -7,6 +7,7 @@ Layout Schwimmen: Zeilen = Blickrichtung S, W, N, E (Unity y-nach-unten), Spalte
 Zellgroesse: Forelle/Karpfen 32x32, Schwarm 48x48, Sprung 48x48 (16 Frames, Wasserlinie bei y=34), Ringe 32/48.
 Alle Fische sind prozedural (Form als Funktion) und werden fuer jede Richtung/Pose per Rotation abgetastet -> keine Spiegelungsfehler.
 Aufruf: python gen_fische.py"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import sys
 

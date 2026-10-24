@@ -1,0 +1,4 @@
+#!/bin/sh
+# Pixel Law: neue/bisher konforme PNGs unter Art/ muessen pixel_lint-fehlerfrei sein.
+ROOT=$(git rev-parse --show-toplevel)
+exec python3 "$ROOT/Assets/_Project/Art/__STYLEBIBLE/tools/art_gate.py" --staged

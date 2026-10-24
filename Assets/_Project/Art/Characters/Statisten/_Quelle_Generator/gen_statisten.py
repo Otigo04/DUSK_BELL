@@ -17,6 +17,7 @@ Figuren (Ordner Statisten/<Name>/):
 Ausgabe je Figur: <name>_stand_8dir.png (448x56), <name>_idle_sheet.png (336x448), <name>_walk_sheet.png (448x448).
 Aufruf:  python gen_statisten.py [Ausgabeordner]     (schreibt auch Vorschau_Statisten.png)
 """
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import os
 import sys

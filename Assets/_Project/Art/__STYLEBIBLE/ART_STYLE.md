@@ -60,3 +60,13 @@ W_OUTLINE Aussenkante <85% Outline-Farbe | W_NOISE >10% Einzelpixel | W_DITHER >
 Rund 2000 PNGs vor diesem Regelwerk. Sie sind NICHT konform (Stand 2026-10-24: ~90% E_PALETTE). Angleichen ist ein eigener Schritt
 (`snap_image` + Abweichungsliste via `pixel_lint.py --report`), nie stillschweigend beim Bearbeiten anderer Dinge.
 Neue/ueberarbeitete Assets muessen konform sein.
+
+## 9. Durchsetzung (automatisch, nicht verhandelbar)
+Vier Schichten stellen sicher, dass kein Asset am Regelwerk vorbeikommt:
+1. **Guard in jedem Generator** (`tools/pixel_guard.py`): die erste Zeile jedes `_Quelle_Generator/*.py` importiert ihn. Er faengt jedes `Image.save()` auf PNGs unter `Art/` ab. Eine Datei, die nicht in `style_baseline.txt` steht, muss E_-fehlerfrei sein, sonst `PixelLawError` und die Datei wird nicht geschrieben.
+   Neuer Generator: erste Zeile aus einem bestehenden Generator kopieren (Pfad zu `tools` anpassen) und Farben nur aus `style_lib.P` holen.
+2. **Baseline mit Ratsche** (`style_baseline.txt`): Liste bekannter Altlasten (E_-Fehler). Sie darf nur schrumpfen. Wird eine Altlast konform, aus der Liste entfernen: `python3 tools/pixel_lint.py --write-baseline <Art-Ordner>` (bricht ab, wenn die Liste wachsen wuerde).
+3. **Git-Hook** (`.githooks/pre-commit`): prueft gestagte PNGs unter `Art/` mit `art_gate.py --staged`. Einmal pro Klon aktivieren: `git config core.hooksPath .githooks`.
+4. **Claude-Hook** (`.claude/settings.json`): nach Bash-, Write-, Edit- und Aseprite-Export-Aufrufen prueft `art_gate.py --worktree` geaenderte PNGs und meldet Verstoesse sofort zurueck.
+Verboten: Baseline erweitern, `--no-verify`, `PIXEL_GUARD=warn` dauerhaft, den Guard-Import entfernen oder Image.save umgehen.
+Grenze: der Linter prueft Palette, Alpha, Raster und per Heuristik Outline/Rauschen/Dithering. Formensprache, Schattierung und Licht oben-links bleiben Sichtpruefung (Abschnitt 6, Schritt 4).

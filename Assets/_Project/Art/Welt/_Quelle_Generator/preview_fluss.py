@@ -1,5 +1,6 @@
 """Vorschau-Karte fuer das Fluss-Tileset: setzt eine Testkarte aus dem Sheet zusammen (Autotile wie in Unity), schreibt PNG je Frame + GIF.
 Aufruf: python preview_fluss.py [Strom] [Ufer]      Standard: S Gras"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import os, sys
 from PIL import Image
 import welt_lib as W

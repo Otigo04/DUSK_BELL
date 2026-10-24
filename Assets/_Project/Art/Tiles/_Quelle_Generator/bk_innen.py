@@ -1,5 +1,6 @@
 """Haus-Baukasten INNEN: Boeden (nahtlos, 3 Varianten), Wandflaechen (Autotile N1 E2 S4 W8), Mauerkronen
 (Autotile + Innenecken), Schatten-Overlays. Ansicht 3/4 von vorne, Licht oben links."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from bk_lib import *
 
 FLOORS = ['dielen_hell', 'dielen_dunkel', 'dielen_rot', 'parkett', 'steinplatten', 'pflaster', 'lehm', 'stroh',

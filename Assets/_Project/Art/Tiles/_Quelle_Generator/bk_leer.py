@@ -5,6 +5,7 @@ Spuren, dass doch jemand schlaeft (zerwuehltes Bett, Nest aus Decken, altes Brot
   aussen   Tuer_Verwittert, Tuer_Verwittert_Angelehnt (Tuer nie abgeschlossen), Fenster_Laeden_Schief_Blau, Fenster_Zerbrochen,
            Spinnweben_Aussen_Links/Rechts
   innen    Spinnweben_Ecke_Links/Rechts, Laken_Sofa, Laken_Sessel, Stuhl_Umgekippt, Bett_Zerwuehlt, Nest_Decken, Tisch_Staub, Kerzenstumpf"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from bk_lib import *
 import bk_fassade as F
 import bk_moebel as M

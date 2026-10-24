@@ -2,6 +2,7 @@
 Ergaenzt Art/UI/HUD_Neu/Needs um Symbol_* und Anzeige_<Kette>_Stufe_1..4 im gleichen Stil wie build_hud_neu.py
 (Kachel 22x22, Symbol 16x16 bei 3,1; nur Farben der Style-Bibel). Einzeln lauffaehig: python build_hud_survival.py
 Texte der Stufen stehen in Scripts/UI/NwNeedTile.cs (NwNeedTexts) und Beduerfnisse_Texte.json."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import json
 import os
 

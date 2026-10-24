@@ -6,6 +6,7 @@ Animiert  : Findling_Schaum_S/N/O/W (Stein mit Schaum), Furtstein_Schaum, Seeros
             Pfahl_Wellen, Wasserfall_{Kante,Mitte,Fuss}_{L,M,R}
 Alles liegt TRANSPARENT ueber dem Wasser-Tileset (ausser Wasserfall-Kacheln, die sind vollflaechig). Palette.png, Alpha 0/255, 8 Frames, Schleife nahtlos.
 Aufruf: python gen_fluss_objekte.py"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import sys
 

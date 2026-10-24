@@ -7,6 +7,7 @@ eigenen Reveal-Portraits (der_gast_reveal_1..3, die_hausfrau_reveal_1..3), hier 
 Vorgehen (damit die Gesichter unveraendert bleiben): Basis = ruhiges Portrait. Augenweiss -> #d64a6a (mit dunklem Rand wie in der_gast_reveal_1),
 Mund: das vorhandene Mundbild wird aus der Umgebung ueberdeckt, darueber das Grinsen-Muster aus der_gast_reveal_2 (Zaehne #f2ead8, dunkle Mundhoehle).
 Aufruf: python portrait_grin.py   (schreibt die 7 Dateien + Vorschau_Grin.png neben dieses Skript)"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import os
 import sys
 from collections import Counter

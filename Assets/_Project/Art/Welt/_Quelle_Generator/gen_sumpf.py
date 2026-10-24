@@ -6,6 +6,7 @@ Tileset/  Boden_Sumpf.png            4 nahtlose Bodenvarianten (Schlamm, Moos, P
 Objekte/  Mangrove (64x80), Totholz (32x48), Entengruetze_A-C, Moorfund_Schaedel, Moorfund_Rippen
 Animiert/ Frosch_Sitzen (8f), Frosch_Huepfen_S/W/N/E (8f), Irrlicht (32x48, 8f), Blasen (32x32, 8f)
 Aufruf: python gen_sumpf.py"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import sys
 

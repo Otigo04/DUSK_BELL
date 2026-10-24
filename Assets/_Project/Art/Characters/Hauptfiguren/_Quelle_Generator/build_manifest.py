@@ -1,4 +1,5 @@
 """Schreibt die Frame-Dauern der Kampf-Animationen als Lua-Tabelle (fuer das Aseprite-Zusammenbauen)."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import sys
 import gen_hauptfiguren_combat as C
 

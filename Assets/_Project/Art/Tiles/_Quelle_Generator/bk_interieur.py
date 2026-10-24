@@ -8,6 +8,7 @@ Quellen:
   Revier   Zellengitter_Gerade, Zellentuer_Zu, Zellentuer_Offen, Zellenpritsche, Zelleneimer, Aktenregal, Wand_Dorfkarte, Wand_Namensliste
   Praxis   Behandlungsliege, Instrumententisch, Paravent, Wand_Anatomietafel, Pult_Totenbuch
 3/4-Ansicht von vorn, Licht oben links, Anker links unten; Gitter sind durchsichtig (Luecken transparent), Teile mit Fuss-Zeilen sind solide."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from bk_lib import *
 import bk_moebel as M
 

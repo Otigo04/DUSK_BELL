@@ -7,6 +7,7 @@ Objekte/  Saeule_ganz (32x64), Saeule_gebrochen (32x48), Saeulenfuss, Torbogen (
           Ranken (32x32, Overlay), Grabstein_A-C (32x48), Altar (64x48), Muehle_Ruine (96x96, ohne Rad)
 Animiert/ Wasserrad (64x64, 8 Frames = 22.5 Grad, Schleife nahtlos), Fackel (16x32), Fahne_zerrissen (32x48) - je 8 Frames
 Aufruf: python gen_ruinen.py"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import sys
 

@@ -12,6 +12,7 @@ import argparse, collections, os, sys
 from PIL import Image
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import style_lib as S
+import pixel_guard as G
 
 
 def iter_pngs(paths):
@@ -32,9 +33,13 @@ def main():
     ap.add_argument("--kind", choices=sorted(S.KINDS))
     ap.add_argument("--summary", action="store_true")
     ap.add_argument("--report")
+    ap.add_argument("--write-baseline", action="store_true",
+                    help="style_baseline.txt neu schreiben (Ratsche: darf nur schrumpfen, ausser --allow-grow)")
+    ap.add_argument("--allow-grow", action="store_true")
     a = ap.parse_args()
     n = bad = warned = 0
     codes = collections.Counter()
+    failing = []
     bydir = collections.defaultdict(lambda: [0, 0])
     lines = []
     for f in iter_pngs(a.paths):
@@ -47,6 +52,7 @@ def main():
         d = os.path.dirname(f)
         bydir[d][0] += 1
         if err:
+            failing.append(os.path.relpath(f, G.ART).replace(os.sep, "/"))
             bad += 1
             bydir[d][1] += 1
         if warn:
@@ -64,6 +70,18 @@ def main():
     if a.summary:
         for d, (t, b) in sorted(bydir.items()):
             print(f"{b:4d}/{t:<4d} fehlerhaft  {d}")
+    if a.write_baseline:
+        old = G.load_baseline()
+        new = set(failing)
+        grown = sorted(new - old)
+        if old and grown and not a.allow_grow:
+            print(f"ABGEBROCHEN: {len(grown)} Dateien waeren NEU in der Baseline (Ratsche), z.B. {grown[:3]}. "
+                  "Erst fixen. Nur bei Erstanlage --allow-grow.", file=sys.stderr)
+            sys.exit(3)
+        with open(G.BASELINE_FILE, "w", encoding="utf-8") as fh:
+            fh.write("# Bekannte Altlasten (E_-Fehler). Darf nur schrumpfen. Neu erzeugen: pixel_lint.py --write-baseline <Art-Ordner>\n")
+            fh.write("\n".join(sorted(new)) + "\n")
+        print(f"Baseline: {len(new)} Eintraege (vorher {len(old)})")
     print(f"\n{n} PNGs: {n - bad} ok, {bad} mit Fehlern, {warned} mit Warnungen | " +
           ", ".join(f"{k}={v}" for k, v in sorted(codes.items())))
     sys.exit(1 if bad else 0)

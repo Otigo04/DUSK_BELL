@@ -6,6 +6,7 @@ Tileset/  Boden_Fels.png             4 nahtlose Varianten (Geroell, Risse) 128x3
 Objekte/  Treppe_Fels_S (32x48), Hoehleneingang (64x64), Felsbrocken_A-D, Geroellhaufen, Stalagmit_A/B, Felssaeule, Erzader_Wand (32x32, statisch)
 Animiert/ Kristall_A/B (32x40, 8f), Erzader_Glitzern (32x32, 8f), Tropfen (16x32, 8f, Hoehlen-Tropfstein)
 Aufruf: python gen_felsland.py"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import math
 import sys
 

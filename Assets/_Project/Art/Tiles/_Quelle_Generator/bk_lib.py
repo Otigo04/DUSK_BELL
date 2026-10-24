@@ -1,6 +1,7 @@
 """Nightward Haus-Baukasten - Grundlagen.
 Palette = Style-Bibel (bar_lib, 39 Farben). Alle Texturen sind in 32 px periodisch, damit Kacheln nahtlos sind.
 Kanten-Schema wie im restlichen Projekt: Maske = N*1 + E*2 + S*4 + W*8 (Bit = dort geht dasselbe Material weiter)."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import os, sys, math
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from bar_lib import *          # Palette, Spr, hsh, rect_o, planks, shingles, stone_base ...

@@ -1,5 +1,6 @@
 """Vorschau-Bilder fuer das HUD-Paket (Neu): Spiel-Mock mit HUD, Tages-Banner mit Ereignisliste, Bauteil-Uebersicht.
 Wird von build_hud_neu.py am Ende importiert (liest die gespeicherten PNGs)."""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 from hud2_lib import *
 from hud2_lib import MANIFEST
 

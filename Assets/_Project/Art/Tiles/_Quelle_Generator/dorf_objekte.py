@@ -1,5 +1,6 @@
 """Dorf-Objekte (Pivot unten links, 32 px Raster): Wegweiser (Englisch), Kreuz-Schild, Laternen, Beete, Waescheleine, Kuebel, Talisman-Pfosten, Ortsschild.
 Ausgabe: Art/Tiles/Dorf/Objekte/*.png + _Liste.txt.  Aufruf: python dorf_objekte.py [ausgabeordner] [vorschau.png]"""
+import os as _o, sys as _s; _s.path.insert(0, _o.path.normpath(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../../__STYLEBIBLE/tools'))); import pixel_guard  # noqa: E402,F401  (Pixel Law, siehe __STYLEBIBLE/ART_STYLE.md)
 import sys, math, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from nwlib import *
