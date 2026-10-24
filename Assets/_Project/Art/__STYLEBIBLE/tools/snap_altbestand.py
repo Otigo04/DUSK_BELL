@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Altbestand auf die Master-Palette snappen (in place, nur Dateien mit Verstoessen).
 
-    python3 snap_altbestand.py [--pool allgemein|wasser|sumpf|alle] [--apply] <Ordner> ...
+    python3 snap_altbestand.py [--pool allgemein|wasser|sumpf|alle|auto] [--apply] <Ordner> ...
 
 Ohne --apply nur Trockenlauf. Aendert nur Farben/Alpha, nie die Groesse. Dateien ohne Verstoss bleiben unberuehrt.
 Achtung: Generatoren (build_welt.py, bk_build.py ...) schreiben die alten Farben beim naechsten Lauf wieder zurueck.
@@ -27,7 +27,8 @@ def main():
     a = ap.parse_args()
     todo = changed = 0
     for root in a.paths:
-        for r, dirs, files in os.walk(root):
+        walk = [(os.path.dirname(root), [], [os.path.basename(root)])] if os.path.isfile(root) else os.walk(root)
+        for r, dirs, files in walk:
             dirs[:] = [d for d in dirs if d not in S.SKIP_DIRS and not d.startswith("_Backup")]
             for n in sorted(files):
                 if not n.lower().endswith(".png") or any(k in n for k in S.SKIP_NAMES):

@@ -45,7 +45,7 @@ def main():
         sig = [st.st_mtime_ns, st.st_size]
         if mode == "worktree" and cache.get(rel) == sig:
             continue
-        err, warn = S.check_image(Image.open(f), S.guess_kind(rel))
+        err, warn = S.check_image(Image.open(f), S.guess_kind(rel), path=rel)
         n += 1
         if rel in base:
             if not err:

@@ -60,7 +60,7 @@ def _guarded_save(self, fp, format=None, **params):
             _stat["legacy"] += 1
         else:
             kind = S.guess_kind(rel)
-            err, warn = S.check_image(self, kind)
+            err, warn = S.check_image(self, kind, path=rel)
             for m in warn:
                 print(f"[pixel_guard] warn {rel}: {m}")
             if err:

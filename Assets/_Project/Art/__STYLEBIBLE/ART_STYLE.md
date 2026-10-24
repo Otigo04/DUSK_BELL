@@ -7,7 +7,7 @@ Pruefung ist maschinell: `tools/pixel_lint.py`. Ein Asset ist erst fertig, wenn 
 ## 1. Palette (gesperrt)
 - Nur `Nightward_Master.gpl` / `.png` / `.hex` (46 Farben = 39 Bibel + 7 Welt: Wasser x5, Sumpf dunkel, Sumpf Licht).
 - Keine andere Farbe, auch nicht fuer Effekte, Glow oder Schatten. Reines Schwarz #000000 gibt es nicht.
-- Talisman-Blau nur fuer Talismane. Monster-Rot nur Zaehne + Monsterauge + Blut. Wasser-Blau nur fuer Wasser.
+- Farb-Rollen (Linter `E_ROLLE`): Talisman-Farben nur in Talisman-/Schutz-/Baukasten-/Icon-/VFX-Assets, Monsterauge und Blut nur in Gast-/Hausfrau-/Monster-/Blut-/UI-/VFX-Assets; ausserhalb hoechstens 10 % Akzent. Wasser-Blau nur fuer Wasser (Sichtpruefung). Grinsen nur in Zaehne-Farbe #f2ead8 und Monsterauge #d64a6a. Regeln in `style_lib.ROLE_RULES`.
 - Alt-Palette `Art/Palette.png` (40 Farben) ist Legacy. Nicht mehr verwenden.
 - Palette erweitern nur per ausdruecklichem Beschluss des Users, dann in `tools/style_lib.py` (_MASTER) + `python3 style_lib.py`.
 
@@ -49,7 +49,7 @@ Kein 22x22, 7x7, 56x56, 40x112 usw.
    ACHTUNG (getestet 2026-10-24): Der MCP erzwingt die Palette NICHT. `draw_*` akzeptiert jedes Hex und Alpha-Hex (#RRGGBBAA). Immer nur Hex-Werte aus `Nightward_Master.hex`, nie ein 8-stelliges Hex. Der Linter ist die einzige Absicherung. Export-Kette: `create_canvas` -> `load_palette_file` -> `draw_rectangle`/`draw_pixels` -> `export_sprite` (.png) -> `pixel_lint.py`. Tools mit Kantenglaettung (draw_circle, draw_ellipse, draw_text, rotate, resize) nur nutzen, wenn danach der Linter sauber ist.
    Python: `from style_lib import P, ramp, new, add_outline, snap_image, save`; Speichern IMMER ueber `save()` (bricht bei Verstoss ab).
 3. Export als PNG, dann: `python3 Assets/_Project/Art/__STYLEBIBLE/tools/pixel_lint.py <Datei>`. E_-Fehler beheben, W_-Warnungen bewerten.
-4. Vorschau 4x ansehen (nearest) und neben ein Referenz-Asset (Anker: Hauptfigur_Frau, Amboss, Monster_Mann_Grinsen) halten: Stil muss zusammenpassen.
+4. Vorschau 4x ansehen (nearest) und neben die Anker legen (`__STYLEBIBLE/Anker/`: Anker_Tile, Anker_Bewohner, Anker_Monster, Vorschau in Anker_Vorschau.png): Stil muss zusammenpassen.
 5. Unity: Filter Point (no filter), Kompression None, Pixels Per Unit 32.
 
 ## 7. Linter-Codes
@@ -70,3 +70,8 @@ Vier Schichten stellen sicher, dass kein Asset am Regelwerk vorbeikommt:
 4. **Claude-Hook** (`.claude/settings.json`): nach Bash-, Write-, Edit- und Aseprite-Export-Aufrufen prueft `art_gate.py --worktree` geaenderte PNGs und meldet Verstoesse sofort zurueck.
 Verboten: Baseline erweitern, `--no-verify`, `PIXEL_GUARD=warn` dauerhaft, den Guard-Import entfernen oder Image.save umgehen.
 Grenze: der Linter prueft Palette, Alpha, Raster und per Heuristik Outline/Rauschen/Dithering. Formensprache, Schattierung und Licht oben-links bleiben Sichtpruefung (Abschnitt 6, Schritt 4).
+
+## 10. Skill und Anker
+- Projekt-Skill `.claude/skills/nightward-pixelart/SKILL.md`: Kurzfassung der harten Regeln, Checkliste und Validator-Aufruf. Wird bei jedem Asset-Auftrag geladen. Einzige Quelle bleibt dieses Dokument.
+- `__STYLEBIBLE/Anker/`: drei Referenz-Kopien (Tile, Bewohner, Monster). Nicht aendern ohne Beschluss des Users.
+- Offen: Messung der Grinsen-Breite (2-3 px) ist nicht automatisiert, bis geklaert ist, ob die Breite der Zahnreihe oder die Linienstaerke gemeint ist.

@@ -45,7 +45,7 @@ def main():
     for f in iter_pngs(a.paths):
         kind = a.kind or S.guess_kind(f)
         try:
-            err, warn = S.check_image(Image.open(f), kind)
+            err, warn = S.check_image(Image.open(f), kind, path=os.path.relpath(f, G.ART).replace(os.sep, "/"))
         except Exception as e:
             err, warn = [f"E_LESEN {e}"], []
         n += 1

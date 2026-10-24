@@ -10,6 +10,7 @@ import os
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+ART = os.path.dirname(os.path.dirname(HERE))   # .../Art
 
 # ---------------------------------------------------------------- Master-Palette
 # 39 Style-Bibel-Farben + 7 Welt-Farben (Wasser, Sumpf). Gesperrt: nur per Beschluss erweitern.
@@ -74,6 +75,15 @@ RAMPS = {
 }
 LIGHT_DIR = (-1, -1)   # Licht kommt von oben-links
 
+# Farb-Rollen: Sonderfarben duerfen nur in passenden Assets flaechig vorkommen.
+# Ausserhalb der erlaubten Pfad-Stichworte gilt ein Akzent-Limit (Anteil an den deckenden Pixeln).
+ROLE_RULES = [
+    ("Talisman-Farben", frozenset(P[n] for n in ("talisman_schutz", "talisman_highlight", "talisman_dunkel")),
+     ("talisman", "schutz", "baukasten", "icon", "vfx", "tuerspion"), 0.10),
+    ("Monster-Farben (Monsterauge, Blut)", frozenset((P["monsterauge"], P["blut_dunkel"])),
+     ("gast", "hausfrau", "monster", "blut", "hud", "icon", "warnung", "tuerspion", "vfx", "spalt", "grin"), 0.10),
+]
+
 
 def ramp(name):
     """(schatten, basis, licht) als RGB-Tupel."""
@@ -110,8 +120,8 @@ def guess_kind(path):
 
 
 # ---------------------------------------------------------------- Pruefung
-def check_image(img, kind="object", dither_max=0.02, noise_max=0.10):
-    """-> (fehler, warnungen). Fehler = Asset ist NICHT fertig."""
+def check_image(img, kind="object", dither_max=0.02, noise_max=0.10, path=None):
+    """-> (fehler, warnungen). Fehler = Asset ist NICHT fertig. path (relativ zu Art/) aktiviert die Farb-Rollen-Regel."""
     err, warn = [], []
     im = img.convert("RGBA")
     w, h = im.size
@@ -143,6 +153,18 @@ def check_image(img, kind="object", dither_max=0.02, noise_max=0.10):
                    (n, len(bad_pal), ", ".join("#%02x%02x%02x(%d)" % (*c, k) for c, k in top)))
     if not opaque:
         return err, warn
+    if path:
+        low = "/" + path.replace("\\", "/").lower()
+        counts = {}
+        for y in range(h):
+            for x in range(w):
+                if px[x, y][3] == 255:
+                    c = px[x, y][:3]
+                    counts[c] = counts.get(c, 0) + 1
+        for label, cols, allowed, cap in ROLE_RULES:
+            share = sum(n for c, n in counts.items() if c in cols) / opaque
+            if share > cap and not any(k in low for k in allowed):
+                err.append(f"E_ROLLE {label} {int(share * 100)}% in diesem Asset (ausserhalb {'/'.join(allowed[:3])}... max {int(cap * 100)}%)")
 
     def op(x, y):
         return 0 <= x < w and 0 <= y < h and px[x, y][3] == 255
@@ -196,6 +218,7 @@ POOLS = {
     "wasser":    frozenset(v for k, v in P.items() if not k.startswith(tuple(x for x in _SPECIAL if x != "wasser"))),
     "sumpf":     frozenset(v for k, v in P.items() if not k.startswith(tuple(x for x in _SPECIAL if x != "sumpf_licht"))),
     "alle":      MASTER_RGB,
+    "auto":      MASTER_RGB,   # Sonderfall, siehe snap(): Wasser nur fuer gesaettigtes Blau
 }
 _SNAP_CACHE = {}
 
@@ -208,7 +231,11 @@ def snap(rgb, pool="allgemein"):
         return rgb
     key = (rgb, pool)
     if key not in _SNAP_CACHE:
-        _SNAP_CACHE[key] = min(POOLS[pool], key=lambda m: _dist(m, rgb))
+        use = pool
+        if pool == "auto":   # gesaettigte Blautoene duerfen auf Wasser, graue/neutrale Toene nie
+            r, g, b = rgb
+            use = "wasser" if (b > r + 20 and b >= g and (max(rgb) - min(rgb)) / max(max(rgb), 1) > 0.30) else "allgemein"
+        _SNAP_CACHE[key] = min(POOLS[use], key=lambda m: _dist(m, rgb))
     return _SNAP_CACHE[key]
 
 
@@ -244,7 +271,9 @@ def add_outline(img, color=OUTLINE, diagonal=False):
 def save(img, path, kind=None, strict=True):
     """Prueft gegen das Regelwerk und schreibt das PNG. strict -> Fehler werfen ValueError."""
     kind = kind or guess_kind(path)
-    err, warn = check_image(img, kind)
+    ap = os.path.abspath(str(path))
+    rel = ap[len(ART) + 1:] if ap.startswith(ART + os.sep) else None
+    err, warn = check_image(img, kind, path=rel)
     for m in warn:
         print(f"  [warn] {os.path.basename(path)}: {m}")
     if err and strict:
