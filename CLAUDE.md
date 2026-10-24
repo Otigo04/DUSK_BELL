@@ -12,3 +12,6 @@ Regeln nie aus dem Gedaechtnis anwenden und nie ohne Erlaubnis die Palette erwei
 - `style_baseline.txt` ist eine Ratsche: nie erweitern, nur Eintraege entfernen, wenn Dateien konform werden.
 - Git-Hook einmal aktivieren: `git config core.hooksPath .githooks`. Nie `--no-verify`.
 - Ein Hook in `.claude/settings.json` meldet Verstoesse nach Bash/Write/Edit/Aseprite-Export. Melden, beheben, nicht umgehen.
+
+### Charaktere
+Alle Charaktere (auch Statisten, Tiere, Ueberarbeitungen) folgen `ART_STYLE.md` Abschnitt 11-13: Detail, Form, Familien-Stil, Charakter-Pflicht. Vor "fertig" immer `tools/character_compare.py` laufen lassen, das Bild ansehen und dem User zeigen. Kennzahlen gruen heisst nicht fertig.

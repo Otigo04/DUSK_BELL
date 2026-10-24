@@ -28,6 +28,9 @@ Einzige Quelle der Wahrheit: `Assets/_Project/Art/__STYLEBIBLE/ART_STYLE.md` (zu
 5. [ ] Sichtpruefung: 4x vergroessern, neben Anker UND neben den Sheriff legen. Outline, Schattenstufen, Licht oben-links, Silhouette, Wertgruppen, Zubehoer. W_DETAIL/W_PROPORTION nicht ignorieren.
 6. [ ] Erst dann als fertig melden. Hooks (`art_gate`) pruefen zusaetzlich nach jedem Bash-/Write-/Aseprite-Aufruf.
 
+## Charaktere (Pflicht, ART_STYLE.md Abschnitt 13)
+Jeder neue oder ueberarbeitete Charakter durchlaeuft die Charakter-Pflicht: Referenz als Raster lesen, Design nennen, 8 Richtungen + Idle/Walk + 5 Portraits + .aseprite + JSON + Generator, Linter, und DANN `python3 Assets/_Project/Art/__STYLEBIBLE/tools/character_compare.py Characters/<NAME> --out <bild.png>` mit Sichtpruefung und dem Bild an den User. Kein Charakter ist ohne Familien-Vergleich fertig. Gilt auch fuer Statisten, Tiere und Ueberarbeitungen alter Figuren.
+
 ## Verboten
 Palette erweitern ohne Beschluss, `style_baseline.txt` erweitern, `git commit --no-verify`, `PIXEL_GUARD=warn`, Guard-Import entfernen, Anker aendern, Regeln aus dem Gedaechtnis statt aus `ART_STYLE.md` anwenden.
 

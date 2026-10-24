@@ -118,3 +118,15 @@ wirken "hingerotzt", auch wenn der Linter nichts meldet. So bauen die guten Figu
 8. **Koepfe von Hand:** Gesichter/Koepfe der Sprites als Raster-Schablone (Zeichen je Pixel) zeichnen und pro Ansicht eigens (S, SW, W, N), nicht aus einer Vorlage abgeleitet.
 9. **Familien-Vergleich (Pflicht):** Jede neue Figur wird vor "fertig" mit ALLEN bestehenden Charakteren verglichen, Sprite-Koepfe (8x) und Portraits (3x) nebeneinander. Die Familie hat: Haar/Hut als anliegende Kappe (1-2 px breiter als das Gesicht, Seitenhaar endet am Kiefer), Augen auf ca. 60 % der Kopfhoehe, Gesicht 8-10 px breit, Portrait-Gesicht 28-38 px breit (Hautanteil 14-19 % des Bildes), Schraffur-Schattierung mit gezackter Kante statt weicher Verlaeufe, kein Glitzer/Streupunkte, keine rosa Wangenflecken, kleiner Mund. Abweichung = nicht fertig, auch bei gruenem Linter (Lehre Testfrau v3).
 10. **Haar-Kappe:** Kappe hoechstens 6 Zeilen hoch (Sprite), Gesicht beginnt frueh. Eine hohe, schmale Haarkuppe mit dem Gesicht ganz unten wirkt wie eine Kugelspitze.
+
+## 13. Charakter-Pflicht (gilt fuer ALLE neuen und ueberarbeiteten Charaktere)
+Beschluss des Users (2026-10-24): alle Charaktere folgen den Regeln aus Abschnitt 1-12, nicht nur Palette und Raster. Ein Charakter ist erst fertig, wenn jeder Punkt erledigt ist:
+1. **Referenz lesen:** mindestens 2 bestehende Charaktere (Mara, Elenora, Veronica, Sheriff) als Pixelraster/8x-Zoom ansehen, bevor gezeichnet wird.
+2. **Design festlegen** (im Chat nennen): markantes Element, Zubehoer (>= 3), Wertgruppen, Augenfarbe, Frisur/Hut als anliegende Kappe.
+3. **Format:** Sprite-Zelle 48x48 (32x48 schmal), 8 Richtungen S,SW,W,NW,N,NE,E,SE (NE/E/SE gespiegelt), Idle 6 Frames, Walk 8 Frames; Portraits 64x64: calm, blink, talk_A, talk_E, talk_O (mehr Stimmungen nach Bedarf); Pivot unten-Mitte, PPU 32.
+4. **Form (Abschnitt 12):** Chibi-Proportion, Rundungen, Kurvenschattierung, Schraffur mit gezackter Kante, keine Glitzer-/Streupunkte, Augen mit Irisfarbe, Koepfe pro Ansicht von Hand als Raster.
+5. **Dateien:** `Characters/<NAME>/` mit stand_8dir, idle_sheet, walk_sheet, portraits/, `<Name>.aseprite` (Tags idle_/walk_ je Richtung), `<name>_animation.json`, LIESMICH.txt, `_Quelle_Generator/gen_<name>.py` (erste Zeile `import pixel_guard`). Alle PNGs speichern ueber `style_lib.save()`.
+6. **Pruefen:** `pixel_lint.py Characters/<NAME>` ohne E_-Fehler; W_DETAIL/W_PROPORTION/W_NOISE bewerten.
+7. **Familien-Vergleich:** `python3 tools/character_compare.py Characters/<NAME> --out <bild.png>`. Bild ansehen UND dem User zeigen; Abweichungen gegen die Familie benennen und beheben oder begruenden.
+8. **Erst dann** als fertig melden. Ohne Schritt 7 ist kein Charakter fertig.
+Aseprite-Datei: Tags erst NACH allen Frames anlegen (sonst verlaengert Aseprite sie bis zum Ende).
