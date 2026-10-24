@@ -1,0 +1,42 @@
+{
+  "name": "Otigo",
+  "cell": [
+    48,
+    48
+  ],
+  "pivot": "bottom-center",
+  "ppu": 32,
+  "rows": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "mirrored": {
+    "NE": "NW",
+    "E": "W",
+    "SE": "SW"
+  },
+  "idle": {
+    "frames": 6,
+    "fps": 6,
+    "sheet": "otigo_idle_sheet.png"
+  },
+  "walk": {
+    "frames": 8,
+    "fps": 10,
+    "sheet": "otigo_walk_sheet.png"
+  },
+  "stand": "otigo_stand_8dir.png",
+  "portraits": [
+    "calm",
+    "blink",
+    "talk_A",
+    "talk_E",
+    "talk_O"
+  ]
+}

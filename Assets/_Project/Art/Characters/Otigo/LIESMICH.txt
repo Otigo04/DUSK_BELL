@@ -1,0 +1,13 @@
+OTIGO - Charakter nach dem Pixel Law (Assets/_Project/Art/__STYLEBIBLE/ART_STYLE.md, Abschnitt 11-13)
+Design nach einem Foto des Users, vereinfacht in den Spielstil: nach hinten gestrichenes, fast schwarzes Haar mit Volumen, kraeftige dunkle Brauen,
+braune Augen, Stoppelbart (Schraffur), markante gerade Nase, ernster Blick. Olivgruene Jacke mit Reissverschluss ueber dunklem Shirt, dunkle Jeans, braune Stiefel.
+Zubehoer: Kette mit Anhaenger, Armbanduhr, Guertel mit Schnalle, Guerteltasche.
+Zelle 48x48, Pivot unten-Mitte, 8 Richtungen (Zeilen: S, SW, W, NW, N, NE, E, SE; NE/E/SE gespiegelt), Pixel Per Unit 32.
+  otigo_stand_8dir.png    384x48   erste Idle-Frame je Richtung
+  otigo_idle_sheet.png    288x384  6 Frames je Richtung (Atmen, Blinzeln in Frame 5), 6 fps
+  otigo_walk_sheet.png    384x384  8 Frames je Richtung, 10 fps
+  portraits/otigo_{calm,blink,talk_A,talk_E,talk_O}.png   64x64
+  Otigo.aseprite          112 Frames, Tags idle_<Richtung> und walk_<Richtung>, Master-Palette
+  otigo_animation.json    Zellgroesse, Reihenfolge, Frames, fps (fuer die Unity-Einrichtung)
+  _Quelle_Generator/      gen_otigo.py (alles), sprite_otigo.py (Koepfe/Koerper), portrait_otigo.py
+Nicht in Unity eingerichtet (Unity 6 auf dem Mac nicht installiert): kein Import, keine .meta, kein Animator.
