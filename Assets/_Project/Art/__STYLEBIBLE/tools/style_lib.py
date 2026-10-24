@@ -189,19 +189,31 @@ def _dist(a, b):
     return 2 * (a[0] - b[0]) ** 2 + 4 * (a[1] - b[1]) ** 2 + 3 * (a[2] - b[2]) ** 2
 
 
+# Snap-Pools: wohin Fremdfarben abgebildet werden duerfen. Verhindert z.B. kuehlen Stein -> Wasser-Blau.
+_SPECIAL = ("wasser", "talisman", "monsterauge", "blut", "sumpf_licht")
+POOLS = {
+    "allgemein": frozenset(v for k, v in P.items() if not k.startswith(_SPECIAL)),
+    "wasser":    frozenset(v for k, v in P.items() if not k.startswith(tuple(x for x in _SPECIAL if x != "wasser"))),
+    "sumpf":     frozenset(v for k, v in P.items() if not k.startswith(tuple(x for x in _SPECIAL if x != "sumpf_licht"))),
+    "alle":      MASTER_RGB,
+}
 _SNAP_CACHE = {}
 
 
-def snap(rgb):
-    """Naechste Master-Farbe."""
+def snap(rgb, pool="allgemein"):
+    """Naechste Farbe des Pools (Standard: allgemein = ohne Wasser/Talisman/Monster/Sumpf-Licht).
+    Farben, die schon in der Master-Palette liegen, bleiben unveraendert."""
     rgb = tuple(rgb[:3])
-    if rgb not in _SNAP_CACHE:
-        _SNAP_CACHE[rgb] = rgb if rgb in MASTER_RGB else min(MASTER_RGB, key=lambda m: _dist(m, rgb))
-    return _SNAP_CACHE[rgb]
+    if rgb in MASTER_RGB:
+        return rgb
+    key = (rgb, pool)
+    if key not in _SNAP_CACHE:
+        _SNAP_CACHE[key] = min(POOLS[pool], key=lambda m: _dist(m, rgb))
+    return _SNAP_CACHE[key]
 
 
-def snap_image(img, alpha_cut=128):
-    """Alle Pixel auf Master-Palette, Alpha hart auf 0/255 (Schwelle alpha_cut)."""
+def snap_image(img, pool="allgemein", alpha_cut=128):
+    """Alle Pixel auf Master-Palette (Pool), Alpha hart auf 0/255 (Schwelle alpha_cut)."""
     im = img.convert("RGBA")
     out = new(*im.size)
     s, d = im.load(), out.load()
@@ -209,7 +221,7 @@ def snap_image(img, alpha_cut=128):
         for x in range(im.width):
             r, g, b, a = s[x, y]
             if a >= alpha_cut:
-                d[x, y] = (*snap((r, g, b)), 255)
+                d[x, y] = (*snap((r, g, b), pool), 255)
     return out
 
 
